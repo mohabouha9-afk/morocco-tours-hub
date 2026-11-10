@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moroccotourshub.com/sitemap.xml
