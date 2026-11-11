@@ -384,7 +384,7 @@ p { margin: 0 0 1em; }
 /* desktop: header, hero text and trust strip share one 1280px container (20px padding),
    header is 116px tall over the photo (76px once scrolled), hero + strip fill the first screen */
 @media (min-width: 1025px) {
-  .site-header--overlay .wrap, .hero2__grid, .hero2__trust-in, .hrev__in, .hdest__in, .habout__in, .htours__in, .happart__in { max-width: 1280px; padding-left: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); padding-right: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); }
+  .site-header--overlay .wrap, .hero2__grid, .hero2__trust-in, .hrev__in, .hdest__in, .habout__in, .htours__in, .happart__in, .hfaq__in { max-width: 1280px; padding-left: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); padding-right: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); }
   .site-header--overlay .wrap { height: 116px; padding-top: 16px; }
   .site-header--overlay .brand__logo { height: 68px; }
   .site-header--overlay.is-scrolled .wrap { height: 76px; padding-top: 0; }
@@ -708,31 +708,54 @@ p { margin: 0 0 1em; }
 }
 
 /* ==========================================================================
-   FAQ + Reviews (two-column)
+   Homepage FAQ (near the end): 7 researched questions as a simple accordion.
+   FAQ column now; the blog column will sit on its right on laptop later.
    ========================================================================== */
-.faqrev__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-.faqrev__col > h2 { margin: 4px 0 22px; }
-.faq-list { display: flex; flex-direction: column; gap: 12px; }
-.faq-item { background: var(--sand); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 15px 18px; font-weight: 600; color: var(--navy); }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item__ic { flex: none; width: 26px; height: 26px; display: grid; place-items: center; color: var(--gold-deep); transition: transform .25s ease; }
-.faq-item__ic svg { width: 20px; height: 20px; }
-.faq-item[open] .faq-item__ic { transform: rotate(180deg); }
-.faq-item__a { padding: 0 18px 16px; }
-.faq-item__a p { margin: 0; color: var(--muted); line-height: 1.7; }
-.rev-stack { display: flex; flex-direction: column; gap: 18px; margin-bottom: 20px; }
-.rev-quote { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-sm); padding: 22px 24px; }
-.rev-quote__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.rev-quote__top .stars { margin: 0; }
-.rev-quote__mark { color: var(--gold-light); }
-.rev-quote__mark svg { width: 30px; height: 30px; }
-.rev-quote blockquote { margin: 0 0 16px; color: var(--navy); font-size: 1.02rem; line-height: 1.65; }
-.rev-quote figcaption { display: flex; align-items: center; gap: 12px; }
-.rev-quote figcaption b { display: block; color: var(--navy); font-size: .95rem; }
-.rev-quote figcaption small { color: var(--muted); font-size: .82rem; }
-@media (max-width: 860px) { .faqrev__grid { grid-template-columns: 1fr; gap: 40px; } }
-.faqrev__grid--solo { grid-template-columns: minmax(0, 860px); justify-content: center; }
+.hfaq { background: var(--cream); padding: 68px 0 72px; }
+.hfaq__faq { max-width: 860px; margin: 0 auto; }
+.hfaq__head { margin-bottom: 30px; }
+.hfaq__list { display: flex; flex-direction: column; gap: 10px; }
+.hfaq__more { margin-top: 28px; }
+.hfaq-item { background: #fff; border: 1px solid var(--line); border-radius: 10px; transition: border-color .2s; }
+.hfaq-item[open] { border-color: var(--gold); }
+.hfaq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; border-radius: 10px; }
+.hfaq-item summary::-webkit-details-marker { display: none; }
+.hfaq-item summary h3 { margin: 0; font-family: var(--sans); font-size: .98rem; font-weight: 600; line-height: 1.45; color: var(--ink); transition: color .2s; }
+.hfaq-item summary:hover h3 { color: var(--gold-deep); }
+.hfaq-item summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.hfaq-item summary:active .hfaq-item__ic { transform: scale(.9); }
+.hfaq-item__ic { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--gold); color: var(--gold-deep);
+  transition: transform .25s cubic-bezier(.2,.8,.2,1); }
+.hfaq-item__ic svg { width: 16px; height: 16px; }
+.hfaq-item[open] .hfaq-item__ic { transform: rotate(45deg); background: var(--gold); color: #fff; }
+.hfaq-item__a { padding: 0 20px 18px; }
+.hfaq-item__a p { margin: 0; max-width: 70ch; font-size: .92rem; line-height: 1.75; color: var(--muted); }
+/* full FAQ page (faq.html): grouped questions + closing contact box */
+.faqp__group, .faqp__cta { max-width: 860px; margin: 0 auto; }
+.faqp__group + .faqp__group { margin-top: 44px; }
+.faqp__title { margin: 0 0 16px; font-size: clamp(1.35rem, 2.4vw, 1.7rem); color: var(--ink); }
+.faqp__title::after { content: ""; display: block; width: 44px; height: 2px; margin-top: 10px; background: var(--gold); border-radius: 2px; }
+.hfaq-item__a a { color: var(--gold-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.hfaq-item__a a:hover { color: var(--navy); }
+.faqp__cta { margin-top: 52px; padding: 32px 28px; border-radius: 16px; background: #fff; border: 1px solid var(--line); text-align: center; }
+.faqp__cta h2 { margin: 0 0 8px; font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
+.faqp__cta p { margin: 0 auto 20px; max-width: 480px; color: var(--muted); }
+.faqp__btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.faqp__btns .btn--outline { color: var(--gold-deep); border-color: var(--gold); }
+.faqp__btns .btn--outline:hover { background: var(--gold); color: #fff; }
+.faqp__btns .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .hfaq { padding: 56px 0 60px; }
+  .hfaq__head { margin-bottom: 22px; }
+  .hfaq-item summary { padding: 14px 14px 14px 16px; gap: 12px; }
+  .hfaq-item summary h3 { font-size: .9rem; }
+  .hfaq-item__ic { width: 26px; height: 26px; }
+  .hfaq-item__a { padding: 0 16px 16px; }
+  .hfaq-item__a p { font-size: .86rem; line-height: 1.7; }
+  .faqp__group + .faqp__group { margin-top: 34px; }
+  .faqp__cta { padding: 26px 18px; }
+  .faqp__btns .btn { width: 100%; justify-content: center; }
+}
 
 /* ==========================================================================
    Intro (twin arch images)
