@@ -384,7 +384,7 @@ p { margin: 0 0 1em; }
 /* desktop: header, hero text and trust strip share one 1280px container (20px padding),
    header is 116px tall over the photo (76px once scrolled), hero + strip fill the first screen */
 @media (min-width: 1025px) {
-  .site-header--overlay .wrap, .hero2__grid, .hero2__trust-in, .hrev__in, .hdest__in { max-width: 1280px; padding-left: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); padding-right: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); }
+  .site-header--overlay .wrap, .hero2__grid, .hero2__trust-in, .hrev__in, .hdest__in, .habout__in, .htours__in, .happart__in { max-width: 1280px; padding-left: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); padding-right: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); }
   .site-header--overlay .wrap { height: 116px; padding-top: 16px; }
   .site-header--overlay .brand__logo { height: 68px; }
   .site-header--overlay.is-scrolled .wrap { height: 76px; padding-top: 0; }
@@ -516,6 +516,126 @@ p { margin: 0 0 1em; }
 .hdest__arrow:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
 .hdest__arrow.is-back svg { transform: rotate(180deg); }
 
+/* ==========================================================================
+   Homepage "Who we are" (after destinations): sand panel, text + 4 offers left, team photo right
+   ========================================================================== */
+.habout { background: #fff; padding: 8px 0 76px; }
+.habout__panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; max-width: 1160px; margin: 0 auto; align-items: center;
+  background: var(--sand); border: 1px solid var(--line); border-radius: 16px; padding: 40px 44px; }
+.habout__body h2 { font-size: clamp(1.6rem, 2.6vw, 2.05rem); margin: 0; }
+.habout__body h2::after { content: ""; display: block; width: 56px; height: 2px; margin-top: 12px; background: var(--gold); border-radius: 2px; }
+.habout__body > p { margin: 16px 0 0; color: var(--muted); font-size: .92rem; line-height: 1.7; max-width: 34em; }
+.habout__body > p + p { margin-top: 10px; }
+.habout__body > p b { color: var(--ink); font-weight: 600; }
+/* offers row styled like the reference's stat row: plain gold line icon, bold uppercase title, one muted line */
+.habout__offers { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.habout-offer { padding-right: 4px; }
+.habout-offer__icon { display: block; width: 28px; height: 28px; color: var(--gold); }
+.habout-offer__icon svg { display: block; width: 100%; height: 100%; }
+.habout-offer h3 { margin: 12px 0 3px; font-family: var(--sans); font-size: .76rem; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: var(--ink); }
+.habout-offer p { margin: 0; font-size: .8rem; line-height: 1.4; color: var(--muted); }
+.habout__media { position: relative; margin: 0; }
+.habout__media img { display: block; width: 100%; height: 370px; object-fit: cover; object-position: 35% center; border-radius: 10px; }
+.habout__badge { position: absolute; left: 16px; bottom: 16px; display: flex; align-items: center; gap: 10px; padding: 10px 16px 10px 12px;
+  background: var(--navy-deep); color: #fff; border-radius: 8px; box-shadow: 0 10px 24px rgba(10,32,51,.28); }
+.habout__badge b { font-family: var(--serif); font-size: 1.5rem; line-height: 1; color: var(--gold-light); }
+.habout__badge span { font-size: .76rem; line-height: 1.35; color: rgba(255,255,255,.85); }
+.habout__badge svg { width: 14px; height: 14px; color: var(--gold-light); vertical-align: -1px; }
+@media (max-width: 1100px) {
+  .habout__panel { grid-template-columns: 1fr; gap: 36px; padding: 40px; }
+  .habout__body > p { max-width: none; }
+  .habout__media img { height: 340px; }
+}
+@media (max-width: 640px) {
+  .habout { padding: 0 0 60px; }
+  .habout__panel { padding: 28px 20px; gap: 28px; }
+  /* phone: keep the 4 stats in one row, centred and a bit smaller */
+  .habout__offers { gap: 6px; }
+  .habout-offer { padding: 0; text-align: center; }
+  .habout-offer__icon { width: 24px; height: 24px; margin: 0 auto; }
+  .habout-offer h3 { margin-top: 8px; font-size: .66rem; letter-spacing: .01em; line-height: 1.3; }
+  .habout-offer p { font-size: .7rem; line-height: 1.3; }
+  .habout__media img { height: 260px; }
+}
+
+/* ==========================================================================
+   Homepage tours: Popular (4) · Sahara Desert (all, slider on every screen) · All Our Tours (8)
+   PC: popular + all = 4-col grid, desert = sideways slider with arrows. Phone: every row swipes sideways.
+   ========================================================================== */
+.htours { padding: 72px 0 76px; background: var(--cream); }
+.htours--desert { background: #fff; }
+.htours__head p { max-width: 560px; margin: 14px auto 0; color: var(--muted); font-size: .95rem; }
+.htours__track { position: relative; }
+.htours__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.htours__list > li { min-width: 0; }
+.htours__list--slider { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - 60px) / 4);
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 2px; scrollbar-width: none; padding: 4px 2px 10px; margin: -4px -2px -10px; }
+.htours__list--slider::-webkit-scrollbar { display: none; }
+.htours__list--slider > li { scroll-snap-align: start; }
+
+.htour { height: 100%; }
+.htour__link { display: flex; flex-direction: column; height: 100%; background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  text-decoration: none; color: inherit; transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s; }
+.htour__media { position: relative; display: block; overflow: hidden; }
+.htour__media img { display: block; width: 100%; height: 190px; object-fit: cover; transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.htour__days { position: absolute; left: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 6px;
+  background: var(--navy-deep); color: #fff; font-size: .72rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.htour__days svg { width: 14px; height: 14px; color: var(--gold-light); }
+/* diagonal corner ribbon (top-right), brand gold: "Popular" / "Best Seller" */
+.htour__ribbon { position: absolute; top: 0; right: 0; width: 112px; height: 112px; overflow: hidden; pointer-events: none; }
+.htour__ribbon span { position: absolute; top: 24px; right: -40px; width: 170px; padding: 6px 0; transform: rotate(45deg); text-align: center;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold) 50%, var(--gold-deep)); color: #fff;
+  font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 4px 10px rgba(10,32,51,.3); }
+.htour__body { display: flex; flex-direction: column; flex: 1; padding: 16px 16px 18px; }
+.htour__title { margin: 0; font-family: var(--serif); font-size: 1.02rem; line-height: 1.35; color: var(--ink);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.7em; }
+.htour__stars { display: flex; gap: 2px; margin: 8px 0 8px; color: var(--gold); }
+.htour__stars svg { width: 14px; height: 14px; }
+.htour__desc { margin: 0 0 12px; font-size: .8rem; line-height: 1.55; color: var(--muted);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 4.65em; }
+/* start / end / private tour: three short lines on a sand strip */
+.htour__facts { display: grid; gap: 5px; margin-bottom: 14px; padding: 10px 12px; border-radius: 6px; background: var(--sand); }
+.htour__fact { display: flex; align-items: center; gap: 6px; min-width: 0; font-size: .76rem; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.htour__fact b { font-weight: 600; }
+.htour__fact svg { width: 14px; height: 14px; color: var(--gold); flex: none; }
+.htour__cta { margin-top: auto; display: block; padding: 10px 12px; border: 1.5px solid var(--gold); border-radius: 6px; text-align: center;
+  color: var(--gold-deep); font-size: .76rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; transition: background-color .2s, color .2s; }
+.htour__link:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(14,42,65,.13); }
+.htour__link:hover .htour__media img { transform: scale(1.05); }
+.htour__link:hover .htour__cta { background: var(--gold); color: #fff; }
+.htour__link:active { transform: translateY(-1px); }
+.htour__link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* desert slider arrows (sit on the card photos, both sides) */
+.htours__nav { position: absolute; top: 95px; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px; margin-top: -22px; border: 0; border-radius: 50%;
+  background: var(--gold); color: #fff; cursor: pointer; box-shadow: 0 0 0 4px #fff, 0 8px 18px rgba(14,42,65,.22); transition: background-color .2s, opacity .2s, transform .2s; }
+.htours__nav svg { width: 20px; height: 20px; }
+.htours__nav--prev { left: -22px; }
+.htours__nav--next { right: -22px; }
+.htours__nav:hover { background: var(--gold-deep); }
+.htours__nav:active { transform: scale(.92); }
+.htours__nav:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
+.htours__nav[disabled] { opacity: 0; pointer-events: none; }
+.htours--all .hdest__more, .htours--exc .hdest__more { margin-top: 40px; }
+
+@media (max-width: 1100px) {
+  .htours__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .htours__list--slider { grid-auto-columns: calc((100% - 40px) / 3); }
+}
+@media (max-width: 640px) {
+  .htours { padding: 60px 0 64px; }
+  /* phone: every tours row is one line of cards that swipes sideways */
+  .htours__list, .htours__list--slider { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 80%; gap: 14px;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 2px; scrollbar-width: none; padding: 4px 2px 10px; margin: -4px -2px -10px; }
+  .htours__list::-webkit-scrollbar { display: none; }
+  .htours__list > li { scroll-snap-align: start; }
+  .htours__nav { top: 85px; width: 40px; height: 40px; margin-top: -20px; }
+  .htours__nav--prev { left: -10px; }
+  .htours__nav--next { right: -10px; }
+  .htour__media img { height: 170px; }
+  .htours--all .hdest__more, .htours--exc .hdest__more { margin-top: 28px; }
+}
+
 /* Search bar */
 .searchbar {
   position: relative; z-index: 5; margin-top: -66px;
@@ -645,30 +765,28 @@ p { margin: 0 0 1em; }
 }
 
 /* ==========================================================================
-   Why Choose (staggered cards)
+   Homepage "What Sets Us Apart" (after the tours): simple like the reference — white bg,
+   6 light cards (gold line icon, uppercase title, short text). PC 3x2, tablet 2 cols, phone swipes.
    ========================================================================== */
-.whychoose__head { text-align: center; max-width: 830px; margin: 0 auto 44px; }
-.whychoose__kicker { color: var(--gold-deep); }
-.whychoose__head h2 { margin: 4px 0 0; }
-.whychoose__rule { display: block; width: 130px; height: 2px; margin: 16px auto 22px; position: relative;
-  background: linear-gradient(90deg, transparent, var(--gold-deep), transparent); }
-.whychoose__rule::before { content: "❖"; position: absolute; left: 50%; top: -12px; transform: translateX(-50%);
-  color: var(--gold-deep); font-size: .85rem; background: #fff; padding: 0 8px; }
-.whychoose__intro { color: var(--muted); line-height: 1.8; margin: 0; }
-.whychoose__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: stretch; }
-.wc-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm);
-  padding: 32px 24px 28px; text-align: center; transition: transform .2s ease, box-shadow .2s ease; }
-.wc-card--down { margin-top: 0; }
-.wc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
-.wc-card__ic { width: 62px; height: 62px; border-radius: 50%; background: var(--gold-grad); display: grid; place-items: center; margin: 0 auto 18px; box-shadow: 0 8px 20px rgba(165,118,42,.28); }
-.wc-card__ic svg { width: 34px; height: 34px; color: #fff; }
-.wc-card h3 { font-size: 1.16rem; margin: 0 0 10px; }
-.wc-card p { color: var(--muted); line-height: 1.65; font-size: .92rem; margin: 0; }
-@media (max-width: 980px) {
-  .whychoose__grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .wc-card--down { margin-top: 0; }
+.happart { background: #fff; padding: 64px 0 68px; }
+.happart__head p { max-width: 560px; margin: 14px auto 0; color: var(--muted); font-size: .95rem; }
+.happart__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.happart__grid > li { min-width: 0; }
+.happart-card { height: 100%; padding: 24px 24px 26px; border-radius: 10px; background: var(--sand); border: 1px solid var(--line); }
+.happart-card__ic { display: block; width: 30px; height: 30px; color: var(--gold); }
+.happart-card__ic svg { display: block; width: 100%; height: 100%; }
+.happart-card h3 { margin: 14px 0 6px; font-family: var(--sans); font-size: .86rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--ink); }
+.happart-card p { margin: 0; font-size: .86rem; line-height: 1.65; color: var(--muted); }
+@media (max-width: 1100px) { .happart__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .happart { padding: 56px 0 60px; }
+  /* phone: 3 rows of 2 small cards (owner request) */
+  .happart__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .happart-card { padding: 16px 14px 18px; }
+  .happart-card__ic { width: 26px; height: 26px; }
+  .happart-card h3 { margin: 10px 0 4px; font-size: .74rem; letter-spacing: .02em; line-height: 1.3; }
+  .happart-card p { font-size: .78rem; line-height: 1.5; }
 }
-@media (max-width: 560px) { .whychoose__grid { grid-template-columns: 1fr; } }
 
 /* ---- Fleet / transport ------------------------------------------------- */
 .fleet__head { text-align: center; max-width: 790px; margin: 0 auto 46px; }
@@ -701,9 +819,6 @@ p { margin: 0 0 1em; }
    ========================================================================== */
 .tour-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 .tour-grid--3 { grid-template-columns: repeat(3, 1fr); gap: 26px; }
-.tgrid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-@media (max-width: 1000px) { .tgrid4 { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .tgrid4 { grid-template-columns: 1fr; } }
 .tour-card {
   position: relative; border-radius: var(--radius); overflow: hidden; color: #fff;
   min-height: 430px; display: flex; flex-direction: column; justify-content: flex-end;

@@ -108,3 +108,27 @@ function moroccoForm(form) {
   window.addEventListener('resize', update);
   update();
 })();
+
+/* Homepage tour sliders (desert tours, day excursions): prev/next arrows move one view of cards; each arrow hides at its end */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.htours__track').forEach(function (track) {
+    var prev = track.querySelector('.htours__nav--prev');
+    var next = track.querySelector('.htours__nav--next');
+    if (!prev || !next) return;
+    var list = document.getElementById(next.getAttribute('aria-controls'));
+    if (!list) return;
+    function step(dir) {
+      list.scrollBy({ left: dir * (list.clientWidth + 20), behavior: reduce ? 'auto' : 'smooth' });
+    }
+    function update() {
+      prev.disabled = list.scrollLeft <= 6;
+      next.disabled = list.scrollLeft >= list.scrollWidth - list.clientWidth - 6;
+    }
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    list.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+})();
