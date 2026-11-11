@@ -7,6 +7,8 @@
 - Audience: international travellers who want authentic, flexible, reliable, high-quality trips.
 - Tone (for when copy work starts): warm, professional, authentic, inspiring.
 - Target keywords: "private Morocco tours", "Sahara desert trips", "custom Morocco itineraries".
+- WhatsApp: **+212 621 460 083** → link `https://wa.me/212621460083` (use for header, hero, CTA banner, floating button).
+- Goal set by the owner: make the redesign genuinely **amazing** — high craft, not generic. Claude has latitude to make sensible design decisions.
 
 ## Current phase: STRUCTURE & DESIGN ONLY
 - We are redesigning **layout, section order and visual design** of the homepage first (`index.html` + `assets/css/styles.css`).
@@ -46,6 +48,19 @@
 ## Preview & checking
 - Start the local server: `node serve.mjs` → http://localhost:3000 (don't start a second one if running).
 - View pages in the built-in browser at localhost, never `file:///`. Compare against the reference at desktop and mobile widths before calling a section done.
+
+## Progress log (homepage redesign)
+**Done (2026-11-10/11) — header + hero top, homepage only (`index.html`):**
+- **Overlay header**: `<header class="site-header site-header--overlay">` sits on the hero photo (transparent, white links, gold active underline). On scroll (`main.js` toggles `.is-scrolled` at >10px) a **black** bar fades in (`::before`, opacity only). Other pages still use the old white sticky header.
+- **Logo**: homepage uses `assets/images/logo-white.png` — generated from `logo.png`: word MOROCCO + man + tagline + swoosh white; **camels & palm trees stay dark**; gold star, lantern and gold streaks removed from the word (first O replaced by a copy of a clean O; M has a few tiny gaps — a designer file would be cleaner). Originals `logo.png` / `logo-light.png` untouched. Owner rejected: cream-badge behind logo, cream-lettering version.
+- **Header actions** (right side, menu centred): round outlined **WhatsApp icon** (`.header-wa`) + solid gold square-ish **CONTACT US** block (`.header-contact`, uppercase). Hidden ≤520px; mobile drawer got a green "WhatsApp Us" button under "Book Your Tour". Tightened nav spacing 1181–1320px so it fits.
+- **Hero buttons**: `.hero2__actions` = gold **EXPLORE OUR TOURS** (car icon) + dark navy glass **CHAT ON WHATSAPP**; compact, radius 6px, uppercase; stack full-width ≤420px.
+- Hero top scrim darkened slightly for header legibility.
+- **Site-wide CSS fixes** (all pages): burger was pushed off-screen on phones (header Book button hidden ≤520px, `.header-tools` margin-left:auto ≤1180px); footer caused sideways scroll on phones (single column ≤520px); hero side padding restored (`.hero2__grid` uses padding-top/bottom only).
+
+**Owner's style preferences learned:** likes the reference site's look; square-ish (6px) uppercase buttons in brand gold; white/dark contrast in header; keep things compact ("not too big"); wants to preview at laptop size (1366×768).
+
+**Next up (owner decides order):** rest of the hero (trust strip / social sidebar / avatars card), then sections below following the reference order. Header/footer rollout to the other 161 pages only after the homepage is finished — confirm first.
 
 ## Secrets & git
 - **Any API key goes in `.env`, which is listed in `.gitignore`. Never put a key in a page file, never commit it to GitHub.** `.env.example` holds placeholder names only.

@@ -4,7 +4,9 @@
   var header = document.querySelector(".site-header");
   function onScroll() {
     if (!header) return;
-    header.style.boxShadow = window.scrollY > 10 ? "0 6px 20px rgba(14,42,65,.08)" : "none";
+    var scrolled = window.scrollY > 10;
+    header.style.boxShadow = scrolled ? "0 6px 20px rgba(14,42,65,.08)" : "none";
+    header.classList.toggle("is-scrolled", scrolled);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
