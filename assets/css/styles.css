@@ -605,6 +605,18 @@ p { margin: 0 0 1em; }
 .htour__link:hover .htour__cta { background: var(--gold); color: #fff; }
 .htour__link:active { transform: translateY(-1px); }
 .htour__link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+/* "View All Day Trips": laptop = normal button under the slider; phone = plain arrow link (no card) at the end of the swipe row */
+.htours__end { display: none; }
+.htour-more { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; height: 100%; padding: 0 8px;
+  text-align: center; text-decoration: none; border-radius: 10px; }
+.htour-more__ic { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: #fff;
+  box-shadow: 0 0 0 4px #fff, 0 8px 18px rgba(14,42,65,.2); transition: transform .25s cubic-bezier(.2,.8,.2,1), background-color .2s; }
+.htour-more__ic svg { width: 22px; height: 22px; }
+.htour-more__title { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-deep); line-height: 1.4; }
+.htour-more__text { display: none; }
+.htour-more:hover .htour-more__ic { background: var(--gold-deep); transform: translateX(3px); }
+.htour-more:active .htour-more__ic { transform: scale(.94); }
+.htour-more:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* desert slider arrows (sit on the card photos, both sides) */
 .htours__nav { position: absolute; top: 95px; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px; margin-top: -22px; border: 0; border-radius: 50%;
@@ -633,7 +645,12 @@ p { margin: 0 0 1em; }
   .htours__nav--prev { left: -10px; }
   .htours__nav--next { right: -10px; }
   .htour__media img { height: 170px; }
-  .htours--all .hdest__more, .htours--exc .hdest__more { margin-top: 28px; }
+  .htours--all .hdest__more { margin-top: 28px; }
+  /* day excursions + all tours: show the end link in the row, hide the button; the end slot is narrower than a card */
+  .htours__more--desk { display: none; }
+  .htours--exc .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(6, 80%) 34%; }
+  .htours--all .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(8, 80%) 34%; }
+  .htours__end { display: block; }
 }
 
 /* Search bar */
