@@ -807,8 +807,6 @@ p { margin: 0 0 1em; }
 
 /* ---- Fleet / transport ------------------------------------------------- */
 .fleet__head { text-align: center; max-width: 790px; margin: 0 auto 46px; }
-.fleet__kicker { display: inline-flex; align-items: center; gap: 14px; color: var(--gold-deep); margin-bottom: .6em; }
-.fleet__kicker::before, .fleet__kicker::after { content: ""; width: 34px; height: 1px; background: currentColor; opacity: .55; }
 .fleet__head h2 { margin: 4px 0 14px; }
 .fleet__intro { color: var(--muted); line-height: 1.8; margin: 0; }
 .fleet__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; align-items: stretch; }
@@ -829,7 +827,22 @@ p { margin: 0 0 1em; }
 .fleet-card__body h3 { margin: 0 0 7px; font-size: 1.3rem; }
 .fleet-card__body p { margin: 0; text-transform: uppercase; letter-spacing: .13em; font-size: .73rem; font-weight: 700; color: var(--muted); }
 .fleet__note { text-align: center; color: var(--muted); font-size: .95rem; line-height: 1.7; margin: 34px auto 0; max-width: 620px; }
-@media (max-width: 820px) { .fleet__grid { grid-template-columns: 1fr; max-width: 430px; margin: 0 auto; } }
+@media (max-width: 820px) { .fleet__grid { gap: 16px; } .fleet-card__body { padding: 16px 18px 18px; } .fleet-card__body h3 { font-size: 1.1rem; } }
+/* phone: smaller head + the 3 vehicles in one compact row that swipes sideways (like the tour rows) */
+@media (max-width: 640px) {
+  .fleet__head { margin-bottom: 26px; }
+  .fleet__head h2 { font-size: 1.6rem; margin-bottom: 10px; }
+  .fleet__intro { font-size: .88rem; line-height: 1.65; }
+  .fleet__grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 66%; gap: 12px; overflow-x: auto;
+    scroll-snap-type: x mandatory; scrollbar-width: none; padding: 2px 2px 8px; margin: 0 -2px; }
+  .fleet__grid::-webkit-scrollbar { display: none; }
+  .fleet-card { scroll-snap-align: start; }
+  .fleet-card:hover { transform: none; }
+  .fleet-card__body { padding: 12px 14px 14px; }
+  .fleet-card__body h3 { font-size: 1rem; margin-bottom: 4px; }
+  .fleet-card__body p { font-size: .64rem; letter-spacing: .08em; }
+  .fleet__note { font-size: .85rem; margin-top: 20px; }
+}
 
 /* ==========================================================================
    Tour cards
