@@ -81,7 +81,7 @@
   </div>
 <main>
   <section class="hero2">
-    <div class="hero2__bg"><img src="/assets/images/home-hero.jpg" alt="Camel caravan crossing the Sahara dunes at Merzouga, Morocco" loading="lazy" loading="eager"></div>
+    <div class="hero2__bg"><img src="/assets/images/home-hero.jpg" alt="Camel caravan crossing the Sahara dunes at Merzouga, Morocco" loading="eager" fetchpriority="high"></div>
     <div class="hero2__scrim"></div>
     <div class="hero2__social">
       <span>Follow Us</span>
@@ -108,12 +108,103 @@
         </div>
       </div>
     </div>
-    <div class="hero2__bar"><div class="wrap hero2__bar-in">
-      <div class="hero2__feat"><span class="hero2__feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 13v-1a7 7 0 0114 0v1M5 13a2 2 0 00-2 2v1a2 2 0 002 2h1v-5H5zm14 0a2 2 0 012 2v1a2 2 0 01-2 2h-1v-5h1zM12 21h3a2 2 0 002-2v-1"/></svg></span><div><b>Live Guide</b><span>English</span></div></div>
-      <div class="hero2__feat"><span class="hero2__feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 9h16M8 3v4M16 3v4"/></svg></span><div><b>Book with Confidence</b><span>Book now, decide later.</span></div></div>
-      <div class="hero2__feat"><span class="hero2__feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M4 13l1.5-4.5A2 2 0 017.4 7h9.2a2 2 0 011.9 1.5L20 13M4 13h16M4 13v4h2v-1.5h12V17h2v-4"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></span><div><b>Pick-up Service</b><span>Pick-up available</span></div></div>
-      <div class="hero2__book"><span>Daily Departures</span><a class="btn btn--gold" href="contact.html">Book Now</a></div>
-    </div></div>
+    <div class="hero2__trust">
+      <ul class="wrap hero2__trust-in" aria-label="Why travel with us">
+        <li class="hero2__trust-item"><span class="hero2__trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M5 20.5c.8-3.6 3.6-5.6 7-5.6s6.2 2 7 5.6"/></svg></span><div><strong>Private Tours</strong><span>Just you and your group, at your own pace.</span></div></li>
+        <li class="hero2__trust-item"><span class="hero2__trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h10a1.5 1.5 0 011.5 1.5v5.5A1.5 1.5 0 0114 14H9l-3.5 3v-3H4a1.5 1.5 0 01-1.5-1.5V7A1.5 1.5 0 014 5.5z"/><path d="M18 9.5h1.5A1.5 1.5 0 0121 11v5.5a1.5 1.5 0 01-1.5 1.5H19v2.5L16 18h-3.5a1.5 1.5 0 01-1.5-1.5"/><path d="M6.5 9.8h5M6.5 11.8h3"/></svg></span><div><strong>English-Speaking Guides</strong><span>Expert local driver-guides, start to finish.</span></div></li>
+        <li class="hero2__trust-item"><span class="hero2__trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13l1.5-4.5A2 2 0 017.4 7h9.2a2 2 0 011.9 1.5L20 13M4 13h16M4 13v4h2v-1.5h12V17h2v-4"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></span><div><strong>Pick-up Service</strong><span>From your hotel, riad or the airport.</span></div></li>
+        <li class="hero2__trust-item"><span class="hero2__trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16.5 14.5h1.5"/></svg></span><div><strong>Flexible Payment</strong><span>Small deposit, balance on arrival.</span></div></li>
+        <li class="hero2__trust-item"><span class="hero2__trust-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 7.9-7 9.5-4.1-1.6-7-5.2-7-9.5V6l7-3z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></svg></span><div><strong>Book with Confidence</strong><span>Book now, decide later.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="hrev" aria-labelledby="hrev-title">
+    <div class="wrap hrev__in">
+      <header class="hrev__head">
+        <p class="eyebrow">Traveler Reviews</p>
+        <h2 id="hrev-title">Reviews From Our Travellers</h2>
+      </header>
+      <div class="hrev__grid">
+        <figure class="hrev-feature">
+          <div class="hrev-feature__body">
+            <span class="hrev-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
+            <blockquote>“The camel trek at sunset and the night under the stars in Merzouga were the highlight of our year. Flawless private tour.”</blockquote>
+            <figcaption><span class="hrev-avatar hrev-avatar--gold" aria-hidden="true">LM</span><span><b>Lukas M.</b><small>Germany · 3 Days Desert Tour</small></span></figcaption>
+            <dl class="hrev-feature__stats">
+              <div><dt>Average rating</dt><dd>4.9<span aria-hidden="true">★</span></dd></div>
+              <div><dt>Travelers hosted</dt><dd>5,000+</dd></div>
+              <div><dt>Would recommend</dt><dd>98%</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <div class="hrev__cards">
+          <figure class="hrev-card">
+            <span class="hrev-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
+            <blockquote>“An amazing experience from start to finish! The desert camp was magical and our guide was incredible. Highly recommend!”</blockquote>
+            <figcaption><span class="hrev-avatar" aria-hidden="true">SL</span><span><b>Sarah L.</b><small>USA · 7 Days Morocco Tour</small></span></figcaption>
+          </figure>
+          <figure class="hrev-card">
+            <span class="hrev-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
+            <blockquote>“Everything was perfectly organized. The team was very professional and friendly. Morocco Tours Hub made our dream trip come true!”</blockquote>
+            <figcaption><span class="hrev-avatar" aria-hidden="true">JT</span><span><b>James T.</b><small>UK · 10 Days Morocco Tour</small></span></figcaption>
+          </figure>
+          <figure class="hrev-card">
+            <span class="hrev-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
+            <blockquote>“Two weeks of pure wonder — every hotel, driver and meal was thoughtfully chosen. We felt looked after the whole time.”</blockquote>
+            <figcaption><span class="hrev-avatar" aria-hidden="true">CD</span><span><b>Chloé D.</b><small>France · 14 Days Best of Morocco</small></span></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="hrev__more"><a class="hero-btn hero-btn--gold" href="reviews.html">Read More Reviews</a></div>
+    </div>
+  </section>
+
+  <section class="hdest" aria-labelledby="hdest-title">
+    <div class="wrap hdest__in">
+      <header class="hrev__head hdest__head">
+        <h2 id="hdest-title">Explore Morocco's Best Destinations</h2>
+        <p>From vibrant cities to breathtaking landscapes, each destination has a unique story to tell.</p>
+      </header>
+      <div class="hdest__track">
+      <ul class="hdest__grid" id="hdest-list">
+        <li><a class="hdest-card" href="destinations/marrakech.html">
+          <span class="hdest-card__media"><img src="/assets/images/mosque-sunset.jpg" alt="Koutoubia Mosque minaret above Marrakech at sunset" width="1600" height="1067" loading="lazy"><span class="hdest-card__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span></span>
+          <h3 class="hdest-card__name">Marrakech</h3>
+        </a></li>
+        <li><a class="hdest-card" href="destinations/fes.html">
+          <span class="hdest-card__media"><img src="/assets/images/fes.jpg" alt="Carved cedar door in a historic madrasa of Fes" width="1170" height="1560" loading="lazy"><span class="hdest-card__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span></span>
+          <h3 class="hdest-card__name">Fes</h3>
+        </a></li>
+        <li><a class="hdest-card" href="destinations/merzouga.html">
+          <span class="hdest-card__media"><img src="/assets/images/dune-screensaver.jpg" alt="Golden Erg Chebbi sand dunes near Merzouga" width="1080" height="1348" loading="lazy"><span class="hdest-card__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span></span>
+          <h3 class="hdest-card__name">Merzouga</h3>
+        </a></li>
+        <li><a class="hdest-card" href="destinations/chefchaouen.html">
+          <span class="hdest-card__media"><img src="/assets/images/chefchaouen-blue-steps.jpg" alt="Blue-washed stone steps in the medina of Chefchaouen" width="800" height="900" loading="lazy"><span class="hdest-card__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span></span>
+          <h3 class="hdest-card__name">Chefchaouen</h3>
+        </a></li>
+        <li><a class="hdest-card" href="destinations/essaouira.html">
+          <span class="hdest-card__media"><img src="/assets/images/essaouira-skala-port.jpg" alt="Skala sea tower above the blue fishing boats of Essaouira port" width="1000" height="667" loading="lazy"><span class="hdest-card__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span></span>
+          <h3 class="hdest-card__name">Essaouira</h3>
+        </a></li>
+        <li><a class="hdest-card" href="destinations/ouarzazate.html">
+          <span class="hdest-card__media"><img src="/assets/images/ouarzazate-kasbah.jpg" alt="Earthen kasbah towers in Ouarzazate" width="1600" height="1066" loading="lazy"><span class="hdest-card__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span></span>
+          <h3 class="hdest-card__name">Ouarzazate</h3>
+        </a></li>
+        <li><a class="hdest-card" href="tours/morocco-tours-from-casablanca.html">
+          <span class="hdest-card__media"><img src="/assets/images/casablanca.webp" alt="Hassan II Mosque on the Atlantic shore in Casablanca" width="4032" height="3024" loading="lazy"><span class="hdest-card__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span></span>
+          <h3 class="hdest-card__name">Casablanca</h3>
+        </a></li>
+        <li><a class="hdest-card" href="tours/morocco-tours-from-tangier.html">
+          <span class="hdest-card__media"><img src="/assets/images/tangier-cap-spartel-lighthouse.jpg" alt="Cap Spartel lighthouse among palm trees near Tangier" width="1000" height="667" loading="lazy"><span class="hdest-card__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span></span>
+          <h3 class="hdest-card__name">Tangier</h3>
+        </a></li>
+      </ul>
+        <button type="button" class="hdest__arrow" aria-controls="hdest-list" aria-label="More destinations"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+      <div class="hdest__more"><a class="hdest__btn" href="destinations/index.html">View All Destinations</a></div>
+    </div>
   </section>
 
   <section class="section intro-x">
@@ -328,38 +419,14 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="head-row"><div><h2>Explore Morocco's Best Destinations</h2><p>From vibrant cities to breathtaking landscapes, each destination has a unique story to tell.</p></div>
-        <a class="link-more" href="destinations/index.html">View All Destinations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="dest-grid"><a class="dest-card" href="destinations/marrakech.html"><img src="/assets/images/marrakech.webp" alt="Marrakech" loading="lazy" ><b>Marrakech</b></a><a class="dest-card" href="destinations/fes.html"><img src="/assets/images/fes.jpg" alt="Fes" loading="lazy" ><b>Fes</b></a><a class="dest-card" href="destinations/merzouga.html"><img src="/assets/images/merzouga-dune.jpg" alt="Merzouga" loading="lazy" ><b>Merzouga</b></a><a class="dest-card" href="destinations/chefchaouen.html"><img src="/assets/images/chefchaouen.jpg" alt="Chefchaouen" loading="lazy" ><b>Chefchaouen</b></a><a class="dest-card" href="destinations/essaouira.html"><img src="/assets/images/essaouira.jpg" alt="Essaouira" loading="lazy" ><b>Essaouira</b></a><a class="dest-card" href="destinations/ouarzazate.html"><img src="/assets/images/dades-road.jpg" alt="Ouarzazate & Dades" loading="lazy" ><b>Ouarzazate & Dades</b></a></div>
-    </div>
-  </section>
-
   <section class="section faqrev">
-    <div class="wrap faqrev__grid">
+    <div class="wrap faqrev__grid faqrev__grid--solo">
       <div class="faqrev__col">
         <p class="eyebrow">FAQ</p>
         <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
           <details class="faq-item"><summary>Are your Morocco tours private or in a group?<span class="faq-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="faq-item__a"><p>All our tours are private by default. You travel only with your own party, in a private vehicle with your own driver-guide, and the itinerary is yours to shape. If you'd prefer to share and save, just ask us about small-group options.</p></div></details><details class="faq-item"><summary>Is Morocco safe to travel to?<span class="faq-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="faq-item__a"><p>Yes. Morocco is one of the most welcoming and safe countries in the region for travellers, including families and solo women. Your private driver-guide is with you throughout, and we're reachable on WhatsApp before and during your trip.</p></div></details><details class="faq-item"><summary>Can I customise my itinerary?<span class="faq-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="faq-item__a"><p>Absolutely — every tour on this site is a starting point. We can shorten or extend it, add cities, change the pace, upgrade the hotels or design a completely new route around your dates and interests.</p></div></details><details class="faq-item"><summary>How do I book, and do I pay everything upfront?<span class="faq-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="faq-item__a"><p>Just send us a message with your dates and group size. We'll confirm availability and a tailored quote, then hold your tour with a small deposit. The balance is usually settled at the start of your trip — no need to pay it all upfront.</p></div></details><details class="faq-item"><summary>Which payment methods do you accept?<span class="faq-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="faq-item__a"><p>We accept bank transfer for your deposit, and the remaining balance can be paid in cash (EUR, USD or MAD) or by card on arrival. We'll confirm the exact options when you book.</p></div></details><details class="faq-item"><summary>When is the best time to visit Morocco?<span class="faq-item__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="faq-item__a"><p>Spring (March to May) and autumn (September to November) are ideal, with warm days and comfortable desert nights. Winter suits the imperial cities and the Sahara by day, while summer is best on the Atlantic coast around Essaouira.</p></div></details>
         </div>
-      </div>
-      <div class="faqrev__col">
-        <p class="eyebrow">Traveler Reviews</p>
-        <h2>Reviews From Our Travellers</h2>
-        <div class="rev-stack">
-          <figure class="rev-quote">
-            <div class="rev-quote__top"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg></div><span class="rev-quote__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M9.5 7H4.5v6h3.2c0 2.4-1.1 3.6-3.2 3.6V19c3.6 0 5.5-2.4 5.5-6.2zm10 0h-5v6h3.2c0 2.4-1.1 3.6-3.2 3.6V19c3.6 0 5.5-2.4 5.5-6.2z" fill="currentColor" stroke="none"/></svg></span></div>
-            <blockquote>An amazing experience from start to finish! The desert camp was magical and our guide was incredible. Highly recommend!</blockquote>
-            <figcaption><span class="avatar" style="background:#c0913b">SL</span><span><b>Sarah L.</b><small>USA · 7 Days Morocco Tour</small></span></figcaption>
-          </figure><figure class="rev-quote">
-            <div class="rev-quote__top"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg></div><span class="rev-quote__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M9.5 7H4.5v6h3.2c0 2.4-1.1 3.6-3.2 3.6V19c3.6 0 5.5-2.4 5.5-6.2zm10 0h-5v6h3.2c0 2.4-1.1 3.6-3.2 3.6V19c3.6 0 5.5-2.4 5.5-6.2z" fill="currentColor" stroke="none"/></svg></span></div>
-            <blockquote>Everything was perfectly organized. The team was very professional and friendly. Morocco Tours Hub made our dream trip come true!</blockquote>
-            <figcaption><span class="avatar" style="background:#2e7d5b">JT</span><span><b>James T.</b><small>UK · 10 Days Morocco Tour</small></span></figcaption>
-          </figure>
-        </div>
-        <a class="link-more" href="reviews.html">Read More Reviews <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </section>

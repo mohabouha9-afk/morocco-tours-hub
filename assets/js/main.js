@@ -84,3 +84,27 @@ function moroccoForm(form) {
   }
   return false;
 }
+
+
+/* Homepage destinations (phone): one arrow slides to the next group of cards; at the end it turns round and goes back */
+(function () {
+  var btn = document.querySelector('.hdest__arrow');
+  if (!btn) return;
+  var list = document.getElementById(btn.getAttribute('aria-controls'));
+  if (!list) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function atEnd() { return list.scrollLeft >= list.scrollWidth - list.clientWidth - 2; }
+  function update() {
+    var back = atEnd();
+    btn.classList.toggle('is-back', back);
+    btn.setAttribute('aria-label', back ? 'Back to first destinations' : 'More destinations');
+  }
+  btn.addEventListener('click', function () {
+    var behavior = reduce ? 'auto' : 'smooth';
+    if (atEnd()) list.scrollTo({ left: 0, behavior: behavior });
+    else list.scrollBy({ left: list.clientWidth + 12, behavior: behavior });
+  });
+  list.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
