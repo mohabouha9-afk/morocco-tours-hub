@@ -132,3 +132,16 @@ function moroccoForm(form) {
     update();
   });
 })();
+
+/* homepage footer: link lists are open on tablet/laptop, tap-to-open on phones */
+(function () {
+  var cols = document.querySelectorAll('.hfoot__col');
+  if (!cols.length) return;
+  var wide = window.matchMedia('(min-width: 768px)');
+  function sync() { cols.forEach(function (d) { d.open = wide.matches; }); }
+  cols.forEach(function (d) {
+    d.addEventListener('toggle', function () { if (wide.matches && !d.open) d.open = true; });
+  });
+  if (wide.addEventListener) wide.addEventListener('change', sync); else wide.addListener(sync);
+  sync();
+})();

@@ -267,7 +267,7 @@ p { margin: 0 0 1em; }
 .header-contact:hover { background: var(--gold-deep); color: #fff; transform: translateY(-2px); box-shadow: 0 14px 30px rgba(165,118,42,.42); }
 .header-contact:active { transform: translateY(0) scale(.97); }
 .header-wa:focus-visible, .header-contact:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
-@media (max-width: 520px) { .header-wa, .header-contact { display: none; } }
+@media (max-width: 767px) { .header-wa, .header-contact { display: none; } }
 @media (max-width: 1320px) {
   .site-header--overlay .wrap { gap: 18px; }
   .site-header--overlay .nav a { padding-left: 9px; padding-right: 9px; }
@@ -294,7 +294,6 @@ p { margin: 0 0 1em; }
 .hero-btn--dark:hover svg { color: var(--gold-light); }
 .hero-btn:active { transform: translateY(0) scale(.97); }
 .hero-btn:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
-@media (max-width: 420px) { .hero2__actions { flex-direction: column; align-items: stretch; } }
 /* the hero now starts under the header */
 .site-header--overlay + .mobile-nav + main > .hero2:first-child { padding-top: 76px; }
 
@@ -345,17 +344,16 @@ p { margin: 0 0 1em; }
 .hero2__lang.is-cur { opacity: 1; background: rgba(255,255,255,.16); }
 .hero2__lang.is-cur b { color: var(--gold-light); }
 .hero2__grid { position: relative; z-index: 3; display: grid; grid-template-columns: 1.7fr 1fr; gap: 44px; align-items: center; padding-top: 64px; padding-bottom: 72px; }
-.hero2__title { font-size: clamp(2rem, 3.9vw, 3.6rem); line-height: 1; margin: 0; color: transparent;
-  white-space: nowrap; -webkit-text-stroke: 1.3px rgba(255,255,255,.92); text-transform: uppercase; letter-spacing: .01em; }
+.hero2__title { font-size: clamp(2rem, 3.6vw, 3.3rem); font-weight: 600; line-height: 1.05; margin: 0; color: #fff; white-space: nowrap; }
 .hero2__sub { font-family: var(--serif); font-size: clamp(1.15rem, 1.75vw, 1.55rem); line-height: 1.3; color: var(--gold-light); margin: 14px 0 0; }
 .hero2__text { max-width: 480px; color: rgba(255,255,255,.9); font-size: .95rem; line-height: 1.65; margin: 14px 0 26px; }
-.hero2__card { display: flex; align-items: center; gap: 14px; margin-top: 28px; max-width: 420px;
-  background: rgba(255,255,255,.12); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.24); border-radius: 10px; padding: 11px 16px; }
+.hero2__card { display: flex; align-items: center; gap: 12px; margin-top: 24px; max-width: 380px;
+  background: rgba(255,255,255,.12); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.24); border-radius: 10px; padding: 9px 14px; }
 .hero2__avatars { display: flex; align-items: center; flex: none; }
-.hero2__avatars img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -12px; }
+.hero2__avatars img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -12px; }
 .hero2__avatars img:first-child { margin-left: 0; }
 .hero2__avatars b { margin-left: 10px; font-family: var(--serif); font-size: .95rem; color: #fff; white-space: nowrap; }
-.hero2__card p { margin: 0; font-size: .82rem; color: rgba(255,255,255,.9); line-height: 1.42; }
+.hero2__card p { margin: 0; font-size: .78rem; color: rgba(255,255,255,.9); line-height: 1.42; }
 .hero2__stats { display: flex; flex-direction: column; gap: 24px; }
 .hstat { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; }
 .hstat svg { width: 46px; height: 46px; color: var(--gold-light); grid-row: span 2; }
@@ -384,7 +382,7 @@ p { margin: 0 0 1em; }
 /* desktop: header, hero text and trust strip share one 1280px container (20px padding),
    header is 116px tall over the photo (76px once scrolled), hero + strip fill the first screen */
 @media (min-width: 1025px) {
-  .site-header--overlay .wrap, .hero2__grid, .hero2__trust-in, .hrev__in, .hdest__in, .habout__in, .htours__in, .happart__in, .hfaq__in { max-width: 1280px; padding-left: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); padding-right: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); }
+  .site-header--overlay .wrap, .hero2__grid, .hero2__trust-in, .hrev__in, .hdest__in, .habout__in, .htours__in, .happart__in, .hfaq__in, .hfoot__in, .section.fleet > .wrap { max-width: 1280px; padding-left: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); padding-right: clamp(20px, calc(56px - (100vw - 1295px) / 2), 56px); }
   .site-header--overlay .wrap { height: 116px; padding-top: 16px; }
   .site-header--overlay .brand__logo { height: 68px; }
   .site-header--overlay.is-scrolled .wrap { height: 76px; padding-top: 0; }
@@ -399,13 +397,21 @@ p { margin: 0 0 1em; }
   .hero-btn { padding-top: 15px; padding-bottom: 15px; }
 }
 @media (max-width: 1024px) { .hero2__social, .hero2__langs { display: none; } }
+/* phones + tablets: the hero fills the first screen so the trust strip only shows after scrolling */
+@media (max-width: 1024px) { .hero2__grid { min-height: calc(100svh - 76px); align-content: end; } }
 @media (max-width: 900px) {
   .hero2__grid { grid-template-columns: 1fr; gap: 30px; padding-top: 74px; padding-bottom: 82px; }
   .hero2__stats { flex-direction: row; flex-wrap: wrap; gap: 18px 34px; }
 }
 @media (max-width: 560px) {
   .hstat b { font-size: 1.45rem; }
-  .hero2__card { flex-direction: column; align-items: flex-start; }
+  .hero2__card { gap: 10px; max-width: 100%; padding: 8px 12px; margin-top: 20px; }
+  .hero2__avatars img { width: 26px; height: 26px; margin-left: -9px; border-width: 1.5px; }
+  .hero2__avatars b { margin-left: 6px; font-size: .82rem; }
+  .hero2__card p { font-size: .7rem; line-height: 1.35; }
+  .hero2__actions { flex-wrap: nowrap; gap: 10px; }
+  .hero2__actions .hero-btn { flex: 0 1 auto; min-width: 0; padding: 11px 12px; gap: 7px; font-size: .68rem; letter-spacing: .05em; }
+  .hero2__actions .hero-btn svg { width: 16px; height: 16px; }
 }
 
 /* ==========================================================================
@@ -413,7 +419,7 @@ p { margin: 0 0 1em; }
    ========================================================================== */
 .hrev { background: var(--cream); padding: 72px 0 76px; }
 .hrev__head { text-align: center; margin-bottom: 36px; }
-.hrev__head h2 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin: 0; }
+.hrev__head h2 { margin: 0; }
 .hrev__head h2::after { content: ""; display: block; width: 56px; height: 2px; margin: 16px auto 0; background: var(--gold); border-radius: 2px; }
 .hrev__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 20px; align-items: stretch; }
 
@@ -465,7 +471,6 @@ p { margin: 0 0 1em; }
    Homepage destinations (after reviews): one row of 8 place cards with a pin badge
    ========================================================================== */
 .hdest { background: #fff; padding: 72px 0 76px; }
-.hdest__head p { max-width: 560px; margin: 14px auto 0; color: var(--muted); font-size: .95rem; }
 .hdest__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 16px; }
 .hdest-card { display: flex; flex-direction: column; height: 100%; background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
   box-shadow: 0 2px 10px rgba(14,42,65,.05); color: var(--navy); text-decoration: none;
@@ -522,7 +527,7 @@ p { margin: 0 0 1em; }
 .habout { background: #fff; padding: 8px 0 76px; }
 .habout__panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; max-width: 1160px; margin: 0 auto; align-items: center;
   background: var(--sand); border: 1px solid var(--line); border-radius: 16px; padding: 40px 44px; }
-.habout__body h2 { font-size: clamp(1.6rem, 2.6vw, 2.05rem); margin: 0; }
+.habout__body h2 { margin: 0; }
 .habout__body h2::after { content: ""; display: block; width: 56px; height: 2px; margin-top: 12px; background: var(--gold); border-radius: 2px; }
 .habout__body > p { margin: 16px 0 0; color: var(--muted); font-size: .92rem; line-height: 1.7; max-width: 34em; }
 .habout__body > p + p { margin-top: 10px; }
@@ -564,7 +569,6 @@ p { margin: 0 0 1em; }
    ========================================================================== */
 .htours { padding: 72px 0 76px; background: var(--cream); }
 .htours--desert { background: #fff; }
-.htours__head p { max-width: 560px; margin: 14px auto 0; color: var(--muted); font-size: .95rem; }
 .htours__track { position: relative; }
 .htours__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .htours__list > li { min-width: 0; }
@@ -726,8 +730,6 @@ p { margin: 0 0 1em; }
   .hfaq__grid { grid-template-columns: minmax(0, 1fr) 360px; gap: 44px; align-items: stretch; }
   .hfaq__grid .hfaq__faq, .hfaq__grid .hblog { max-width: none; margin: 0; display: flex; flex-direction: column; }
   .hfaq__grid .hfaq__list { flex: none; }
-  .hfaq__grid .hfaq__head { text-align: left; }
-  .hfaq__grid .hfaq__head h2::after { margin-left: 0; }
   .hfaq__grid .hfaq__more { margin-top: auto; padding-top: 28px; justify-content: flex-start; }
 }
 /* full FAQ page (faq.html): grouped questions + closing contact box */
@@ -761,35 +763,10 @@ p { margin: 0 0 1em; }
 }
 
 /* ==========================================================================
-   SEO content block (two columns + central arch)
-   ========================================================================== */
-.seo-x__head { text-align: center; max-width: 760px; margin: 0 auto 46px; }
-.seo-x__kicker { font-size: 1.7rem; color: var(--gold-deep); margin: 0 0 6px; }
-.seo-x__head h2 { margin: 0; }
-.seo-x__grid { display: grid; grid-template-columns: 1fr 0.86fr 1fr; gap: 46px; align-items: start; }
-.seo-x__col { display: flex; flex-direction: column; gap: 30px; }
-.seo-x__block h3 { font-size: 1.26rem; margin: 0 0 12px; }
-.seo-x__block p { color: var(--muted); line-height: 1.75; margin: 0; }
-.seo-x__block a { color: var(--gold-deep); font-weight: 600; }
-.seo-x__block a:hover { text-decoration: underline; }
-.seo-x__media { position: relative; }
-.seo-x__arch { position: sticky; top: 96px; aspect-ratio: 3 / 4.1; padding: 8px;
-  -webkit-mask: var(--arch); mask: var(--arch);
-  background: linear-gradient(160deg, var(--gold-light), var(--gold-deep));
-  box-shadow: 0 24px 50px rgba(14,42,65,.18); }
-.seo-x__arch img { display: block; width: 100%; height: 100%; object-fit: cover; -webkit-mask: var(--arch); mask: var(--arch); }
-@media (max-width: 980px) {
-  .seo-x__grid { grid-template-columns: 1fr; gap: 34px; }
-  .seo-x__media { order: -1; max-width: 400px; margin: 0 auto; }
-  .seo-x__arch { position: static; }
-}
-
-/* ==========================================================================
    Homepage "What Sets Us Apart" (after the tours): simple like the reference — white bg,
    6 light cards (gold line icon, uppercase title, short text). PC 3x2, tablet 2 cols, phone swipes.
    ========================================================================== */
 .happart { background: #fff; padding: 64px 0 68px; }
-.happart__head p { max-width: 560px; margin: 14px auto 0; color: var(--muted); font-size: .95rem; }
 .happart__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .happart__grid > li { min-width: 0; }
 .happart-card { height: 100%; padding: 24px 24px 26px; border-radius: 10px; background: var(--sand); border: 1px solid var(--line); }
@@ -811,7 +788,6 @@ p { margin: 0 0 1em; }
 /* ---- Fleet / transport ------------------------------------------------- */
 .fleet__head { text-align: center; max-width: 790px; margin: 0 auto 46px; }
 .fleet__head h2 { margin: 4px 0 14px; }
-.fleet__intro { color: var(--muted); line-height: 1.8; margin: 0; }
 .fleet__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; align-items: stretch; }
 .fleet-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
   box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease; }
@@ -834,8 +810,7 @@ p { margin: 0 0 1em; }
 /* phone: smaller head + the 3 vehicles in one compact row that swipes sideways (like the tour rows) */
 @media (max-width: 640px) {
   .fleet__head { margin-bottom: 26px; }
-  .fleet__head h2 { font-size: 1.6rem; margin-bottom: 10px; }
-  .fleet__intro { font-size: .88rem; line-height: 1.65; }
+  .fleet__head h2 { margin-bottom: 10px; }
   .fleet__grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 66%; gap: 12px; overflow-x: auto;
     scroll-snap-type: x mandatory; scrollbar-width: none; padding: 2px 2px 8px; margin: 0 -2px; }
   .fleet__grid::-webkit-scrollbar { display: none; }
@@ -972,6 +947,51 @@ p { margin: 0 0 1em; }
 .cta__inner { position: relative; padding: 68px 0; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
 .cta__inner .script { font-size: 2.2rem; color: var(--gold-light); }
 .cta__inner h3 { color: #fff; font-size: 1.15rem; font-family: var(--sans); font-weight: 400; margin: 6px 0 0; opacity: .9; }
+/* ==========================================================================
+   Homepage layout rhythm (owner, 2026-11-12): one cream background for every section,
+   simple one-line titles starting on the left, 64px between sections (56px on phones)
+   ========================================================================== */
+.hrev, .hdest, .habout, .htours, .htours--desert, .happart, .section.fleet, .hfaq { background: var(--cream); padding: 32px 0; }
+.hrev { padding-top: 64px; }
+.hfaq { padding-bottom: 64px; }
+.hrev__head, .fleet__head { text-align: center; max-width: none; margin: 0 0 24px; }
+/* one section-title size everywhere: 24px on phones → 30px on laptops */
+.hrev__head h2, .fleet__head h2, .habout__body h2 { margin: 0; font-size: clamp(1.5rem, 1.25rem + .75vw, 1.875rem); font-weight: 600; line-height: 1.2; }
+.hrev__head h2::after, .fleet__head h2::after { content: ""; display: block; width: 44px; height: 2px; margin: 12px auto 0; background: var(--gold); border-radius: 2px; }
+.hfaq__head { text-align: left; }
+.hfaq__head h2::after { margin-left: 0; }
+/* panels and cards that were sand-on-white are white-on-cream now */
+.habout__panel, .happart-card { background: #fff; }
+@media (max-width: 680px) {
+  .hrev, .hdest, .habout, .htours, .htours--desert, .happart, .section.fleet, .hfaq { padding: 28px 0; }
+  .hrev { padding-top: 48px; }
+  .hfaq { padding-bottom: 56px; }
+  .hrev__head, .fleet__head { margin-bottom: 18px; }
+}
+/* homepage closing photo banner */
+.hcta { position: relative; isolation: isolate; overflow: hidden; color: #fff; text-align: center; }
+.hcta__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; }
+.hcta::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10,32,51,.72) 0%, rgba(10,32,51,.5) 45%, rgba(10,32,51,.78) 100%); }
+.hcta::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.hcta__inner { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
+.hcta__kicker { margin: 0 0 10px; font-family: var(--sans); font-weight: 600; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-light); }
+.hcta h2 { margin: 0; color: #fff; font-size: clamp(1.3rem, .9rem + 1.5vw, 2.1rem); line-height: 1.2; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+.hcta__sub { margin: 10px auto 0; font-size: .95rem; color: rgba(255,255,255,.9); }
+.hcta__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+.hcta__actions .hero-btn { padding: 11px 20px; font-size: .78rem; }
+.hcta__actions .hero-btn svg { width: 17px; height: 17px; }
+.hcta__quote { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.75); }
+.hcta__quote:hover { background: #fff; border-color: #fff; color: var(--navy); transform: translateY(-2px); }
+@media (max-width: 640px) {
+  .hcta__inner { padding: 40px 16px 42px; }
+  .hcta__kicker { font-size: .66rem; margin-bottom: 8px; }
+  .hcta__sub { font-size: .84rem; margin-top: 8px; }
+  .hcta__bg { object-position: 60% 50%; }
+  .hcta__actions { flex-wrap: nowrap; gap: 10px; margin-top: 20px; }
+  .hcta__actions .hero-btn { flex: 0 1 auto; min-width: 0; padding: 8px 12px; gap: 6px; font-size: .64rem; letter-spacing: .05em; border-radius: 5px; }
+  .hcta__actions .hero-btn svg { width: 14px; height: 14px; }
+}
+@media (max-width: 360px) { .hcta__actions { flex-direction: column; } .hcta__actions .hero-btn { flex: none; padding: 11px 12px; } }
 
 /* ==========================================================================
    Footer
@@ -995,6 +1015,123 @@ p { margin: 0 0 1em; }
 .site-footer__bar { border-top: 1px solid rgba(255,255,255,.1); padding: 18px 0; display: flex; justify-content: space-between; gap: 16px; font-size: .82rem; flex-wrap: wrap; }
 .site-footer__bar a { margin-left: 20px; }
 .site-footer__bar a:hover { color: var(--gold-light); }
+/* homepage footer (8 blocks: who we are, why book, desert tours, contact, by city, explore, reviews, follow) */
+.hfoot { position: relative; background: var(--navy-deep); color: rgba(255,255,255,.72); font-size: .88rem; }
+.hfoot::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.hfoot__grid { display: grid; gap: 0; padding: 40px 0 8px;
+  grid-template-areas: "about" "contact" "why" "desert" "city" "explore" "praise" "follow"; }
+.hfoot__about { grid-area: about; } .hfoot__contact { grid-area: contact; } .hfoot__col--why { grid-area: why; }
+.hfoot__col--desert { grid-area: desert; } .hfoot__col--city { grid-area: city; } .hfoot__col--explore { grid-area: explore; }
+.hfoot__praise { grid-area: praise; } .hfoot__follow { grid-area: follow; }
+.hfoot p { margin: 0; line-height: 1.65; }
+.hfoot a { color: inherit; transition: color .2s; }
+.hfoot a:hover { color: var(--gold-light); }
+.hfoot a:focus-visible, .hfoot summary:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; border-radius: 4px; }
+.hfoot__h { margin: 0 0 14px; color: #fff; font-family: var(--serif); font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+/* who we are */
+.hfoot__about { text-align: center; padding-bottom: 22px; }
+.hfoot__logo { display: inline-block; margin-bottom: 14px; }
+.hfoot__logo img { display: block; width: auto; height: 58px; }
+.hfoot__about .hfoot__h { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.hfoot__about p { max-width: 340px; margin: 0 auto; }
+.hfoot__more { display: none; }
+/* accordion columns (open on laptop, tap to open on phones) */
+.hfoot__col { border-top: 1px solid rgba(255,255,255,.1); }
+.hfoot__col summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 0; cursor: pointer; list-style: none; }
+.hfoot__col summary::-webkit-details-marker { display: none; }
+.hfoot__col summary .hfoot__h { margin: 0; font-size: 1rem; }
+.hfoot__chev { width: 18px; height: 18px; flex: none; color: var(--gold-light); transition: transform .25s ease; }
+.hfoot__col[open] .hfoot__chev { transform: rotate(180deg); }
+.hfoot__col[open] > ul { padding-bottom: 16px; }
+.hfoot__links { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.hfoot__links a { display: inline-block; padding: 5px 0; }
+.hfoot__why { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.hfoot__why li { display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; }
+.hfoot__why svg { width: 16px; height: 16px; flex: none; margin-top: 3px; color: var(--gold-light); }
+.hfoot__why b { color: #fff; font-weight: 600; }
+/* contact */
+.hfoot__contact { padding-bottom: 26px; }
+.hfoot__contact .hfoot__h { text-align: center; }
+.hfoot__btns { display: flex; gap: 10px; justify-content: center; }
+.hfoot__btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex: 1 1 0; max-width: 170px; padding: 11px 14px; border: 1px solid transparent; border-radius: 6px;
+  font-family: var(--sans); font-weight: 600; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; transition: transform .2s cubic-bezier(.2,.8,.2,1), background-color .2s, border-color .2s; }
+.hfoot__btn svg { width: 17px; height: 17px; flex: none; }
+.hfoot .hfoot__btn--wa { background: var(--gold); color: #fff; }
+.hfoot .hfoot__btn--wa:hover { background: var(--gold-deep); color: #fff; transform: translateY(-2px); }
+.hfoot .hfoot__btn--call { border-color: rgba(255,255,255,.4); color: #fff; }
+.hfoot .hfoot__btn--call:hover { border-color: var(--gold-light); color: var(--gold-light); transform: translateY(-2px); }
+.hfoot__btn:active { transform: scale(.97); }
+.hfoot__lines { list-style: none; margin: 14px 0 0; padding: 0; display: grid; justify-items: center; }
+.hfoot__lines li { display: flex; align-items: center; gap: 10px; padding: 5px 0; min-width: 0; }
+.hfoot__lines a, .hfoot__lines span { min-width: 0; overflow-wrap: anywhere; }
+.hfoot__lines svg { width: 17px; height: 17px; flex: none; color: var(--gold-light); }
+/* reviews & praise */
+.hfoot__praise { border-top: 1px solid rgba(255,255,255,.1); padding: 22px 0 0; display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: center; }
+.hfoot__praise .hfoot__h { grid-column: 1 / -1; }
+.hfoot__score { display: flex; align-items: center; gap: 12px; }
+.hfoot__score b { font-family: var(--serif); font-size: 2.4rem; line-height: 1; color: var(--gold-light); }
+.hfoot__stars { display: flex; gap: 2px; color: var(--gold-light); }
+.hfoot__stars svg { width: 14px; height: 14px; }
+.hfoot__score small { display: block; margin-top: 4px; font-size: .78rem; }
+.hfoot__note { display: none; }
+.hfoot__textlinks { display: grid; gap: 6px; justify-items: end; font-size: .78rem; white-space: nowrap; }
+.hfoot__textlinks a { color: #fff; text-decoration: underline; text-decoration-color: rgba(217,180,100,.6); text-underline-offset: 3px; }
+/* follow + payment */
+.hfoot__follow { padding: 22px 0 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
+.hfoot__follow .hfoot__h { margin: 0; font-size: .95rem; }
+.hfoot__social { display: flex; gap: 8px; }
+.hfoot__social a { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.08); color: #fff; transition: background-color .2s, color .2s, transform .2s; }
+.hfoot__social a:hover { background: var(--gold); color: #fff; transform: translateY(-2px); }
+.hfoot__social svg { width: 18px; height: 18px; }
+.hfoot__h--pay { display: none; }
+.hfoot__pay { flex-basis: 100%; font-size: .8rem; color: rgba(255,255,255,.6); }
+/* bottom bar */
+.hfoot__bar { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 18px; padding: 16px 0 84px; border-top: 1px solid rgba(255,255,255,.1); font-size: .76rem; text-align: center; color: rgba(255,255,255,.55); }
+.hfoot__bar nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; }
+@media (min-width: 768px) {
+  .hfoot__grid { gap: 36px 40px; padding: 56px 0 40px; grid-template-columns: 1fr 1fr;
+    grid-template-areas: "about contact" "why desert" "city explore" "praise follow"; }
+  .hfoot__about { text-align: left; padding: 0; }
+  .hfoot__about p { margin: 0; }
+  .hfoot__more { display: block; margin-top: 10px !important; }
+  .hfoot__about .hfoot__h { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; }
+  .hfoot__logo { margin-bottom: 18px; }
+  .hfoot__col, .hfoot__praise { border-top: 0; }
+  .hfoot__col summary { padding: 0; margin-bottom: 14px; cursor: default; pointer-events: none; }
+  .hfoot__col summary .hfoot__h { font-size: 1.05rem; }
+  .hfoot__chev { display: none; }
+  .hfoot__col[open] > ul { padding-bottom: 0; }
+  .hfoot__contact { padding: 0; }
+  .hfoot__contact .hfoot__h { text-align: left; }
+  .hfoot__follow .hfoot__h--pay { display: block; }
+  .hfoot__btns { justify-content: flex-start; margin-bottom: 14px; }
+  .hfoot__lines { display: block; margin: 0; }
+  .hfoot__praise { display: block; padding: 0; }
+  .hfoot__score { padding: 16px 18px; border: 1px solid rgba(217,180,100,.35); border-radius: 10px; background: rgba(255,255,255,.03); }
+  .hfoot__note { display: block; margin: 12px 0 8px; }
+  .hfoot__textlinks { justify-items: start; font-size: .84rem; }
+  .hfoot__follow { display: block; padding: 0; }
+  .hfoot__follow .hfoot__h { margin-bottom: 14px; font-size: 1.05rem; }
+  .hfoot__h--pay { margin-top: 26px !important; }
+  .hfoot__pay { font-size: .84rem; }
+  .hfoot__bar { flex-direction: row; justify-content: space-between; margin-top: 0; padding: 18px 76px 18px 0; text-align: left; }
+}
+@media (min-width: 1025px) {
+  .hfoot__grid { grid-template-columns: 1.25fr 1fr 1.05fr 1.1fr; gap: 44px 48px; padding: 64px 0 48px;
+    grid-template-areas: "about why desert contact" "city explore praise follow"; }
+}
+/* floating WhatsApp button (homepage) */
+.wa-float { position: fixed; right: 22px; bottom: 22px; z-index: 90; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
+  background: #25d366; color: #fff; box-shadow: 0 10px 26px rgba(10,32,51,.35); transition: transform .2s cubic-bezier(.2,.8,.2,1), box-shadow .2s; }
+.wa-float svg { width: 30px; height: 30px; }
+.wa-float:hover { color: #fff; transform: translateY(-3px) scale(1.05); box-shadow: 0 14px 30px rgba(10,32,51,.42); }
+.wa-float:active { transform: scale(.95); }
+.wa-float:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .wa-float { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); width: 50px; height: 50px; }
+  .wa-float svg { width: 27px; height: 27px; }
+}
+@media (prefers-reduced-motion: reduce) { .wa-float, .hfoot__btn, .hfoot__social a, .hfoot__chev { transition: none; } }
 .lang--footer { gap: 6px; }
 .lang--footer a, .lang--footer .lang__cur { margin-left: 0; padding: 3px 8px; color: rgba(255,255,255,.7); }
 .lang--footer .lang__code { display: inline; }
@@ -1253,3 +1390,51 @@ p { margin: 0 0 1em; }
 .mobile-nav.open .mobile-nav__panel { transform: translateX(0); }
 .mobile-nav a { display: block; padding: 12px 6px; border-bottom: 1px solid var(--line); font-weight: 500; color: var(--navy); }
 .mobile-nav__close { float: right; background: none; border: 0; font-size: 1.6rem; cursor: pointer; color: var(--navy); }
+
+/* ==========================================================================
+   Homepage typography = the reference site (measured 2026-11-12 at 1366 and 375):
+   Oswald for headings, menu, buttons and labels (mostly uppercase), Poppins for body text.
+   Scoped to body.home so the other pages keep their look until the rollout.
+   ========================================================================== */
+body.home { --serif: "Oswald", "Arial Narrow", sans-serif; }
+/* hero: h1 52px / 36px, sub line, 15px body */
+.home .hero2__title { font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem); font-weight: 700; line-height: 1.08; letter-spacing: .01em; text-transform: uppercase; }
+.home .hero2__sub { font-weight: 400; font-size: clamp(1.1rem, .95rem + .6vw, 1.4rem); letter-spacing: .01em; }
+.home .hero2__text { font-size: .94rem; line-height: 1.63; }
+.home .hero2__avatars b { font-weight: 600; letter-spacing: .02em; }
+/* menu (overlay header) */
+.home .site-header--overlay .nav > a, .home .site-header--overlay .nav__item > a { font-family: var(--serif); font-weight: 500; font-size: .94rem; letter-spacing: .08em; text-transform: uppercase; }
+/* buttons: Oswald 14px 600, small letter-spacing */
+.home .hero-btn, .home .header-contact, .home .hdest__btn, .home .hfoot__btn { font-family: var(--serif); font-weight: 600; letter-spacing: .07em; }
+.home .htour__cta { font-family: var(--serif); font-weight: 600; font-size: .78rem; letter-spacing: .09em; }
+.home .htour-more__title { font-family: var(--serif); font-size: .82rem; }
+/* section titles: 26px laptop / 21px phone, 700, uppercase */
+.home .hrev__head h2, .home .fleet__head h2, .home .habout__body h2 { font-size: clamp(1.3rem, 1.1rem + .6vw, 1.625rem); font-weight: 700; line-height: 1.1; letter-spacing: .03em; text-transform: uppercase; }
+/* labels: trust strip, stats, destination names, What Sets Us Apart, badges */
+.home .hero2__trust-item strong { font-family: var(--serif); font-size: .875rem; letter-spacing: .06em; }
+.home .hero2__trust-item span:not(.hero2__trust-ic) { font-size: .8125rem; }
+.home .habout-offer h3, .home .happart-card h3 { font-family: var(--serif); font-size: .8125rem; font-weight: 600; letter-spacing: .06em; }
+.home .habout-offer p { font-size: .78rem; }
+.home .habout__body > p { font-size: .94rem; line-height: 1.9; }
+.home .hdest-card__name { font-family: var(--serif); font-size: .8125rem; letter-spacing: .09em; }
+.home .htour__days, .home .htour__ribbon span { font-family: var(--serif); font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.home .happart-card p { font-size: .8125rem; line-height: 1.75; }
+/* tour and blog cards: Oswald 16.5px titles, 13px text */
+.home .htour__title { font-size: 1.03rem; font-weight: 600; line-height: 1.3; }
+.home .htour__desc { font-size: .8125rem; line-height: 1.75; }
+.home .htour__fact { font-size: .8125rem; }
+.home .hblog-card__title { font-size: 1rem; font-weight: 600; }
+.home .hblog-card__ex { font-size: .8125rem; }
+.home .fleet-card__body h3 { font-size: 1.15rem; font-weight: 600; letter-spacing: .02em; }
+/* reviews: Poppins 13.5px quotes, Oswald numbers */
+.home .hrev-card blockquote { font-size: .84rem; line-height: 1.85; }
+.home .hrev-feature blockquote { font-family: var(--sans); font-style: italic; font-size: .9rem; line-height: 1.7; }
+/* FAQ: Poppins 14px 500 questions, 13.5px answers */
+.home .hfaq-item summary h3 { font-size: .875rem; font-weight: 500; }
+.home .hfaq-item__a p { font-size: .84rem; line-height: 1.8; }
+/* closing banner + footer */
+.home .hcta h2 { font-weight: 700; letter-spacing: .03em; text-transform: uppercase; }
+.home .hcta__kicker { font-family: var(--serif); font-size: .82rem; letter-spacing: .14em; }
+.home .hfoot { font-size: .8125rem; }
+.home .hfoot__h { font-size: .8125rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.home .hfoot__col summary .hfoot__h { font-size: .875rem; }
