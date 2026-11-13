@@ -41,7 +41,7 @@ body {
   margin: 0;
   font-family: var(--sans);
   color: var(--ink);
-  background: #ffffff;
+  background: var(--cream); /* one cream page background on every page (owner, 2026-11-13) */
   line-height: 1.65;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -163,10 +163,6 @@ p { margin: 0 0 1em; }
 .browse-view[hidden] { display: none; }
 
 /* Start-elsewhere chips on city pages */
-.city-switch { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
-.city-switch span { font-size: .88rem; font-weight: 600; color: var(--muted); }
-.city-switch a { padding: 7px 15px; border: 1px solid var(--line); border-radius: 999px; font-size: .86rem; font-weight: 500; color: var(--navy); background: #fff; transition: .18s ease; }
-.city-switch a:hover { border-color: var(--gold); color: var(--gold-deep); }
 
 /* Blog article */
 .article__cat { display: inline-block; background: var(--gold); color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 5px 13px; border-radius: 999px; margin-bottom: 14px; }
@@ -192,10 +188,6 @@ p { margin: 0 0 1em; }
 .article__related a:hover { color: var(--gold-deep); }
 
 /* Blog category filter */
-.blog-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-.blog-filter button { padding: 8px 16px; border: 1px solid var(--line); background: #fff; border-radius: 999px; font-family: inherit; font-size: .86rem; font-weight: 500; color: var(--navy); cursor: pointer; transition: .18s ease; }
-.blog-filter button:hover { border-color: var(--gold); color: var(--gold-deep); }
-.blog-filter button.is-on { background: var(--navy); border-color: var(--navy); color: #fff; }
 
 .header-tools { display: flex; align-items: center; gap: 14px; }
 .lang { display: flex; align-items: center; gap: 4px; font-size: .82rem; font-weight: 500; color: var(--navy); }
@@ -918,7 +910,7 @@ p { margin: 0 0 1em; }
 /* ==========================================================================
    Reviews
    ========================================================================== */
-.reviews { background: var(--cream-2); }
+.reviews { background: transparent; } /* one cream page background (was a darker cream-2 band) */
 .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .review-card { background: #fff; border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
 .stars { display: flex; gap: 3px; color: var(--gold); margin-bottom: 14px; }
@@ -1167,11 +1159,6 @@ p { margin: 0 0 1em; }
 .overview figcaption { position: relative; margin-top: -34px; margin-left: 12px; margin-right: 12px; background: rgba(14,42,65,.82); color: #fff; font-size: .8rem; padding: 6px 12px; border-radius: 8px; z-index: 2; width: fit-content; }
 
 /* Category quick-nav (tours listing) */
-.cat-nav { position: sticky; top: 76px; z-index: 40; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.cat-nav .wrap { display: flex; gap: 8px; flex-wrap: wrap; padding: 14px 24px; }
-.cat-nav a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .86rem; font-weight: 500; color: var(--navy); background: #fff; transition: .18s ease; }
-.cat-nav a:hover { border-color: var(--gold); color: var(--gold-deep); }
-.cat-nav a b { background: var(--sand); color: var(--gold-deep); border-radius: 999px; padding: 1px 8px; font-size: .76rem; }
 .section[id] { scroll-margin-top: 150px; }
 
 /* Gallery (tour page) */
@@ -1239,7 +1226,7 @@ p { margin: 0 0 1em; }
 .itin-card__foot svg { width: 16px; height: 16px; }
 
 /* Enquiry form on tour page */
-.enquire-sec { background: #ffffff; }
+.enquire-sec { background: transparent; } /* sits on the cream page like every other section */
 .enquire { display: grid; grid-template-columns: 1fr 1.05fr; gap: 44px; align-items: start; }
 .enquire__intro h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
 .enquire__intro p { color: #33475a; }
@@ -1425,11 +1412,11 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
 :is(.home, .site2) .hfoot__h { font-size: .8125rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 :is(.home, .site2) .hfoot__col summary .hfoot__h { font-size: .875rem; }
 
-/* ===== Tours page: trust strip lifted into the hero (panel overlapping the photo bottom, placed like the reference contact page; old sand colours) ===== */
+/* ===== Inner pages: trust strip lifted into the hero (panel overlapping the photo bottom, placed like the reference contact page; warm near-white card so it stands out on the cream page, owner 2026-11-13) ===== */
 .page-hero--lift .page-hero__inner { padding: 66px 24px 84px; }
 .trust--lift { position: relative; z-index: 2; background: transparent; border-bottom: 0; margin-top: -56px; }
 .trust--lift .trust__grid {
-  background: var(--sand); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow-lg);
+  background: #fffdf9; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow-lg);
   padding: 8px 0; gap: 0;
 }
 .trust--lift .trust__item {
@@ -1456,7 +1443,7 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
 @media (max-width: 640px) {
   /* phones: strip sits right below the hero, not over the photo */
   .page-hero--lift .page-hero__inner { padding-bottom: 48px; }
-  .trust--lift { margin-top: 0; background: var(--sand); border-bottom: 1px solid var(--line); }
+  .trust--lift { margin-top: 0; background: #fffdf9; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .trust--lift .wrap { padding: 0; }
   .trust--lift .trust__grid { border: 0; border-radius: 0; box-shadow: none; }
   .trust--lift .trust__item { padding: 14px 12px; column-gap: 8px; }
@@ -1496,6 +1483,8 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
   }
   .site2 .tour-grid::-webkit-scrollbar { display: none; }
   .site2 .tour-grid > .htour { scroll-snap-align: start; }
+  /* a list with only one tour: the card sits in the middle, not stuck to the left */
+  .site2 .tour-grid:not(:has(> :nth-child(2))) { justify-content: center; }
   .site2 .htour__media img { height: 170px; }
 }
 /* inner pages: same section rhythm as the homepage — 32px top + 32px bottom (64px between sections),
@@ -1815,13 +1804,6 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
 .htour__meta svg { width: 13px; height: 13px; flex: none; }
 .htour--dt .htour__stars { margin-top: 6px; }
 /* listing: 4 promise cards under the hero */
-.site2 main > .page-hero + .dtl-feats { padding-top: 48px; }
-.dtl-feats__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.dtl-feats__grid li { display: flex; align-items: flex-start; gap: 12px; padding: 18px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
-.dtl-feats__ic { display: grid; place-items: center; width: 42px; height: 42px; flex: none; border-radius: 50%; background: var(--sand); color: var(--gold-deep); }
-.dtl-feats__ic svg { width: 21px; height: 21px; }
-.dtl-feats__grid b { display: block; font-family: var(--serif); font-size: .9rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--ink); line-height: 1.3; }
-.dtl-feats__grid small { display: block; margin-top: 3px; font-size: .8rem; color: var(--muted); line-height: 1.45; }
 /* listing: "add a day trip to your tour" strip */
 .dtl-combine__box { display: flex; align-items: center; gap: 20px; padding: 24px 28px; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow-sm); }
 .dtl-combine__ic { display: grid; place-items: center; width: 52px; height: 52px; flex: none; border-radius: 50%; background: var(--gold); color: #fff; }
@@ -1934,7 +1916,6 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
 .dt-others .hdest__more { margin-top: 32px; }
 
 @media (max-width: 1100px) {
-  .dtl-feats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .dt-grid { grid-template-columns: minmax(0, 1fr); }
   .dt-aside { max-width: 560px; }
   .dt-inc { grid-template-columns: 1fr 1fr; }
@@ -1948,11 +1929,6 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
   .dtl-combine__btns { width: 100%; padding-left: 72px; }
 }
 @media (max-width: 640px) {
-  .dtl-feats__grid { gap: 10px; }
-  .dtl-feats__grid li { flex-direction: column; gap: 8px; padding: 14px; }
-  .dtl-feats__ic { width: 36px; height: 36px; } .dtl-feats__ic svg { width: 18px; height: 18px; }
-  .dtl-feats__grid b { font-size: .78rem; }
-  .dtl-feats__grid small { font-size: .74rem; }
   .dtl-combine__box { flex-direction: column; align-items: flex-start; gap: 14px; padding: 20px; }
   .dtl-combine__btns { padding-left: 0; flex-wrap: wrap; }
   .dtl-combine__btns .hero-btn { flex: 1 1 auto; }
@@ -1976,3 +1952,202 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
   /* other trips: back to the standard phone swipe row (the 2/3-column rule above must not apply here) */
   .dt-others__list { grid-auto-columns: auto; grid-template-columns: repeat(3, 80%) 34%; }
 }
+
+/* ===== Tours-from-city pages (tours/morocco-tours-from-*.html): intro, category bar, "Prefer to start elsewhere?" box under the last tour list ===== */
+.cstart__title { font-size: clamp(1.3rem, 1.1rem + .6vw, 1.625rem); font-weight: 700; line-height: 1.2; letter-spacing: .03em; text-transform: uppercase; color: var(--navy); margin: 0; }
+.cstart__title::after { content: ""; display: block; width: 44px; height: 2px; margin-top: 12px; background: var(--gold); border-radius: 2px; }
+.cstart__intro p { margin: 18px 0 0; max-width: 78ch; font-size: .95rem; line-height: 1.85; color: #33475a; }
+@media (max-width: 640px) { .cstart__intro p { font-size: .9rem; line-height: 1.8; } }
+
+/* other start cities: one white box at the end of the tour lists */
+.cother__box { max-width: 1040px; margin: 0 auto; padding: 30px 32px 32px; text-align: center; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow-sm); }
+.cother__title { margin: 0; font-size: clamp(1.15rem, 1rem + .45vw, 1.375rem); font-weight: 700; line-height: 1.2; letter-spacing: .03em; text-transform: uppercase; color: var(--navy); }
+.cother__title::after { content: ""; display: block; width: 44px; height: 2px; margin: 12px auto 0; background: var(--gold); border-radius: 2px; }
+.cother__sub { margin: 14px auto 22px; max-width: 60ch; font-size: .92rem; color: var(--muted); }
+.cother__box ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.cother__box a { display: flex; align-items: center; gap: 8px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--cream); color: var(--navy); font-size: .85rem; font-weight: 500; line-height: 1.2; text-align: left; transition: border-color .18s ease, background-color .18s ease, transform .18s ease; }
+.cother__box a > svg:first-child { width: 16px; height: 16px; flex: none; color: var(--gold); }
+.cother__box a span { flex: 1; min-width: 0; }
+.cstart__chev { width: 14px; height: 14px; flex: none; color: var(--muted); transition: transform .18s ease; }
+.cother__box a:hover { border-color: var(--gold); background: #fff; }
+.cother__box a:hover .cstart__chev { transform: translateX(2px); color: var(--gold-deep); }
+.cother__box a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.cother__box a:active { transform: scale(.98); }
+@media (max-width: 1024px) {
+  /* tablets: 3 per row, a short last row stays centred */
+  .cother__box ul { display: flex; flex-wrap: wrap; justify-content: center; }
+  .cother__box li { flex: 0 1 calc((100% - 20px) / 3); }
+}
+@media (max-width: 640px) {
+  /* phones: compact chips that wrap, centred, no chevron */
+  .cother__box { padding: 22px 16px; }
+  .cother__sub { margin: 12px auto 16px; font-size: .86rem; }
+  .cother__box ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .cother__box li { flex: 0 0 auto; }
+  .cother__box a { padding: 8px 12px 8px 10px; gap: 6px; font-size: .8rem; }
+  .cother__box a > svg:first-child { width: 14px; height: 14px; }
+  .cstart__chev { display: none; }
+}
+
+/* category jump bar under the intro (sticky under the scrolled header) */
+.cat-nav { position: sticky; top: 76px; z-index: 40; background: rgba(250,246,238,.96); backdrop-filter: blur(8px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.cat-nav .wrap { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 12px 24px; }
+.cat-nav a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 6px; font-size: .84rem; font-weight: 500; color: var(--navy); background: #fff; white-space: nowrap; transition: border-color .18s ease, color .18s ease, transform .18s ease; }
+.cat-nav a:hover { border-color: var(--gold); color: var(--gold-deep); }
+.cat-nav a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.cat-nav a:active { transform: scale(.97); }
+.cat-nav a b { min-width: 22px; text-align: center; background: var(--gold); color: #fff; border-radius: 4px; padding: 1px 6px; font-size: .72rem; font-weight: 600; }
+@media (max-width: 1024px) {
+  /* phones + tablets: one sideways row instead of stacked chips */
+  .cat-nav .wrap { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding: 10px 16px; }
+  .cat-nav .wrap::-webkit-scrollbar { display: none; }
+  .cat-nav a { font-size: .8rem; padding: 7px 12px; }
+}
+
+/* tours-from-city, laptop: the tour-type buttons sit beside the intro text, same height as the text column
+   (the sticky .cat-nav bar under it is kept for tablets/phones only) */
+.cstart__cats { display: none; }
+@media (min-width: 1025px) {
+  .cstart__row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 48px; align-items: stretch; }
+  .cstart--cats .cstart__intro p { max-width: none; }
+  .cstart__cats { display: flex; flex-direction: column; gap: 14px; }
+  .cstart__cats-title { margin: 0; display: flex; align-items: center; gap: 12px; font-size: .95rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--navy); line-height: 1.2; }
+  .cstart__cats-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .cstart__cats-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 10px; }
+  /* only 2-3 tour types (Casablanca, Fes, Agadir, Tangier): one column, buttons stretch to the text height */
+  .cstart__cats-grid:not(:has(> a:nth-child(4))) { grid-template-columns: 1fr; }
+  .cstart__cat { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .cstart__cat small { font-size: .78rem; font-weight: 400; color: var(--muted); line-height: 1.4; }
+  .cstart__cats a:hover .cstart__cat small { color: var(--muted); }
+  .cstart__cats-grid:not(:has(> a:nth-child(4))) a { padding: 10px 18px; }
+  .cstart__cats-grid:not(:has(> a:nth-child(4))) .cstart__cat-name { font-size: .92rem; font-weight: 600; }
+  .cstart__cats a { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--navy); font-size: .86rem; font-weight: 500; line-height: 1.25; transition: border-color .18s ease, color .18s ease, transform .18s ease; }
+  .cstart__cats a:hover { border-color: var(--gold); color: var(--gold-deep); }
+  .cstart__cats a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .cstart__cats a:active { transform: scale(.98); }
+  .cstart__cats a b { flex: none; min-width: 24px; text-align: center; background: var(--gold); color: #fff; border-radius: 4px; padding: 2px 6px; font-size: .74rem; font-weight: 600; }
+  .cstart--cats + .cat-nav { display: none; }
+}
+
+/* Day Trips page: the 4 promises use the standard lifted trust strip (overlapping the hero bottom), 4 items instead of 5 */
+.trust--dt .trust__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 860px) { .trust--dt .trust__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+
+/* trial (owner 2026-11-13, screenshot ref): strip = warm near-white panel that lifts a little off the cream page; Tours from Marrakech only */
+.trust--pop .trust__grid { background: #fffdf9; }
+@media (max-width: 640px) { .trust--pop { background: #fffdf9; } }
+
+/* trial (owner 2026-11-13), Tours from Marrakech + About + Morocco by Experience + All Tours + all 6 Tours-from-city pages + Day Trips + the 13 day-trip pages: page and strip colours swapped —
+   page = warm near-white, trust strip = brand cream */
+body.page-swap { background: #fffdf9; }
+.page-swap .trust--lift .trust__grid { background: var(--cream); }
+@media (max-width: 640px) { .page-swap .trust--lift { background: var(--cream); } }
+.page-swap .cat-nav { background: rgba(255,253,249,.96); }
+/* About: its sections set their own cream background, and the Our Story panel was white on cream */
+.page-swap .habout, .page-swap .amv, .page-swap .adiff, .page-swap .avalues, .page-swap .team { background: transparent; }
+.page-swap .habout__panel { background: var(--cream); }
+/* Morocco by Experience: jump bar, experience sections and reviews + blog row set their own cream */
+.page-swap .xjump, .page-swap main > .xexp, .page-swap .hrev { background: transparent; }
+/* day-trip detail pages: their content, "Other Day Trips" and tab bar set their own cream */
+.page-swap main > .dt-body, .page-swap main > .dt-others { background: transparent; }
+.page-swap .dtnav { background: rgba(255,253,249,.96); backdrop-filter: blur(8px); }
+.page-swap .dt-prog__n { box-shadow: 0 0 0 4px #fffdf9; }
+
+/* ===== Blog page (blog.html)
+   Sticky topic bar (.bcat, follows you under the scrolled 76px header): 6 topic links that jump to
+   their section and light up navy for the section you are reading, + a round gold search icon that
+   opens a search field over the bar (filters the cards as you type; close with × or Esc).
+   Then one section per topic (.bsec, shared centred title) with its articles in ONE row:
+   the homepage slider (.htours__list--slider + gold arrows) on laptop/tablet, a swipe row on phones. ===== */
+.bcat { position: sticky; top: 76px; z-index: 40; background: rgba(250,246,238,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.bcat__bar { position: relative; display: flex; align-items: center; justify-content: center; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+.bcat__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; min-width: 0; }
+.bcat__list a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 10px 8px 12px; background: #fff; border: 1px solid var(--line); border-radius: 6px;
+  font-size: .84rem; font-weight: 500; color: var(--navy); white-space: nowrap; text-decoration: none;
+  transition: border-color .18s ease, color .18s ease, background-color .18s ease, transform .18s ease; }
+.bcat__list svg { width: 17px; height: 17px; color: var(--gold); flex: none; }
+.bcat__list b { min-width: 22px; padding: 1px 6px; border-radius: 4px; background: var(--cream-2); color: var(--gold-deep); font-size: .7rem; font-weight: 600; text-align: center; }
+.bcat__list a:hover { border-color: var(--gold); color: var(--gold-deep); }
+.bcat__list a:active { transform: scale(.97); }
+.bcat__list a:focus-visible, .bcat__toggle:focus-visible, .bsearch__close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.bcat__list a.is-on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.bcat__list a.is-on svg { color: var(--gold-light); }
+.bcat__list a.is-on b { background: var(--gold); color: #fff; }
+.bcat__toggle { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--gold); color: #fff; cursor: pointer;
+  transition: background-color .18s ease, transform .18s ease; }
+.bcat__toggle svg { width: 18px; height: 18px; }
+.bcat__toggle:hover { background: var(--gold-deep); }
+.bcat__toggle:active { transform: scale(.92); }
+/* search field: covers the bar while open */
+.bsearch { position: absolute; inset: 8px 24px; display: flex; align-items: center; gap: 10px; padding: 0 6px 0 16px; background: #fff;
+  border: 1.5px solid var(--gold); border-radius: 6px; box-shadow: var(--shadow-sm); animation: bsearch-in .2s ease; }
+.bsearch[hidden] { display: none; }
+@keyframes bsearch-in { from { opacity: 0; transform: scale(.98); } to { opacity: 1; transform: none; } }
+.bsearch > svg { width: 18px; height: 18px; color: var(--gold); flex: none; }
+.bsearch__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.bsearch input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; font: inherit; font-size: .9rem; color: var(--ink); outline: none; }
+.bsearch input::-webkit-search-cancel-button { display: none; }
+.bsearch__count { flex: none; font-size: .78rem; font-weight: 600; color: var(--gold-deep); }
+.bsearch__close { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 50%; background: var(--cream-2); color: var(--navy); cursor: pointer;
+  transition: background-color .18s ease, transform .18s ease; }
+.bsearch__close svg { width: 16px; height: 16px; }
+.bsearch__close:hover { background: var(--line); }
+.bsearch__close:active { transform: scale(.92); }
+.bcat.is-search .bcat__list, .bcat.is-search .bcat__toggle { visibility: hidden; }
+.bsearch__empty { max-width: 1280px; margin: 40px auto 0; padding: 0 24px; text-align: center; font-size: .92rem; color: var(--muted); }
+.bsearch__empty[hidden] { display: none; }
+/* topic sections: jump target sits under the header + bar */
+.bsec { scroll-margin-top: 136px; }
+.bsec[hidden] { display: none; }
+.bsec { padding: 32px 0; }
+.bsecs > .bsec:first-child { padding-top: 48px; }
+.bsecs > .bsec:last-child { padding-bottom: 64px; }
+.bcat__all { display: none; }
+.bsec .htours__list > li[hidden] { display: none; }
+/* site-wide fix: the tablet rule ".htours__list { repeat(2,…) }" also hit every slider row (homepage desert +
+   excursions, experiences, blog) and squashed its first 2 cards to 0px wide. Tablet only, so the phone
+   end-link layouts (repeat(6, 80%) 34%) are untouched. */
+@media (min-width: 641px) and (max-width: 1100px) { .htours__list.htours__list--slider { grid-template-columns: none; } }
+/* blog cards = the tour card (.htour): topic in the navy photo badge, title, 3-line summary, outlined READ ARTICLE */
+.htour--blog .htour__desc { margin-bottom: 16px; }
+/* owner: the old "Read more →" text link instead of the READ ARTICLE button; arrow slides on card hover */
+.htour--blog .link-more { margin-top: auto; align-self: flex-start; }
+.htour--blog .htour__link:hover .link-more svg { transform: translateX(4px); }
+@media (max-width: 1024px) {
+  .bcat__bar { justify-content: flex-start; padding-left: 0; padding-right: 0; }
+  .bcat__list { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding: 2px 0 2px 24px; scroll-padding-left: 24px; }
+  .bcat__list::-webkit-scrollbar { display: none; }
+  .bcat__list li { flex: none; }
+  .bcat__list li:last-child { padding-right: 4px; }
+  .bcat__toggle { margin-right: 24px; }
+  .bsearch { inset: 8px 16px; }
+}
+@media (max-width: 640px) {
+  .bcat__bar { padding-top: 10px; padding-bottom: 10px; gap: 8px; }
+  .bcat__list { padding-left: 16px; }
+  .bcat__list a { padding: 7px 9px 7px 10px; font-size: .78rem; gap: 6px; }
+  .bcat__list svg { width: 15px; height: 15px; }
+  .bcat__toggle { width: 36px; height: 36px; margin-right: 16px; }
+  .bsearch { inset: 6px 12px; padding-left: 12px; }
+  .bsearch input { font-size: 16px; } /* 16px stops iPhone zooming in on focus */
+  .bsec { scroll-margin-top: 126px; }
+  .bsec { padding: 28px 0; }
+  .bsecs > .bsec:first-child { padding-top: 36px; }
+}
+/* laptop (owner): no sections, no rows — one plain grid of all the articles, 4 per row;
+   the topic buttons (incl. All articles) filter it instead of jumping */
+@media (min-width: 1025px) {
+  .bcat__all { display: block; }
+  /* 7 buttons + search on one line */
+  .bcat__bar { gap: 10px; }
+  .bcat__list { gap: 6px; flex-wrap: nowrap; }
+  .bcat__list a { gap: 7px; padding: 7px 8px 7px 10px; font-size: .8rem; }
+  .bcat__list svg { width: 16px; height: 16px; }
+  .bsecs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 20px; max-width: var(--wrap); margin: 0 auto; padding: 48px 24px 64px; }
+  .bsecs > .bsec, .bsecs > .bsec > .wrap, .bsecs .htours__track, .bsecs .htours__list { display: contents; }
+  .bsecs > .bsec[hidden], .bsecs > .bsec.is-out, .bsecs .htours__list > li[hidden] { display: none; }
+  .bsecs .head-row { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: 0; }
+  .bsecs .htours__nav { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .bsearch { animation: none; } }

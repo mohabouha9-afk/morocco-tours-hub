@@ -85,137 +85,580 @@
       <h1>Morocco Travel Blog<span class="script">Tips, stories & inspiration</span></h1>
     </div>
   </section>
-  <section class="section"><div class="wrap">
-    <div class="blog-filter">
-      <button type="button" class="is-on" data-cat="all">All</button>
-      <button type="button" data-cat="Itineraries">Itineraries</button><button type="button" data-cat="Desert">Desert</button><button type="button" data-cat="Things to Do">Things to Do</button><button type="button" data-cat="Best Time">Best Time</button><button type="button" data-cat="Travel Tips">Travel Tips</button><button type="button" data-cat="Culture">Culture</button>
+  <nav class="bcat" aria-label="Blog topics and search">
+    <div class="wrap bcat__bar">
+      <ul class="bcat__list">
+        <li class="bcat__all"><a href="#all"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All articles</span><b>62</b></a></li>
+        <li><a href="#itineraries"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><span>Itineraries</span><b>12</b></a></li>
+        <li><a href="#sahara-desert"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg><span>Sahara Desert</span><b>9</b></a></li>
+        <li><a href="#cities-places"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg><span>Cities &amp; Places</span><b>12</b></a></li>
+        <li><a href="#when-to-go"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>When to Go</span><b>14</b></a></li>
+        <li><a href="#planning"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg><span>Planning &amp; Practical</span><b>11</b></a></li>
+        <li><a href="#travel-styles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="6.5" r="2.5"/><path d="M3 19v-1c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4v1"/><circle cx="16.5" cy="9" r="2"/><path d="M13.5 19v-.5c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5v.5"/></svg><span>Travel Styles</span><b>4</b></a></li>
+      </ul>
+      <button type="button" class="bcat__toggle" aria-expanded="false" aria-controls="bsearch" aria-label="Search articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+      <form class="bsearch" id="bsearch" role="search" hidden>
+        <label class="bsearch__label" for="bsearch-q">Search 62 articles</label>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input id="bsearch-q" type="search" placeholder="Search articles, e.g. Sahara, packing, Fes" autocomplete="off" enterkeyhint="search">
+        <span class="bsearch__count" aria-live="polite"></span>
+        <button type="button" class="bsearch__close" aria-label="Close search"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </form>
     </div>
-    <div class="blog-grid"><article class="blog-card" data-cat="Desert"><a href="blog/morocco-desert-tours-complete-guide.html"><img src="/assets/images/camel-caravan.webp" alt="Morocco Desert Tours: The Complete Guide for First-Time Visitors" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Desert</span><h3><a href="blog/morocco-desert-tours-complete-guide.html" style="color:inherit">Morocco Desert Tours: The Complete Guide for First-Time Visitors</a></h3><p>Everything a first-time visitor needs to know before booking a Morocco Sahara desert tour — Merzouga vs Zagora, how many days, private vs shared, desert camps, best time to go, packing and costs.</p>
-      <a class="link-more" href="blog/morocco-desert-tours-complete-guide.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-marrakech.html"><img src="/assets/images/marrakech.webp" alt="Best Things to Do in Marrakech" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-marrakech.html" style="color:inherit">Best Things to Do in Marrakech</a></h3><p>From the buzz of Jemaa el-Fnaa and the souks to palaces, gardens and Atlas day trips — the top things to do in Marrakech, plus how many days you need and the best time to visit.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-marrakech.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-fes.html"><img src="/assets/images/fes.jpg" alt="Best Things to Do in Fes" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-fes.html" style="color:inherit">Best Things to Do in Fes</a></h3><p>The world's largest car-free medina, medieval madrasas, the famous tanneries and artisan souks — the best things to do in Fes, Morocco's spiritual and cultural capital.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-fes.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-chefchaouen.html"><img src="/assets/images/chefchaouen.jpg" alt="Best Things to Do in Chefchaouen" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-chefchaouen.html" style="color:inherit">Best Things to Do in Chefchaouen</a></h3><p>Morocco's Blue Pearl in the Rif Mountains — wander the blue-washed medina, catch sunset at the Spanish Mosque, hike to waterfalls, and shop for local crafts.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-chefchaouen.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/ultimate-7-day-morocco-itinerary.html"><img src="/assets/images/camel-caravan.webp" alt="The Ultimate 7-Day Morocco Itinerary" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/ultimate-7-day-morocco-itinerary.html" style="color:inherit">The Ultimate 7-Day Morocco Itinerary</a></h3><p>A perfectly paced 7-day Morocco itinerary from Marrakech to Fes, taking in the High Atlas, Aït Ben Haddou, the Dades Valley and a night in the Sahara at Merzouga.</p>
-      <a class="link-more" href="blog/ultimate-7-day-morocco-itinerary.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/ultimate-10-day-morocco-itinerary.html"><img src="/assets/images/fes-to-merzouga.webp" alt="The Ultimate 10-Day Morocco Itinerary" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/ultimate-10-day-morocco-itinerary.html" style="color:inherit">The Ultimate 10-Day Morocco Itinerary</a></h3><p>A 10-day Morocco itinerary covering Marrakech, the Sahara, Fes and Chefchaouen — with more time in the desert and the imperial cities, ending on the Atlantic in Casablanca.</p>
-      <a class="link-more" href="blog/ultimate-10-day-morocco-itinerary.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/ultimate-14-day-morocco-itinerary.html"><img src="/assets/images/chefchaouen.jpg" alt="The Ultimate 14-Day Morocco Itinerary" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/ultimate-14-day-morocco-itinerary.html" style="color:inherit">The Ultimate 14-Day Morocco Itinerary</a></h3><p>Two weeks to see it all — a 14-day Morocco itinerary through Tangier, Chefchaouen, Fes, the Sahara, Marrakech and Essaouira, from the Mediterranean to the dunes and the Atlantic.</p>
-      <a class="link-more" href="blog/ultimate-14-day-morocco-itinerary.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/morocco-5-day-itinerary.html"><img src="/assets/images/camel-trek.webp" alt="Morocco in 5 Days: The Best Itinerary" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/morocco-5-day-itinerary.html" style="color:inherit">Morocco in 5 Days: The Best Itinerary</a></h3><p>Short on time? This 5-day Morocco itinerary runs from Marrakech to Fes via the High Atlas, Aït Ben Haddou and a night in the Sahara at Merzouga.</p>
-      <a class="link-more" href="blog/morocco-5-day-itinerary.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/morocco-8-day-itinerary.html"><img src="/assets/images/fes.jpg" alt="Morocco in 8 Days: Complete Itinerary" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/morocco-8-day-itinerary.html" style="color:inherit">Morocco in 8 Days: Complete Itinerary</a></h3><p>An 8-day Morocco itinerary from Marrakech to Casablanca via the Sahara, Fes and the blue city of Chefchaouen — the country's highlights at a comfortable pace.</p>
-      <a class="link-more" href="blog/morocco-8-day-itinerary.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/morocco-12-day-itinerary.html"><img src="/assets/images/essaouira.jpg" alt="Morocco in 12 Days: Where Should You Go?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/morocco-12-day-itinerary.html" style="color:inherit">Morocco in 12 Days: Where Should You Go?</a></h3><p>A 12-day Morocco itinerary combining Marrakech, the Atlantic coast at Essaouira, a full Sahara experience, Fes, Volubilis and Chefchaouen, ending in Casablanca.</p>
-      <a class="link-more" href="blog/morocco-12-day-itinerary.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/morocco-16-day-itinerary.html"><img src="/assets/images/casablanca.webp" alt="Morocco in 16 Days: The Complete Travel Itinerary" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/morocco-16-day-itinerary.html" style="color:inherit">Morocco in 16 Days: The Complete Travel Itinerary</a></h3><p>The most complete Morocco itinerary — 16 days through Casablanca, Rabat, Chefchaouen, Fes, the Sahara, Marrakech and Essaouira, seeing the whole country at a relaxed pace.</p>
-      <a class="link-more" href="blog/morocco-16-day-itinerary.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/best-morocco-itinerary-first-time-visitors.html"><img src="/assets/images/camel-caravan.webp" alt="The Best Morocco Itinerary for First-Time Visitors" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/best-morocco-itinerary-first-time-visitors.html" style="color:inherit">The Best Morocco Itinerary for First-Time Visitors</a></h3><p>Not sure how long to spend or where to go? This guide helps first-time visitors choose the best Morocco itinerary — from a 5-day taste to a 2-week grand tour.</p>
-      <a class="link-more" href="blog/best-morocco-itinerary-first-time-visitors.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/morocco-itinerary-marrakech-to-fes.html"><img src="/assets/images/fes-to-merzouga.webp" alt="Morocco Itinerary from Marrakech to Fes" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/morocco-itinerary-marrakech-to-fes.html" style="color:inherit">Morocco Itinerary from Marrakech to Fes</a></h3><p>The classic Marrakech to Fes route crosses the High Atlas, Aït Ben Haddou and the Sahara at Merzouga. Here's how to travel it — in 3, 5 or 7 days.</p>
-      <a class="link-more" href="blog/morocco-itinerary-marrakech-to-fes.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/morocco-itinerary-from-casablanca.html"><img src="/assets/images/casablanca.webp" alt="Morocco Itinerary from Casablanca" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/morocco-itinerary-from-casablanca.html" style="color:inherit">Morocco Itinerary from Casablanca</a></h3><p>Arriving at Morocco's biggest airport? Here's how to plan a trip from Casablanca — the best routes and how many days for the imperial cities, Sahara and Marrakech.</p>
-      <a class="link-more" href="blog/morocco-itinerary-from-casablanca.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/morocco-itinerary-from-tangier.html"><img src="/assets/images/tangier.jpg" alt="Morocco Itinerary from Tangier" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/morocco-itinerary-from-tangier.html" style="color:inherit">Morocco Itinerary from Tangier</a></h3><p>Arriving from Spain or the north? Here's how to plan a Morocco trip from Tangier — north-to-south routes through Chefchaouen, Fes, the Sahara and Marrakech, plus a Tangier round trip.</p>
-      <a class="link-more" href="blog/morocco-itinerary-from-tangier.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Itineraries"><a href="blog/morocco-north-to-south-guide.html"><img src="/assets/images/chefchaouen-blue-hour.jpg" alt="Morocco from North to South: A Complete Travel Guide" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Itineraries</span><h3><a href="blog/morocco-north-to-south-guide.html" style="color:inherit">Morocco from North to South: A Complete Travel Guide</a></h3><p>A region-by-region guide to travelling Morocco from north to south — the Mediterranean north, the imperial cities, the Atlantic coast, Marrakech and the Sahara.</p>
-      <a class="link-more" href="blog/morocco-north-to-south-guide.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/how-to-plan-2-week-morocco-trip.html"><img src="/assets/images/sahara-dunes.jpg" alt="How to Plan a 2-Week Trip to Morocco" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/how-to-plan-2-week-morocco-trip.html" style="color:inherit">How to Plan a 2-Week Trip to Morocco</a></h3><p>A step-by-step guide to planning two weeks in Morocco — where to start, how to structure the route, when to go, how to travel, budgeting and what to pack.</p>
-      <a class="link-more" href="blog/how-to-plan-2-week-morocco-trip.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-tangier.html"><img src="/assets/images/tangier.jpg" alt="Best Things to Do in Tangier" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-tangier.html" style="color:inherit">Best Things to Do in Tangier</a></h3><p>Where the Atlantic meets the Mediterranean — the Kasbah, Cap Spartel, the Caves of Hercules and café culture. The best things to do in Tangier, Morocco's northern gateway.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-tangier.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-casablanca.html"><img src="/assets/images/casablanca.webp" alt="Best Things to Do in Casablanca" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-casablanca.html" style="color:inherit">Best Things to Do in Casablanca</a></h3><p>Morocco's modern Atlantic metropolis — the vast Hassan II Mosque, the Corniche, the Habous quarter and striking Art Deco architecture. The best things to do in Casablanca.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-casablanca.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-rabat.html"><img src="/assets/images/rabat-theatre.webp" alt="Best Things to Do in Rabat" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-rabat.html" style="color:inherit">Best Things to Do in Rabat</a></h3><p>Morocco's elegant, relaxed capital — the Kasbah of the Udayas, the Hassan Tower, the Chellah ruins and a laid-back medina. The best things to do in Rabat.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-rabat.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-essaouira.html"><img src="/assets/images/essaouira.jpg" alt="Best Things to Do in Essaouira" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-essaouira.html" style="color:inherit">Best Things to Do in Essaouira</a></h3><p>Morocco's laid-back Atlantic port — the walled medina, sea ramparts, fishing harbour, beach and Gnawa music. The best things to do in breezy Essaouira.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-essaouira.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-merzouga.html"><img src="/assets/images/merzouga-dune.jpg" alt="Best Things to Do in Merzouga" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-merzouga.html" style="color:inherit">Best Things to Do in Merzouga</a></h3><p>The gateway to the Erg Chebbi dunes — camel treks, desert camps, 4×4 excursions, nomad visits and Gnawa music. The best things to do in Merzouga and the Sahara.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-merzouga.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-ouarzazate.html"><img src="/assets/images/fes-to-merzouga.webp" alt="Best Things to Do in Ouarzazate" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-ouarzazate.html" style="color:inherit">Best Things to Do in Ouarzazate</a></h3><p>The 'Gateway to the Sahara' and Morocco's film capital — Aït Ben Haddou, the Taourirt Kasbah, film studios and the Fint Oasis. The best things to do in Ouarzazate.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-ouarzazate.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-dades-valley.html"><img src="/assets/images/dades-valley.jpg" alt="Best Things to Do in the Dades Valley" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-dades-valley.html" style="color:inherit">Best Things to Do in the Dades Valley</a></h3><p>Red-rock canyons, the famous switchback road, the 'Monkey Fingers' formations and palm-filled oases along the Road of a Thousand Kasbahs. The best things to do in the Dades Valley.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-dades-valley.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/best-things-to-do-in-todra-gorge.html"><img src="/assets/images/dades-rocks.jpg" alt="Best Things to Do at the Todra Gorge" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/best-things-to-do-in-todra-gorge.html" style="color:inherit">Best Things to Do at the Todra Gorge</a></h3><p>Towering limestone walls, a clear river, world-class rock climbing and the Tinghir oasis — the best things to do at Morocco's spectacular Todra Gorge.</p>
-      <a class="link-more" href="blog/best-things-to-do-in-todra-gorge.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Things to Do"><a href="blog/things-to-do-sahara-desert-morocco.html"><img src="/assets/images/camel-caravan.webp" alt="Things to Do in the Sahara Desert in Morocco" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Things to Do</span><h3><a href="blog/things-to-do-sahara-desert-morocco.html" style="color:inherit">Things to Do in the Sahara Desert in Morocco</a></h3><p>Far more than a camel ride — desert camps, 4×4 adventures, nomad culture, Gnawa music, sandboarding and world-class stargazing. The best things to do in the Sahara Desert.</p>
-      <a class="link-more" href="blog/things-to-do-sahara-desert-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/is-morocco-safe-for-tourists.html"><img src="/assets/images/happy-group.jpeg" alt="Is Morocco Safe for Tourists?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/is-morocco-safe-for-tourists.html" style="color:inherit">Is Morocco Safe for Tourists?</a></h3><p>Morocco is one of the most visited and generally safe countries in the region. Here's an honest look at safety for tourists, solo women and families — plus how to avoid common scams.</p>
-      <a class="link-more" href="blog/is-morocco-safe-for-tourists.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/morocco-travel-budget.html"><img src="/assets/images/souk-carpets.jpg" alt="Is Morocco Expensive? A Complete Morocco Travel Budget" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/morocco-travel-budget.html" style="color:inherit">Is Morocco Expensive? A Complete Morocco Travel Budget</a></h3><p>How much does a trip to Morocco cost? A guide to Morocco travel budgets — what drives the price, daily costs by travel style, and how to save money.</p>
-      <a class="link-more" href="blog/morocco-travel-budget.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/what-to-pack-for-morocco.html"><img src="/assets/images/sahara-dunes.jpg" alt="What to Pack for Morocco: The Complete Packing List" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/what-to-pack-for-morocco.html" style="color:inherit">What to Pack for Morocco: The Complete Packing List</a></h3><p>From medina heat to cold desert nights and mountain cool — a complete Morocco packing list covering clothing, desert essentials, toiletries, documents and what to leave at home.</p>
-      <a class="link-more" href="blog/what-to-pack-for-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/what-to-wear-in-morocco.html"><img src="/assets/images/marrakech.webp" alt="What to Wear in Morocco: A Practical Dress Guide" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/what-to-wear-in-morocco.html" style="color:inherit">What to Wear in Morocco: A Practical Dress Guide</a></h3><p>What to wear in Morocco as a tourist — the dress code for men and women, what to wear in the desert and by season, and whether you need to cover your head.</p>
-      <a class="link-more" href="blog/what-to-wear-in-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/how-to-get-around-morocco.html"><img src="/assets/images/dades-road.jpg" alt="How to Get Around Morocco: Transport Guide" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/how-to-get-around-morocco.html" style="color:inherit">How to Get Around Morocco: Transport Guide</a></h3><p>Trains, buses, taxis, private drivers or self-drive? A practical guide to getting around Morocco — and the best option for reaching the cities, mountains and Sahara.</p>
-      <a class="link-more" href="blog/how-to-get-around-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/private-vs-group-tour-morocco.html"><img src="/assets/images/camel-caravan.webp" alt="Private Tour vs Group Tour in Morocco: Which Is Better?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/private-vs-group-tour-morocco.html" style="color:inherit">Private Tour vs Group Tour in Morocco: Which Is Better?</a></h3><p>Should you book a private tour or a shared group tour in Morocco? An honest comparison of the pros, cons and costs — and which suits couples, families, solo and budget travellers.</p>
-      <a class="link-more" href="blog/private-vs-group-tour-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/morocco-travel-tips-first-time-visitors.html"><img src="/assets/images/fes.jpg" alt="Morocco Travel Tips for First-Time Visitors" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/morocco-travel-tips-first-time-visitors.html" style="color:inherit">Morocco Travel Tips for First-Time Visitors</a></h3><p>Everything a first-time visitor should know before travelling to Morocco — money, haggling, water, dress, customs, food and the mistakes to avoid.</p>
-      <a class="link-more" href="blog/morocco-travel-tips-first-time-visitors.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/currency-used-in-morocco.html"><img src="/assets/images/souk-carpets.jpg" alt="What Currency Is Used in Morocco?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/currency-used-in-morocco.html" style="color:inherit">What Currency Is Used in Morocco?</a></h3><p>Morocco uses the dirham — a closed currency you get in the country. Here's what to know about money in Morocco: cash vs cards, ATMs, and exchanging money.</p>
-      <a class="link-more" href="blog/currency-used-in-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/can-you-drink-tap-water-in-morocco.html"><img src="/assets/images/fes-medina.jpg" alt="Can You Drink Tap Water in Morocco?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/can-you-drink-tap-water-in-morocco.html" style="color:inherit">Can You Drink Tap Water in Morocco?</a></h3><p>Is tap water safe in Morocco? The short answer is to stick to bottled or filtered water. Here's what to know about drinking water, ice and staying hydrated.</p>
-      <a class="link-more" href="blog/can-you-drink-tap-water-in-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/tipping-in-morocco.html"><img src="/assets/images/happy-group.jpeg" alt="How Much Should You Tip in Morocco?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/tipping-in-morocco.html" style="color:inherit">How Much Should You Tip in Morocco?</a></h3><p>Tipping in Morocco explained — is it expected, how much to tip in restaurants and cafés, and what to give your tour guide and driver at the end of a trip.</p>
-      <a class="link-more" href="blog/tipping-in-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Culture"><a href="blog/moroccan-food-dishes-to-try.html"><img src="/assets/images/souk-carpets.jpg" alt="Moroccan Food: The Dishes You Should Try" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Culture</span><h3><a href="blog/moroccan-food-dishes-to-try.html" style="color:inherit">Moroccan Food: The Dishes You Should Try</a></h3><p>A guide to Moroccan cuisine — the must-try dishes from tagine and couscous to pastilla and street food, plus sweets and the famous mint tea.</p>
-      <a class="link-more" href="blog/moroccan-food-dishes-to-try.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/morocco-travel-guide-couples.html"><img src="/assets/images/desert-camp.webp" alt="Morocco Travel Guide for Couples" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/morocco-travel-guide-couples.html" style="color:inherit">Morocco Travel Guide for Couples</a></h3><p>Riads, desert camps under the stars, romantic sunsets and the coast — why Morocco is a dream destination for couples and honeymooners, and the best things to do together.</p>
-      <a class="link-more" href="blog/morocco-travel-guide-couples.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/morocco-travel-guide-families.html"><img src="/assets/images/happy-group.jpeg" alt="Morocco Travel Guide for Families" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/morocco-travel-guide-families.html" style="color:inherit">Morocco Travel Guide for Families</a></h3><p>Camel rides, sandboarding, waterfalls and monkeys — why Morocco is a brilliant family destination, the best things to do with kids, and tips for stress-free family travel.</p>
-      <a class="link-more" href="blog/morocco-travel-guide-families.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/morocco-travel-guide-solo-travelers.html"><img src="/assets/images/sahara-dunes.jpg" alt="Morocco Travel Guide for Solo Travelers" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/morocco-travel-guide-solo-travelers.html" style="color:inherit">Morocco Travel Guide for Solo Travelers</a></h3><p>Morocco is a rewarding destination for solo travellers — easy to meet people, full of adventure. A guide to solo travel in Morocco, including safety and group tours.</p>
-      <a class="link-more" href="blog/morocco-travel-guide-solo-travelers.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Travel Tips"><a href="blog/morocco-travel-guide-students-erasmus.html"><img src="/assets/images/camel-caravan.webp" alt="Morocco Travel Guide for Students & Erasmus Groups" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Travel Tips</span><h3><a href="blog/morocco-travel-guide-students-erasmus.html" style="color:inherit">Morocco Travel Guide for Students & Erasmus Groups</a></h3><p>Affordable, close to Europe and full of adventure — why Morocco is perfect for students and Erasmus groups, the best experiences, and how to keep costs down.</p>
-      <a class="link-more" href="blog/morocco-travel-guide-students-erasmus.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/best-time-to-visit-morocco.html"><img src="/assets/images/merzouga-dune.jpg" alt="The Best Time to Visit Morocco" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/best-time-to-visit-morocco.html" style="color:inherit">The Best Time to Visit Morocco</a></h3><p>Spring and autumn bring the perfect balance of warm days and cool desert nights. A season-by-season and region-by-region guide to the best time to visit Morocco.</p>
-      <a class="link-more" href="blog/best-time-to-visit-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/best-time-to-visit-marrakech.html"><img src="/assets/images/marrakech.webp" alt="The Best Time to Visit Marrakech" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/best-time-to-visit-marrakech.html" style="color:inherit">The Best Time to Visit Marrakech</a></h3><p>Spring and autumn are the sweet spots for Marrakech — warm, sunny and comfortable. A season-by-season guide to the best time to visit the Red City.</p>
-      <a class="link-more" href="blog/best-time-to-visit-marrakech.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/best-time-to-visit-sahara-desert.html"><img src="/assets/images/camel-caravan.webp" alt="The Best Time to Visit the Sahara Desert in Morocco" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/best-time-to-visit-sahara-desert.html" style="color:inherit">The Best Time to Visit the Sahara Desert in Morocco</a></h3><p>Spring and autumn are the best times for the Merzouga Sahara — warm days and comfortable nights. A season-by-season guide to visiting Morocco's desert.</p>
-      <a class="link-more" href="blog/best-time-to-visit-sahara-desert.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/best-time-to-visit-fes.html"><img src="/assets/images/fes.jpg" alt="The Best Time to Visit Fes" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/best-time-to-visit-fes.html" style="color:inherit">The Best Time to Visit Fes</a></h3><p>Spring and autumn are ideal for exploring the medina of Fes on foot. A season-by-season guide to the best time to visit Morocco's cultural capital.</p>
-      <a class="link-more" href="blog/best-time-to-visit-fes.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/best-time-to-visit-chefchaouen.html"><img src="/assets/images/chefchaouen.jpg" alt="The Best Time to Visit Chefchaouen" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/best-time-to-visit-chefchaouen.html" style="color:inherit">The Best Time to Visit Chefchaouen</a></h3><p>Spring and autumn are perfect for the Blue City and its Rif Mountain setting. A season-by-season guide to the best time to visit Chefchaouen.</p>
-      <a class="link-more" href="blog/best-time-to-visit-chefchaouen.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/morocco-in-december.html"><img src="/assets/images/desert-camp.webp" alt="Morocco in December: Weather, Things to Do & Tours" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/morocco-in-december.html" style="color:inherit">Morocco in December: Weather, Things to Do & Tours</a></h3><p>Mild sunny days, cold desert nights and a festive atmosphere — what to expect from Morocco in December, plus the best things to do and what to pack.</p>
-      <a class="link-more" href="blog/morocco-in-december.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/morocco-in-january.html"><img src="/assets/images/chefchaouen-blue-hour.jpg" alt="Morocco in January: Complete Travel Guide" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/morocco-in-january.html" style="color:inherit">Morocco in January: Complete Travel Guide</a></h3><p>Sunny city days, snowy mountains and the quietest, best-value season — a complete guide to visiting Morocco in January, with weather, things to do and packing tips.</p>
-      <a class="link-more" href="blog/morocco-in-january.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/morocco-in-february.html"><img src="/assets/images/dades-valley.jpg" alt="Morocco in February: Weather & Travel Tips" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/morocco-in-february.html" style="color:inherit">Morocco in February: Weather & Travel Tips</a></h3><p>Late winter with hints of spring — almond blossom, quieter sights and sunny days. A guide to visiting Morocco in February, with weather, things to do and packing tips.</p>
-      <a class="link-more" href="blog/morocco-in-february.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/morocco-in-march.html"><img src="/assets/images/marrakech-red-city.webp" alt="Morocco in March: Is It a Good Time to Visit?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/morocco-in-march.html" style="color:inherit">Morocco in March: Is It a Good Time to Visit?</a></h3><p>Spring arrives — warm days, green landscapes and ideal conditions for the desert and cities. A guide to visiting Morocco in March, with weather and things to do.</p>
-      <a class="link-more" href="blog/morocco-in-march.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/morocco-in-april.html"><img src="/assets/images/sahara-dunes.jpg" alt="Morocco in April: Weather & Best Places to Visit" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/morocco-in-april.html" style="color:inherit">Morocco in April: Weather & Best Places to Visit</a></h3><p>Arguably the best month — warm, green and ideal for the desert, cities and mountains. A guide to visiting Morocco in April, with weather and the best places to go.</p>
-      <a class="link-more" href="blog/morocco-in-april.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/morocco-in-october.html"><img src="/assets/images/camel-caravan.webp" alt="Morocco in October: Weather & Sahara Tours" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/morocco-in-october.html" style="color:inherit">Morocco in October: Weather & Sahara Tours</a></h3><p>Warm days, comfortable nights and prime desert conditions — October is one of the best months for Morocco. A guide to the weather, Sahara tours and things to do.</p>
-      <a class="link-more" href="blog/morocco-in-october.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/morocco-in-november.html"><img src="/assets/images/fes-medina.jpg" alt="Morocco in November: What to Expect" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/morocco-in-november.html" style="color:inherit">Morocco in November: What to Expect</a></h3><p>Mild days, fewer crowds and good value as autumn eases toward winter — a guide to visiting Morocco in November, with weather, things to do and packing tips.</p>
-      <a class="link-more" href="blog/morocco-in-november.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/christmas-in-morocco.html"><img src="/assets/images/merzouga-dune.jpg" alt="Christmas in Morocco: Where to Go & What to Expect" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/christmas-in-morocco.html" style="color:inherit">Christmas in Morocco: Where to Go & What to Expect</a></h3><p>A sunny, exotic escape for the holidays — what Christmas in Morocco is really like, the best places to spend it, and what to expect from the weather and atmosphere.</p>
-      <a class="link-more" href="blog/christmas-in-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Best Time"><a href="blog/new-year-in-morocco.html"><img src="/assets/images/camel-trek.webp" alt="New Year in Morocco: Complete Travel Guide" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Best Time</span><h3><a href="blog/new-year-in-morocco.html" style="color:inherit">New Year in Morocco: Complete Travel Guide</a></h3><p>See in the New Year with desert camps, festive riads and lively cities — a complete guide to spending New Year in Morocco, with the best places and what to expect.</p>
-      <a class="link-more" href="blog/new-year-in-morocco.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Desert"><a href="blog/marrakech-to-merzouga-route-guide.html"><img src="/assets/images/dades-road.jpg" alt="Marrakech to Merzouga: The Complete Route Guide" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Desert</span><h3><a href="blog/marrakech-to-merzouga-route-guide.html" style="color:inherit">Marrakech to Merzouga: The Complete Route Guide</a></h3><p>How far is Marrakech to Merzouga, what are the stops, and how long does it take? A complete guide to the classic desert route — by car or on a tour.</p>
-      <a class="link-more" href="blog/marrakech-to-merzouga-route-guide.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Desert"><a href="blog/3-days-vs-4-days-marrakech-to-merzouga.html"><img src="/assets/images/camel-caravan.webp" alt="3 Days vs 4 Days Marrakech to Merzouga: Which Is Better?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Desert</span><h3><a href="blog/3-days-vs-4-days-marrakech-to-merzouga.html" style="color:inherit">3 Days vs 4 Days Marrakech to Merzouga: Which Is Better?</a></h3><p>Should you do the Marrakech to Merzouga desert tour in 3 days or 4? An honest comparison of the pace, driving, desert time and cost to help you choose.</p>
-      <a class="link-more" href="blog/3-days-vs-4-days-marrakech-to-merzouga.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Desert"><a href="blog/merzouga-or-zagora.html"><img src="/assets/images/sahara-dunes.jpg" alt="Merzouga or Zagora: Which Morocco Desert Should You Visit?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Desert</span><h3><a href="blog/merzouga-or-zagora.html" style="color:inherit">Merzouga or Zagora: Which Morocco Desert Should You Visit?</a></h3><p>Merzouga or Zagora? Compare Morocco's two main desert destinations — dune size, distance from Marrakech, days needed and the experience — to choose the right one.</p>
-      <a class="link-more" href="blog/merzouga-or-zagora.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Desert"><a href="blog/camel-trekking-in-merzouga.html"><img src="/assets/images/camel-trek.webp" alt="Camel Trekking in Merzouga: Everything You Need to Know" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Desert</span><h3><a href="blog/camel-trekking-in-merzouga.html" style="color:inherit">Camel Trekking in Merzouga: Everything You Need to Know</a></h3><p>What a Merzouga camel trek is really like — how long it lasts, whether it's comfortable, what to wear and bring, and tips for a great ride into the Erg Chebbi dunes.</p>
-      <a class="link-more" href="blog/camel-trekking-in-merzouga.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Desert"><a href="blog/luxury-vs-standard-desert-camp.html"><img src="/assets/images/luxury-camp-aerial.webp" alt="Luxury vs Standard Desert Camp in Morocco: Which to Choose?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Desert</span><h3><a href="blog/luxury-vs-standard-desert-camp.html" style="color:inherit">Luxury vs Standard Desert Camp in Morocco: Which to Choose?</a></h3><p>Standard, comfort or luxury desert camp? A guide to the different Sahara camp types in Morocco — facilities, privacy and price — and how to choose the right one.</p>
-      <a class="link-more" href="blog/luxury-vs-standard-desert-camp.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Desert"><a href="blog/sleeping-in-a-sahara-desert-camp.html"><img src="/assets/images/desert-camp.webp" alt="What Is It Like to Sleep in a Sahara Desert Camp?" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Desert</span><h3><a href="blog/sleeping-in-a-sahara-desert-camp.html" style="color:inherit">What Is It Like to Sleep in a Sahara Desert Camp?</a></h3><p>Everything a night in a Sahara desert camp is really like — the camel ride in, sunset, dinner and music, the starry night, sunrise, what to pack, and how many nights to stay in Merzouga.</p>
-      <a class="link-more" href="blog/sleeping-in-a-sahara-desert-camp.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article><article class="blog-card" data-cat="Culture"><a href="blog/chefchaouen-why-the-city-is-blue.html"><img src="/assets/images/chefchaouen-blue-hour.jpg" alt="Chefchaouen: Why the City is Blue" loading="lazy" style="height:190px;width:100%;object-fit:cover"></a>
-      <div class="blog-card__body"><span class="meta">Culture</span><h3><a href="blog/chefchaouen-why-the-city-is-blue.html" style="color:inherit">Chefchaouen: Why the City is Blue</a></h3><p>The story behind Morocco's Blue Pearl — the history, the theories behind the blue, and the best spots to explore its famous indigo lanes.</p>
-      <a class="link-more" href="blog/chefchaouen-why-the-city-is-blue.html">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article></div>
+  </nav>
+  <p class="bsearch__empty" hidden>No articles match your search. Try a shorter word, like Sahara, Marrakech or packing.</p>
+  <div class="bsecs">
+  <section class="section bsec" id="itineraries" aria-labelledby="itineraries-title"><div class="wrap">
+    <div class="head-row"><h2 id="itineraries-title">Itineraries</h2></div>
+    <div class="htours__track">
+      <ul class="htours__list htours__list--slider" id="itineraries-list">
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/ultimate-7-day-morocco-itinerary.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="The Ultimate 7-Day Morocco Itinerary" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Ultimate 7-Day Morocco Itinerary</h3>
+            <p class="htour__desc">A perfectly paced 7-day Morocco itinerary from Marrakech to Fes, taking in the High Atlas, Aït Ben Haddou, the Dades Valley and a night in the Sahara at Merzouga.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/ultimate-10-day-morocco-itinerary.html">
+          <span class="htour__media"><img src="/assets/images/fes-to-merzouga.webp" alt="The Ultimate 10-Day Morocco Itinerary" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Ultimate 10-Day Morocco Itinerary</h3>
+            <p class="htour__desc">A 10-day Morocco itinerary covering Marrakech, the Sahara, Fes and Chefchaouen — with more time in the desert and the imperial cities, ending on the Atlantic in Casablanca.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/ultimate-14-day-morocco-itinerary.html">
+          <span class="htour__media"><img src="/assets/images/chefchaouen.jpg" alt="The Ultimate 14-Day Morocco Itinerary" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Ultimate 14-Day Morocco Itinerary</h3>
+            <p class="htour__desc">Two weeks to see it all — a 14-day Morocco itinerary through Tangier, Chefchaouen, Fes, the Sahara, Marrakech and Essaouira, from the Mediterranean to the dunes and the Atlantic.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/morocco-5-day-itinerary.html">
+          <span class="htour__media"><img src="/assets/images/camel-trek.webp" alt="Morocco in 5 Days: The Best Itinerary" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in 5 Days: The Best Itinerary</h3>
+            <p class="htour__desc">Short on time? This 5-day Morocco itinerary runs from Marrakech to Fes via the High Atlas, Aït Ben Haddou and a night in the Sahara at Merzouga.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/morocco-8-day-itinerary.html">
+          <span class="htour__media"><img src="/assets/images/fes.jpg" alt="Morocco in 8 Days: Complete Itinerary" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in 8 Days: Complete Itinerary</h3>
+            <p class="htour__desc">An 8-day Morocco itinerary from Marrakech to Casablanca via the Sahara, Fes and the blue city of Chefchaouen — the country's highlights at a comfortable pace.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/morocco-12-day-itinerary.html">
+          <span class="htour__media"><img src="/assets/images/essaouira.jpg" alt="Morocco in 12 Days: Where Should You Go?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in 12 Days: Where Should You Go?</h3>
+            <p class="htour__desc">A 12-day Morocco itinerary combining Marrakech, the Atlantic coast at Essaouira, a full Sahara experience, Fes, Volubilis and Chefchaouen, ending in Casablanca.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/morocco-16-day-itinerary.html">
+          <span class="htour__media"><img src="/assets/images/casablanca.webp" alt="Morocco in 16 Days: The Complete Travel Itinerary" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in 16 Days: The Complete Travel Itinerary</h3>
+            <p class="htour__desc">The most complete Morocco itinerary — 16 days through Casablanca, Rabat, Chefchaouen, Fes, the Sahara, Marrakech and Essaouira, seeing the whole country at a relaxed pace.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/best-morocco-itinerary-first-time-visitors.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="The Best Morocco Itinerary for First-Time Visitors" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Best Morocco Itinerary for First-Time Visitors</h3>
+            <p class="htour__desc">Not sure how long to spend or where to go? This guide helps first-time visitors choose the best Morocco itinerary — from a 5-day taste to a 2-week grand tour.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/morocco-itinerary-marrakech-to-fes.html">
+          <span class="htour__media"><img src="/assets/images/fes-to-merzouga.webp" alt="Morocco Itinerary from Marrakech to Fes" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Itinerary from Marrakech to Fes</h3>
+            <p class="htour__desc">The classic Marrakech to Fes route crosses the High Atlas, Aït Ben Haddou and the Sahara at Merzouga. Here's how to travel it — in 3, 5 or 7 days.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/morocco-itinerary-from-casablanca.html">
+          <span class="htour__media"><img src="/assets/images/casablanca.webp" alt="Morocco Itinerary from Casablanca" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Itinerary from Casablanca</h3>
+            <p class="htour__desc">Arriving at Morocco's biggest airport? Here's how to plan a trip from Casablanca — the best routes and how many days for the imperial cities, Sahara and Marrakech.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/morocco-itinerary-from-tangier.html">
+          <span class="htour__media"><img src="/assets/images/tangier.jpg" alt="Morocco Itinerary from Tangier" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Itinerary from Tangier</h3>
+            <p class="htour__desc">Arriving from Spain or the north? Here's how to plan a Morocco trip from Tangier — north-to-south routes through Chefchaouen, Fes, the Sahara and Marrakech, plus a Tangier round trip.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="itineraries"><a class="htour__link" href="blog/morocco-north-to-south-guide.html">
+          <span class="htour__media"><img src="/assets/images/chefchaouen-blue-hour.jpg" alt="Morocco from North to South: A Complete Travel Guide" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>Itineraries</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco from North to South: A Complete Travel Guide</h3>
+            <p class="htour__desc">A region-by-region guide to travelling Morocco from north to south — the Mediterranean north, the imperial cities, the Atlantic coast, Marrakech and the Sahara.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+      </ul>
+      <button type="button" class="htours__nav htours__nav--prev" aria-controls="itineraries-list" aria-label="Previous Itineraries articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="htours__nav htours__nav--next" aria-controls="itineraries-list" aria-label="Next Itineraries articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
   </div></section>
+  <section class="section bsec" id="sahara-desert" aria-labelledby="sahara-desert-title"><div class="wrap">
+    <div class="head-row"><h2 id="sahara-desert-title">Sahara Desert</h2></div>
+    <div class="htours__track">
+      <ul class="htours__list htours__list--slider" id="sahara-desert-list">
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/morocco-desert-tours-complete-guide.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="Morocco Desert Tours: The Complete Guide for First-Time Visitors" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Desert Tours: The Complete Guide for First-Time Visitors</h3>
+            <p class="htour__desc">Everything a first-time visitor needs to know before booking a Morocco Sahara desert tour — Merzouga vs Zagora, how many days, private vs shared, desert camps, best time to go, packing and costs.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/best-things-to-do-in-merzouga.html">
+          <span class="htour__media"><img src="/assets/images/merzouga-dune.jpg" alt="Best Things to Do in Merzouga" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Merzouga</h3>
+            <p class="htour__desc">The gateway to the Erg Chebbi dunes — camel treks, desert camps, 4×4 excursions, nomad visits and Gnawa music. The best things to do in Merzouga and the Sahara.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/things-to-do-sahara-desert-morocco.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="Things to Do in the Sahara Desert in Morocco" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Things to Do in the Sahara Desert in Morocco</h3>
+            <p class="htour__desc">Far more than a camel ride — desert camps, 4×4 adventures, nomad culture, Gnawa music, sandboarding and world-class stargazing. The best things to do in the Sahara Desert.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/marrakech-to-merzouga-route-guide.html">
+          <span class="htour__media"><img src="/assets/images/dades-road.jpg" alt="Marrakech to Merzouga: The Complete Route Guide" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Marrakech to Merzouga: The Complete Route Guide</h3>
+            <p class="htour__desc">How far is Marrakech to Merzouga, what are the stops, and how long does it take? A complete guide to the classic desert route — by car or on a tour.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/3-days-vs-4-days-marrakech-to-merzouga.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="3 Days vs 4 Days Marrakech to Merzouga: Which Is Better?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">3 Days vs 4 Days Marrakech to Merzouga: Which Is Better?</h3>
+            <p class="htour__desc">Should you do the Marrakech to Merzouga desert tour in 3 days or 4? An honest comparison of the pace, driving, desert time and cost to help you choose.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/merzouga-or-zagora.html">
+          <span class="htour__media"><img src="/assets/images/sahara-dunes.jpg" alt="Merzouga or Zagora: Which Morocco Desert Should You Visit?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Merzouga or Zagora: Which Morocco Desert Should You Visit?</h3>
+            <p class="htour__desc">Merzouga or Zagora? Compare Morocco's two main desert destinations — dune size, distance from Marrakech, days needed and the experience — to choose the right one.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/camel-trekking-in-merzouga.html">
+          <span class="htour__media"><img src="/assets/images/camel-trek.webp" alt="Camel Trekking in Merzouga: Everything You Need to Know" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Camel Trekking in Merzouga: Everything You Need to Know</h3>
+            <p class="htour__desc">What a Merzouga camel trek is really like — how long it lasts, whether it's comfortable, what to wear and bring, and tips for a great ride into the Erg Chebbi dunes.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/luxury-vs-standard-desert-camp.html">
+          <span class="htour__media"><img src="/assets/images/luxury-camp-aerial.webp" alt="Luxury vs Standard Desert Camp in Morocco: Which to Choose?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Luxury vs Standard Desert Camp in Morocco: Which to Choose?</h3>
+            <p class="htour__desc">Standard, comfort or luxury desert camp? A guide to the different Sahara camp types in Morocco — facilities, privacy and price — and how to choose the right one.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="sahara-desert"><a class="htour__link" href="blog/sleeping-in-a-sahara-desert-camp.html">
+          <span class="htour__media"><img src="/assets/images/desert-camp.webp" alt="What Is It Like to Sleep in a Sahara Desert Camp?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="7" r="2.5"/><path d="M2 19c3-5 6-7 9-7s6 3 11 7z"/></svg>Sahara Desert</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">What Is It Like to Sleep in a Sahara Desert Camp?</h3>
+            <p class="htour__desc">Everything a night in a Sahara desert camp is really like — the camel ride in, sunset, dinner and music, the starry night, sunrise, what to pack, and how many nights to stay in Merzouga.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+      </ul>
+      <button type="button" class="htours__nav htours__nav--prev" aria-controls="sahara-desert-list" aria-label="Previous Sahara Desert articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="htours__nav htours__nav--next" aria-controls="sahara-desert-list" aria-label="Next Sahara Desert articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div></section>
+  <section class="section bsec" id="cities-places" aria-labelledby="cities-places-title"><div class="wrap">
+    <div class="head-row"><h2 id="cities-places-title">Cities &amp; Places</h2></div>
+    <div class="htours__track">
+      <ul class="htours__list htours__list--slider" id="cities-places-list">
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-marrakech.html">
+          <span class="htour__media"><img src="/assets/images/marrakech.webp" alt="Best Things to Do in Marrakech" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Marrakech</h3>
+            <p class="htour__desc">From the buzz of Jemaa el-Fnaa and the souks to palaces, gardens and Atlas day trips — the top things to do in Marrakech, plus how many days you need and the best time to visit.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-fes.html">
+          <span class="htour__media"><img src="/assets/images/fes.jpg" alt="Best Things to Do in Fes" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Fes</h3>
+            <p class="htour__desc">The world's largest car-free medina, medieval madrasas, the famous tanneries and artisan souks — the best things to do in Fes, Morocco's spiritual and cultural capital.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-chefchaouen.html">
+          <span class="htour__media"><img src="/assets/images/chefchaouen.jpg" alt="Best Things to Do in Chefchaouen" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Chefchaouen</h3>
+            <p class="htour__desc">Morocco's Blue Pearl in the Rif Mountains — wander the blue-washed medina, catch sunset at the Spanish Mosque, hike to waterfalls, and shop for local crafts.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-tangier.html">
+          <span class="htour__media"><img src="/assets/images/tangier.jpg" alt="Best Things to Do in Tangier" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Tangier</h3>
+            <p class="htour__desc">Where the Atlantic meets the Mediterranean — the Kasbah, Cap Spartel, the Caves of Hercules and café culture. The best things to do in Tangier, Morocco's northern gateway.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-casablanca.html">
+          <span class="htour__media"><img src="/assets/images/casablanca.webp" alt="Best Things to Do in Casablanca" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Casablanca</h3>
+            <p class="htour__desc">Morocco's modern Atlantic metropolis — the vast Hassan II Mosque, the Corniche, the Habous quarter and striking Art Deco architecture. The best things to do in Casablanca.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-rabat.html">
+          <span class="htour__media"><img src="/assets/images/rabat-theatre.webp" alt="Best Things to Do in Rabat" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Rabat</h3>
+            <p class="htour__desc">Morocco's elegant, relaxed capital — the Kasbah of the Udayas, the Hassan Tower, the Chellah ruins and a laid-back medina. The best things to do in Rabat.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-essaouira.html">
+          <span class="htour__media"><img src="/assets/images/essaouira.jpg" alt="Best Things to Do in Essaouira" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Essaouira</h3>
+            <p class="htour__desc">Morocco's laid-back Atlantic port — the walled medina, sea ramparts, fishing harbour, beach and Gnawa music. The best things to do in breezy Essaouira.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-ouarzazate.html">
+          <span class="htour__media"><img src="/assets/images/fes-to-merzouga.webp" alt="Best Things to Do in Ouarzazate" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in Ouarzazate</h3>
+            <p class="htour__desc">The 'Gateway to the Sahara' and Morocco's film capital — Aït Ben Haddou, the Taourirt Kasbah, film studios and the Fint Oasis. The best things to do in Ouarzazate.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-dades-valley.html">
+          <span class="htour__media"><img src="/assets/images/dades-valley.jpg" alt="Best Things to Do in the Dades Valley" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do in the Dades Valley</h3>
+            <p class="htour__desc">Red-rock canyons, the famous switchback road, the 'Monkey Fingers' formations and palm-filled oases along the Road of a Thousand Kasbahs. The best things to do in the Dades Valley.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/best-things-to-do-in-todra-gorge.html">
+          <span class="htour__media"><img src="/assets/images/dades-rocks.jpg" alt="Best Things to Do at the Todra Gorge" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Best Things to Do at the Todra Gorge</h3>
+            <p class="htour__desc">Towering limestone walls, a clear river, world-class rock climbing and the Tinghir oasis — the best things to do at Morocco's spectacular Todra Gorge.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/moroccan-food-dishes-to-try.html">
+          <span class="htour__media"><img src="/assets/images/souk-carpets.jpg" alt="Moroccan Food: The Dishes You Should Try" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Moroccan Food: The Dishes You Should Try</h3>
+            <p class="htour__desc">A guide to Moroccan cuisine — the must-try dishes from tagine and couscous to pastilla and street food, plus sweets and the famous mint tea.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="cities-places"><a class="htour__link" href="blog/chefchaouen-why-the-city-is-blue.html">
+          <span class="htour__media"><img src="/assets/images/chefchaouen-blue-hour.jpg" alt="Chefchaouen: Why the City is Blue" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/></svg>Cities &amp; Places</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Chefchaouen: Why the City is Blue</h3>
+            <p class="htour__desc">The story behind Morocco's Blue Pearl — the history, the theories behind the blue, and the best spots to explore its famous indigo lanes.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+      </ul>
+      <button type="button" class="htours__nav htours__nav--prev" aria-controls="cities-places-list" aria-label="Previous Cities and Places articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="htours__nav htours__nav--next" aria-controls="cities-places-list" aria-label="Next Cities and Places articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div></section>
+  <section class="section bsec" id="when-to-go" aria-labelledby="when-to-go-title"><div class="wrap">
+    <div class="head-row"><h2 id="when-to-go-title">When to Go</h2></div>
+    <div class="htours__track">
+      <ul class="htours__list htours__list--slider" id="when-to-go-list">
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/best-time-to-visit-morocco.html">
+          <span class="htour__media"><img src="/assets/images/merzouga-dune.jpg" alt="The Best Time to Visit Morocco" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Best Time to Visit Morocco</h3>
+            <p class="htour__desc">Spring and autumn bring the perfect balance of warm days and cool desert nights. A season-by-season and region-by-region guide to the best time to visit Morocco.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/best-time-to-visit-marrakech.html">
+          <span class="htour__media"><img src="/assets/images/marrakech.webp" alt="The Best Time to Visit Marrakech" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Best Time to Visit Marrakech</h3>
+            <p class="htour__desc">Spring and autumn are the sweet spots for Marrakech — warm, sunny and comfortable. A season-by-season guide to the best time to visit the Red City.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/best-time-to-visit-sahara-desert.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="The Best Time to Visit the Sahara Desert in Morocco" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Best Time to Visit the Sahara Desert in Morocco</h3>
+            <p class="htour__desc">Spring and autumn are the best times for the Merzouga Sahara — warm days and comfortable nights. A season-by-season guide to visiting Morocco's desert.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/best-time-to-visit-fes.html">
+          <span class="htour__media"><img src="/assets/images/fes.jpg" alt="The Best Time to Visit Fes" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Best Time to Visit Fes</h3>
+            <p class="htour__desc">Spring and autumn are ideal for exploring the medina of Fes on foot. A season-by-season guide to the best time to visit Morocco's cultural capital.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/best-time-to-visit-chefchaouen.html">
+          <span class="htour__media"><img src="/assets/images/chefchaouen.jpg" alt="The Best Time to Visit Chefchaouen" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">The Best Time to Visit Chefchaouen</h3>
+            <p class="htour__desc">Spring and autumn are perfect for the Blue City and its Rif Mountain setting. A season-by-season guide to the best time to visit Chefchaouen.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/morocco-in-december.html">
+          <span class="htour__media"><img src="/assets/images/desert-camp.webp" alt="Morocco in December: Weather, Things to Do & Tours" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in December: Weather, Things to Do & Tours</h3>
+            <p class="htour__desc">Mild sunny days, cold desert nights and a festive atmosphere — what to expect from Morocco in December, plus the best things to do and what to pack.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/morocco-in-january.html">
+          <span class="htour__media"><img src="/assets/images/chefchaouen-blue-hour.jpg" alt="Morocco in January: Complete Travel Guide" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in January: Complete Travel Guide</h3>
+            <p class="htour__desc">Sunny city days, snowy mountains and the quietest, best-value season — a complete guide to visiting Morocco in January, with weather, things to do and packing tips.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/morocco-in-february.html">
+          <span class="htour__media"><img src="/assets/images/dades-valley.jpg" alt="Morocco in February: Weather & Travel Tips" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in February: Weather & Travel Tips</h3>
+            <p class="htour__desc">Late winter with hints of spring — almond blossom, quieter sights and sunny days. A guide to visiting Morocco in February, with weather, things to do and packing tips.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/morocco-in-march.html">
+          <span class="htour__media"><img src="/assets/images/marrakech-red-city.webp" alt="Morocco in March: Is It a Good Time to Visit?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in March: Is It a Good Time to Visit?</h3>
+            <p class="htour__desc">Spring arrives — warm days, green landscapes and ideal conditions for the desert and cities. A guide to visiting Morocco in March, with weather and things to do.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/morocco-in-april.html">
+          <span class="htour__media"><img src="/assets/images/sahara-dunes.jpg" alt="Morocco in April: Weather & Best Places to Visit" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in April: Weather & Best Places to Visit</h3>
+            <p class="htour__desc">Arguably the best month — warm, green and ideal for the desert, cities and mountains. A guide to visiting Morocco in April, with weather and the best places to go.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/morocco-in-october.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="Morocco in October: Weather & Sahara Tours" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in October: Weather & Sahara Tours</h3>
+            <p class="htour__desc">Warm days, comfortable nights and prime desert conditions — October is one of the best months for Morocco. A guide to the weather, Sahara tours and things to do.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/morocco-in-november.html">
+          <span class="htour__media"><img src="/assets/images/fes-medina.jpg" alt="Morocco in November: What to Expect" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco in November: What to Expect</h3>
+            <p class="htour__desc">Mild days, fewer crowds and good value as autumn eases toward winter — a guide to visiting Morocco in November, with weather, things to do and packing tips.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/christmas-in-morocco.html">
+          <span class="htour__media"><img src="/assets/images/merzouga-dune.jpg" alt="Christmas in Morocco: Where to Go & What to Expect" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Christmas in Morocco: Where to Go & What to Expect</h3>
+            <p class="htour__desc">A sunny, exotic escape for the holidays — what Christmas in Morocco is really like, the best places to spend it, and what to expect from the weather and atmosphere.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="when-to-go"><a class="htour__link" href="blog/new-year-in-morocco.html">
+          <span class="htour__media"><img src="/assets/images/camel-trek.webp" alt="New Year in Morocco: Complete Travel Guide" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>When to Go</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">New Year in Morocco: Complete Travel Guide</h3>
+            <p class="htour__desc">See in the New Year with desert camps, festive riads and lively cities — a complete guide to spending New Year in Morocco, with the best places and what to expect.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+      </ul>
+      <button type="button" class="htours__nav htours__nav--prev" aria-controls="when-to-go-list" aria-label="Previous When to Go articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="htours__nav htours__nav--next" aria-controls="when-to-go-list" aria-label="Next When to Go articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div></section>
+  <section class="section bsec" id="planning" aria-labelledby="planning-title"><div class="wrap">
+    <div class="head-row"><h2 id="planning-title">Planning &amp; Practical</h2></div>
+    <div class="htours__track">
+      <ul class="htours__list htours__list--slider" id="planning-list">
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/how-to-plan-2-week-morocco-trip.html">
+          <span class="htour__media"><img src="/assets/images/sahara-dunes.jpg" alt="How to Plan a 2-Week Trip to Morocco" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">How to Plan a 2-Week Trip to Morocco</h3>
+            <p class="htour__desc">A step-by-step guide to planning two weeks in Morocco — where to start, how to structure the route, when to go, how to travel, budgeting and what to pack.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/is-morocco-safe-for-tourists.html">
+          <span class="htour__media"><img src="/assets/images/happy-group.jpeg" alt="Is Morocco Safe for Tourists?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Is Morocco Safe for Tourists?</h3>
+            <p class="htour__desc">Morocco is one of the most visited and generally safe countries in the region. Here's an honest look at safety for tourists, solo women and families — plus how to avoid common scams.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/morocco-travel-budget.html">
+          <span class="htour__media"><img src="/assets/images/souk-carpets.jpg" alt="Is Morocco Expensive? A Complete Morocco Travel Budget" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Is Morocco Expensive? A Complete Morocco Travel Budget</h3>
+            <p class="htour__desc">How much does a trip to Morocco cost? A guide to Morocco travel budgets — what drives the price, daily costs by travel style, and how to save money.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/what-to-pack-for-morocco.html">
+          <span class="htour__media"><img src="/assets/images/sahara-dunes.jpg" alt="What to Pack for Morocco: The Complete Packing List" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">What to Pack for Morocco: The Complete Packing List</h3>
+            <p class="htour__desc">From medina heat to cold desert nights and mountain cool — a complete Morocco packing list covering clothing, desert essentials, toiletries, documents and what to leave at home.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/what-to-wear-in-morocco.html">
+          <span class="htour__media"><img src="/assets/images/marrakech.webp" alt="What to Wear in Morocco: A Practical Dress Guide" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">What to Wear in Morocco: A Practical Dress Guide</h3>
+            <p class="htour__desc">What to wear in Morocco as a tourist — the dress code for men and women, what to wear in the desert and by season, and whether you need to cover your head.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/how-to-get-around-morocco.html">
+          <span class="htour__media"><img src="/assets/images/dades-road.jpg" alt="How to Get Around Morocco: Transport Guide" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">How to Get Around Morocco: Transport Guide</h3>
+            <p class="htour__desc">Trains, buses, taxis, private drivers or self-drive? A practical guide to getting around Morocco — and the best option for reaching the cities, mountains and Sahara.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/private-vs-group-tour-morocco.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="Private Tour vs Group Tour in Morocco: Which Is Better?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Private Tour vs Group Tour in Morocco: Which Is Better?</h3>
+            <p class="htour__desc">Should you book a private tour or a shared group tour in Morocco? An honest comparison of the pros, cons and costs — and which suits couples, families, solo and budget travellers.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/morocco-travel-tips-first-time-visitors.html">
+          <span class="htour__media"><img src="/assets/images/fes.jpg" alt="Morocco Travel Tips for First-Time Visitors" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Travel Tips for First-Time Visitors</h3>
+            <p class="htour__desc">Everything a first-time visitor should know before travelling to Morocco — money, haggling, water, dress, customs, food and the mistakes to avoid.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/currency-used-in-morocco.html">
+          <span class="htour__media"><img src="/assets/images/souk-carpets.jpg" alt="What Currency Is Used in Morocco?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">What Currency Is Used in Morocco?</h3>
+            <p class="htour__desc">Morocco uses the dirham — a closed currency you get in the country. Here's what to know about money in Morocco: cash vs cards, ATMs, and exchanging money.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/can-you-drink-tap-water-in-morocco.html">
+          <span class="htour__media"><img src="/assets/images/fes-medina.jpg" alt="Can You Drink Tap Water in Morocco?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Can You Drink Tap Water in Morocco?</h3>
+            <p class="htour__desc">Is tap water safe in Morocco? The short answer is to stick to bottled or filtered water. Here's what to know about drinking water, ice and staying hydrated.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="planning"><a class="htour__link" href="blog/tipping-in-morocco.html">
+          <span class="htour__media"><img src="/assets/images/happy-group.jpeg" alt="How Much Should You Tip in Morocco?" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h10M9 12h10M9 19h10"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/></svg>Planning &amp; Practical</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">How Much Should You Tip in Morocco?</h3>
+            <p class="htour__desc">Tipping in Morocco explained — is it expected, how much to tip in restaurants and cafés, and what to give your tour guide and driver at the end of a trip.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+      </ul>
+      <button type="button" class="htours__nav htours__nav--prev" aria-controls="planning-list" aria-label="Previous Planning and Practical articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="htours__nav htours__nav--next" aria-controls="planning-list" aria-label="Next Planning and Practical articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div></section>
+  <section class="section bsec" id="travel-styles" aria-labelledby="travel-styles-title"><div class="wrap">
+    <div class="head-row"><h2 id="travel-styles-title">Travel Styles</h2></div>
+    <div class="htours__track">
+      <ul class="htours__list htours__list--slider" id="travel-styles-list">
+        <li><article class="htour htour--blog" data-cat="travel-styles"><a class="htour__link" href="blog/morocco-travel-guide-couples.html">
+          <span class="htour__media"><img src="/assets/images/desert-camp.webp" alt="Morocco Travel Guide for Couples" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="6.5" r="2.5"/><path d="M3 19v-1c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4v1"/><circle cx="16.5" cy="9" r="2"/><path d="M13.5 19v-.5c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5v.5"/></svg>Travel Styles</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Travel Guide for Couples</h3>
+            <p class="htour__desc">Riads, desert camps under the stars, romantic sunsets and the coast — why Morocco is a dream destination for couples and honeymooners, and the best things to do together.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="travel-styles"><a class="htour__link" href="blog/morocco-travel-guide-families.html">
+          <span class="htour__media"><img src="/assets/images/happy-group.jpeg" alt="Morocco Travel Guide for Families" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="6.5" r="2.5"/><path d="M3 19v-1c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4v1"/><circle cx="16.5" cy="9" r="2"/><path d="M13.5 19v-.5c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5v.5"/></svg>Travel Styles</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Travel Guide for Families</h3>
+            <p class="htour__desc">Camel rides, sandboarding, waterfalls and monkeys — why Morocco is a brilliant family destination, the best things to do with kids, and tips for stress-free family travel.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="travel-styles"><a class="htour__link" href="blog/morocco-travel-guide-solo-travelers.html">
+          <span class="htour__media"><img src="/assets/images/sahara-dunes.jpg" alt="Morocco Travel Guide for Solo Travelers" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="6.5" r="2.5"/><path d="M3 19v-1c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4v1"/><circle cx="16.5" cy="9" r="2"/><path d="M13.5 19v-.5c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5v.5"/></svg>Travel Styles</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Travel Guide for Solo Travelers</h3>
+            <p class="htour__desc">Morocco is a rewarding destination for solo travellers — easy to meet people, full of adventure. A guide to solo travel in Morocco, including safety and group tours.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+        <li><article class="htour htour--blog" data-cat="travel-styles"><a class="htour__link" href="blog/morocco-travel-guide-students-erasmus.html">
+          <span class="htour__media"><img src="/assets/images/camel-caravan.webp" alt="Morocco Travel Guide for Students & Erasmus Groups" width="1200" height="800" loading="lazy"><span class="htour__days"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="6.5" r="2.5"/><path d="M3 19v-1c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4v1"/><circle cx="16.5" cy="9" r="2"/><path d="M13.5 19v-.5c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5v.5"/></svg>Travel Styles</span></span>
+          <span class="htour__body">
+            <h3 class="htour__title">Morocco Travel Guide for Students & Erasmus Groups</h3>
+            <p class="htour__desc">Affordable, close to Europe and full of adventure — why Morocco is perfect for students and Erasmus groups, the best experiences, and how to keep costs down.</p>
+            <span class="link-more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </a></article></li>
+      </ul>
+      <button type="button" class="htours__nav htours__nav--prev" aria-controls="travel-styles-list" aria-label="Previous Travel Styles articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="htours__nav htours__nav--next" aria-controls="travel-styles-list" aria-label="Next Travel Styles articles"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div></section>
+  </div>
   <section class="hcta" aria-labelledby="hcta-title">
     <img class="hcta__bg" src="/assets/images/erg-chebbi-caravan-sunset.jpg" alt="Camel caravan crossing the Erg Chebbi dunes at sunset" width="1800" height="1200" loading="lazy">
     <div class="hcta__inner">
@@ -228,12 +671,46 @@
     </div>
   </section>
   <script>
-  (function(){var f=document.querySelector('.blog-filter');if(!f)return;
-    f.addEventListener('click',function(e){var b=e.target.closest('button[data-cat]');if(!b)return;
-      var c=b.getAttribute('data-cat');
-      f.querySelectorAll('button').forEach(function(x){x.classList.toggle('is-on',x===b);});
-      document.querySelectorAll('.blog-card').forEach(function(card){card.style.display=(c==='all'||card.getAttribute('data-cat')===c)?'':'none';});
-    });})();
+  (function(){
+    var nav=document.querySelector('.bcat');if(!nav)return;
+    var list=nav.querySelector('.bcat__list'),links=[].slice.call(list.querySelectorAll('a')),
+        toggle=nav.querySelector('.bcat__toggle'),form=nav.querySelector('.bsearch'),q=form.querySelector('input'),
+        count=form.querySelector('.bsearch__count'),empty=document.querySelector('.bsearch__empty'),
+        wrap=document.querySelector('.bsecs'),
+        secs=[].slice.call(document.querySelectorAll('.bsec')),cards=[].slice.call(document.querySelectorAll('.bsec .htour')),
+        laptop=window.matchMedia('(min-width: 1025px)'),filter='all',cur;
+    function mark(id){links.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('is-on',on);
+      if(on){a.setAttribute('aria-current','true');list.scrollTo({left:a.offsetLeft-16,behavior:'smooth'});}else a.removeAttribute('aria-current');});}
+    function toTop(){var top=nav.offsetTop-76;if(window.scrollY>top+4)window.scrollTo({top:top});}
+    /* laptop: one grid of all articles, the topic buttons filter it */
+    function setFilter(id){filter=id;secs.forEach(function(s){s.classList.toggle('is-out',id!=='all'&&s.id!==id);});mark(id);}
+    /* tablet/phone: sections in rows, the topic of the section you are reading lights up */
+    function spy(){if(laptop.matches)return;var y=nav.getBoundingClientRect().bottom+60,c=null;
+      secs.forEach(function(s){if(!s.hidden&&s.getBoundingClientRect().top<=y)c=s.id;});
+      if(c!==cur){cur=c;mark(c);}}
+    function mode(){var h=location.hash.slice(1);setFilter(laptop.matches&&secs.some(function(s){return s.id===h;})?h:'all');cur=undefined;if(!laptop.matches)spy();}
+    if(laptop.addEventListener)laptop.addEventListener('change',mode);else laptop.addListener(mode);
+    list.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;
+      var id=a.getAttribute('href').slice(1);
+      if(laptop.matches){e.preventDefault();setFilter(id===filter?'all':id);toTop();}
+      else if(id==='all'){e.preventDefault();}});
+    window.addEventListener('scroll',spy,{passive:true});mode();window.addEventListener('hashchange',function(){if(laptop.matches)mode();});
+    /* search: filters the cards as you type, hides topics with no match */
+    function norm(t){return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
+    cards.forEach(function(c){c._t=norm(c.textContent);});
+    function run(){var v=norm(q.value.trim()),words=v?v.split(/\s+/):[],n=0;
+      cards.forEach(function(c){var ok=words.every(function(w){return c._t.indexOf(w)>-1;});c.parentNode.hidden=!ok;if(ok)n++;});
+      secs.forEach(function(s){s.hidden=!s.querySelector('li:not([hidden])');var l=s.querySelector('.htours__list');l.scrollLeft=0;l.dispatchEvent(new Event('scroll'));});
+      count.textContent=v?n+(n===1?' article':' articles'):'';
+      empty.hidden=!v||n>0;cur=undefined;spy();}
+    function open(){setFilter('all');form.hidden=false;nav.classList.add('is-search');toggle.setAttribute('aria-expanded','true');q.focus();}
+    function close(){q.value='';run();form.hidden=true;nav.classList.remove('is-search');toggle.setAttribute('aria-expanded','false');mode();toggle.focus();}
+    toggle.addEventListener('click',open);
+    form.querySelector('.bsearch__close').addEventListener('click',close);
+    form.addEventListener('submit',function(e){e.preventDefault();q.blur();});
+    q.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+    q.addEventListener('input',function(){run();toTop();});
+  })();
   </script>
   </main>
 <footer class="hfoot">
