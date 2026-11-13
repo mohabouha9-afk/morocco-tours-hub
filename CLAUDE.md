@@ -1,6 +1,7 @@
 # CLAUDE.md — Morocco Tours Hub website
 
 > **Read `.claude/OWNER-PROFILE.md` first**: the owner's working style, design likes/rejections, content rules and brand identity in one place.
+> **Day-trip pages:** follow `.claude/PERFECT-DAY-TRIP.md` (blueprint of the owner-approved Agafay sample: section order, fixed content, per-trip data, rules, technical checklist).
 
 ## The business
 - **Morocco Tours Hub** — local Moroccan tour operator. Live site: https://moroccotourshub.com/
