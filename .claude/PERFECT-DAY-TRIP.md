@@ -25,7 +25,7 @@ A visitor answers five questions, in this order. The page follows them:
 | 6 | **What's Included** | 3 boxes: Included / Not included / Good to know → **Costs on the day** → **Day Trip Map** (title + map + 1-line note) | `#included`, `.dt-inc`, `.dt-costs`, `h3.dt-h3` + `.dt-map` + `.dt-map__note` |
 | 7 | **Make It Your Own** | 1 line + 6 options (2-col ticks) → **Is this trip for you?** (Great for / Think twice if, with links to the better-fit tour) | `#custom`, `.dt-ticks--2`, `h3.dt-h3` + `.dt-inc.dt-fit` |
 | 8 | **Reviews** | 4.9 from 5,000+ travellers + Read more reviews link + 3 review cards (swipe row on phones) | `#reviews`, `.dt-revs__sum`, `.dt-revs .hrev-card` |
-| 9 | **FAQ** | 5 questions, first open, only things not answered above | `#faq`, `.hfaq-item`; booking answer = `ol.dt-steps` |
+| 9 | **FAQ** | 5–6 questions, first open, only things not answered above. **Owner (2026-11-13): the FAQ does NOT have to match Agafay; pick each trip's questions from its own research (Reddit, TripAdvisor, top pages)** | `#faq`, `.hfaq-item`; booking answer = `ol.dt-steps` |
 | side | **Booking box** (sticky on laptop) | "Private day trip" / **Book Your Date** / price note / 2 trust lines / form → WhatsApp / Ask on WhatsApp / phone | `aside.dt-aside#book`, `.dt-book` |
 | 10 | Other Day Trips | Laptop/tablet: title → **"View all day trips" text link above the cards** (right-aligned, styled like "Read more reviews") → 3 cards, no button under the row. **Phones keep the original:** no link above, gold arrow link "View all day trips" at the end of the swipe row (`li.htours__end`) | `section.dt-others`, `p.dt-others__all`, `li.htours__end` |
 | 11 | Help strip | "Confused or want to add a day trip to a tour?" + WhatsApp + Request a Quote | `section.dtl-combine` |
@@ -36,7 +36,7 @@ A visitor answers five questions, in this order. The page follows them:
 - **No price anywhere on the page** (not "On request", not "from €X", not in the hidden data).
 - Booking note: *"The price depends on your date, your accommodation and the number of travellers."* (no "we reply within 24 hours").
 - Trust lines: **Transparent pricing** – What we agree on is what you pay. / **Free cancellation** – Up to 24 hours before the trip.
-- **A professional licensed local guide is ALWAYS included** → key fact "Guide: Licensed local guide included", Included list, FAQ "Do we need a guide…? → always included, you never pay anyone else".
+- **Owner (2026-11-13): call him a "local professional guide" (not "licensed mountain guide"), and never list the guide under Costs on the day.** A professional local guide is ALWAYS included → key fact "Guide: Licensed local guide included", Included list, FAQ "Do we need a guide…? → always included, you never pay anyone else".
 - **Free cancellation up to 24 hours before** → key fact "Cancellation" + first sentence of the change-date FAQ.
 - **Payment:** small deposit to confirm, the rest on the day in cash or by card (FAQ "How do I book and pay?" as 2 numbered steps).
 - **No shopping stops** → key fact + FAQ "Will we stop at shops on the way?".
