@@ -27,7 +27,7 @@ A visitor answers five questions, in this order. The page follows them:
 | 8 | **Reviews** | 4.9 from 5,000+ travellers + Read more reviews link + 3 review cards (swipe row on phones) | `#reviews`, `.dt-revs__sum`, `.dt-revs .hrev-card` |
 | 9 | **FAQ** | 5 questions, first open, only things not answered above | `#faq`, `.hfaq-item`; booking answer = `ol.dt-steps` |
 | side | **Booking box** (sticky on laptop) | "Private day trip" / **Book Your Date** / price note / 2 trust lines / form → WhatsApp / Ask on WhatsApp / phone | `aside.dt-aside#book`, `.dt-book` |
-| 10 | Other Day Trips | Title → **"View all day trips" text link above the cards** (right-aligned, styled like "Read more reviews"; left on phones) → 3 cards. No button under the row, no arrow card at the end of the phone row | `section.dt-others`, `p.dt-others__all` |
+| 10 | Other Day Trips | Laptop/tablet: title → **"View all day trips" text link above the cards** (right-aligned, styled like "Read more reviews") → 3 cards, no button under the row. **Phones keep the original:** no link above, gold arrow link "View all day trips" at the end of the swipe row (`li.htours__end`) | `section.dt-others`, `p.dt-others__all`, `li.htours__end` |
 | 11 | Help strip | "Confused or want to add a day trip to a tour?" + WhatsApp + Request a Quote | `section.dtl-combine` |
 | 12 | Closing banner | "Book This Day Trip on Your Date" | `section.hcta` |
 | fixed | Phone/tablet booking bar | Trip name + "Free cancellation up to 24 h" + BOOK YOUR DATE → #book; hides while the booking box is on screen | `div.dt-mbar` (≤1100px) |

@@ -2033,10 +2033,8 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
 .dt-others__all a:hover { color: var(--navy); text-decoration: underline; }
 .dt-others__all a:active { color: var(--gold); }
 .dt-others__all a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
-@media (max-width: 640px) {
-  .dt-others__all { justify-content: flex-start; }
-  .dt-others__list:not(:has(.htours__end)) { grid-template-columns: repeat(3, 80%); }
-}
+/* phones keep the original pattern: arrow link at the end of the swipe row, no link above */
+@media (max-width: 640px) { .dt-others__all { display: none; } }
 .dt-mbar { display: none; }
 @media (max-width: 1100px) {
   .dt-mbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 85; display: flex; align-items: center; justify-content: space-between; gap: 12px;
