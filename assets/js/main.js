@@ -145,3 +145,10 @@ function moroccoForm(form) {
   if (wide.addEventListener) wide.addEventListener('change', sync); else wide.addListener(sync);
   sync();
 })();
+
+/* day-trip pages: hide the phone booking bar while the booking box itself is on screen */
+(function () {
+  var bar = document.querySelector('.dt-mbar'), box = document.querySelector('.dt-book');
+  if (!bar || !box || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (e) { bar.classList.toggle('is-hidden', e[0].isIntersecting); }).observe(box);
+})();
