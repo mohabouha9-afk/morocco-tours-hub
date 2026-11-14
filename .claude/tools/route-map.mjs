@@ -162,6 +162,19 @@ const TRIPS = {
       { at: [-6.9063, 30.9189], icon: 'film', name: 'Ouarzazate', note: 'Studios or kasbah', side: 'right', sideM: 'bottom' },
     ],
   },
+  // 2-day tour Marrakech → Merzouga → Marrakech: same roads as mz3, one night in the dunes
+  mz2: {
+    title: 'Route map: 2-day tour from Marrakech over the High Atlas through Ouarzazate and the Dades Valley to the Merzouga dunes, back through the Draa Valley',
+    legend: [], chip: { at: 0.42, text: 'About 1,120 km in 2 days', textM: '1,120 km' }, compassM: 'topright', pad: [110, 48, 40, 36], padM: [48, 48, 24, 44],
+    legs: [{ kind: 'car', road: 'mz2-d1' }, { kind: 'car', road: 'mz3-d3' }], // OSRM: d1 557 km, d2 559 km
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'top', sideM: 'bottom' },
+      { at: [-6.9063, 30.9189], icon: 'kasbah', name: 'Ouarzazate', note: 'Day 1', side: 'left', sideM: 'bottom' },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Day 1', side: 'top', sideM: 'top' },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night in camp', side: 'left', sideM: 'left' },
+      { at: [-6.45, 30.70], icon: 'view', name: 'Draa Valley', note: 'Day 2, way back', side: 'bottom', hideM: true },
+    ],
+  },
   // 3-day tour Marrakech → Dades → Merzouga → Marrakech (OSRM: d1 323 km, d2 272 km, d3 559 km)
   mz3: {
     title: 'Route map: 3-day tour from Marrakech over the High Atlas to Aït Ben Haddou, the Dades Valley, the Todra Gorge and the Merzouga dunes, back through the Draa Valley',
