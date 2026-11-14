@@ -39,9 +39,11 @@ A visitor answers five questions, in this order. The page follows them:
 - **Owner (2026-11-13): call him a "local professional guide" (not "licensed mountain guide"), and never list the guide under Costs on the day.** A professional local guide is ALWAYS included → key fact "Guide: Licensed local guide included", Included list, FAQ "Do we need a guide…? → always included, you never pay anyone else".
 - **Free cancellation up to 24 hours before** → key fact "Cancellation" + first sentence of the change-date FAQ.
 - **Payment:** small deposit to confirm, the rest on the day in cash or by card (FAQ "How do I book and pay?" as 2 numbered steps).
-- **No shopping stops** → key fact + FAQ "Will we stop at shops on the way?".
+- **No shopping stops** → key fact + FAQ "Will we stop at shops on the way?" — **only on trips where a shop stop is a real risk** (long day trips). Not on short/evening experiences.
+- **Key facts rule (owner, 2026-11-14):** always exactly 6, and they must be **the 6 most important facts for THAT trip** (not a fixed list): usually Pick-up/back, Drive, the main activity and its length (e.g. "Camel ride: About 1 hour at sunset"), what's included that matters (e.g. "Dinner & show: Included"), Guide, Cancellation. Drop Shopping stops / Best time when they don't matter. **Keep each value short** (2–6 words, e.g. "40 minutes from Marrakech", "Free up to 24 h before", "Local guide included").
 - **Lunch:** not included, give an honest approximate cost ("around €10 depending on what you eat" for Agafay) in Costs on the day and the lunch step.
 - **Tips:** "up to you" — never an amount.
+- **Entrance fees (owner, 2026-11-14): NOT included, paid on site** — list each monument under Not included / Costs on the day with its price (e.g. Bahia 100 MAD). Exception in practice: Majorelle tickets are online-only, so we buy them in advance and the guest repays on the day. (Researched: budget sellers and the reference agency exclude fees, premium private operators include them; owner chose paid on site.)
 - Promises the owner approved: WhatsApp confirmation of time and place the day before; medina riads = driver meets you at the nearest gate; drop-off at a restaurant if you go out for dinner; driver stays with you all day.
 - Vehicle: "Private air-conditioned 4×4 or minivan with driver (see our fleet → `../index.html#fleet`)"; child seats on request.
 - Reviews: the 3 site reviews (Lukas M., Sarah L., James T.) until the owner gives per-trip reviews. **Do not invent traveller types or platforms** (reviews.html only has name, country, tour).
@@ -87,3 +89,14 @@ Trip-specific must-answers (from research): **Aït Ben Haddou** long day (~3–3
 - Key facts "At the camp" (time split) and "Walking" on Agafay — a time-split / walking fact may still suit long trips (Aït Ben Haddou, Ouzoud, Ourika); ask the owner first.
 - FAQ "Is it a sand desert?" and "Is it suitable for families?" (answered elsewhere).
 - Invented review tags (traveller type / platform).
+- **Route map on every page** (owner, 2026-11-14): only pages with a real drive or route that helps people decide get the Day Trip Map, and only with real locations. Short in-town experiences (hammam, cooking class) have none; no map with made-up example pins.
+
+## 8. Fit the page to its topic (owner, 2026-11-14: "be flexible, follow the research")
+The blueprint is a starting point, not a form to fill. On every page check that each section, label and line fits what the visitor is buying:
+- **Day trips (the 6 drive trips)** keep the day-trip wording: "Private day trip", "Day Trip Map", "Is this trip for you?", "Other Day Trips", banner "Book This Day Trip on Your Date".
+- **Experiences (balloon, camel & dinner, quad, medina, Majorelle, food tour, hammam, cooking class)**: no "day trip" wording. Booking label "Private experience" / "Private guided tour" / "Private food tour" / "Private cooking class"; form field Experience / Tour / Class; map title "Route Map" (walks: "Walking Route"); "Is this for you?"; related cards "You May Also Like"; add-to-tour strip "Want to add this experience to a Morocco tour?"; own closing banner line (e.g. "Book Your Sunrise Flight"); booking-box aria-label "Book this experience/tour/class".
+- **Services (airport transfer)**: How It Works instead of Programme, Our Vehicles, Extras, no Highlights / Is this for you? / guide fact, TaxiService JSON-LD, "Book Your Transfer".
+- **Drop a section when it only repeats another** (hammam: Highlights repeated the ritual steps, removed; its programme is titled "The Ritual").
+- **Map only with real places where the route helps** (none on hammam, cooking class, airport).
+- **Reviews**: only real site reviews (reviews.html has 6). Desert reviews (Lukas M. Merzouga camels, Sarah L. desert camp) only on desert pages (Agafay day trip, camel & dinner, quad); every other page shows the 3 general ones (James T., Chloé D., Aisha K.).
+- **Guide wording**: "local professional guide", never "licensed guide" (balloon pilots stay "licensed").

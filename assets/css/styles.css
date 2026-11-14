@@ -156,10 +156,6 @@ p { margin: 0 0 1em; }
 .dropdown--dest { min-width: 210px; }
 
 /* Browse-by toggle (tours listing) */
-.browse-toggle { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 28px 0 4px; }
-.browse-toggle button { padding: 9px 20px; border: 1px solid var(--line); background: #fff; border-radius: 999px; font-family: inherit; font-size: .9rem; font-weight: 600; color: var(--navy); cursor: pointer; transition: .18s ease; }
-.browse-toggle button:hover { border-color: var(--gold); color: var(--gold-deep); }
-.browse-toggle button.is-on { background: var(--navy); border-color: var(--navy); color: #fff; }
 .browse-view[hidden] { display: none; }
 
 /* Start-elsewhere chips on city pages */
@@ -1500,41 +1496,68 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
   .site2 .head-row { margin-bottom: 18px; }
 }
 
-/* tours page: "Browse By" block — title, two buttons, then the chosen list (homepage section style) */
-.tbrowse { padding: 64px 0 32px; text-align: center; }
-.tbrowse__title { margin: 0 0 22px; font-size: clamp(1.3rem, 1.1rem + .6vw, 1.625rem); font-weight: 700; line-height: 1.15; letter-spacing: .03em; text-transform: uppercase; }
-.tbrowse__title::after { content: ""; display: block; width: 44px; height: 2px; margin: 12px auto 0; background: var(--gold); border-radius: 2px; }
-.tbrowse .browse-toggle { justify-content: center; gap: 12px; margin: 0 0 22px; }
-.tbrowse .browse-toggle button {
-  min-width: 150px; padding: 12px 22px; border: 1.5px solid var(--gold); border-radius: 6px; background: #fff; color: var(--gold-deep);
-  font-family: var(--serif); font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-  transition: background-color .18s ease, color .18s ease, transform .18s ease;
+/* tours page: sticky "browse" bar (.tbar) — follows you under the scrolled 76px header.
+   Left: By city / By theme switch; right: one row of chips (short name + count) that jump to
+   their section; the chip of the section you are reading turns navy (scroll-spy, inline script). */
+.tbar { position: sticky; top: 76px; z-index: 40; margin-top: 40px; background: rgba(250,246,238,.96); backdrop-filter: blur(8px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.page-swap .tbar { background: rgba(255,253,249,.96); }
+.tbar__bar { position: relative; display: flex; align-items: center; justify-content: center; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
+.tbar__switch { flex: none; display: flex; padding: 3px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.tbar__switch button { padding: 8px 14px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); cursor: pointer;
+  font-family: var(--serif); font-size: .76rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap;
+  transition: background-color .18s ease, color .18s ease, transform .18s ease; }
+.tbar__switch button:hover { color: var(--gold-deep); }
+.tbar__switch button.is-on { background: var(--gold); color: #fff; }
+.tbar__switch button:active { transform: scale(.96); }
+.tbar__switch button:focus-visible, .tbar__list a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.tbar__list { list-style: none; margin: 0; padding: 2px; display: flex; gap: 8px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.tbar__list::-webkit-scrollbar { display: none; }
+.tbar__list[hidden] { display: none; }
+.tbar__list li { flex: none; }
+.tbar__list a { display: inline-flex; align-items: center; gap: 7px; padding: 7px 9px 7px 11px; background: #fff; border: 1px solid var(--line); border-radius: 6px;
+  font-size: .82rem; font-weight: 500; color: var(--navy); white-space: nowrap; transition: border-color .18s ease, color .18s ease, background-color .18s ease, transform .18s ease; }
+.tbar__list svg { width: 16px; height: 16px; color: var(--gold); flex: none; }
+.tbar__list b { min-width: 22px; padding: 1px 6px; border-radius: 4px; background: var(--cream-2); color: var(--gold-deep); font-size: .7rem; font-weight: 600; text-align: center; }
+.tbar__list a:hover { border-color: var(--gold); color: var(--gold-deep); }
+.tbar__list a:active { transform: scale(.97); }
+.tbar__list a.is-on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.tbar__list a.is-on svg { color: var(--gold-light); }
+.tbar__list a.is-on b { background: var(--gold); color: #fff; }
+/* search: reuses the blog round gold button + field (.bcat__toggle / .bsearch, which cover the bar while open) */
+.tbar.is-search .tbar__switch, .tbar.is-search .tbar__list, .tbar.is-search .bcat__toggle { visibility: hidden; }
+.tbar .bcat__toggle { width: 36px; height: 36px; }
+.tbar ~ .bsearch__empty { margin-bottom: 64px; }
+/* Day Trips page: no switch, one list of all 13 names; no search icon on phones (owner) */
+@media (max-width: 640px) { .tbar--dt .bcat__toggle, .tbar--dt .bsearch { display: none; } }
+/* Day Trips page: a chip briefly rings its card in gold (opacity only) */
+.tbar--dt ~ .dtl-list .htour { position: relative; }
+.htour.is-flash::after { content: ""; position: absolute; inset: -4px; border: 2px solid var(--gold); border-radius: 13px; pointer-events: none; opacity: 0; animation: dt-flash 2s ease; }
+@keyframes dt-flash { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .htour.is-flash::after { animation-duration: 2.4s; animation-timing-function: steps(1, end); } }
+/* the first tour section under the bar keeps the 64px rhythm */
+.tbar ~ .browse-view > .section:first-child { padding-top: 32px; }
+/* laptops: the 10 theme chips do not fit one line, so they wrap to a second centred line */
+@media (min-width: 1025px) {
+  .tbar__list { flex-wrap: wrap; justify-content: center; overflow: visible; }
+  .tbar__list[data-view="theme"] { gap: 6px; }
+  .tbar__list[data-view="theme"] a { padding: 6px 8px 6px 10px; font-size: .78rem; }
 }
-.tbrowse .browse-toggle button:hover { background: var(--sand); color: var(--gold-deep); border-color: var(--gold); }
-.tbrowse .browse-toggle button.is-on { background: var(--gold); border-color: var(--gold); color: #fff; }
-.tbrowse .browse-toggle button:active { transform: scale(.97); }
-.tbrowse .browse-toggle button:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
-.tbrowse__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 980px; margin: 0 auto; }
-.tbrowse__list[hidden] { display: none; }
-.tbrowse__list a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; background: #fff;
-  font-size: .84rem; font-weight: 500; color: var(--navy); transition: border-color .18s ease, color .18s ease; }
-.tbrowse__list a:hover { border-color: var(--gold); color: var(--gold-deep); }
-.tbrowse__list a:active { transform: translateY(1px); }
-.tbrowse__list a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-.tbrowse__list a b { background: var(--sand); color: var(--gold-deep); border-radius: 999px; padding: 1px 8px; font-size: .74rem; }
-/* the first tour section right under the block keeps the homepage 64px rhythm (32 + 32) */
-.tbrowse + .browse-view > .section:first-child { padding-top: 32px; }
-@media (max-width: 680px) {
-  .tbrowse { padding: 48px 0 28px; }
-  .tbrowse__title { margin-bottom: 18px; }
-  .tbrowse .browse-toggle { gap: 10px; margin-bottom: 18px; }
-  .tbrowse .browse-toggle button { flex: 1 1 0; min-width: 0; padding: 11px 10px; font-size: .78rem; }
-  .tbrowse__list { gap: 6px; }
-  .tbrowse__list a { padding: 7px 12px; font-size: .78rem; }
-  .tbrowse + .browse-view > .section:first-child { padding-top: 28px; }
-  /* phones: list hidden until Starting city or Theme is tapped */
-  .tbrowse:not(.is-open) .tbrowse__list { display: none; }
-  .tbrowse:not(.is-open) .browse-toggle { margin-bottom: 0; }
+/* tablet + phone: one line — the switch stays put on the left, the chips scroll sideways beside it */
+@media (max-width: 1024px) {
+  .tbar__bar { justify-content: flex-start; gap: 10px; padding-right: 0; }
+  .tbar__list { flex: 1 1 auto; padding: 2px 0; }
+  .tbar__list li:last-child { padding-right: 24px; }
+}
+@media (max-width: 640px) {
+  .tbar { margin-top: 28px; }
+  .tbar__bar { padding-top: 9px; padding-bottom: 9px; gap: 8px; }
+  .tbar__switch { padding: 2px; }
+  .tbar__switch button { padding: 7px 9px; font-size: .64rem; letter-spacing: .05em; }
+  .tbar__list { gap: 6px; }
+  .tbar__list li:last-child { padding-right: 16px; }
+  .tbar__list a { padding: 6px 8px 6px 9px; font-size: .78rem; gap: 6px; }
+  .tbar__list svg { width: 14px; height: 14px; }
+  .tbar ~ .browse-view > .section:first-child { padding-top: 28px; }
 }
 
 /* ==========================================================================
@@ -2013,6 +2036,66 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
 @media (max-width: 640px) {
   .dt-ticks--2 { grid-template-columns: 1fr; }
   .dt-map iframe { height: 240px; }
+}
+/* Day-trip route map (figure.rmap): real OpenStreetMap land (Leaflet), our route traced on the real
+   roads (navy line, white casing; gold dashes = by quad), gold icon pins with white labels, a navy
+   drive-time tag and an 8-point star compass with N/E/S/W. Built by .claude/tools/route-map.mjs + main.js. */
+.rmap { position: relative; isolation: isolate; z-index: 0; margin: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); background: #e8e2d4; }
+.dt-h3 + .rmap { margin-top: 0; }
+.rmap__map { width: 100%; height: 300px; font: inherit; background: #e8e2d4; }
+.rmap .leaflet-tile-pane { filter: saturate(.85) contrast(.97); }
+.rmap .leaflet-control-zoom { border: 0; box-shadow: var(--shadow-sm); border-radius: 6px; overflow: hidden; }
+.rmap .leaflet-control-zoom a { width: 32px; height: 32px; line-height: 30px; color: var(--navy); font-size: 18px; }
+.rmap .leaflet-control-zoom a:hover { background: var(--cream); color: var(--gold-deep); }
+.rmap .leaflet-control-zoom a:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+.rmap .leaflet-control-attribution { font-size: 10px; background: rgba(255, 255, 255, .85); }
+.rmap .leaflet-control-scale-line { border-color: var(--navy); color: var(--navy); background: rgba(255, 255, 255, .8); font-size: 10px; }
+/* stop pins */
+.rmap-pin { display: grid !important; place-items: center; border-radius: 50%; background: var(--gold); color: #fff; border: 2.5px solid #fff; box-shadow: 0 2px 8px rgba(14, 42, 65, .35); }
+.rmap-pin svg { width: 18px; height: 18px; }
+.rmap-pin--start { background: var(--navy); }
+/* labels beside each pin */
+.leaflet-tooltip.rmap-tip { display: grid; padding: 4px 9px 5px; background: #fff; border: 0; border-radius: 6px; box-shadow: 0 1px 5px rgba(14, 42, 65, .22); font-family: inherit; white-space: nowrap; }
+.leaflet-tooltip.rmap-tip::before { display: none; }
+.rmap-tip b { font-size: .84rem; font-weight: 600; line-height: 1.25; color: var(--navy); }
+.rmap-tip small { font-size: .7rem; line-height: 1.3; color: var(--muted); }
+.rmap-tip--left { text-align: right; }
+.rmap-tip--top, .rmap-tip--bottom { text-align: center; }
+/* drive-time tag on the road */
+.leaflet-tooltip.rmap-chip { padding: 4px 10px; background: var(--navy); color: #fff; border: 2px solid #fff; border-radius: 999px; box-shadow: 0 2px 6px rgba(14, 42, 65, .3);
+  font-family: inherit; font-size: .72rem; font-weight: 600; white-space: nowrap; }
+.leaflet-tooltip.rmap-chip::before { display: none; }
+/* compass: 8-point star with N / E / S / W */
+.rmap-compass { position: relative; width: 74px; height: 74px; margin: 10px 10px 0 0 !important; border-radius: 50%; background: rgba(255, 255, 255, .92); box-shadow: var(--shadow-sm); pointer-events: none; }
+.rmap-compass svg { position: absolute; inset: 13px; width: 48px; height: 48px; }
+.rmap-compass__star { fill: var(--navy); opacity: .85; }
+.rmap-compass__n { fill: var(--gold); }
+.rmap-compass__l { position: absolute; font-size: .66rem; font-weight: 700; line-height: 1; color: var(--navy); }
+.rmap-compass__l--n { top: 3px; left: 50%; transform: translateX(-50%); color: var(--gold-deep); }
+.rmap-compass__l--s { bottom: 3px; left: 50%; transform: translateX(-50%); }
+.rmap-compass__l--e { right: 4px; top: 50%; transform: translateY(-50%); }
+.rmap-compass__l--w { left: 4px; top: 50%; transform: translateY(-50%); }
+/* legend (only when there are two kinds of line) */
+.rmap__legend { position: absolute; left: 10px; top: 10px; z-index: 500; display: flex; gap: 14px; padding: 6px 10px; background: rgba(255, 255, 255, .94); border-radius: 6px;
+  box-shadow: var(--shadow-sm); font-size: .72rem; color: var(--ink); }
+.rmap__legend span { display: inline-flex; align-items: center; gap: 6px; }
+.rmap__key { width: 22px; height: 0; border-top: 4px solid var(--navy); border-radius: 2px; }
+.rmap__key--quad, .rmap__key--air { border-top: 3px dashed var(--gold-deep); }
+.rmap__key--walk { border-top: 4px dotted var(--navy); }
+.rmap:has(.rmap__legend) .leaflet-top.leaflet-left { top: 38px; }
+@media (max-width: 640px) {
+  .rmap__map { height: 240px; }
+  .rmap-pin { width: 28px !important; height: 28px !important; margin-left: -14px !important; margin-top: -14px !important; }
+  .rmap-pin svg { width: 15px; height: 15px; }
+  .leaflet-tooltip.rmap-tip { padding: 3px 7px 4px; }
+  .rmap-tip b { font-size: .72rem; }
+  .rmap-tip small { display: none; }
+  .leaflet-tooltip.rmap-chip { font-size: .64rem; padding: 3px 8px; }
+  .rmap-compass { width: 52px; height: 52px; margin: 8px !important; }
+  .rmap-compass svg { inset: 10px; width: 32px; height: 32px; }
+  .rmap-compass__l { font-size: .56rem; }
+  .rmap__legend { left: 8px; top: 8px; gap: 10px; padding: 4px 8px; font-size: .64rem; }
+  .rmap .leaflet-control-scale { display: none; }
 }
 /* short laptop screens: the price note stays visible (small) so the sticky box still fits whole */
 @media (min-width: 1101px) and (max-height: 860px) {

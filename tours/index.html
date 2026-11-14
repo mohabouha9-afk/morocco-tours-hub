@@ -89,19 +89,22 @@
   <section class="trust trust--lift" aria-label="Why travel with us"><div class="wrap"><div class="trust__grid">
     <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg><b>100% Private Tours</b><small>No groups, just your journey</small></div><div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg><b>Local Experts</b><small>Passionate & experienced guides</small></div><div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M4 13l1.5-4.5A2 2 0 017.4 7h9.2a2 2 0 011.9 1.5L20 13M4 13h16M4 13v4h2v-1.5h12V17h2v-4"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg><b>Comfortable Transport</b><small>Safe & modern vehicles</small></div><div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 13v-1a7 7 0 0114 0v1M5 13a2 2 0 00-2 2v1a2 2 0 002 2h1v-5H5zm14 0a2 2 0 012 2v1a2 2 0 01-2 2h-1v-5h1zM12 21h3a2 2 0 002-2v-1"/></svg><b>24/7 Support</b><small>We are here for you</small></div><div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><path d="M4 20c8 0 16-4 16-14 0 0-12-2-14 6-1 4 0 6 0 6l6-8"/></svg><b>Sustainable Travel</b><small>Supporting local communities</small></div><div class="trust__item trust__item--m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/></svg><b>Flexible Payment</b><small>Small deposit, balance on arrival</small></div>
   </div></div></section>
-  <section class="tbrowse" aria-labelledby="tbrowse-title"><div class="wrap">
-    <h2 class="tbrowse__title" id="tbrowse-title">Browse By</h2>
-    <div class="browse-toggle" role="tablist" aria-label="Browse tours by">
-      <button type="button" role="tab" id="tab-city" aria-selected="true" aria-controls="list-city" class="is-on" data-view="city">Starting city</button>
-      <button type="button" role="tab" id="tab-theme" aria-selected="false" aria-controls="list-theme" data-view="theme">Theme</button>
+  <nav class="tbar" aria-label="Browse tours by starting city or theme"><div class="wrap tbar__bar">
+    <div class="tbar__switch" role="tablist" aria-label="Browse tours by">
+      <button type="button" role="tab" id="tab-city" aria-selected="true" aria-controls="list-city" class="is-on" data-view="city">By city</button><button type="button" role="tab" id="tab-theme" aria-selected="false" aria-controls="list-theme" data-view="theme">By theme</button>
     </div>
-    <nav class="tbrowse__list" id="list-city" role="tabpanel" aria-labelledby="tab-city" data-view="city">
-    <a href="#morocco-tours-from-marrakech">Morocco Tours from Marrakech <b>35</b></a><a href="#morocco-tours-from-casablanca">Morocco Tours from Casablanca <b>9</b></a><a href="#morocco-tours-from-tangier">Morocco Tours from Tangier <b>13</b></a><a href="#morocco-tours-from-fes">Morocco Tours from Fes <b>6</b></a><a href="#morocco-tours-from-errachidia">Morocco Tours from Errachidia <b>3</b></a><a href="#morocco-tours-from-agadir">Morocco Tours from Agadir <b>5</b></a>
-    </nav>
-    <nav class="tbrowse__list" id="list-theme" role="tabpanel" aria-labelledby="tab-theme" data-view="theme" hidden>
-    <a href="#desert">Sahara Desert Tours <b>19</b></a><a href="#grand">Grand Morocco Tours <b>28</b></a><a href="#northern">Northern Morocco Tours <b>4</b></a><a href="#coast">Coast & Short Breaks <b>6</b></a><a href="#daytrip">Day Trips from Marrakech <b>6</b></a><a href="#student">Student & Group Tours <b>6</b></a><a href="#family">Family Tours <b>1</b></a><a href="#wellness">Yoga & Wellness Retreats <b>1</b></a><a href="#photography">Photography Tours <b>1</b></a><a href="#honeymoon">Honeymoon Tours <b>1</b></a>
-    </nav>
-  </div></section>
+    <ul class="tbar__list" id="list-city" role="tabpanel" aria-labelledby="tab-city" data-view="city"><li><a href="#morocco-tours-from-marrakech"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4-4.5 7-7.6 7-11a7 7 0 10-14 0c0 3.4 3 6.5 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Marrakech</span><b>35</b></a></li><li><a href="#morocco-tours-from-casablanca"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4-4.5 7-7.6 7-11a7 7 0 10-14 0c0 3.4 3 6.5 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Casablanca</span><b>9</b></a></li><li><a href="#morocco-tours-from-tangier"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4-4.5 7-7.6 7-11a7 7 0 10-14 0c0 3.4 3 6.5 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Tangier</span><b>13</b></a></li><li><a href="#morocco-tours-from-fes"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4-4.5 7-7.6 7-11a7 7 0 10-14 0c0 3.4 3 6.5 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Fes</span><b>6</b></a></li><li><a href="#morocco-tours-from-errachidia"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4-4.5 7-7.6 7-11a7 7 0 10-14 0c0 3.4 3 6.5 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Errachidia</span><b>3</b></a></li><li><a href="#morocco-tours-from-agadir"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4-4.5 7-7.6 7-11a7 7 0 10-14 0c0 3.4 3 6.5 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Agadir</span><b>5</b></a></li></ul>
+    <ul class="tbar__list" id="list-theme" role="tabpanel" aria-labelledby="tab-theme" data-view="theme" hidden><li><a href="#desert"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Sahara Desert</span><b>19</b></a></li><li><a href="#grand"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Grand Tours</span><b>28</b></a></li><li><a href="#northern"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Northern Morocco</span><b>4</b></a></li><li><a href="#coast"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Coast &amp; Short Breaks</span><b>6</b></a></li><li><a href="#daytrip"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Day Trips</span><b>6</b></a></li><li><a href="#student"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Student &amp; Group</span><b>6</b></a></li><li><a href="#family"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Family</span><b>1</b></a></li><li><a href="#wellness"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Yoga &amp; Wellness</span><b>1</b></a></li><li><a href="#photography"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Photography</span><b>1</b></a></li><li><a href="#honeymoon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Honeymoon</span><b>1</b></a></li></ul>
+    <button type="button" class="bcat__toggle" aria-expanded="false" aria-controls="tsearch" aria-label="Search tours"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+    <form class="bsearch" id="tsearch" role="search" hidden>
+      <label class="bsearch__label" for="tsearch-q">Search 73 tours</label>
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="tsearch-q" type="search" placeholder="Search tours, e.g. Sahara, Fes, 7 days" autocomplete="off" enterkeyhint="search">
+      <span class="bsearch__count" aria-live="polite"></span>
+      <button type="button" class="bsearch__close" aria-label="Close search"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </form>
+  </div></nav>
+  <p class="bsearch__empty" hidden>No tours match your search. Try a shorter word, like Sahara, Fes or 5 days.</p>
 
   <div class="browse-view" data-view="city">
     <section class="section" id="morocco-tours-from-marrakech"><div class="wrap">
@@ -2044,19 +2047,65 @@
   </section>
   <script>
   (function(){
-    var toggle=document.querySelector('.browse-toggle'); if(!toggle) return;
-    function setView(view){
-      toggle.querySelectorAll('button').forEach(function(b){var on=b.getAttribute('data-view')===view; b.classList.toggle('is-on',on); b.setAttribute('aria-selected',on?'true':'false');});
-      document.querySelectorAll('.browse-view, .tbrowse__list').forEach(function(v){v.hidden=v.getAttribute('data-view')!==view;});
+    var bar=document.querySelector('.tbar'); if(!bar) return;
+    var sw=bar.querySelector('.tbar__switch'), view='city';
+    function OFF(){ return 76+bar.offsetHeight+8; }
+    function links(){ return bar.querySelectorAll('.tbar__list[data-view="'+view+'"] a'); }
+    function go(el,smooth){ window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-OFF()+32,behavior:smooth?'smooth':'auto'}); }
+    function setView(v){
+      view=v;
+      sw.querySelectorAll('button').forEach(function(b){var on=b.getAttribute('data-view')===v; b.classList.toggle('is-on',on); b.setAttribute('aria-selected',on?'true':'false');});
+      document.querySelectorAll('.browse-view, .tbar__list').forEach(function(el){el.hidden=el.getAttribute('data-view')!==v;});
+      cur=null; if(typeof run==='function') run(); spy();
     }
-    var box=toggle.closest('.tbrowse');
-    toggle.addEventListener('click',function(e){var b=e.target.closest('button[data-view]'); if(!b) return;
-      // phones: the list stays closed until a button is tapped; tapping the open one again closes it
-      var same=b.classList.contains('is-on'); if(box){ box.classList.toggle('is-open', !(same && box.classList.contains('is-open'))); }
-      setView(b.getAttribute('data-view'));});
-    var themeIds=['desert','grand','northern','coast','daytrip','student','family','wellness','photography','honeymoon'];
-    var h=location.hash.replace('#','');
-    if(h && themeIds.indexOf(h)>-1){ setView('theme'); var el=document.getElementById(h); if(el) setTimeout(function(){el.scrollIntoView();},60); }
+    // switching view while the bar is pinned jumps to the top of the new list
+    sw.addEventListener('click',function(e){var b=e.target.closest('button[data-view]'); if(!b||b.classList.contains('is-on')) return;
+      setView(b.getAttribute('data-view'));
+      if(bar.getBoundingClientRect().top<=77){ var first=document.querySelector('.browse-view:not([hidden]) > .section'); if(first) go(first,false); }
+    });
+    // scroll-spy: the chip of the section you are reading turns navy (and slides into view when the row scrolls)
+    var cur=null;
+    function spy(){
+      var on=null; links().forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s && !s.hidden && !a.parentNode.hidden && s.getBoundingClientRect().top<=OFF()) on=a;});
+      if(on===cur) return;
+      bar.querySelectorAll('.tbar__list a.is-on').forEach(function(a){a.classList.remove('is-on'); a.removeAttribute('aria-current');});
+      cur=on;
+      if(on){ on.classList.add('is-on'); on.setAttribute('aria-current','true'); var l=on.closest('.tbar__list'); if(l.scrollWidth>l.clientWidth){ l.scrollTo({left:on.parentNode.offsetLeft-l.offsetLeft-8,behavior:'smooth'}); } }
+    }
+    var tick=false; window.addEventListener('scroll',function(){ if(!tick){ tick=true; requestAnimationFrame(function(){tick=false; spy();}); } },{passive:true});
+    bar.addEventListener('click',function(e){var a=e.target.closest('.tbar__list a'); if(!a) return; var s=document.getElementById(a.getAttribute('href').slice(1)); if(!s) return;
+      e.preventDefault(); go(s,true); history.replaceState(null,'','#'+s.id);});
+    var h=location.hash.slice(1), themeIds=['desert','grand','northern','coast','daytrip','student','family','wellness','photography','honeymoon'];
+    if(h && themeIds.indexOf(h)>-1) setView('theme');
+    if(h){ var el=document.getElementById(h); if(el && el.closest('.browse-view')){ var j=function(){go(el,false);}; setTimeout(j,60); window.addEventListener('load',function(){setTimeout(j,0);}); } }
+    /* search (same look as the blog): filters the tour cards of the open view as you type,
+       hides sections (and their chips) with no match; every word must match the start of a word, accents ignored */
+    var toggle=bar.querySelector('.bcat__toggle'), form=bar.querySelector('.bsearch'), q=form.querySelector('input'),
+        count=form.querySelector('.bsearch__count'), empty=document.querySelector('.bsearch__empty');
+    function norm(t){return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();}
+    var cards=[].slice.call(document.querySelectorAll('.browse-view .htour'));
+    cards.forEach(function(c){c._t=' '+norm(c.textContent);});
+    function run(){
+      if(!cards) return;
+      var v=norm(q.value.trim()), words=v?v.split(/\s+/):[], seen={}, n=0;
+      cards.forEach(function(c){var ok=words.every(function(w){return c._t.indexOf(' '+w)>-1;}); c.hidden=!ok;
+        if(ok && !c.closest('.browse-view').hidden){ var href=c.querySelector('a').getAttribute('href'); if(!seen[href]){seen[href]=1;n++;} }});
+      document.querySelectorAll('.browse-view > .section').forEach(function(s){
+        var none=!s.querySelector('.htour:not([hidden])'); s.hidden=none;
+        var chip=bar.querySelector('.tbar__list a[href="#'+s.id+'"]'); if(chip) chip.parentNode.hidden=none;
+        var g=s.querySelector('.tour-grid'); if(g) g.scrollLeft=0; });
+      count.textContent=v?n+(n===1?' tour':' tours'):'';
+      empty.hidden=!v||n>0; cur=null; spy();
+    }
+    function toTop(){ if(bar.getBoundingClientRect().top<=77){ var first=document.querySelector('.browse-view:not([hidden]) > .section:not([hidden])'); window.scrollTo({top:(first?first.getBoundingClientRect().top+window.scrollY-OFF()+32:bar.offsetTop-76)}); } }
+    function open(){form.hidden=false; bar.classList.add('is-search'); toggle.setAttribute('aria-expanded','true'); q.focus();}
+    function shut(){q.value=''; run(); form.hidden=true; bar.classList.remove('is-search'); toggle.setAttribute('aria-expanded','false'); toggle.focus();}
+    toggle.addEventListener('click',open);
+    form.querySelector('.bsearch__close').addEventListener('click',shut);
+    form.addEventListener('submit',function(e){e.preventDefault(); q.blur();});
+    q.addEventListener('keydown',function(e){if(e.key==='Escape') shut();});
+    q.addEventListener('input',function(){run(); toTop();});
+    spy();
   })();
   </script>
   </main>
