@@ -162,6 +162,20 @@ const TRIPS = {
       { at: [-6.9063, 30.9189], icon: 'film', name: 'Ouarzazate', note: 'Studios or kasbah', side: 'right', sideM: 'bottom' },
     ],
   },
+  // 3-day tour Marrakech → Dades → Merzouga → Marrakech (OSRM: d1 323 km, d2 272 km, d3 559 km)
+  mz3: {
+    title: 'Route map: 3-day tour from Marrakech over the High Atlas to Aït Ben Haddou, the Dades Valley, the Todra Gorge and the Merzouga dunes, back through the Draa Valley',
+    legend: [], chip: { at: 0.42, text: 'About 1,150 km in 3 days', textM: '1,150 km' }, compassM: 'topright', pad: [110, 48, 40, 36], padM: [48, 48, 24, 44],
+    legs: [{ kind: 'car', road: 'mz3-d1' }, { kind: 'car', road: 'mz3-d2' }, { kind: 'car', road: 'mz3-d3' }],
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'top', sideM: 'bottom' },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'bottom', sideM: 'bottom' },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 1', side: 'bottom', sideM: 'top' },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: 'Day 2', side: 'top', hideM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 2', side: 'left', sideM: 'left' },
+      { at: [-6.45, 30.70], icon: 'view', name: 'Draa Valley', note: 'Day 3, way back', side: 'bottom', hideM: true },
+    ],
+  },
 };
 
 // ---- --save: simplify an OSRM response (Douglas–Peucker, ~25 m) and keep it for builds

@@ -275,3 +275,101 @@ function moroccoForm(form) {
     window.addEventListener('resize', function () { clearTimeout(fig._t); fig._t = setTimeout(fit, 200); });
   });
 })();
+
+/* Phone menu: sub-links (Tours by city, Experiences) fold under their main
+   title and open/close with a chevron button. Built from the existing markup
+   (indented links follow their parent link), so no page HTML has to change. */
+(function () {
+  var panel = document.querySelector('#mnav .mobile-nav__panel');
+  if (!panel) return;
+  var isSub = function (el) { return el && el.tagName === 'A' && /padding-left:\s*26px/.test(el.getAttribute('style') || ''); };
+  var n = 0;
+  Array.prototype.slice.call(panel.children).forEach(function (el) {
+    if (el.tagName !== 'A' || isSub(el) || !isSub(el.nextElementSibling)) return;
+    var id = 'mnav-sub-' + (++n);
+    var sub = document.createElement('div');
+    sub.className = 'mnav-sub'; sub.id = id; sub.hidden = true;
+    while (isSub(el.nextElementSibling)) { var s2 = el.nextElementSibling; s2.removeAttribute('style'); sub.appendChild(s2); }
+    var row = document.createElement('div');
+    row.className = 'mnav-row';
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'mnav-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', id);
+    btn.setAttribute('aria-label', 'Show ' + el.textContent.trim() + ' links');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+    el.parentNode.insertBefore(row, el);
+    row.appendChild(el); row.appendChild(btn);
+    row.parentNode.insertBefore(sub, row.nextSibling);
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', (open ? 'Hide ' : 'Show ') + el.textContent.trim() + ' links');
+      sub.hidden = !open;
+    });
+  });
+})();
+
+/* Phone menu layout: logo + close on top, links in the middle,
+   Book + WhatsApp side by side in a footer (runs after the groups are built). */
+(function () {
+  var panel = document.querySelector('#mnav .mobile-nav__panel');
+  if (!panel || panel.querySelector('.mnav-links')) return;
+  var close = panel.querySelector('.mobile-nav__close');
+  var clear = panel.querySelector('div[style*="clear"]');
+  if (clear) clear.remove();
+  var top = document.createElement('div'); top.className = 'mnav-top';
+  var logo = document.createElement('img');
+  logo.src = '/assets/images/logo-white.png'; logo.alt = 'Morocco Tours Hub'; logo.height = 44;
+  top.appendChild(logo);
+  if (close) { close.setAttribute('aria-label', 'Close menu'); top.appendChild(close); }
+  var links = document.createElement('nav'); links.className = 'mnav-links'; links.setAttribute('aria-label', 'Menu');
+  var actions = document.createElement('div'); actions.className = 'mnav-actions';
+  var btns = document.createElement('div'); btns.className = 'mnav-actions__btns';
+  Array.prototype.slice.call(panel.children).forEach(function (el) {
+    if (el.classList.contains('btn')) {
+      el.removeAttribute('style');
+      var wa = el.classList.contains('btn--wa');
+      el.className = 'mnav-btn ' + (wa ? 'mnav-btn--wa' : 'mnav-btn--book');
+      el.innerHTML = wa
+        ? '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm4.53 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.050-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.670-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>WhatsApp'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>Book a Tour';
+      btns.appendChild(el);
+    } else links.appendChild(el);
+  });
+  var here = location.pathname.replace(/\/index\.html$/, '/');
+  links.querySelectorAll('a').forEach(function (a) {
+    var p = a.pathname.replace(/\/index\.html$/, '/');
+    if (!a.hash && p === here) a.setAttribute('aria-current', 'page');
+  });
+  actions.appendChild(btns);
+  var line = document.createElement('p'); line.className = 'mnav-actions__line';
+  line.innerHTML = 'Open 24/7 · <a href="tel:+212621460083">+212 621 460 083</a>';
+  actions.appendChild(line);
+  panel.appendChild(top); panel.appendChild(links); panel.appendChild(actions);
+})();
+
+/* Section bar (nav.dtnav): highlight the section you are reading; on phones keep that link in view */
+(function () {
+  var nav = document.querySelector('.dtnav');
+  if (!nav || !('IntersectionObserver' in window)) return;
+  var row = nav.querySelector('.dtnav__in');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+  var map = {};
+  links.forEach(function (a) { var el = document.querySelector(a.getAttribute('href')); if (el) map[el.id] = a; });
+  var visible = {};
+  function setActive(a) {
+    links.forEach(function (l) { l.classList.toggle('is-active', l === a); });
+    if (a && row.scrollWidth > row.clientWidth) {
+      var left = a.offsetLeft - (row.clientWidth - a.offsetWidth) / 2;
+      row.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+    }
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting; });
+    var current = null;
+    links.forEach(function (a) { var id = a.getAttribute('href').slice(1); if (visible[id] && !current) current = a; });
+    if (current && !current.classList.contains('is-active')) setActive(current);
+  }, { rootMargin: '-140px 0px -55% 0px' });
+  Object.keys(map).forEach(function (id) { io.observe(document.getElementById(id)); });
+})();
