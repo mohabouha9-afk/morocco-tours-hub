@@ -2424,3 +2424,85 @@ body.page-swap { background: #fffdf9; }
 .dt-gal.dt-gal--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 640px) { .dt-gal.dt-gal--6 { grid-template-columns: 1fr 1fr; } }
 
+
+/* ===== Homepage hero refresh (2026-11-15): golden caravan photo, lighter scrim, phone framing ===== */
+.home .hero2__bg img { object-position: 62% 58%; }
+/* laptop: dark only behind the text (left + bottom), the caravan and gold clouds stay bright on the right */
+.home .hero2__scrim {
+  background: linear-gradient(90deg, rgba(9,26,42,.78) 0%, rgba(9,26,42,.48) 34%, rgba(9,26,42,.08) 62%, rgba(9,26,42,0) 100%),
+              linear-gradient(180deg, rgba(9,26,42,.58) 0%, rgba(9,26,42,.10) 18%, rgba(9,26,42,0) 52%, rgba(9,26,42,.62) 100%);
+}
+.home .hero2__text { max-width: 440px; margin-bottom: 24px; }
+/* tablet + phone: the photo is lifted so the caravan rides along the top half, the text sits on the shaded dune below */
+@media (max-width: 1024px) {
+  .home .hero2 { background: var(--navy-deep); }
+  .home .hero2__bg, .home .hero2__scrim { bottom: auto; height: 100svh; overflow: hidden; }
+  .home .hero2__bg img { position: absolute; left: 0; top: -30%; height: 130%; object-position: 70% 50%; }
+  .home .hero2__scrim {
+    background: linear-gradient(180deg, rgba(9,26,42,.55) 0%, rgba(9,26,42,.06) 16%, rgba(9,26,42,0) 34%, rgba(9,26,42,.55) 52%, rgba(9,26,42,.88) 100%);
+  }
+}
+@media (max-width: 560px) {
+  .home .hero2__bg img { top: -36%; height: 136%; object-position: 74% 50%; }
+  .home .hero2__grid { padding-bottom: 64px; }
+  .home .hero2__text { font-size: .9rem; line-height: 1.6; margin: 10px 0 20px; }
+  .home .hero2__sub { margin-top: 10px; }
+}
+/* hero fit pass: balanced lines, buttons fill the text width, compact trust card that never runs under the floating WhatsApp button */
+.home .hero2__title, .home .hero2__sub, .home .hero2__text { text-wrap: balance; }
+@media (max-width: 1024px) {
+  .home .hero2__card { width: fit-content; max-width: min(100%, 380px); }
+}
+@media (max-width: 560px) {
+  .home .hero2__title { font-size: 2rem; }
+  .home .hero2__sub { font-size: 1rem; line-height: 1.35; }
+  .home .hero2__grid { padding-bottom: 84px; }
+  .home .hero2__actions .hero-btn { flex: 1 1 0; justify-content: center; padding: 12px 10px; font-size: .7rem; }
+  .home .hero2__card { width: auto; max-width: 100%; margin-top: 16px; padding: 8px 12px 8px 10px; }
+  .home .hero2__card p { font-size: .7rem; }
+}
+@media (max-width: 360px) {
+  .home .hero2__actions .hero-btn svg { display: none; }
+}
+/* phones: brand name + script line centred at the top (above the rider), paragraph, buttons and card at the bottom */
+@media (max-width: 640px) {
+  .home .hero2__grid { padding-top: 34px; }
+  .home .hero2__main { display: flex; flex-direction: column; min-height: calc(100svh - 76px - 34px - 84px); }
+  .home .hero2__title { text-align: center; font-size: 2rem; white-space: normal; text-shadow: 0 2px 14px rgba(9,26,42,.45); }
+  .home .hero2__sub { text-align: center; font-family: var(--script); font-weight: 600; font-size: 1.35rem; line-height: 1.2; letter-spacing: 0; color: var(--gold-light); margin-top: 6px; text-shadow: 0 1px 2px rgba(9,26,42,.6), 0 2px 12px rgba(9,26,42,.6); }
+  .home .hero2__text { margin-top: auto; padding-top: 24px; }
+  .home .hero2__scrim {
+    background: linear-gradient(180deg, rgba(9,26,42,.7) 0%, rgba(9,26,42,.46) 24%, rgba(9,26,42,0) 42%, rgba(9,26,42,.45) 56%, rgba(9,26,42,.88) 100%);
+  }
+  .home .hero2__bg img { top: -24%; height: 124%; object-position: 72% 50%; }
+}
+/* laptop + tablet keep the original hero layout (owner reverted the centred version); only the gold line uses the inner-page script font */
+.hero2__hub { display: none; }
+@media (max-width: 640px) { .home .hero2__hub { display: inline; } }
+@media (min-width: 641px) {
+  .home .hero2__sub { font-family: var(--script); font-weight: 600; font-size: clamp(1.45rem, 1.05rem + 1vw, 1.9rem); line-height: 1.2; letter-spacing: 0; color: var(--gold-light); margin-top: 8px; text-shadow: 0 1px 2px rgba(9,26,42,.5); }
+}
+/* long multi-day routes (Marrakech → Fes…): a taller map so the stops and their labels have room */
+.rmap--tall .rmap__map { height: 440px; }
+@media (max-width: 640px) { .rmap--tall .rmap__map { height: 320px; } }
+/* accommodation table with 3 nights (4 columns): tighter cells on phones so it fits 375px without sideways scroll */
+@media (max-width: 640px) {
+  .dt-acc--4 { font-size: .76rem; }
+  .dt-acc--4 th, .dt-acc--4 td { padding: 10px 6px; }
+  .dt-acc--4 thead th { font-size: .66rem; letter-spacing: .02em; }
+  .dt-acc--4 tbody th { width: auto; }
+}
+/* phones: small icon pins for the minor stops of long tour maps (name on tap) */
+@media (max-width: 640px) {
+  .rmap-pin.rmap-pin--mini { width: 22px !important; height: 22px !important; margin-left: -11px !important; margin-top: -11px !important; border-width: 2px; }
+  .rmap-pin--mini svg { width: 12px; height: 12px; }
+}
+/* small icon pins (also on laptop) for crowded minor stops: same look as the phone mini pins */
+.rmap-pin.rmap-pin--mini { width: 24px !important; height: 24px !important; margin-left: -12px !important; margin-top: -12px !important; border-width: 2px; }
+.rmap-pin--mini svg { width: 13px; height: 13px; }
+/* route map: zoom hint (laptop, plain wheel over the map) + zoom buttons on phones */
+.rmap__hint { position: absolute; inset: auto 50% 14px auto; transform: translateX(50%); z-index: 1000; padding: 7px 12px; border-radius: 6px; background: rgba(10, 32, 51, .86); color: #fff; font-size: .78rem; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .25s ease; }
+.rmap__hint.is-on { opacity: 1; }
+@media (max-width: 640px) {
+  .rmap .leaflet-control-zoom a { width: 30px; height: 30px; line-height: 30px; font-size: 18px; }
+}

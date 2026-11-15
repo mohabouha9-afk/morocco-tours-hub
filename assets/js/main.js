@@ -185,7 +185,9 @@ function moroccoForm(form) {
     ruins: '<path d="M3 20h18M5 20V9h3v11M10 20v-6h4v6M16 20V6h3v14"/><path d="M5 9l1.5-2L8 9M16 6l1.5-2L19 6"/>',
     dome: '<path d="M4 20h16M6 20v-6h12v6"/><path d="M6 14a6 6 0 0112 0M12 8V5.5M11 5.5h2"/><path d="M10 20v-3h4v3"/>',
     plane: '<path d="M10.5 4.5c0-1 .7-2 1.5-2s1.5 1 1.5 2v5l7 4v2l-7-2v4l2 1.5V20l-3.5-1L8.5 20v-1.5l2-1.5v-4l-7 2v-2l7-4z"/>',
-    camel: '<path d="M3 20v-6l2-3h2l2 2 2-4h2l2 4 2-2 1.5 1.5L21 9"/><path d="M5 20v-4M9 20v-5M15 20v-5M18 20v-6"/>'
+    camel: '<path d="M3 20v-6l2-3h2l2 2 2-4h2l2 4 2-2 1.5 1.5L21 9"/><path d="M5 20v-4M9 20v-5M15 20v-5M18 20v-6"/>',
+    fossil: '<path d="M12 12.5a1 1 0 011 1 2 2 0 01-2 2 3 3 0 01-3-3 4 4 0 014-4 5 5 0 015 5 6 6 0 01-6 6 7 7 0 01-7-7 8 8 0 018-8"/>',
+    palm: '<path d="M12 21c0-5 .5-9 1-12"/><path d="M13 9c-1.5-2.5-4.5-3.5-8-2.5M13 9c1-2.8 4-4.2 7.5-3.5M13 9c-3 0-5.5 1.5-6.5 4.5M13 9c3 .2 5.3 1.8 6 4.5M13 9c0-2.5-1-4.5-3-6"/><path d="M8 21h9"/>'
   };
   function svg(n) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (I[n] || '') + '</svg>'; }
   function star() {
@@ -199,8 +201,30 @@ function moroccoForm(form) {
     if (!el || !raw) return;
     var data = JSON.parse(raw.textContent), ll = function (p) { return [p[1], p[0]]; };
     var narrow = window.innerWidth <= 640;
-    var map = L.map(el, { scrollWheelZoom: false, dragging: !touch, tap: false, zoomSnap: 0.25, attributionControl: true, zoomControl: !narrow });
+    var map = L.map(el, { scrollWheelZoom: false, dragging: !touch, tap: false, zoomSnap: 0.25, attributionControl: true, zoomControl: false });
     map.attributionControl.setPrefix(false);
+    // zoom buttons on every screen (bottom-left on phones, away from the compass corner)
+    L.control.zoom({ position: narrow ? 'bottomleft' : 'topleft' }).addTo(map);
+    // laptop: the plain mouse wheel keeps scrolling the page; Ctrl/⌘ + wheel and trackpad pinch (sent as Ctrl + wheel) zoom the map
+    var hint = document.createElement('div'); hint.className = 'rmap__hint'; hint.setAttribute('aria-hidden', 'true');
+    hint.textContent = /Mac|iPhone|iPad/.test(navigator.platform) ? 'Use ⌘ + scroll to zoom the map' : 'Use Ctrl + scroll to zoom the map';
+    el.appendChild(hint);
+    var hintT;
+    el.addEventListener('wheel', function (e) {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        var step = Math.max(-1, Math.min(1, -e.deltaY / 60)) * 0.5;
+        map.setZoomAround(map.mouseEventToContainerPoint(e), map.getZoom() + step, { animate: false });
+      } else if (!touch) {
+        hint.classList.add('is-on'); clearTimeout(hintT); hintT = setTimeout(function () { hint.classList.remove('is-on'); }, 1400);
+      }
+    }, { passive: false });
+    // touch screens: one finger scrolls the page until you zoom in (pinch, double tap or +), then it moves the map
+    var baseZoom = null;
+    if (touch) map.on('zoomend', function () {
+      if (baseZoom === null) return;
+      if (map.getZoom() > baseZoom + 0.1) map.dragging.enable(); else map.dragging.disable();
+    });
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 17, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
     }).addTo(map);
@@ -217,9 +241,15 @@ function moroccoForm(form) {
     data.stops.forEach(function (s) {
       if (narrow && s.hideM) return; // stops too close together on a phone: one pin speaks for both (nameM)
       var side = (narrow && s.sideM) || s.side || 'right';
+      if ((narrow && s.pinM) || s.mini) { // phones: small icon pin, its name shows on tap (no permanent label on a small map)
+        var mini = L.marker(ll(s.at), { icon: L.divIcon({ className: 'rmap-pin rmap-pin--mini', html: svg(s.icon), iconSize: [22, 22], iconAnchor: [11, 11] }), keyboard: false, title: s.name }).addTo(map);
+        mini.bindTooltip('<b>' + (s.nameM || s.name) + '</b>', { direction: 'top', offset: [0, -12], className: 'rmap-tip rmap-tip--top' });
+        all.push(ll(s.at));
+        return;
+      }
       var icon = L.divIcon({ className: 'rmap-pin' + (s.start ? ' rmap-pin--start' : ''), html: svg(s.icon), iconSize: [34, 34], iconAnchor: [17, 17] });
       var m = L.marker(ll(s.at), { icon: icon, keyboard: false, title: s.name }).addTo(map);
-      m.bindTooltip('<b>' + ((narrow && s.nameM) || s.name) + '</b><small>' + s.note + '</small>', {
+      m.bindTooltip('<b>' + ((narrow && s.nameM) || s.name) + '</b>' + (s.note ? '<small>' + s.note + '</small>' : ''), {
         permanent: true, direction: side, offset: { left: [-20, 0], right: [20, 0], top: [0, -18], bottom: [0, 18] }[side] || [20, 0], className: 'rmap-tip rmap-tip--' + side
       });
       all.push(ll(s.at));
@@ -235,7 +265,7 @@ function moroccoForm(form) {
       var el = chip.getElement(); if (!el) return;
       var tries = []; for (var k = 0.08; k <= 0.921; k += 0.04) tries.push(k);
       tries.sort(function (x, y) { return Math.abs(x - data.chip.at) - Math.abs(y - data.chip.at); });
-      var box = fig.getBoundingClientRect(), others = [].slice.call(fig.querySelectorAll('.rmap-pin, .rmap-tip, .rmap-compass, .rmap__legend'));
+      var box = fig.getBoundingClientRect(), others = [].slice.call(fig.querySelectorAll('.rmap-pin, .rmap-tip, .rmap-compass, .rmap__legend, .leaflet-control-zoom'));
       // on the road first; if every spot there is taken, just above/below the road, then a little further off it.
       // If nothing is fully free (tiny phone maps), keep the spot that covers the least of the pins and labels.
       var rects = others.map(function (o) { return o.getBoundingClientRect(); });
@@ -269,7 +299,7 @@ function moroccoForm(form) {
     } });
     map.addControl(new Compass());
     L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
-    var fit = function () { map.invalidateSize(); map.fitBounds(L.latLngBounds(all), narrow ? (data.padM ? { paddingTopLeft: [data.padM[0], data.padM[1]], paddingBottomRight: [data.padM[2], data.padM[3]] } : { paddingTopLeft: [24, 44], paddingBottomRight: [96, 24] }) : (data.pad ? { paddingTopLeft: [data.pad[0], data.pad[1]], paddingBottomRight: [data.pad[2], data.pad[3]] } : { paddingTopLeft: [70, 60], paddingBottomRight: [150, 50] })); placeChip(); };
+    var fit = function () { map.invalidateSize(); map.fitBounds(L.latLngBounds(all), narrow ? (data.padM ? { paddingTopLeft: [data.padM[0], data.padM[1]], paddingBottomRight: [data.padM[2], data.padM[3]] } : { paddingTopLeft: [24, 44], paddingBottomRight: [96, 24] }) : (data.pad ? { paddingTopLeft: [data.pad[0], data.pad[1]], paddingBottomRight: [data.pad[2], data.pad[3]] } : { paddingTopLeft: [70, 60], paddingBottomRight: [150, 50] })); baseZoom = map.getZoom(); if (touch) map.dragging.disable(); placeChip(); };
     map.on('zoomend', placeChip);
     fit();
     window.addEventListener('resize', function () { clearTimeout(fig._t); fig._t = setTimeout(fit, 200); });

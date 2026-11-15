@@ -165,28 +165,160 @@ const TRIPS = {
   // 2-day tour Marrakech → Merzouga → Marrakech: same roads as mz3, one night in the dunes
   mz2: {
     title: 'Route map: 2-day tour from Marrakech over the High Atlas through Ouarzazate and the Dades Valley to the Merzouga dunes, back through the Draa Valley',
-    legend: [], chip: { at: 0.42, text: 'About 1,120 km in 2 days', textM: '1,120 km' }, compassM: 'topright', pad: [110, 48, 40, 36], padM: [48, 48, 24, 44],
+    legend: [], tall: true, chip: { at: 0.8, text: 'About 1,120 km in 2 days', textM: '1,120 km' }, compassM: 'topright', pad: [110, 48, 90, 72], padM: [48, 48, 24, 44],
     legs: [{ kind: 'car', road: 'mz2-d1' }, { kind: 'car', road: 'mz3-d3' }], // OSRM: d1 557 km, d2 559 km
     stops: [
       { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'top', sideM: 'bottom' },
-      { at: [-6.9063, 30.9189], icon: 'kasbah', name: 'Ouarzazate', note: 'Day 1', side: 'left', sideM: 'bottom' },
-      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Day 1', side: 'top', sideM: 'top' },
-      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night in camp', side: 'left', sideM: 'left' },
-      { at: [-6.45, 30.70], icon: 'view', name: 'Draa Valley', note: 'Day 2, way back', side: 'bottom', hideM: true },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'top', pinM: true },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Day 1', side: 'bottom', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night in camp', side: 'bottom', sideM: 'left' },
+      { at: [-6.45, 30.7], icon: 'palm', name: 'Draa Valley', note: '', side: 'bottom', pinM: true },
     ],
   },
   // 3-day tour Marrakech → Dades → Merzouga → Marrakech (OSRM: d1 323 km, d2 272 km, d3 559 km)
   mz3: {
     title: 'Route map: 3-day tour from Marrakech over the High Atlas to Aït Ben Haddou, the Dades Valley, the Todra Gorge and the Merzouga dunes, back through the Draa Valley',
-    legend: [], chip: { at: 0.42, text: 'About 1,150 km in 3 days', textM: '1,150 km' }, compassM: 'topright', pad: [110, 48, 40, 36], padM: [48, 48, 24, 44],
+    legend: [], tall: true, chip: { at: 0.55, text: 'About 1,150 km in 3 days', textM: '1,150 km' }, compassM: 'topright', pad: [110, 48, 90, 72], padM: [48, 48, 24, 44],
     legs: [{ kind: 'car', road: 'mz3-d1' }, { kind: 'car', road: 'mz3-d2' }, { kind: 'car', road: 'mz3-d3' }],
     stops: [
       { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'top', sideM: 'bottom' },
-      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'bottom', sideM: 'bottom' },
-      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 1', side: 'bottom', sideM: 'top' },
-      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: 'Day 2', side: 'top', hideM: true },
-      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 2', side: 'left', sideM: 'left' },
-      { at: [-6.45, 30.70], icon: 'view', name: 'Draa Valley', note: 'Day 3, way back', side: 'bottom', hideM: true },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'top', pinM: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'left', sideM: 'bottom' },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 1', side: 'bottom', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 2', side: 'bottom', sideM: 'left' },
+      { at: [-6.45, 30.7], icon: 'palm', name: 'Draa Valley', note: '', side: 'bottom', pinM: true },
+    ],
+  },
+  // 4-day tour Fes → Merzouga → Dades → Marrakech (reversed roads of mzf3-d3, mz3-d2, mz3-d1)
+  // 5-day Fes → Merzouga (camp + hotel) → Dades → Aït Ben Haddou → Marrakech: same roads as fm4
+  fm5: {
+    title: 'Route map: 5-day tour from Fes over the Middle Atlas to the Merzouga dunes, a day around Merzouga, then west through the Todra Gorge and the Dades Valley to Aït Ben Haddou and over the High Atlas to Marrakech',
+    legend: [], tall: true, chip: { at: 0.5, text: 'About 1,100 km in 5 days', textM: '1,100 km' }, compassM: 'topleft', pad: [70, 40, 50, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'fm4-d1' }, { kind: 'car', road: 'fm4-d2' }, { kind: 'car', road: 'fm4-d3' }],
+    stops: [
+      { at: [-4.9998, 34.0331], icon: 'hotel', name: 'Fes', note: 'Start', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Day 1, lunch', side: 'right', pinM: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Nights 1 and 2', side: 'right', sideM: 'left' },
+      { at: [-3.995, 31.025], icon: 'lantern', name: 'Khamlia', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 3', side: 'bottom', pinM: true },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Night 4', side: 'left', sideM: 'bottom' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'End', side: 'left', sideM: 'top' },
+    ],
+  },  fm4: {
+    title: 'Route map: 4-day tour from Fes over the Middle Atlas to the Merzouga dunes, then west through the Todra Gorge, the Dades Valley and Aït Ben Haddou to Marrakech',
+    legend: [], tall: true, chip: { at: 0.5, text: 'About 1,060 km in 4 days', textM: '1,060 km' }, compassM: 'topleft', pad: [70, 40, 50, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'fm4-d1' }, { kind: 'car', road: 'fm4-d2' }, { kind: 'car', road: 'fm4-d3' }],
+    stops: [
+      { at: [-4.9998, 34.0331], icon: 'hotel', name: 'Fes', note: 'Start', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Day 1, lunch', side: 'right', pinM: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 1', side: 'right', sideM: 'left' },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 2', side: 'bottom', pinM: true },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 3', side: 'left', sideM: 'bottom' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'Night 3, end', side: 'left', sideM: 'top' },
+    ],
+  },
+  // 3-day tour Marrakech → Dades → Merzouga → Fes (OSRM: d1 323 km, d2 272 km, d3 468 km via Ziz, Midelt, Azrou, Ifrane)
+  // 4-day Marrakech → Dades → Merzouga (camp + hotel) → Fes: same roads as mzf3
+  // 5-day Marrakech → Dades → Merzouga (camp + hotel) → Fes (riad + guided medina day): same roads as mf4
+  mf5: {
+    title: 'Route map: 5-day tour from Marrakech over the High Atlas to Aït Ben Haddou, the Dades Valley and the Merzouga dunes, a day around Merzouga, then north over the Middle Atlas to Fes',
+    legend: [], tall: true, chip: { at: 0.25, text: 'About 1,100 km in 5 days', textM: '1,100 km' }, compassM: 'topleft', pad: [70, 40, 50, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'mz3-d1' }, { kind: 'car', road: 'mz3-d2' }, { kind: 'car', road: 'mzf3-d3' }],
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start', start: true, side: 'left', sideM: 'top' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'left', sideM: 'bottom' },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 1', side: 'bottom', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Nights 2 and 3', side: 'right', sideM: 'left' },
+      { at: [-3.995, 31.025], icon: 'lantern', name: 'Khamlia', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Day 4, lunch', side: 'right', pinM: true },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.9998, 34.0331], icon: 'minaret', name: 'Fes', note: 'Night 4, medina day', side: 'right', sideM: 'right' },
+    ],
+  },  mzf3: {
+    title: 'Route map: 3-day tour from Marrakech over the High Atlas to Aït Ben Haddou, the Dades Valley, the Todra Gorge and the Merzouga dunes, then north over the Middle Atlas to Fes',
+    legend: [], tall: true, chip: { at: 0.25, text: 'About 1,060 km in 3 days', textM: '1,060 km' }, compassM: 'topleft', pad: [70, 40, 50, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'mz3-d1' }, { kind: 'car', road: 'mz3-d2' }, { kind: 'car', road: 'mzf3-d3' }],
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start', start: true, side: 'left', sideM: 'top' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'left', sideM: 'bottom' },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 1', side: 'bottom', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 2', side: 'right', sideM: 'left' },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Day 3, lunch', side: 'right', pinM: true },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.9998, 34.0331], icon: 'minaret', name: 'Fes', note: 'End of tour', side: 'right', sideM: 'right' },
+    ],
+  },  mf4: {
+    title: 'Route map: 4-day tour from Marrakech over the High Atlas to Aït Ben Haddou, the Dades Valley, the Todra Gorge and the Merzouga dunes, a day around Merzouga, then north over the Middle Atlas to Fes',
+    legend: [], tall: true, chip: { at: 0.25, text: 'About 1,100 km in 4 days', textM: '1,100 km' }, compassM: 'topleft', pad: [70, 40, 50, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'mz3-d1' }, { kind: 'car', road: 'mz3-d2' }, { kind: 'car', road: 'mzf3-d3' }],
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start', start: true, side: 'left', sideM: 'top' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'left', sideM: 'bottom' },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 1', side: 'bottom', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Nights 2 and 3', side: 'right', sideM: 'left' },
+      { at: [-3.995, 31.025], icon: 'lantern', name: 'Khamlia', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Day 4, lunch', side: 'right', pinM: true },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.9998, 34.0331], icon: 'minaret', name: 'Fes', note: 'End of tour', side: 'right', sideM: 'right' },
+    ],
+  },  mzf3: {
+    title: 'Route map: 3-day tour from Marrakech over the High Atlas to Aït Ben Haddou, the Dades Valley, the Todra Gorge and the Merzouga dunes, then north over the Middle Atlas to Fes',
+    legend: [], tall: true, chip: { at: 0.25, text: 'About 1,060 km in 3 days', textM: '1,060 km' }, compassM: 'topleft', pad: [70, 40, 50, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'mz3-d1' }, { kind: 'car', road: 'mz3-d2' }, { kind: 'car', road: 'mzf3-d3' }],
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start', start: true, side: 'left', sideM: 'top' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'left', sideM: 'bottom' },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 1', side: 'bottom', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 2', side: 'right', sideM: 'left' },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Day 3, lunch', side: 'right', pinM: true },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.9998, 34.0331], icon: 'minaret', name: 'Fes', note: 'End of tour', side: 'right', sideM: 'right' },
     ],
   },
 };
@@ -237,14 +369,14 @@ const stops = T.stops.map(s => typeof s.at === 'string' ? { ...s, at: alongRoute
 const data = { legs, stops, chip: T.chip, compassM: T.compassM, padM: T.padM, pad: T.pad }; // pad / padM = laptop / phone map padding [left, top, right, bottom] px
 
 const legend = T.legend.map(([kind, t]) => `<span><i class="rmap__key rmap__key--${kind}" aria-hidden="true"></i>${t}</span>`).join('');
-const html = `<figure class="rmap" aria-label="${T.title}">
+const html = `<figure class="rmap${T.tall ? ' rmap--tall' : ''}" aria-label="${T.title}">
     <div class="rmap__map" role="img" aria-label="${T.title}"></div>
     ${T.legend.length ? `<span class="rmap__legend">${legend}</span>` : ''}
     <script type="application/json" class="rmap__data">${JSON.stringify(data)}</script>
   </figure>`;
 
 let page = fs.readFileSync(file, 'utf8');
-let a = page.indexOf('<figure class="rmap"'), b;
+let a = page.indexOf('<figure class="rmap'), b;
 if (a >= 0) b = page.indexOf('</figure>', a) + 9;
 else { a = page.indexOf('<div class="dt-map">'); if (a < 0) throw new Error('no map on page'); b = page.indexOf('</div>', a) + 6; }
 page = page.slice(0, a) + html + page.slice(b);
