@@ -2,7 +2,7 @@
 
 How to build (or rebuild) a multi-day tour page in `tours/`, the way the owner approved it on the
 3-day Marrakech → Merzouga page (2026-11-14) and the tours built after it (2-day Merzouga, 3-day and
-4-day Marrakech ⇄ Fes, 4-day and 5-day Fes → Marrakech, 5-day Marrakech → Fes).
+4-day Marrakech ⇄ Fes, 4-day and 5-day Fes → Marrakech, 5-day Marrakech → Fes, 4-day Marrakech → Erg Chigaga).
 Read this file, `.claude/OWNER-PROFILE.md` and the tour lines in `CLAUDE.md` before starting a tour.
 Day trips have their own blueprint: `.claude/PERFECT-DAY-TRIP.md`.
 
@@ -52,7 +52,7 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
 | 4 | **Gallery** `#gallery` | `.dt-gal--6`: 6 photos, 3 per row (2 on phones), **max 2 photos of the camp** |
 | 5 | **Itinerary** `#itinerary` | `ol.dt-prog.dt-prog--acc.dt-prog--days`: one open/close card per day (day 1 open), ~3–4 lines, then a meta line `ul.dt-prog__meta`: km + hours on the road · Night: … · meals |
 | 6 | **What's Included** `#included` | Included / Not included / Good to know → **Costs on the way** → **Tour Map** (`h3.dt-h3` + `figure.rmap` + one-line note) |
-| 7 | **Accommodations** `#stay` | intro line + table + "Or similar, depending on availability…" note → **Is this tour for you?** (Think twice if, full width) |
+| 7 | **Accommodations** `#stay` | intro line + table + "Or similar, depending on availability…" note → **Is this tour for you?** = two boxes like the day trips: **Great for** (3 lines, tour-specific) + **Think twice if** (owner, 2026-11-15) |
 | 8 | **Reviews** `#reviews` | 4.9 from 5,000+ + Read more reviews + 3 site reviews (real, from reviews.html) |
 | 9 | **FAQ** `#faq` | 6 questions, first open, FAQPage JSON-LD built from the visible FAQ |
 | 10 | **Make It Your Own** `#custom` | one line + 6 options in 2 columns (`.dt-ticks--2`), even number |
@@ -119,7 +119,7 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
     Hotel Xaluca Dades · Merzouga camps = Erg Chebbi Sahara Camp / Sandrock Luxury Camp / Desert
     Luxury Camp · Merzouga hotel = Riad Madu / Kasbah Mohayut / Kasbah Hotel Tombouctou · Aït Ben
     Haddou = Kasbah Tebi / Riad Caravane / Riad Ksar Ighnda · Marrakech = Riad 144 / Riad Dar Anika /
-    Riad Kniza · Fes = Dar Seffarine / Riad Dar Bensouda / Riad Fes.
+    Riad Kniza · Fes = Dar Seffarine / Riad Dar Bensouda / Riad Fes · Zagora = Kasbah Ziwana / Riad Lamane / Kasbah Sirocco · Erg Chigaga = Camp Al Koutban (shared bathrooms) / Desert Luxury Camp Erg Chigaga / Erg Chigaga Luxury Desert Camp · Ouarzazate = Dar Chamaa / Kenzi Azghor Hotel / Le Berbère Palace · Todra Gorge = Guesthouse Panorama Todra / La Petite Gorge / Auberge Le Festival.
 
 ## 6. Route map (`figure.rmap`, real Leaflet map)
 
@@ -131,6 +131,12 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
 - **Pin every stop AND places known for something** (Tizi n'Tichka pass, Taourirt, Dades, Todra,
   Erfoud fossils, Rissani market, Ziz Valley, Midelt, Ifrane, Draa…). Long routes `tall: true`.
   Minor stops `pinM` (small icon on phones, name on tap) or `mini`; `hideM` only if needed.
+- **Stops of the desert-tour maps live in `.claude/tools/tour-map-stops.js`** (shared stop names/icons
+  `S.*`, one list per trip key). Add the new tour's list there, run `node .claude/tools/tour-map-stops.js`
+  (it rewrites the `stops:` of each TRIPS entry in route-map.mjs), then build the page's map. Long
+  routes that reuse roads can copy an existing TRIPS entry (title, chip text) and reuse its saved roads;
+  reversed routes = reversed copies of saved road files (e.g. `fm4-d1` = `mzf3-d3` reversed).
+- Off-road desert legs (no road for OSRM) = hand-drawn `{ kind: 'quad', path: [...] }` legs, legend label "Off-road by 4×4" (ec4).
 - Map note = **one line + a Google Maps link**: "{Route}, about N km in N days. See the route on
   Google Maps" (google.com/maps/dir with the main stops, new tab). No distance list under the map.
 - Check by script: no label overlaps, nothing off-map at 1366 and 375; zoom works (buttons, Ctrl/⌘ +
@@ -160,7 +166,6 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 - Downsides in key facts or the overview ("Longest drive").
 - Anything under the booking box (side cards, "Read before you go" there, a "100% Local" ribbon).
 - "Private or shared tour?" comparison table.
-- "Great for" box (only "Think twice if" stays).
 - "Read before you go" blog-links block (removed from the tour page).
 - Navy-header / striped accommodation table with stars; a separate camp photo row under the table.
 - More than 2 camp photos in the gallery; 8-photo gallery.
