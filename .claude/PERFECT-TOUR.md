@@ -31,6 +31,10 @@ Day trips have their own blueprint: `.claude/PERFECT-DAY-TRIP.md`.
    them what you chose and why**, flagged "owner to confirm".
 5. **Build by script** from the latest approved tour page (same markup and classes), replacing every
    block's content. Keep a copy of the old page in the session scratchpad (`<tour>-before.html`).
+   Template scripts + helpers (`cards.js` for Similar Tours cards, shared icons) are in
+   `.claude/tools/tour-build/` (read its README: never re-run a script on a finished page).
+   After building, **update this tour's card text/title on every page that links to it**
+   (homepage, tours/index, city page, related tours) so the old route isn't described there.
 6. **Route map** (see section 6), then **link the page** (section 7).
 7. **Check it yourself** at 1366×768, 768 and 375 (section 8) before reporting. Share a screenshot
    only when it helps; say plainly what was checked and what still needs the owner.
@@ -98,6 +102,12 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
 - **Say each thing once** across key facts, highlights, itinerary, included, FAQ.
 - **Think twice if** = the real alternatives the visitor weighs, each linked to a real tour of ours:
   **shorter**, **longer / slower / more places**, **the other direction**. No weak reasons.
+  **Be precise** (owner, 2026-11-16): each line says exactly what differs, with facts read from the linked
+  page (start/end, which nights or places it keeps, adds or drops). Never vague ("similar road", "more than
+  the desert", "goes on by…"). Example: "You land in Fes: the 5-day Fes to Marrakech tour crosses the Middle
+  Atlas to Merzouga, then takes the same Dades and Aït Ben Haddou road to Marrakech".
+  **Short + our services** (owner, 2026-11-16): exactly 3 lines, each a short question + answer ("Shorter drives? The 4-day Agadir tour adds a night in the Dades Valley"). Mix real tour alternatives with **our own services** (medina tour, day trips, hammam, quad biking…), e.g. "Staying on in Marrakech? Add our medina tour or a day trip". **Make It Your Own** also includes our services (quad biking in the Merzouga dunes, a medina tour or hammam in Marrakech). Be flexible: pick what fits each tour, don't apply a fixed list.
+  **No repeats between the two** (owner, 2026-11-16): **Think twice** = the visitor's worries and preferences, "is this tour right for me?" → a better-fitting tour or service (Long drives worry you? → 4-day tour; Just want a taste of the desert? → our Agafay day trip). **Make It Your Own** = things to add to this tour or upgrades (quad biking in Merzouga, luxury camp, a medina tour or hammam in Marrakech, end in Fes…). Never the same item in both.
 - FAQ = the tour's own questions from research (only the booking FAQ repeats across pages).
   Answers ~3 lines.
 - When the tour has **no monument visits** (2-day), don't mention fees, kasbahs to visit or a
@@ -171,3 +181,18 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 - More than 2 camp photos in the gallery; 8-photo gallery.
 - Copying FAQs, reviews and gallery photos from the previous tour page.
 - Centred hero title on laptop for the homepage (phones only).
+
+## 10. Progress (update when a tour is done)
+
+**Rebuilt (16 desert tours, all logged in CLAUDE.md):** 2-day Marrakech → Merzouga · 3-day Marrakech → Merzouga ·
+3-day Marrakech → Fes · 4-day Marrakech → Fes via Merzouga · 4-day Fes → Marrakech · 5-day Fes → Marrakech ·
+5-day Marrakech → Fes · 4-day Erg Chigaga · 6-day Zagora/Ouzina/Merzouga · 7-day Erg Chigaga & Merzouga ·
+4-day Fes desert loop (Fes → Merzouga → Todra → Fes) · 3-day Errachidia · 4-day Errachidia (Todra Gorge loop) · 5-day Errachidia → Marrakech · 3-day Agadir → Merzouga → Marrakech · 4-day Agadir → Merzouga → Marrakech.
+
+**Desert tours still on the old layout:**
+5-day Agadir → Merzouga → Errachidia airport · 3-day Rabat → Merzouga → Marrakech · 3-day Rabat → Merzouga → Rabat ·
+10-day Merzouga nomad experience · student/group desert tours. Then the grand, northern, coast and themed tours.
+Check which pages are done with: `grep -l dt-prog--days tours/*.html`.
+
+**Errachidia airport tours (rule learned 2026-11-15):** most flights land in the evening, so the first night is a
+Merzouga hotel and the camp comes on day 2; we meet every flight at any hour; ending in Fes or Marrakech is offered. One-way tours also offer going on beyond the desert (Chefchaouen, Tangier, Rabat, Casablanca) in the FAQ + Make It Your Own, and drop-off at the arrival city's airport (owner, 2026-11-16).
