@@ -29,6 +29,9 @@ Day trips have their own blueprint: `.claude/PERFECT-DAY-TRIP.md`.
    which camps/hotels, cancellation, extras). Ask in one short numbered list. Never write a guess
    as a fact. If the owner says "you choose / you are the expert", choose from research and **tell
    them what you chose and why**, flagged "owner to confirm".
+   Owner (2026-11-16): "search, look what others do, you are the expert" → for route, nights, end point
+   and stops, decide from research yourself (check distances with OSRM) instead of asking; ask only facts
+   only the owner knows (pick-up time, which camps they use).
 5. **Build by script** from the latest approved tour page (same markup and classes), replacing every
    block's content. Keep a copy of the old page in the session scratchpad (`<tour>-before.html`).
    Template scripts + helpers (`cards.js` for Similar Tours cards, shared icons) are in
@@ -100,14 +103,20 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
   the itinerary meta lines and the FAQ.
 - **Short wording when the idea is clear** and there is no SEO reason ("Hotel pick-up and drop-off").
 - **Say each thing once** across key facts, highlights, itinerary, included, FAQ.
-- **Think twice if** = the real alternatives the visitor weighs, each linked to a real tour of ours:
-  **shorter**, **longer / slower / more places**, **the other direction**. No weak reasons.
-  **Be precise** (owner, 2026-11-16): each line says exactly what differs, with facts read from the linked
-  page (start/end, which nights or places it keeps, adds or drops). Never vague ("similar road", "more than
-  the desert", "goes on by…"). Example: "You land in Fes: the 5-day Fes to Marrakech tour crosses the Middle
-  Atlas to Merzouga, then takes the same Dades and Aït Ben Haddou road to Marrakech".
-  **Short + our services** (owner, 2026-11-16): exactly 3 lines, each a short question + answer ("Shorter drives? The 4-day Agadir tour adds a night in the Dades Valley"). Mix real tour alternatives with **our own services** (medina tour, day trips, hammam, quad biking…), e.g. "Staying on in Marrakech? Add our medina tour or a day trip". **Make It Your Own** also includes our services (quad biking in the Merzouga dunes, a medina tour or hammam in Marrakech). Be flexible: pick what fits each tour, don't apply a fixed list.
-  **No repeats between the two** (owner, 2026-11-16): **Think twice** = the visitor's worries and preferences, "is this tour right for me?" → a better-fitting tour or service (Long drives worry you? → 4-day tour; Just want a taste of the desert? → our Agafay day trip). **Make It Your Own** = things to add to this tour or upgrades (quad biking in Merzouga, luxury camp, a medina tour or hammam in Marrakech, end in Fes…). Never the same item in both.
+- **Think twice if** (owner, final rule 2026-11-16): **exactly 3 lines, each a short question + short
+  answer**, about the visitor's **worries and preferences** ("is this tour right for me?") → a better-fitting
+  tour **or one of our services**. Each answer names the one real difference, read from the linked page
+  (never vague: "similar road", "more than the desert"). Typical angles: shorter / longer or slower / other
+  start or direction / just a taste. Examples (3-day Agadir): "Long drives worry you? The 4-day Agadir tour
+  adds a night in the Dades Valley" · "Starting in Marrakech? Take the 3-day Marrakech to Merzouga tour" ·
+  "Just want a taste of the desert? Our Agafay day trip is 40 minutes from Marrakech".
+  Rejected: long lines ("You want a full day in the dunes and fly home from Errachidia: the 5-day … adds …
+  and ends at …"), weak reasons ("You will see Fes on your own").
+- **Make It Your Own** = **add-ons and upgrades to this tour**, incl. our services, linked where a page
+  exists (quad biking in the Merzouga dunes, upgrade to a luxury camp, a medina tour or hammam in
+  Marrakech, end in Fes, go on to Chefchaouen…). 6 items.
+- **Never the same item in Think twice and Make It Your Own.** Be flexible: pick what fits each tour,
+  never a fixed list.
 - FAQ = the tour's own questions from research (only the booking FAQ repeats across pages).
   Answers ~3 lines.
 - When the tour has **no monument visits** (2-day), don't mention fees, kasbahs to visit or a
@@ -116,7 +125,7 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
 ## 5. Costs & accommodations
 
 - **Costs on the way:** lunches · each paid entrance fee on its own line (e.g. "Taourirt Kasbah:
-  small fee, if you go in") · **one "Free: …" line** listing the free sites · tips. No "X is free"
+  small fee, if you go in") · **one line "All other sites are free"** (owner, 2026-11-16: never list the free sites by name) · tips. No "X is free"
   sentences, no "houses ask 10–20 MAD", no soft drinks.
 - **Accommodations** (section + tab name "Accommodations", owner's wording):
   - Plain table `.dt-acc-wrap > table.dt-acc` (white box, muted uppercase header, thin lines —
@@ -129,7 +138,7 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
     Hotel Xaluca Dades · Merzouga camps = Erg Chebbi Sahara Camp / Sandrock Luxury Camp / Desert
     Luxury Camp · Merzouga hotel = Riad Madu / Kasbah Mohayut / Kasbah Hotel Tombouctou · Aït Ben
     Haddou = Kasbah Tebi / Riad Caravane / Riad Ksar Ighnda · Marrakech = Riad 144 / Riad Dar Anika /
-    Riad Kniza · Fes = Dar Seffarine / Riad Dar Bensouda / Riad Fes · Zagora = Kasbah Ziwana / Riad Lamane / Kasbah Sirocco · Erg Chigaga = Camp Al Koutban (shared bathrooms) / Desert Luxury Camp Erg Chigaga / Erg Chigaga Luxury Desert Camp · Ouarzazate = Dar Chamaa / Kenzi Azghor Hotel / Le Berbère Palace · Todra Gorge = Guesthouse Panorama Todra / La Petite Gorge / Auberge Le Festival.
+    Riad Kniza · Fes = Dar Seffarine / Riad Dar Bensouda / Riad Fes · Zagora = Kasbah Ziwana / Riad Lamane / Kasbah Sirocco · Erg Chigaga = Camp Al Koutban (shared bathrooms) / Desert Luxury Camp Erg Chigaga / Erg Chigaga Luxury Desert Camp · Ouarzazate = Dar Chamaa / Kenzi Azghor Hotel / Le Berbère Palace · Todra Gorge = Guesthouse Panorama Todra / La Petite Gorge / Auberge Le Festival · Midelt = Kasbah Izoran / Villa Pomme d’Or / Kasbah Asmaa.
 
 ## 6. Route map (`figure.rmap`, real Leaflet map)
 
@@ -184,15 +193,17 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 
 ## 10. Progress (update when a tour is done)
 
-**Rebuilt (16 desert tours, all logged in CLAUDE.md):** 2-day Marrakech → Merzouga · 3-day Marrakech → Merzouga ·
+**Rebuilt (20 desert tours, all logged in CLAUDE.md):** 2-day Marrakech → Merzouga · 3-day Marrakech → Merzouga ·
 3-day Marrakech → Fes · 4-day Marrakech → Fes via Merzouga · 4-day Fes → Marrakech · 5-day Fes → Marrakech ·
 5-day Marrakech → Fes · 4-day Erg Chigaga · 6-day Zagora/Ouzina/Merzouga · 7-day Erg Chigaga & Merzouga ·
-4-day Fes desert loop (Fes → Merzouga → Todra → Fes) · 3-day Errachidia · 4-day Errachidia (Todra Gorge loop) · 5-day Errachidia → Marrakech · 3-day Agadir → Merzouga → Marrakech · 4-day Agadir → Merzouga → Marrakech.
+4-day Fes desert loop (Fes → Merzouga → Todra → Fes) · 3-day Errachidia · 4-day Errachidia (Todra Gorge loop) · 5-day Errachidia → Marrakech · 3-day Agadir → Merzouga → Marrakech · 4-day Agadir → Merzouga → Marrakech · 5-day Agadir → Merzouga → Errachidia airport · 3-day Rabat → Merzouga → Marrakech · 3-day Rabat → Merzouga → Rabat.
 
 **Desert tours still on the old layout:**
-5-day Agadir → Merzouga → Errachidia airport · 3-day Rabat → Merzouga → Marrakech · 3-day Rabat → Merzouga → Rabat ·
-10-day Merzouga nomad experience · student/group desert tours. Then the grand, northern, coast and themed tours.
+student/group desert tours. Then the grand, northern, coast and themed tours.
+**Grand tours started (2026-11-16, owner: student/group desert tours skipped for now — group clashes with 100% private):** 7-day Marrakech → Fes done.
+**Next tour:** next grand tour (e.g. 8-day Imperial Cities & Sahara, 10-day Marrakech → Tangier).
+**Still to update:** the 13 tours rebuilt before 2026-11-16 have the older, longer Think twice lines (no services) — apply the final rule when the owner asks.
 Check which pages are done with: `grep -l dt-prog--days tours/*.html`.
 
 **Errachidia airport tours (rule learned 2026-11-15):** most flights land in the evening, so the first night is a
-Merzouga hotel and the camp comes on day 2; we meet every flight at any hour; ending in Fes or Marrakech is offered. One-way tours also offer going on beyond the desert (Chefchaouen, Tangier, Rabat, Casablanca) in the FAQ + Make It Your Own, and drop-off at the arrival city's airport (owner, 2026-11-16).
+Merzouga hotel and the camp comes on day 2; we meet every flight at any hour; ending in Fes or Marrakech is offered. One-way tours also offer going on beyond the desert (Chefchaouen, Tangier, Rabat, Casablanca) in the FAQ + Make It Your Own, and drop-off at the arrival city's airport (owner, 2026-11-16). **Tours ending at Errachidia airport:** the daily Royal Air Maroc flight to Casablanca leaves ~06:15, so for that flight the last night is in Errachidia (≈10 min from the airport), otherwise a Merzouga hotel.

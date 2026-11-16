@@ -13,6 +13,9 @@ page **wipes every edit made to that page afterwards**. Edit finished pages dire
 - `build-er4.js` → `tours/4-day-errachidia-to-merzouga-desert-tour.html` (4 days, 4-col table)
 - `build-er5.js` → `tours/5-day-errachidia-to-marrakech-desert-tour.html` (5 days, one row per night; template = the finished 4-day Errachidia page)
 - `build-ag3.js` → `tours/3-day-desert-tour-from-agadir.html` (3 days, 3-col table; template = 4-day Marrakech → Fes)
+- `build-rr3.js` → `tours/3-day-desert-tour-rabat-merzouga-rabat.html` (3 days, 3-col table; template = the finished 3-day Rabat → Marrakech page)
+- `build-rb3.js` → `tours/3-day-desert-tour-rabat-merzouga-marrakech.html` (3 days, 3-col table; template = the finished 3-day Agadir page)
+- `build-ag5.js` → `tours/5-day-desert-tour-agadir-merzouga-errachidia-airport.html` (5 days, one row per night; template = the finished 5-day Errachidia page)
 - `build-ag4.js` → `tours/4-day-desert-tour-agadir-merzouga-marrakech.html` (4 days, 4-col table)
 - `icons.part.js` — shared SVG icons + `li()` helper, loaded by the build scripts (`eval`).
 - `cards.js` — `node cards.js <out.json> <tour1.html> <tour2.html> <tour3.html>`: grabs each tour's
