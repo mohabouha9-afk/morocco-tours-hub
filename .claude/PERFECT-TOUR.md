@@ -138,7 +138,7 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
     Hotel Xaluca Dades · Merzouga camps = Erg Chebbi Sahara Camp / Sandrock Luxury Camp / Desert
     Luxury Camp · Merzouga hotel = Riad Madu / Kasbah Mohayut / Kasbah Hotel Tombouctou · Aït Ben
     Haddou = Kasbah Tebi / Riad Caravane / Riad Ksar Ighnda · Marrakech = Riad 144 / Riad Dar Anika /
-    Riad Kniza · Fes = Dar Seffarine / Riad Dar Bensouda / Riad Fes · Zagora = Kasbah Ziwana / Riad Lamane / Kasbah Sirocco · Erg Chigaga = Camp Al Koutban (shared bathrooms) / Desert Luxury Camp Erg Chigaga / Erg Chigaga Luxury Desert Camp · Ouarzazate = Dar Chamaa / Kenzi Azghor Hotel / Le Berbère Palace · Todra Gorge = Guesthouse Panorama Todra / La Petite Gorge / Auberge Le Festival · Midelt = Kasbah Izoran / Villa Pomme d’Or / Kasbah Asmaa · Rabat = Riad Dar Saidi / Riad Zyo / Sofitel Jardin des Roses · Chefchaouen = Casa Perleta / Dar Echchaouen / Lina Ryad & Spa · Tangier = Hilton Garden Inn City Center / Grand Hotel Villa de France / Fairmont Tazi Palace.
+    Riad Kniza · Fes = Dar Seffarine / Riad Dar Bensouda / Riad Fes · Zagora = Kasbah Ziwana / Riad Lamane / Kasbah Sirocco · Erg Chigaga = Camp Al Koutban (shared bathrooms) / Desert Luxury Camp Erg Chigaga / Erg Chigaga Luxury Desert Camp · Ouarzazate = Dar Chamaa / Kenzi Azghor Hotel / Le Berbère Palace · Todra Gorge = Guesthouse Panorama Todra / La Petite Gorge / Auberge Le Festival · Midelt = Kasbah Izoran / Villa Pomme d’Or / Kasbah Asmaa · Rabat = Riad Dar Saidi / Riad Zyo / Sofitel Jardin des Roses · Chefchaouen = Casa Perleta / Dar Echchaouen / Lina Ryad & Spa · Tangier = Hilton Garden Inn City Center / Grand Hotel Villa de France / Fairmont Tazi Palace · Casablanca = Barceló Anfa / Le Casablanca Hotel / Four Seasons.
 
 ## 6. Route map (`figure.rmap`, real Leaflet map)
 
@@ -200,8 +200,9 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 
 **Desert tours still on the old layout:**
 student/group desert tours. Then the grand, northern, coast and themed tours.
-**Grand tours started (2026-11-16, owner: student/group desert tours skipped for now — group clashes with 100% private):** 7-day Marrakech → Fes, 8-day Imperial Cities & Sahara, 10-day Marrakech → Tangier, 10-day Tangier → Marrakech done.
-**Next tour:** next grand tour (e.g. 9-day from Casablanca, 12-day Grand Morocco).
+**Grand tours started (2026-11-16, owner: student/group desert tours skipped for now — group clashes with 100% private):** 7-day Marrakech → Fes, 8-day Imperial Cities & Sahara, 10-day Marrakech → Tangier, 10-day Tangier → Marrakech, 9-day Casablanca → Marrakech, 10-day Casablanca round, 10-day Marrakech → Casablanca done.
+**Next tour:** next grand tour (e.g. 8-day Marrakech → Casablanca, 12-day Grand Morocco).
+**Grand-tour research (owner, 2026-11-16):** "search the web and analyze the top ranking pages" — read the Google page-1 results in full (Tripadvisor listings with ratings + reviewer complaints, moroccofabuloustravel.com, 1–2 agency pages), follow the proven route structure, and answer the reviewers' complaints on the page (FAQ, Good to know). Notes go in the build script header (no research file).
 **Phone table rule (2026-11-16):** long one-word names (Chefchaouen, Echchaouen, Tombouctou) can push the accommodations table wider than a 375px phone; check `.dt-acc-wrap` scrollWidth and add &shy; soft hyphens to the culprit cells (laptop shows the full word).
 **Still to update:** the 13 tours rebuilt before 2026-11-16 have the older, longer Think twice lines (no services) — apply the final rule when the owner asks.
 Check which pages are done with: `grep -l dt-prog--days tours/*.html`.
