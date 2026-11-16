@@ -479,7 +479,23 @@ const TRIPS = {
       { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
       { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'Night 7, end', side: 'top', sideM: 'right' },
     ],
-  },  tm7: {
+  },  tc7: {
+    title: 'Route map: 7-day imperial cities tour from Tangier by Tetouan to Chefchaouen, then Volubilis, Meknes and Fes, west to Rabat and Casablanca and south to Marrakech',
+    legend: [], tall: true, chip: { at: 0.5, text: '950 km', textM: '950 km' }, compassM: 'topright', pad: [90, 50, 90, 50], padM: [40, 40, 90, 40],
+    legs: [{ kind: 'car', road: 'tm7-d1' }, { kind: 'car', road: 'tg3' }, { kind: 'car', road: 'ti4' }, { kind: 'car', road: 'ti5' }],
+    stops: [
+      { at: [-5.813, 35.7855], icon: 'hotel', name: 'Tangier', note: 'Start, ferry port', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.3684, 35.5785], icon: 'arch', name: 'Tetouan', note: '', side: 'top', pinM: true, mini: true },
+      { at: [-5.2636, 35.1688], icon: 'kasbah', name: 'Chefchaouen', note: 'Night 1', side: 'right', sideM: 'right' },
+      { at: [-5.554, 34.074], icon: 'ruins', name: 'Volubilis', note: 'Roman ruins', side: 'top', pinM: true },
+      { at: [-5.5473, 33.8935], icon: 'arch', name: 'Meknes', note: 'Bab Mansour', side: 'bottom', pinM: true },
+      { at: [-4.9998, 34.0331], icon: 'minaret', name: 'Fes', note: 'Nights 2–3', side: 'right', sideM: 'right' },
+      { at: [-6.8326, 34.024], icon: 'kasbah', name: 'Rabat', note: 'Oudayas, Hassan Tower', side: 'left', sideM: 'top' },
+      { at: [-7.6327, 33.6083], icon: 'minaret', name: 'Casablanca', note: 'Night 4, Hassan II Mosque', side: 'bottom', sideM: 'bottom' },
+      { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'Nights 5–6, end', side: 'right', sideM: 'right' },
+    ],
+  },
+  tm7: {
     title: 'Route map: 7-day tour from Tangier by Tetouan to Chefchaouen, then Volubilis, Meknes and Fes, over the Middle Atlas to the Merzouga dunes, the Todra Gorge, the Dades Valley and Aït Ben Haddou, and over the High Atlas to Marrakech',
     legend: [], tall: true, chip: { at: 0.5, text: '1,550 km', textM: '1,550 km' }, compassM: 'topleft', pad: [70, 50, 90, 60], padM: [24, 40, 40, 40],
     legs: [{ kind: 'car', road: 'tm7-d1' }, { kind: 'car', road: 'tg3' }, { kind: 'car', road: 'fm4-d1' }, { kind: 'car', road: 'fm4-d2' }, { kind: 'car', road: 'fm4-d3' }],
