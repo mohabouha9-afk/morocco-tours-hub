@@ -49,6 +49,7 @@ page **wipes every edit made to that page afterwards**. Edit finished pages dire
 - `build-hm9.js` → `tours/9-day-morocco-honeymoon-tour-from-marrakech.html` (9-day honeymoon loop, original route kept; derived from build-fy6.js)
 - `build-yg9.js` → `tours/morocco-yoga-retreat-sahara-desert.html` (9-day yoga retreat, original route kept; derived from build-hm9.js)
 - `build-ph11.js` → `tours/11-day-morocco-photography-tour-from-casablanca.html` (11-day photography tour, original route kept; derived from build-jn10.js)
+- `st-lib.js` + `build-st.js` → the 6 student/group tours (one generic builder: replaces every block by structural markers, so a new tour = one config object; `node build-st.js <key|all>`)
 - `icons.part.js` — shared SVG icons + `li()` helper, loaded by the build scripts (`eval`).
 - `cards.js` — `node cards.js <out.json> <tour1.html> <tour2.html> <tour3.html>`: grabs each tour's
   `.htour` card from any page and writes the 3 Similar Tours `<li>` cards as JSON.
