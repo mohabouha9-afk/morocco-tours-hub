@@ -180,6 +180,8 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 - Shell notes (Windows): use Node scripts in the scratchpad for edits with curly quotes or long HTML;
   `[IO.File]::WriteAllText` with UTF-8 no BOM; lazy images report width 0 until scrolled into view.
 
+**Template check (2026-11-17):** pages built from the 8-day template must also replace the hero chip (`span.dt-hero__loc`, it holds an icon) and the hero `<small>Route</small>` value — the 12-day Agadir, 14-day and 16-day pages shipped with "Casablanca → Marrakech" there. Check all three (chip, hero route, key fact 1) by script after each build.
+
 ## 9. Tried and rejected (don't bring back)
 
 - Downsides in key facts or the overview ("Longest drive").
@@ -200,8 +202,8 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 
 **Desert tours still on the old layout:**
 student/group desert tours. Then the grand, northern, coast and themed tours.
-**Grand tours started (2026-11-16, owner: student/group desert tours skipped for now — group clashes with 100% private):** 7-day Marrakech → Fes, 8-day Imperial Cities & Sahara, 10-day Marrakech → Tangier, 10-day Tangier → Marrakech, 9-day Casablanca → Marrakech, 10-day Casablanca round, 10-day Marrakech → Casablanca, 8-day Marrakech → Casablanca, 7-day Marrakech → Tangier, 7-day Tangier → Marrakech, 12-day Grand Morocco (Tangier → Marrakech), 8-day Tangier → Marrakech, 7-day Imperial Cities (Tangier → Marrakech), 13-day Tangier → Marrakech via the deep south, 14-day Tangier loop, 7-day Casablanca → Marrakech, 6-day Casablanca → Marrakech, 12-day Marrakech → Casablanca, 13-day Marrakech → Casablanca, 14-day Marrakech round trip, 15-day Marrakech → Casablanca, 10-day Casablanca → Marrakech (10-days-morocco-journey), 12-day Agadir loop, 14-day Best of Morocco (Casablanca loop), 16-day Complete Morocco done.
-**Next tour:** 21-day complete tour, then the northern, coast and themed tours.
+**Grand tours started (2026-11-16, owner: student/group desert tours skipped for now — group clashes with 100% private):** 7-day Marrakech → Fes, 8-day Imperial Cities & Sahara, 10-day Marrakech → Tangier, 10-day Tangier → Marrakech, 9-day Casablanca → Marrakech, 10-day Casablanca round, 10-day Marrakech → Casablanca, 8-day Marrakech → Casablanca, 7-day Marrakech → Tangier, 7-day Tangier → Marrakech, 12-day Grand Morocco (Tangier → Marrakech), 8-day Tangier → Marrakech, 7-day Imperial Cities (Tangier → Marrakech), 13-day Tangier → Marrakech via the deep south, 14-day Tangier loop, 7-day Casablanca → Marrakech, 6-day Casablanca → Marrakech, 12-day Marrakech → Casablanca, 13-day Marrakech → Casablanca, 14-day Marrakech round trip, 15-day Marrakech → Casablanca, 10-day Casablanca → Marrakech (10-days-morocco-journey), 12-day Agadir loop, 14-day Best of Morocco (Casablanca loop), 16-day Complete Morocco, 21-day Complete Morocco done — **all grand tours rebuilt**.
+**Next tour:** the northern, coast and themed tours (and the 17-day Tangier → Marrakech grand tour, still on the old layout).
 **Grand-tour research (owner, 2026-11-16):** "search the web and analyze the top ranking pages" — read the Google page-1 results in full (Tripadvisor listings with ratings + reviewer complaints, moroccofabuloustravel.com, 1–2 agency pages), follow the proven route structure, and answer the reviewers' complaints on the page (FAQ, Good to know). Notes go in the build script header (no research file).
 **Phone table rule (2026-11-16):** long one-word names (Chefchaouen, Echchaouen, Tombouctou) can push the accommodations table wider than a 375px phone; check `.dt-acc-wrap` scrollWidth and add &shy; soft hyphens to the culprit cells (laptop shows the full word).
 **Still to update:** the 13 tours rebuilt before 2026-11-16 have the older, longer Think twice lines (no services) — apply the final rule when the owner asks.

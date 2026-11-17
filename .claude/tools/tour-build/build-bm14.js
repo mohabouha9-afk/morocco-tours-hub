@@ -95,6 +95,7 @@ const DAYS = [
 rep(/<img src="\/assets\/images\/merzouga-camel-caravan\.jpg" alt="[^"]*" loading="eager"/, `<img src="/assets/images/${HERO}" alt="A traveller on the Merzouga dunes in the evening light" loading="eager"`, 'hero img');
 rep('<span>8-Day Imperial Cities &amp; Sahara</span></nav>', '<span>14-Day Best of Morocco</span></nav>', 'crumb');
 rep('<h1>8-Day Morocco Imperial Cities &amp; Sahara Tour<span class="script">Four Royal Cities and the Dunes</span></h1>', '<h1>14-Day Best of Morocco Tour<span class="script">From Casablanca and Back</span></h1>', 'h1');
+rep('<small>Route</small><b>Casablanca → Marrakech</b>', '<small>Route</small><b>Casablanca round trip</b>', 'route');
 rep('<b>8 days / 7 nights</b>', '<b>14 days / 13 nights</b>', 'duration');
 
 // ---------- overview ----------
