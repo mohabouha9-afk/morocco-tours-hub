@@ -30,6 +30,7 @@ page **wipes every edit made to that page afterwards**. Edit finished pages dire
 - `build-mc15.js` → `tours/15-day-marrakech-to-casablanca-tour.html` (derived from build-mc13.js: + Chefchaouen day, Tangier, Asilah)
 - `build-jn10.js` → `tours/10-days-morocco-journey.html` (10-day Casablanca → Marrakech, Rabat night + guided Marrakech day; template = the finished 8-day Imperial Cities page, like build-c9.js)
 - `build-ag12.js` → `tours/12-day-morocco-tour-from-agadir.html` (12-day Agadir loop, desert first, coast last; template = the finished 8-day Imperial Cities page)
+- `build-bm14.js` → `tours/14-days-best-of-morocco.html` (14-day Casablanca loop, Essaouira ×2 + Oualidia night; template = the finished 8-day Imperial Cities page)
 - `icons.part.js` — shared SVG icons + `li()` helper, loaded by the build scripts (`eval`).
 - `cards.js` — `node cards.js <out.json> <tour1.html> <tour2.html> <tour3.html>`: grabs each tour's
   `.htour` card from any page and writes the 3 Similar Tours `<li>` cards as JSON.
