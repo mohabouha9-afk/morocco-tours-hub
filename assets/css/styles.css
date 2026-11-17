@@ -2506,3 +2506,8 @@ body.page-swap { background: #fffdf9; }
 @media (max-width: 640px) {
   .rmap .leaflet-control-zoom a { width: 30px; height: 30px; line-height: 30px; font-size: 18px; }
 }
+
+/* Merzouga hub (destinations/merzouga.html): the 6 activity cards sit 3 per row on laptops (4 + 2 left a gap) */
+@media (min-width: 1101px) { .htours__list.mz-grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Merzouga hub: "Combine Them" = 4 cards, one row on laptops (2x2 on tablets and phones via the happart rules) */
+@media (min-width: 1101px) { .mz-combos .happart__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
