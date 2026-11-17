@@ -3,15 +3,16 @@
 How to build (or rebuild) a multi-day tour page in `tours/`, the way the owner approved it on the
 3-day Marrakech → Merzouga page (2026-11-14) and the tours built after it (2-day Merzouga, 3-day and
 4-day Marrakech ⇄ Fes, 4-day and 5-day Fes → Marrakech, 5-day Marrakech → Fes, 4-day Marrakech → Erg Chigaga).
-Read this file, `.claude/OWNER-PROFILE.md` and the tour lines in `CLAUDE.md` before starting a tour.
+**Owner (2026-11-17): for each new tour, read ONLY this file, then build.** Everything needed is here (process, rules, places in use, map tools); do not re-read CLAUDE.md, OWNER-PROFILE.md or old research files first. Look up a related tour in CLAUDE.md only if a specific fact is missing.
 Day trips have their own blueprint: `.claude/PERFECT-DAY-TRIP.md`.
 
 ---
 
+**Owner rule (2026-11-17): modify the tours we have, never invent new ones.** Keep each tour's original route (days, nights, stops) and rebuild only the layout and the writing; propose route changes to the owner instead of making them.
+
 ## 1. The working process (always in this order)
 
-1. **Pick the tour and read what exists.** The old page (itinerary, accommodation text, links),
-   `CLAUDE.md` notes for related tours, and the earlier research files in `.claude/research/`.
+1. **Pick the tour** (section 10 lists what is left) and read its old page once (itinerary, links).
 2. **Research first. Never copy the previous page's content** (owner, 2026-11-15).
    - Keyword volumes with **OpenSEO** (`get_keyword_metrics`, project "Default", US market).
    - Who ranks on Google page 1 for the main keyword (`firecrawl_search`).
@@ -138,7 +139,7 @@ Nothing else goes under it (tried and reverted: Make It Your Own, costs, guides,
     Hotel Xaluca Dades · Merzouga camps = Erg Chebbi Sahara Camp / Sandrock Luxury Camp / Desert
     Luxury Camp · Merzouga hotel = Riad Madu / Kasbah Mohayut / Kasbah Hotel Tombouctou · Aït Ben
     Haddou = Kasbah Tebi / Riad Caravane / Riad Ksar Ighnda · Marrakech = Riad 144 / Riad Dar Anika /
-    Riad Kniza · Fes = Dar Seffarine / Riad Dar Bensouda / Riad Fes · Zagora = Kasbah Ziwana / Riad Lamane / Kasbah Sirocco · Erg Chigaga = Camp Al Koutban (shared bathrooms) / Desert Luxury Camp Erg Chigaga / Erg Chigaga Luxury Desert Camp · Ouarzazate = Dar Chamaa / Kenzi Azghor Hotel / Le Berbère Palace · Todra Gorge = Guesthouse Panorama Todra / La Petite Gorge / Auberge Le Festival · Midelt = Kasbah Izoran / Villa Pomme d’Or / Kasbah Asmaa · Rabat = Riad Dar Saidi / Riad Zyo / Sofitel Jardin des Roses · Chefchaouen = Casa Perleta / Dar Echchaouen / Lina Ryad & Spa · Tangier = Hilton Garden Inn City Center / Grand Hotel Villa de France / Fairmont Tazi Palace · Casablanca = Barceló Anfa / Le Casablanca Hotel / Four Seasons · Oualidia = Dar Beldi / Hôtel L’Hippocampe / La Sultana Oualidia.
+    Riad Kniza · Fes = Dar Seffarine / Riad Dar Bensouda / Riad Fes · Zagora = Kasbah Ziwana / Riad Lamane / Kasbah Sirocco · Erg Chigaga = Camp Al Koutban (shared bathrooms) / Desert Luxury Camp Erg Chigaga / Erg Chigaga Luxury Desert Camp · Ouarzazate = Dar Chamaa / Kenzi Azghor Hotel / Le Berbère Palace · Todra Gorge = Guesthouse Panorama Todra / La Petite Gorge / Auberge Le Festival · Midelt = Kasbah Izoran / Villa Pomme d’Or / Kasbah Asmaa · Rabat = Riad Dar Saidi / Riad Zyo / Sofitel Jardin des Roses · Chefchaouen = Casa Perleta / Dar Echchaouen / Lina Ryad & Spa · Tangier = Hilton Garden Inn City Center / Grand Hotel Villa de France / Fairmont Tazi Palace · Casablanca = Barceló Anfa / Le Casablanca Hotel / Four Seasons · Erfoud = Kasbah Tizimi / Kasbah Xaluca / Palais Masandoïa · Oualidia = Dar Beldi / Hôtel L’Hippocampe / La Sultana Oualidia · Imsouane = Imsouane Magic House / Windhouse (Midrange + Luxury) · Agadir = Hyatt Place / Royal Atlas Hotel & Spa / Sofitel Agadir Thalassa · Taghazout = World of Waves Surf House / Radisson Blu Surf Village / Fairmont Taghazout Bay.
 
 ## 6. Route map (`figure.rmap`, real Leaflet map)
 
@@ -180,6 +181,7 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 - Shell notes (Windows): use Node scripts in the scratchpad for edits with curly quotes or long HTML;
   `[IO.File]::WriteAllText` with UTF-8 no BOM; lazy images report width 0 until scrolled into view.
 
+**Keywords check (2026-11-17):** when deriving a build script from another tour's script, replace the `<meta name="keywords">` line too (the 6-day Agadir page shipped with the 7-day page's keywords).
 **Template check (2026-11-17):** pages built from the 8-day template must also replace the hero chip (`span.dt-hero__loc`, it holds an icon) and the hero `<small>Route</small>` value — the 12-day Agadir, 14-day and 16-day pages shipped with "Casablanca → Marrakech" there. Check all three (chip, hero route, key fact 1) by script after each build.
 
 ## 9. Tried and rejected (don't bring back)
@@ -203,6 +205,11 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 **Desert tours still on the old layout:**
 student/group desert tours. Then the grand, northern, coast and themed tours.
 **Grand tours started (2026-11-16, owner: student/group desert tours skipped for now — group clashes with 100% private):** 7-day Marrakech → Fes, 8-day Imperial Cities & Sahara, 10-day Marrakech → Tangier, 10-day Tangier → Marrakech, 9-day Casablanca → Marrakech, 10-day Casablanca round, 10-day Marrakech → Casablanca, 8-day Marrakech → Casablanca, 7-day Marrakech → Tangier, 7-day Tangier → Marrakech, 12-day Grand Morocco (Tangier → Marrakech), 8-day Tangier → Marrakech, 7-day Imperial Cities (Tangier → Marrakech), 13-day Tangier → Marrakech via the deep south, 14-day Tangier loop, 7-day Casablanca → Marrakech, 6-day Casablanca → Marrakech, 12-day Marrakech → Casablanca, 13-day Marrakech → Casablanca, 14-day Marrakech round trip, 15-day Marrakech → Casablanca, 10-day Casablanca → Marrakech (10-days-morocco-journey), 12-day Agadir loop, 14-day Best of Morocco (Casablanca loop), 16-day Complete Morocco, 21-day Complete Morocco, 17-day Tangier → Marrakech done — **all grand tours rebuilt**.
+**Coast tours started (2026-11-17):** 18-day Atlantic Marrakech → Dakhla, 7-day Coastal Marrakech round trip (Essaouira, Imsouane, Taghazout, Agadir), 6-day Agadir → Marrakech via Essaouira, 4-day Marrakech → Essaouira → Agadir, 3-day Marrakech & Essaouira, 6-day Marrakech & surroundings (original route kept) — **all coast tours done**.
+**Northern tours started (2026-11-17):** 3-day Fes, Chefchaouen & Volubilis, 4-day Fes → Tangier via Chefchaouen, 5-day Tangier, Chefchaouen & Fes, 5-day Tangier → Marrakech, 7-day northern (original routes kept) — **all northern tours done**.
+**Themed tours started (2026-11-17):** 6-day family tour, 9-day honeymoon tour, 9-day yoga retreat, 11-day photography tour (original routes kept) — **all themed tours done**.
+**Left to rebuild:** student/group tours only (skipped for now — group clashes with 100% private; ask the owner).
+**Reviews in use:** only 6 real ones exist (Sarah L., James T., Maria G., Lukas M., Chloé D., Aisha K.); vary the trio per page.
 **Next tour:** the northern, coast and themed tours.
 **Grand-tour research (owner, 2026-11-16):** "search the web and analyze the top ranking pages" — read the Google page-1 results in full (Tripadvisor listings with ratings + reviewer complaints, moroccofabuloustravel.com, 1–2 agency pages), follow the proven route structure, and answer the reviewers' complaints on the page (FAQ, Good to know). Notes go in the build script header (no research file).
 **Phone table rule (2026-11-16):** long one-word names (Chefchaouen, Echchaouen, Tombouctou) can push the accommodations table wider than a 375px phone; check `.dt-acc-wrap` scrollWidth and add &shy; soft hyphens to the culprit cells (laptop shows the full word).

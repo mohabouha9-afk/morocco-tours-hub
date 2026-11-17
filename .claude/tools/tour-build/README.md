@@ -34,6 +34,21 @@ page **wipes every edit made to that page afterwards**. Edit finished pages dire
 - `build-c16.js` → `tours/16-day-complete-morocco-tour.html` (derived from build-bm14.js by a patch script: + Asilah/Tangier night and an Aït Ben Haddou night)
 - `build-c21.js` → `tours/21-day-complete-morocco-tour.html` (patched from build-c16.js: Tangier → Marrakech, two deserts, off-road legs, Taroudant, Imlil)
 - `build-t17.js` → `tours/17-day-tangier-to-marrakech-grand-tour.html` (patched from build-c21.js: Midelt + Todra nights, Ouzina, Zagora, Essaouira end)
+- `build-a18.js` → `tours/18-day-atlantic-morocco-tour-marrakech-to-dakhla.html` (18-day coast route to Dakhla; colspan cells for towns with one good hotel; template = the finished 8-day Imperial Cities page)
+- `build-cc7.js` → `tours/7-day-coastal-morocco-tour-from-marrakech.html` (7-day coast loop, one row per stop with a colspan cell for Imsouane; template = the finished 8-day Imperial Cities page)
+- `build-ag6.js` → `tours/6-day-morocco-tour-agadir-essaouira-marrakech.html` (6-day Agadir → Marrakech; derived from build-cc7.js by a patch script)
+- `build-me4.js` → `tours/4-day-marrakech-essaouira-agadir-tour.html` (4-day Marrakech → Agadir; derived from build-ag6.js)
+- `build-me3.js` → `tours/3-day-marrakech-essaouira-tour.html` (3-day Marrakech round trip with an Essaouira night; has a `dims()` helper that reads image sizes from other pages)
+- `build-ms6.js` → `tours/6-day-marrakech-surroundings-tour.html` (6 days from one Marrakech riad, original route kept; derived from build-me3.js)
+- `build-fc3.js` → `tours/3-day-fes-chefchaouen-volubilis-tour.html` (3-day Fes round trip, original route kept; copies hotel rows from a finished page with `cells()`)
+- `build-ft4.js` → `tours/4-day-fes-to-tangier-via-chefchaouen.html` (4-day Fes → Tangier, original route kept; derived from build-fc3.js)
+- `build-tc5.js` → `tours/5-day-tangier-chefchaouen-fes-tour.html` (5-day Tangier → Fes, original route kept; derived from build-ft4.js)
+- `build-tm5.js` → `tours/5-day-morocco-tour-tangier-to-marrakech.html` (5-day Tangier → Marrakech via Fes + Merzouga camp, original route kept; `cellsFrom()` copies hotel rows from several pages)
+- `build-nt7.js` → `tours/7-day-northern-morocco-tour.html` (7-day Tangier → Fes, original route kept; derived from build-tc5.js)
+- `build-fy6.js` → `tours/6-day-morocco-family-tour-marrakech-merzouga.html` (6-day family loop to Merzouga, original route kept; derived from build-tm5.js)
+- `build-hm9.js` → `tours/9-day-morocco-honeymoon-tour-from-marrakech.html` (9-day honeymoon loop, original route kept; derived from build-fy6.js)
+- `build-yg9.js` → `tours/morocco-yoga-retreat-sahara-desert.html` (9-day yoga retreat, original route kept; derived from build-hm9.js)
+- `build-ph11.js` → `tours/11-day-morocco-photography-tour-from-casablanca.html` (11-day photography tour, original route kept; derived from build-jn10.js)
 - `icons.part.js` — shared SVG icons + `li()` helper, loaded by the build scripts (`eval`).
 - `cards.js` — `node cards.js <out.json> <tour1.html> <tour2.html> <tour3.html>`: grabs each tour's
   `.htour` card from any page and writes the 3 Similar Tours `<li>` cards as JSON.
