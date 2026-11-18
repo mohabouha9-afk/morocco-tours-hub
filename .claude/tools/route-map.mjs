@@ -397,6 +397,32 @@ const TRIPS = {
       { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
       { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: 'Night 3', side: 'left', pinM: true },
     ],
+  },  fr3: {
+    title: 'Route map: 3-day round trip from Fes over the Middle Atlas and the Ziz Valley to the Merzouga dunes, a day around Merzouga by 4×4, then back by Rissani, Erfoud and the Ziz Valley to Fes',
+    legend: [], tall: true, chip: { at: 0.3, text: 'About 1,000 km in 3 days', textM: '1,000 km' }, compassM: 'topleft', pad: [70, 40, 70, 64], padM: [40, 40, 30, 40],
+    legs: [{ kind: 'car', road: 'fm4-d1' }, { kind: 'car', road: 'mzf3-d3' }],
+    stops: [
+      { at: [-4.9998, 34.0331], icon: 'hotel', name: 'Fes', note: 'Start and end', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Lunch, days 1 and 3', side: 'right', pinM: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Nights 1 and 2', side: 'right', sideM: 'left' },
+      { at: [-3.995, 31.025], icon: 'lantern', name: 'Khamlia', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+    ],
+  },  fr2: {
+    title: 'Route map: 2-day round trip from Fes over the Middle Atlas and the Ziz Valley to the Merzouga dunes for a night in the camp, and back to Fes',
+    legend: [], tall: true, chip: { at: 0.3, text: 'About 940 km in 2 days', textM: '940 km' }, compassM: 'topleft', pad: [70, 40, 70, 64], padM: [40, 40, 30, 40],
+    legs: [{ kind: 'car', road: 'fm4-d1' }, { kind: 'car', road: 'mzf3-d3' }],
+    stops: [
+      { at: [-4.9998, 34.0331], icon: 'hotel', name: 'Fes', note: 'Start and end', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Lunch, both days', side: 'right', pinM: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud', note: '', side: 'left', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 1', side: 'right', sideM: 'left' },
+    ],
   },
   er3: {
     title: 'Route map: 3-day round trip from Errachidia airport through the Ziz Valley and Erfoud to Merzouga, a day around the Erg Chebbi dunes, then back by Rissani',
