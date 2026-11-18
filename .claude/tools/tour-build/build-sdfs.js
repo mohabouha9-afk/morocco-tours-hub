@@ -237,6 +237,8 @@ head = head.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(TITLE)}</title>`)
 head = head.replace(/<script type="application\/ld\+json">\{"@context":"https:\/\/schema.org","@type":"ItemList"[\s\S]*?"@type":"BreadcrumbList"[\s\S]*?<\/script>/, ld);
 
 const body = hub.slice(hub.indexOf('<body'));
-const out = head + body.slice(0, body.indexOf('<main>')) + main + body.slice(body.indexOf('</main>') + 7);
+let out = head + body.slice(0, body.indexOf('<main>')) + main + body.slice(body.indexOf('</main>') + 7);
+// Desert Tours menu active (header rollout 2026-11-18), not Tours
+out = out.replace('<a href="tours/index.html" class="is-active">', '<a href="tours/index.html" class="">').replace('<a href="sahara-desert-tours.html" class="">', '<a href="sahara-desert-tours.html" class="is-active">');
 fs.writeFileSync(path.join(ROOT, 'desert-tours-from-fes.html'), out);
 console.log('written', out.length, 'chars;', allCards.length, 'cards; ld blocks', (out.match(/application\/ld\+json/g) || []).length);

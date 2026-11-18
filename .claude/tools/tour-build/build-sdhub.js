@@ -17,7 +17,7 @@ const home = rd('index.html');
 // ---------- cards ----------
 const sec = idx.slice(idx.indexOf('<section class="section" id="desert">'), idx.indexOf('<section class="section" id="grand">'));
 const raw = sec.split('<article class="htour">').slice(1).map(c => '<article class="htour">' + c.slice(0, c.indexOf('</article>') + 10));
-if (raw.length !== 27) throw new Error('expected 27 desert cards, got ' + raw.length);
+if (raw.length !== 28) throw new Error('expected 28 desert cards, got ' + raw.length);
 const ORDER = ['Marrakech', 'Fes', 'Merzouga', 'Errachidia', 'Agadir', 'Rabat'];
 const cards = raw.map(c => {
   c = c.replace(/href="\.\.\/tours\//g, 'href="tours/');
@@ -59,7 +59,7 @@ const ICO = {
 };
 
 const FAQ = [
-  ['Which desert should we choose: Merzouga, Zagora, Erg Chigaga or Agafay?', 'For tall golden dunes, choose Merzouga: Erg Chebbi rises to about 150 m, and 3 days from Marrakech is the best length. Zagora is closer, with lower dunes, and fits 2 days. Erg Chigaga is wild and empty, reached by 4×4, in 4 days. Agafay is a stony desert 40 minutes from Marrakech, made for an evening.'],
+  ['Which desert should we choose: Merzouga, Zagora, Erg Chigaga or Agafay?', 'For tall golden dunes, choose Merzouga: Erg Chebbi rises to about 150 m, and 3 days from Marrakech is the best length. Zagora is closer, with lower dunes, and fits 2 days. Erg Chigaga is wild and empty, reached by 4×4, in 3 days or more. Agafay is a stony desert 40 minutes from Marrakech, made for an evening.'],
   ['How many days do we need for a Sahara tour?', 'Two days is possible, but Merzouga is 9 to 10 hours from Marrakech each way, so it is mostly driving. Three days is the classic, with a night in the Dades Valley and a night in the dunes. Four days or more gives you a full day in Merzouga and no long drive day.'],
   ['Are your desert tours private? Can I come alone?', 'Yes, every desert tour on this page is private: your own vehicle and driver-guide, and your own timings. Solo travellers can book too. If you would rather share the cost with other travellers, ask about our 3-day shared group tour from Marrakech.'],
   ['When is the best time for a desert tour?', 'March to May and September to November, with warm days and cool nights. From June to August the dunes pass 40 °C, so we ride at sunset and sunrise. Winter days are sunny, but nights drop close to freezing: bring a warm jacket for the evening and the sunrise.'],
@@ -138,8 +138,8 @@ ${li}
         <tbody>
           <tr><th scope="row"><a href="destinations/merzouga.html">Merzouga</a><small>Tall dunes, the classic</small></th><td>9 to 10 hours (560 km); 8 hours from Fes</td><td>Erg Chebbi, golden sand up to about 150 m</td><td><a href="tours/3-days-desert-tour-marrakech-to-merzouga.html">3 days</a> (2 possible)</td></tr>
           <tr><th scope="row"><a href="tours/2-day-marrakech-to-zagora-desert-tour.html">Zagora</a><small>Short trips from Marrakech</small></th><td>About 6 hours, through the Draa Valley</td><td>Low dunes and stony desert</td><td><a href="tours/2-day-marrakech-to-zagora-desert-tour.html">2 days</a></td></tr>
-          <tr><th scope="row"><a href="tours/4-day-marrakech-erg-chigaga-tour.html">Erg Chigaga</a><small>Wild and empty</small></th><td>About 8 hours, the last 50 km off-road by 4×4</td><td>Remote dune sea, about 50 to 60 m</td><td><a href="tours/4-day-marrakech-erg-chigaga-tour.html">4 days</a></td></tr>
-          <tr><th scope="row"><a href="tours/marrakech-agafay-desert-day-trip.html">Agafay</a><small>One evening, no long drive</small></th><td>40 minutes</td><td>Stony hills, no sand dunes</td><td><a href="tours/agafay-desert-camel-ride-dinner-show.html">An evening</a> or <a href="tours/marrakech-agafay-desert-day-trip.html">a day</a></td></tr>
+          <tr><th scope="row"><a href="tours/4-day-marrakech-erg-chigaga-tour.html">Erg Chigaga</a><small>Wild and empty</small></th><td>About 8 hours, the last 50 km off-road by 4×4</td><td>Remote dune sea, about 50 to 60 m</td><td><a href="tours/3-day-marrakech-erg-chigaga-tour.html">3 days</a></td></tr>
+          <tr><th scope="row"><a href="destinations/agafay.html">Agafay</a><small>One evening, no long drive</small></th><td>40 minutes</td><td>Stony hills, no sand dunes</td><td><a href="tours/agafay-desert-camel-ride-dinner-show.html">An evening</a> or <a href="tours/marrakech-agafay-desert-day-trip.html">a day</a></td></tr>
         </tbody>
       </table>
     </div>
@@ -181,7 +181,7 @@ ${card(ICO.car, 'Comfortable Vehicles', 'Air-conditioned 4×4 or minivan, matche
       </div>
       <div class="dtl-combine__box">
         <span class="dtl-combine__ic">${TIC(ICO.clock)}</span>
-        <div class="dtl-combine__txt"><h3>Only one free evening?</h3><p>Camels, dinner and a fire show in Agafay, 40 minutes from Marrakech.</p></div>
+        <div class="dtl-combine__txt"><h3>Only one free evening?</h3><p>Camels, dinner and a fire show in Agafay, 40 minutes from Marrakech. <a class="sdh-link" href="destinations/agafay.html">All things to do in Agafay</a></p></div>
         <div class="dtl-combine__btns"><a class="hero-btn hero-btn--gold" href="tours/agafay-desert-camel-ride-dinner-show.html">Agafay at Sunset</a></div>
       </div>
     </div>
@@ -295,6 +295,8 @@ const post = body.slice(body.indexOf('</main>') + 7);
 const header = pre.replace('href="day-trips.html" class="is-active"', 'href="day-trips.html" class=""')
   .replace('<a href="tours/index.html" class="">Tours', '<a href="tours/index.html" class="is-active">Tours');
 
-const out = head + header + main + post;
+let out = head + header + main + post;
+// Desert Tours menu active (header rollout 2026-11-18), not Tours
+out = out.replace('<a href="tours/index.html" class="is-active">', '<a href="tours/index.html" class="">').replace('<a href="sahara-desert-tours.html" class="">', '<a href="sahara-desert-tours.html" class="is-active">');
 fs.writeFileSync(path.join(ROOT, 'sahara-desert-tours.html'), out);
 console.log('written', out.length, 'chars;', cards.length, 'cards', counts);

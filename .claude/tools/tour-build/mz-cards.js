@@ -8,10 +8,12 @@ function dims(f) { const mm = HTMLS.match(new RegExp(f.replace(/\./g, '\\.') + '
 const tpl = JSON.parse(fs.readFileSync(SP + 'mzcamp-similar.json', 'utf8')).split('</li>')[0] + '</li>';
 const A = {
   'merzouga-desert-camp-camel-ride.html': { img: 'desert-camp-aerial-circular.jpg', badge: 'Overnight', title: 'Merzouga Desert Camp &amp; Sunset Camel Ride', desc: 'A sunset camel ride into Erg Chebbi, a private tent with bathroom, dinner and drums by the fire, and sunrise on the dunes.', f3: 'Private night' },
+  'merzouga-luxury-desert-camp.html': { img: 'luxury-camp-night.jpg', badge: 'Overnight', title: 'Merzouga Luxury Desert Camp', desc: 'A large tent with a real bed and your own bathroom and hot shower, a sunset camel ride or 4×4, dinner by the fire and sunrise.', f3: 'Private night' },
   'merzouga-4x4-desert-day-tour.html': { img: 'khamlia-gnawa.jpg', badge: 'Full day', title: 'Merzouga 4×4 Desert Day Tour', desc: 'A private day around Erg Chebbi by 4×4: nomad tea, Gnawa music in Khamlia, the black desert, the Mfis mines and the lake.', f3: 'Private day' },
   'merzouga-medfouna-cooking-class.html': { img: 'cooking-shared-meal.jpg', badge: '3.5 hours', title: 'Medfouna Cooking Class in Merzouga', desc: 'Make medfouna, the Berber pizza of the desert, with a local family, bake it in the hot sand and share it with mint tea.', f3: 'Private class' },
   'merzouga-buggy-tour.html': { img: 'merzouga-buggy-dunes.jpg', badge: '1–2 hours', title: 'Merzouga Buggy Tour', desc: 'Drive a buggy side by side across the Erg Chebbi dunes behind your guide; nomad tea and the desert lake on the 2-hour ride.', f3: 'Private ride' },
   'merzouga-quad-biking.html': { img: 'quad-merzouga.webp', badge: '1–2 hours', title: 'Quad Biking in the Merzouga Dunes', desc: 'Your own quad across the Erg Chebbi dunes with a guide in front, a sandboarding stop and, on the 2-hour ride, nomad tea.', f3: 'Private ride' },
+  'merzouga-camel-trek-2-nights.html': { img: 'camel-trek.webp', badge: '3 days', title: '2-Night Camel Trek in Merzouga', desc: 'A night in a desert camp, a day deeper into Erg Chebbi by camel with lunch at a nomad family, then a night in a nomad camp.', f3: 'Private trek' },
   'merzouga-sunset-camel-ride.html': { img: 'merzouga-camel-ride-dunes.jpg', badge: '2.5 hours', title: 'Merzouga Sunset Camel Ride', desc: 'Ride into the Erg Chebbi dunes with your own camel guide, watch the sunset from a high ridge and try sandboarding.', f3: 'Private ride' },
 };
 const out = {};

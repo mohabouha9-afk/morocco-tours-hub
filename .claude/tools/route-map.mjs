@@ -162,6 +162,27 @@ const TRIPS = {
       { at: [-6.9063, 30.9189], icon: 'film', name: 'Ouarzazate', note: 'Studios or kasbah', side: 'right', sideM: 'bottom' },
     ],
   },
+  // 3-day Marrakech → Aït Ben Haddou → Zagora → M'Hamid → Erg Chigaga (off-road) → Iriqui → Foum Zguid → Taznakht → Marrakech
+  ec3: {
+    title: 'Route map: 3-day tour from Marrakech over the High Atlas by Aït Ben Haddou and down the Draa Valley to Zagora and M’Hamid, off-road by 4×4 to the Erg Chigaga dunes, then across the Iriqui dry lake to Foum Zguid and back to Marrakech by Taznakht',
+    legend: [['car', 'By car'], ['quad', 'Off-road by 4×4']], tall: true, chip: { at: 0.05, text: 'About 920 km in 3 days', textM: '920 km' }, compassM: 'topright', pad: [70, 84, 50, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'ec3-d3' }, { kind: 'car', road: 'ec3-d1' }, { kind: 'car', road: 'ec4-d2' },
+      { kind: 'quad', path: [[-5.7247, 29.8264], [-5.80, 29.815], [-5.90, 29.80], [-6.00, 29.795], [-6.10, 29.81], [-6.2034, 29.8304]] },
+      { kind: 'quad', path: [[-6.2034, 29.8304], [-6.32, 29.86], [-6.45, 29.90], [-6.58, 29.95], [-6.70, 30.00], [-6.80, 30.05], [-6.8735, 30.0835]] },
+      ], // OSRM: d1 360 km, d2 98 km (+ ~50 km off-road), d3 ~100 km off-road + 314 km (ec3-d3 listed first so the km tag sits on it)
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'left', sideM: 'right' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'left', sideM: 'left' },
+      { at: [-6.9063, 30.9189], icon: 'film', name: 'Ouarzazate', note: '', side: 'right', pinM: true, mini: true, hideM: true },
+      { at: [-5.838, 30.3326], icon: 'palm', name: 'Zagora', note: 'Draa Valley, night 1', side: 'top', sideM: 'left' },
+      { at: [-5.7247, 29.8264], icon: 'lantern', name: 'M’Hamid', note: '', side: 'right', pinM: true },
+      { at: [-6.2034, 29.8304], icon: 'camel', name: 'Erg Chigaga', note: 'Camel ride, night 2', side: 'bottom', sideM: 'bottom' },
+      { at: [-6.55, 29.94], icon: 'view', name: 'Iriqui dry lake', note: '', side: 'top', pinM: true, mini: true },
+      { at: [-6.8735, 30.0835], icon: 'tagine', name: 'Foum Zguid', note: '', side: 'left', pinM: true },
+      { at: [-7.2, 30.5786], icon: 'souk', name: 'Taznakht', note: '', side: 'left', pinM: true, mini: true },
+    ],
+  },
   // 4-day Marrakech → Zagora → M'Hamid → Erg Chigaga (off-road) → Iriqui → Foum Zguid → Ouarzazate → Aït Ben Haddou → Marrakech
   ec4: {
     title: 'Route map: 4-day tour from Marrakech over the High Atlas and down the Draa Valley to Zagora and M’Hamid, off-road by 4×4 to the Erg Chigaga dunes, across the Iriqui dry lake to Foum Zguid, then Ouarzazate, Aït Ben Haddou and back to Marrakech',
@@ -350,6 +371,24 @@ const TRIPS = {
       { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 3', side: 'left', sideM: 'bottom' },
       { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
       { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'End', side: 'left', sideM: 'top' },
+    ],
+  },
+  // private transfer page: Merzouga → Fes (north, mzf3-d3) and Merzouga → Marrakech (west by the Draa, mz3-d3)
+  mtr: {
+    title: 'Route map: private transfers from Merzouga, north by the Ziz Valley, Midelt and Ifrane to Fes, or west by the Draa Valley, Ouarzazate and the Tizi n’Tichka pass to Marrakech',
+    legend: [], tall: true, chip: { at: 0.45, text: 'About 470 km to Fes', textM: '470 km' }, compassM: 'topleft', pad: [90, 50, 100, 60], padM: [40, 40, 40, 40],
+    legs: [{ kind: 'car', road: 'mzf3-d3' }, { kind: 'car', road: 'mz3-d3' }],
+    stops: [
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Pick-up', side: 'right', sideM: 'left', start: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud', note: '', side: 'right', mini: true, hideM: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Lunch stop', side: 'right', pinM: true },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', pinM: true },
+      { at: [-4.9998, 34.0331], icon: 'minaret', name: 'Fes', note: 'About 8 hours', side: 'right', sideM: 'right' },
+      { at: [-6.45, 30.7], icon: 'palm', name: 'Draa Valley', note: '', side: 'bottom', pinM: true },
+      { at: [-6.9063, 30.9189], icon: 'arch', name: 'Ouarzazate', note: '', side: 'bottom', pinM: true },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'Tizi n’Tichka', note: '', side: 'top', pinM: true, mini: true },
+      { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: '9 to 10 hours', side: 'left', sideM: 'top' },
     ],
   },  mk3: {
     title: 'Route map: 3-day tour from Merzouga, a night in a desert camp, then Rissani, the Todra Gorge and the Dades Valley, the Valley of Roses, Aït Ben Haddou and the Tizi n’Tichka pass to Marrakech',

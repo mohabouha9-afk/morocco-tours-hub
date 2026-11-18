@@ -27,7 +27,7 @@ function idxCard(slug, tag, round) {
   return c.replace('<span class="htour__media">', `<span class="htour__media"><span class="htour__way${round ? '' : ' htour__way--one'}">${tag}</span>`);
 }
 const ul = (arr, cls = '') => `      <ul class="htours__list sdm-grid${cls}">\n${arr.map(c => '        <li>' + c + '</li>').join('\n')}\n      </ul>`;
-const ROUND = ['2-day-marrakech-to-merzouga-desert-tour', '2-day-marrakech-to-zagora-desert-tour', '3-days-desert-tour-marrakech-to-merzouga', '4-day-marrakech-to-merzouga-desert-tour', '4-day-marrakech-erg-chigaga-tour', '6-day-marrakech-zagora-ouzina-merzouga-tour', '7-day-marrakech-erg-chigaga-merzouga-tour'];
+const ROUND = ['2-day-marrakech-to-merzouga-desert-tour', '2-day-marrakech-to-zagora-desert-tour', '3-day-marrakech-erg-chigaga-tour', '3-days-desert-tour-marrakech-to-merzouga', '4-day-marrakech-to-merzouga-desert-tour', '4-day-marrakech-erg-chigaga-tour', '6-day-marrakech-zagora-ouzina-merzouga-tour', '7-day-marrakech-erg-chigaga-merzouga-tour'];
 const ONEWAY = ['3-day-marrakech-to-fes-desert-tour', '4-day-marrakech-to-fes-desert-tour-via-merzouga', '5-day-marrakech-to-fes-sahara-desert-tour'];
 const roundCards = ROUND.map(hubCard);
 const oneCards = ONEWAY.map(hubCard).concat([idxCard('7-days-morocco-tour', 'Ends in Fes', false)]);
@@ -154,7 +154,7 @@ ${ul(themeCards, ' mz-grid3')}
     <div class="sdh-near__grid">
       <div class="dtl-combine__box">
         <span class="dtl-combine__ic">${TIC(ICO.clock)}</span>
-        <div class="dtl-combine__txt"><h3>Only one free evening?</h3><p>Camels, dinner and a fire show in Agafay, 40 minutes from Marrakech.</p></div>
+        <div class="dtl-combine__txt"><h3>Only one free evening?</h3><p>Camels, dinner and a fire show in Agafay, 40 minutes from Marrakech. <a class="sdh-link" href="destinations/agafay.html">All things to do in Agafay</a></p></div>
         <div class="dtl-combine__btns"><a class="hero-btn hero-btn--gold" href="${T('agafay-desert-camel-ride-dinner-show')}">Agafay at Sunset</a></div>
       </div>
       <div class="dtl-combine__box">
@@ -244,6 +244,8 @@ head = head.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(TITLE)}</title>`)
 head = head.replace(/<script type="application\/ld\+json">\{"@context":"https:\/\/schema.org","@type":"ItemList"[\s\S]*?"@type":"BreadcrumbList"[\s\S]*?<\/script>/, ld);
 
 const body = hub.slice(hub.indexOf('<body'));
-const out = head + body.slice(0, body.indexOf('<main>')) + main + body.slice(body.indexOf('</main>') + 7);
+let out = head + body.slice(0, body.indexOf('<main>')) + main + body.slice(body.indexOf('</main>') + 7);
+// Desert Tours menu active (header rollout 2026-11-18), not Tours
+out = out.replace('<a href="tours/index.html" class="is-active">', '<a href="tours/index.html" class="">').replace('<a href="sahara-desert-tours.html" class="">', '<a href="sahara-desert-tours.html" class="is-active">');
 fs.writeFileSync(path.join(ROOT, 'desert-tours-from-marrakech.html'), out);
 console.log('written', out.length, 'chars;', allCards.length, 'cards; ld blocks', (out.match(/application\/ld\+json/g) || []).length);
