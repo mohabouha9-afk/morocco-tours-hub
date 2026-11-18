@@ -52,6 +52,9 @@ page **wipes every edit made to that page afterwards**. Edit finished pages dire
 - `build-fm3.js` → `tours/3-day-fes-to-marrakech-desert-tour.html` (NEW tour 2026-11-18, 3 days, 3-col table; template = the finished 3-day Rabat → Marrakech page)
 - `build-fr3.js` → `tours/3-day-fes-to-merzouga-desert-tour.html` (NEW tour 2026-11-18, Fes round trip, camp + Merzouga hotel; template = the finished 3-day Fes → Marrakech page)
 - `build-fr2.js` → `tours/2-day-fes-to-merzouga-desert-tour.html` (NEW tour 2026-11-18, 2-day Fes round trip, camp only; template = the finished 2-day Marrakech → Merzouga page)
+- `build-mm4.js` → `tours/4-day-marrakech-to-merzouga-desert-tour.html` (NEW tour 2026-11-18, Marrakech round trip via Dades, Merzouga, Draa, Ouarzazate, Telouet; template = the finished 4-day Agadir page, re-orders its table rows)
+- `build-mf2.js` → `tours/merzouga-to-fes-tour.html` (NEW tour 2026-11-18, starts in Merzouga, camp + drive to Fes; template = the finished 2-day Fes → Merzouga page)
+- `build-mk3.js` → `tours/merzouga-to-marrakech-tour.html` (NEW tour 2026-11-18, starts in Merzouga, camp + Dades + Marrakech; template = the finished 3-day Fes → Marrakech page)
 - `st-lib.js` + `build-st.js` → the 6 student/group tours (one generic builder: replaces every block by structural markers, so a new tour = one config object; `node build-st.js <key|all>`)
 - `icons.part.js` — shared SVG icons + `li()` helper, loaded by the build scripts (`eval`).
 - `cards.js` — `node cards.js <out.json> <tour1.html> <tour2.html> <tour3.html>`: grabs each tour's

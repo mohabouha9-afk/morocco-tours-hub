@@ -339,6 +339,21 @@ const TRIPS = {
       { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
       { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'End', side: 'left', sideM: 'top' },
     ],
+  },  mk3: {
+    title: 'Route map: 3-day tour from Merzouga, a night in a desert camp, then Rissani, the Todra Gorge and the Dades Valley, the Valley of Roses, Aït Ben Haddou and the Tizi n’Tichka pass to Marrakech',
+    legend: [], tall: true, chip: { at: 0.5, text: 'About 590 km in 3 days', textM: '590 km' }, compassM: 'topleft', pad: [90, 50, 90, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'fm4-d2' }, { kind: 'car', road: 'fm4-d3' }],
+    stops: [
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Start, camp night 1', side: 'bottom', sideM: 'left', start: true },
+      { at: [-3.995, 31.025], icon: 'lantern', name: 'Khamlia', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'top', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 2', side: 'bottom', pinM: true },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 3', side: 'left', sideM: 'bottom' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'End', side: 'right', sideM: 'top' },
+    ],
   },
   // 3-day tour Marrakech → Dades → Merzouga → Fes (OSRM: d1 323 km, d2 272 km, d3 468 km via Ziz, Midelt, Azrou, Ifrane)
   // 4-day Marrakech → Dades → Merzouga (camp + hotel) → Fes: same roads as mzf3
@@ -423,6 +438,20 @@ const TRIPS = {
       { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud', note: '', side: 'left', pinM: true },
       { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 1', side: 'right', sideM: 'left' },
     ],
+  },  mf2: {
+    title: 'Route map: 2-day tour from Merzouga, an afternoon around Khamlia and a night in a desert camp, then north by Rissani, the Ziz Valley, Midelt and Ifrane to Fes',
+    legend: [], tall: true, chip: { at: 0.3, text: 'About 470 km to Fes', textM: '470 km' }, compassM: 'topleft', pad: [70, 40, 70, 64], padM: [40, 40, 30, 40],
+    legs: [{ kind: 'car', road: 'mzf3-d3' }],
+    stops: [
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Start, camel ride, camp', side: 'right', sideM: 'left', start: true },
+      { at: [-3.995, 31.025], icon: 'lantern', name: 'Khamlia', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud', note: '', side: 'top', pinM: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Lunch', side: 'right', pinM: true },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.9998, 34.0331], icon: 'minaret', name: 'Fes', note: 'End', side: 'right', sideM: 'right' },
+    ],
   },
   er3: {
     title: 'Route map: 3-day round trip from Errachidia airport through the Ziz Valley and Erfoud to Merzouga, a day around the Erg Chebbi dunes, then back by Rissani',
@@ -455,6 +484,25 @@ const TRIPS = {
       { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 4', side: 'top', sideM: 'top' },
       { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
       { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'End', side: 'top', sideM: 'top' },
+    ],
+  },  mm4: {
+    title: 'Route map: 4-day round trip from Marrakech over the High Atlas to the Dades Valley, the Todra Gorge and the Merzouga dunes, back by Alnif, N’Kob and the Draa Valley to Ouarzazate, Aït Ben Haddou and Telouet',
+    legend: [], tall: true, chip: { at: 0.3, text: 'About 1,160 km in 4 days', textM: '1,160 km' }, compassM: 'topleft', pad: [70, 50, 130, 70], padM: [30, 40, 40, 40],
+    legs: [{ kind: 'car', road: 'mm4-d3' }, { kind: 'car', road: 'mm4-d1' }, { kind: 'car', road: 'mz3-d2' }, { kind: 'car', road: 'mm4-d4' }],
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'Start and end', side: 'top', sideM: 'top' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-6.9063, 30.9189], icon: 'arch', name: 'Ouarzazate', note: 'Night 3', side: 'bottom', sideM: 'bottom' },
+      { at: [-6.564, 31.046], icon: 'kasbah', name: 'Skoura', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 1', side: 'top', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true, mini: true },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'top', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 2', side: 'bottom', sideM: 'left' },
+      { at: [-5.1, 30.86], icon: 'fossil', name: 'Alnif', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-5.87, 30.87], icon: 'kasbah', name: 'N’Kob', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-6.45, 30.7], icon: 'palm', name: 'Draa Valley', note: '', side: 'bottom', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 4', side: 'left', sideM: 'top' },
+      { at: [-7.2405, 31.289], icon: 'kasbah', name: 'Telouet', note: '', side: 'left', pinM: true },
     ],
   },
   ag3: {
