@@ -260,6 +260,18 @@ const TRIPS = {
       { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night in camp', side: 'bottom', sideM: 'left' },
       { at: [-6.45, 30.7], icon: 'palm', name: 'Draa Valley', note: '', side: 'bottom', pinM: true },
     ],
+  },  zg2: {
+    title: 'Route map: 2-day round trip from Marrakech over the High Atlas to Aït Ben Haddou and Ouarzazate, down the Draa Valley to a desert camp near Zagora, and back',
+    legend: [], tall: true, chip: { at: 0.6, text: 'About 720 km in 2 days', textM: '720 km' }, compassM: 'topright', pad: [110, 48, 90, 72], padM: [48, 48, 24, 44],
+    legs: [{ kind: 'car', road: 'ec4-d1' }, { kind: 'car', road: 'zg2-d2' }], // OSRM: d1 557 km, d2 559 km
+    stops: [
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'left', sideM: 'top' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'left', sideM: 'left' },
+      { at: [-6.9063, 30.9189], icon: 'arch', name: 'Ouarzazate', note: 'Taourirt Kasbah', side: 'right', sideM: 'right' },
+      { at: [-6.45, 30.7], icon: 'palm', name: 'Draa Valley', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-5.8375, 30.3325], icon: 'camel', name: 'Zagora', note: 'Camel ride, camp', side: 'right', sideM: 'left' },
+    ],
   },
   // 3-day tour Marrakech → Dades → Merzouga → Marrakech (OSRM: d1 323 km, d2 272 km, d3 559 km)
   mz3: {
