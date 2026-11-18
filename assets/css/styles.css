@@ -2511,3 +2511,89 @@ body.page-swap { background: #fffdf9; }
 @media (min-width: 1101px) { .htours__list.mz-grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* Merzouga hub: "Combine Them" = 4 cards, one row on laptops (2x2 on tablets and phones via the happart rules) */
 @media (min-width: 1101px) { .mz-combos .happart__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ==========================================================================
+   Sahara desert hub (sahara-desert-tours.html, 2026-11-18): filter bar over all 27 desert tours
+   (start city chips + All / Round trip / One way), a "Round trip / Ends in X" tag on each card,
+   the which-desert table, the two "already near the desert" boxes. Built by build-sdhub.js.
+   ========================================================================== */
+.sdh-tours .sdh-bar { margin: 0 0 28px; }
+.sdh-tours { padding-top: 0 !important; }
+.sdh-bar .tbar__list button { display: inline-flex; align-items: center; gap: 7px; padding: 7px 9px 7px 11px; background: #fff; border: 1px solid var(--line); border-radius: 6px; cursor: pointer;
+  font: 500 .82rem var(--sans, Poppins, sans-serif); color: var(--navy); white-space: nowrap; transition: border-color .18s ease, color .18s ease, background-color .18s ease, transform .18s ease; }
+.sdh-bar .tbar__list button:hover { border-color: var(--gold); color: var(--gold-deep); }
+.sdh-bar .tbar__list button:active { transform: scale(.97); }
+.sdh-bar .tbar__list button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.sdh-bar .tbar__list button.is-on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.sdh-bar .tbar__list button.is-on svg { color: var(--gold-light); }
+.sdh-bar .tbar__list button.is-on b { background: var(--gold); color: #fff; }
+.sdh-count { margin: 6px 0 0; font-size: .86rem; color: var(--muted); }
+.sdh-tours .head-row h2 + .sdh-count { text-align: center; }
+.sdh-grid[hidden] { display: none; }
+.htour__way { position: absolute; left: 12px; top: 12px; z-index: 1; padding: 5px 9px; border-radius: 6px; background: rgba(255,253,249,.95); color: var(--navy);
+  font-family: var(--serif); font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; line-height: 1.2; }
+.htour__way--one { background: var(--gold); color: #fff; }
+.sdh-empty { margin: 8px 0 0; padding: 22px; background: #fff; border: 1px solid var(--line); border-radius: 10px; text-align: center; color: var(--muted); }
+.sdh-reset { margin-left: 6px; padding: 0; border: 0; background: none; color: var(--gold-deep); font: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.sdh-reset:hover { color: var(--navy); }
+.sdh-reset:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.sdh-reset:active { opacity: .7; }
+.sdh-table tbody th small { display: block; margin-top: 2px; font-size: .78rem; font-weight: 400; color: var(--muted); }
+.sdh-table td { color: var(--ink); }
+.sdh-note { margin: 14px 0 0; font-size: .88rem; color: var(--muted); text-align: center; }
+.sdh-note a, .sdh-link { color: var(--gold-deep); font-weight: 500; text-decoration: underline; text-decoration-color: var(--gold-light); text-underline-offset: 3px; transition: color .2s ease; }
+.sdh-note a:hover, .sdh-link:hover { color: var(--navy); }
+.sdh-note a:focus-visible, .sdh-link:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.sdh-note a:active, .sdh-link:active { opacity: .7; }
+.sdh-near__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.sdh-near .dtl-combine__box { flex-wrap: wrap; }
+.sdh-near .dtl-combine__txt h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 700; letter-spacing: .02em; color: var(--ink); }
+.sdh-near .dtl-combine__btns { width: 100%; padding-left: 72px; }
+@media (max-width: 1100px) { .sdh-near__grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .sdh-tours .sdh-bar { margin-bottom: 20px; }
+  .sdh-bar .tbar__list button { padding: 6px 8px 6px 9px; font-size: .78rem; gap: 6px; }
+  .sdh-bar .tbar__list svg { width: 14px; height: 14px; }
+  .sdh-near .dtl-combine__btns { padding-left: 0; }
+  .sdh-table { min-width: 560px; }
+}
+/* laptop: switch + 7 city chips fit one line at 1366 */
+@media (min-width: 1025px) {
+  .sdh-bar .tbar__list { gap: 6px; flex-wrap: nowrap; }
+  .sdh-bar .tbar__list button { padding: 7px 8px 7px 10px; font-size: .8rem; }
+}
+/* page-swap page: its own cream sections go transparent so the page stays one near-white background */
+.page-swap .sdh-days, .page-swap .sdh-every, .page-swap .sdh-faq { background: transparent; }
+/* laptop/tablet: 8 cards first, the rest behind "Show all desert tours" (phones swipe the whole row) */
+.sdh-more { display: flex; justify-content: center; margin-top: 28px; }
+.sdh-more[hidden] { display: none; }
+@media (min-width: 641px) { .sdh-grid > li.is-folded { display: none; } }
+@media (max-width: 640px) { .sdh-more { display: none; } }
+
+/* Desert tours from Marrakech (desert-tours-from-marrakech.html, 2026-11-18, build-sdmk.js):
+   "The Road to Merzouga" = 6 stops on one gold line (a row on laptops, a vertical line on phones);
+   the tour rows reuse .htours__list; the 2/3/4-day table reuses .dt-acc / .sdh-table. */
+.sdm-route__list { position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+.sdm-route__list::before { content: ""; position: absolute; left: 8.33%; right: 8.33%; top: 26px; border-top: 2px dashed var(--gold-light); }
+.sdm-route__stop { position: relative; text-align: center; }
+.sdm-route__ic { display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto 12px; border-radius: 50%; background: #fff; border: 2px solid var(--gold); color: var(--gold-deep); }
+.sdm-route__stop:first-child .sdm-route__ic { background: var(--navy); border-color: var(--navy); color: #fff; }
+.sdm-route__stop:last-child .sdm-route__ic { background: var(--gold); color: #fff; }
+.sdm-route__ic svg { width: 24px; height: 24px; }
+.sdm-route__stop h3 { margin: 0 0 4px; font-size: .95rem; font-weight: 600; letter-spacing: .02em; color: var(--ink); }
+.sdm-route__stop p { margin: 0; font-size: .82rem; line-height: 1.5; color: var(--muted); }
+.sdm-list .head-row h2 + .sdh-count { text-align: center; }
+@media (max-width: 900px) {
+  .sdm-route__list { grid-template-columns: 1fr; gap: 0; max-width: 420px; margin: 0 auto; }
+  .sdm-route__list::before { left: 25px; right: auto; top: 26px; bottom: 26px; border-top: 0; border-left: 2px dashed var(--gold-light); }
+  .sdm-route__stop { display: grid; grid-template-columns: 52px 1fr; column-gap: 16px; align-items: center; text-align: left; padding: 6px 0; }
+  .sdm-route__ic { grid-row: span 2; margin: 0; }
+  .sdm-route__stop h3 { align-self: end; }
+  .sdm-route__stop p { align-self: start; }
+}
+/* Merzouga hub (Page 4 of the desert plan): "Getting to Merzouga" = 3 cards with a link to each departure hub;
+   note under "Desert Tours to Merzouga" links the hubs */
+.mz-getting .happart-card p .sdh-link { display: table; margin-top: 8px; }
+.mz-tours__note { margin: -4px 0 22px; }
+@media (min-width: 1101px) { .mz-getting .happart__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .mz-getting .happart__grid { grid-template-columns: 1fr; } }
