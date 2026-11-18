@@ -193,7 +193,7 @@ const TRIPS = {
       { kind: 'quad', road: 'zo6-d2b' }, { kind: 'quad', road: 'zo6-d3a' }, { kind: 'car', road: 'zo6-d3b' },
       { kind: 'car', road: 'zo6-d5' }, { kind: 'car', road: 'zo6-d6' }], // OSRM: d1 353 km; Zagora→Sidi Ali track drawn by hand (~110 km); Sidi Ali→Ramlia→Ouzina 61 km; Ouzina→Taouz 26 km; Taouz→Merzouga 24 km; d5 281 km; d6 323 km
     stops: [
-      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'right', sideM: 'left' },
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'right', sideM: 'right' },
       { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
       { at: [-6.9063, 30.9189], icon: 'film', name: 'Ouarzazate', note: '', side: 'right', pinM: true, mini: true },
       { at: [-5.838, 30.3326], icon: 'palm', name: 'Zagora', note: 'Night 1', side: 'bottom', sideM: 'bottom' },
@@ -222,7 +222,7 @@ const TRIPS = {
       { kind: 'quad', path: [[-6.2034, 29.8304], [-6.32, 29.86], [-6.45, 29.90], [-6.58, 29.95], [-6.70, 30.00], [-6.80, 30.05], [-6.8735, 30.0835]] },
       { kind: 'car', road: 'cm7-d7' }], // d7 Ouarzazate → Marrakech 197 km
     stops: [
-      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'right', sideM: 'left' },
+      { at: [-8.0089, 31.6295], icon: 'hotel', name: 'Marrakech', note: 'Start and end', start: true, side: 'right', sideM: 'right' },
       { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
       { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 1', side: 'left', sideM: 'bottom', pinM: true },
       { at: [-6.9063, 30.9189], icon: 'film', name: 'Ouarzazate', note: 'Night 6', side: 'right', sideM: 'right', mini: true, pinM: true },
@@ -319,6 +319,25 @@ const TRIPS = {
       { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 3', side: 'left', sideM: 'bottom' },
       { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
       { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'Night 3, end', side: 'left', sideM: 'top' },
+    ],
+  },  fm3: {
+    title: 'Route map: 3-day tour from Fes over the Middle Atlas to the Merzouga dunes, then west through the Todra Gorge, the Dades Valley and Aït Ben Haddou to Marrakech',
+    legend: [], tall: true, chip: { at: 0.5, text: 'About 1,060 km in 3 days', textM: '1,060 km' }, compassM: 'topleft', pad: [70, 40, 50, 64], padM: [40, 40, 24, 40],
+    legs: [{ kind: 'car', road: 'fm4-d1' }, { kind: 'car', road: 'fm4-d2' }, { kind: 'car', road: 'fm4-d3' }],
+    stops: [
+      { at: [-4.9998, 34.0331], icon: 'hotel', name: 'Fes', note: 'Start', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Lunch', side: 'right', pinM: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night 1', side: 'right', sideM: 'left' },
+      { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
+      { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+      { at: [-5.588, 31.59], icon: 'river', name: 'Todra Gorge', note: '', side: 'top', pinM: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Night 2', side: 'bottom', pinM: true },
+      { at: [-6.9095, 30.9196], icon: 'arch', name: 'Taourirt Kasbah', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Day 3', side: 'left', sideM: 'bottom' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'End', side: 'left', sideM: 'top' },
     ],
   },
   // 3-day tour Marrakech → Dades → Merzouga → Fes (OSRM: d1 323 km, d2 272 km, d3 468 km via Ziz, Midelt, Azrou, Ifrane)

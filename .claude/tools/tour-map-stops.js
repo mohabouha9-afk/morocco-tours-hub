@@ -1,4 +1,4 @@
-// Tour route-map stops: writes the stops of each multi-day tour map (gm12, tg8, tc7, t13, t14, c7, c6, mc12, mc13, m14, mc15, tm7, m7t, mc8, mc10, cr10, c9, tg10, mt10, ic8, mf7, nm10, rr3, rb3, ag5, ag4, ag3, er5, er4, er3, fd4, mz2, mz3, mzf3, mf4, mf5, fm4, fm5, ec4, zo6, cm7) into the TRIPS table of route-map.mjs.
+// Tour route-map stops: writes the stops of each multi-day tour map (gm12, tg8, tc7, t13, t14, c7, c6, mc12, mc13, m14, mc15, tm7, m7t, mc8, mc10, cr10, c9, tg10, mt10, ic8, mf7, nm10, rr3, rb3, ag5, ag4, ag3, er5, er4, er3, fd4, mz2, mz3, mzf3, mf4, mf5, fm4, fm3, fm5, ec4, zo6, cm7) into the TRIPS table of route-map.mjs.
 // Run from the project root:  node .claude/tools/tour-map-stops.js   then  node .claude/tools/route-map.mjs tours/<page>.html <key>
 // Shared stops (S.*) keep names/icons the same on every map; pinM = small tap-to-name pin on phones, mini = small pin at every size.
 const fs=require('fs');const p='.claude/tools/route-map.mjs';let s=fs.readFileSync(p,'utf8');
@@ -66,6 +66,7 @@ const T={
  er3:[{at:[-4.3983,31.9475],icon:'plane',name:'Errachidia airport',note:'Start and end',start:true,side:'right',sideM:'right'},{...S.ziz('right'),at:[-4.177,31.683],name:'Ziz palm grove'},S.erfoud('right'),S.rissani('left'),S.merz('Hotel, then camp','right','right'),{at:[-3.995,31.025],icon:'lantern',name:'Khamlia',note:'',side:'bottom',pinM:true,mini:true}],
  fd4:[S.fes('Start and end','right',1),S.ifrane('left','left'),S.midelt('Lunch, days 1 and 4','right'),S.ziz('right'),S.merz('Nights 1 and 2','right','left'),{at:[-3.995,31.025],icon:'lantern',name:'Khamlia',note:'',side:'bottom',pinM:true,mini:true},S.rissani('left'),S.erfoud('top'),{...S.todra('left'),note:'Night 3'}],
  fm4:[S.fes('Start','right',1),S.ifrane('left','left'),S.midelt('Day 1, lunch','right'),S.ziz('right'),S.merz('Camel ride, night 1','right','left'),S.rissani('left'),S.erfoud('top'),S.todra('top'),S.dades('Night 2','bottom'),S.taourirt('right'),S.abh('Day 3','left','bottom'),S.tichka('right',true),S.M('Night 3, end','left','top')],
+ fm3:[S.fes('Start','right',1),S.ifrane('left','left'),S.midelt('Lunch','right'),S.ziz('right'),S.merz('Camel ride, night 1','right','left'),S.rissani('left'),S.erfoud('top'),S.todra('top'),S.dades('Night 2','bottom'),S.taourirt('right'),S.abh('Day 3','left','bottom'),S.tichka('right',true),S.M('End','left','top')],
 };
 const lit=o=>'{ '+Object.entries(o).filter(([k,v])=>v!==undefined&&v!==false).map(([k,v])=>k+': '+(typeof v==='string'?"'"+v.replace(/'/g,"\'")+"'":JSON.stringify(v).replace(/,/g,', '))).join(', ')+' }';
 for(const [k,arr] of Object.entries(T)){

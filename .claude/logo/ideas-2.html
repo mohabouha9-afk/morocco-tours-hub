@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo ideas 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#000; color:#fff; font-family:Poppins, sans-serif; }
+  .opt { padding:24px 56px 32px; border-bottom:1px solid #222; }
+  .opt h2 { font: 500 14px Poppins; color:#9aa4ad; margin:0 0 16px; }
+  .row { display:flex; align-items:center; gap:48px; flex-wrap:wrap; }
+  .bar { display:flex; align-items:center; gap:48px; height:116px; padding:0 32px; background:#000; border:1px solid #1d1d1d; border-radius:6px; }
+  .photo { height:116px; border-radius:6px; padding:0 32px; display:flex; align-items:center;
+           background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.2)), url(/assets/images/erg-chebbi-caravan-sunset.jpg) center 40%/cover; }
+  .menu { display:flex; gap:28px; font: 500 15px Oswald; text-transform:uppercase; }
+  svg text { font-family: Oswald, sans-serif; }
+  .big { height:220px; } .logo { height:68px; } .s { height:44px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- dromedary facing right, ground at y=30 -->
+    <symbol id="camel" viewBox="0 0 60 50">
+      <path d="M8 16 C12 9 17 6 22 6 C27 6 30 10 32 14 C34 17 37 21 40 22 C42 20 44 15 46.5 12.2 C48 10.8 50.5 10.6 53 11.6 L55.2 12.8 C55.9 13.4 55.8 15.2 55 15.6 L51 16.2 C48.5 18 46 22.5 43 26.5 C41.5 28 39 28.5 36.5 28.3 L38 38 L39.6 47.8 L41.6 49.4 L41.4 50 L38.3 50 L36.8 39 L34.6 30.6 L33.5 30.6 L32 39.5 L30 50 L28.3 50 L30.4 39.5 L31.2 30.2 C26 30.8 20 30.6 16 29.6 L17.6 39 L19.6 50 L17.6 50 L15.9 40 L13.8 31.2 L12.8 31 L9.4 38.2 L10.6 50 L8.8 50 L7.4 38.6 C7 33 7 28 7.4 24 C6.8 21 7 18 8 16 Z"/>
+      <path d="M8 18 Q6.6 23 6.5 30" stroke-width="1" stroke-linecap="round" fill="none" style="stroke:inherit"/>
+    </symbol>
+    <!-- guide in a djellaba walking right with a staff, ground at y=30 -->
+    <symbol id="guide" viewBox="0 0 16 40">
+      <circle cx="9" cy="4.4" r="3.3"/>
+      <path d="M6.8 8 L11.2 8 C12.6 9 13 11 13 13 L13.6 24 L14.4 33 L15.2 38.6 L12.6 39 L11.3 33.5 L9.8 39 L5 39 L5.8 33 L5.2 24 L5.6 14 L3.4 18.6 L2.2 18.2 L4.2 12 C4.8 9.6 5.6 8.6 6.8 8 Z"/>
+    </symbol>
+
+    <!-- D: caravan crossing a dune inside the sun -->
+    <clipPath id="sunClip"><circle cx="45" cy="45" r="42"/></clipPath>
+    <g id="markD">
+      <circle cx="45" cy="45" r="42" fill="#c0913b"/>
+      <g clip-path="url(#sunClip)">
+        <path d="M0 61 Q30 57 50 60 T95 57 V95 H0 Z" fill="#fff"/>
+        <path d="M0 72 Q30 66 56 71 T95 67" fill="none" stroke="#e8dcc4" stroke-width="1.3"/>
+        <g fill="#000" stroke="#000">
+          <use href="#camel" x="1"  y="44.4" width="19" height="15.8"/>
+          <use href="#camel" x="18" y="44.2" width="19" height="15.8"/>
+          <use href="#camel" x="35" y="43.9" width="19" height="15.8"/>
+          <path d="M52.4 48.8 Q55 52.6 57 51.2" fill="none" stroke-width=".5"/>
+          <use href="#guide" x="56" y="43.6" width="6.4" height="16"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- E: Moroccan gate (bab) with a guide and his camel -->
+    <g id="markE">
+      <g fill="#c0913b">
+        <rect x="4"  y="2" width="8" height="8"/><rect x="20" y="2" width="8" height="8"/>
+        <rect x="36" y="2" width="8" height="8"/><rect x="52" y="2" width="8" height="8"/>
+        <rect x="68" y="2" width="8" height="8"/>
+      </g>
+      <rect x="5.5" y="10" width="69" height="78" fill="none" stroke="#c0913b" stroke-width="3"/>
+      <path d="M17 88 V47 A25 25 0 1 1 63 47 V88" fill="none" stroke="#c0913b" stroke-width="3"/>
+      <circle cx="40" cy="34" r="2.6" fill="#d9b464"/>
+      <path d="M18.5 78 Q30 70 42 74.5 T61.5 71.5 V86.5 H18.5 Z" fill="#c0913b"/>
+      <g fill="#fff" stroke="#fff">
+        <use href="#camel" x="18" y="51.6" width="28" height="23.3"/>
+        <path d="M43.8 58.9 Q46.5 64.5 48.4 63.6" fill="none" stroke-width=".7"/>
+        <use href="#guide" x="47.2" y="55" width="8" height="20"/>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<section class="opt">
+  <h2>D · A guide leading three camels over a dune, inside the setting sun</h2>
+  <div class="row">
+    <svg class="big" viewBox="0 0 90 90"><use href="#markD"/></svg>
+    <div>
+      <div class="bar">
+        <svg class="logo" viewBox="0 0 310 90"><use href="#markD"/>
+          <text x="106" y="50" font-size="40" font-weight="600" letter-spacing="4.5" fill="#fff">MOROCCO</text>
+          <text x="107" y="73" font-size="15.5" letter-spacing="12.3" fill="#d9b464">TOURS HUB</text></svg>
+        <nav class="menu"><span>Home</span><span>All Tours</span><span>Experiences</span></nav>
+        <svg class="s" viewBox="0 0 310 90"><use href="#markD"/>
+          <text x="106" y="50" font-size="40" font-weight="600" letter-spacing="4.5" fill="#fff">MOROCCO</text>
+          <text x="107" y="73" font-size="15.5" letter-spacing="12.3" fill="#d9b464">TOURS HUB</text></svg>
+      </div>
+      <div class="photo" style="margin-top:12px"><svg class="logo" viewBox="0 0 310 90"><use href="#markD"/>
+          <text x="106" y="50" font-size="40" font-weight="600" letter-spacing="4.5" fill="#fff">MOROCCO</text>
+          <text x="107" y="73" font-size="15.5" letter-spacing="12.3" fill="#d9b464">TOURS HUB</text></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="opt">
+  <h2>E · A Moroccan gate (bab) with a guide and his camel on the dune</h2>
+  <div class="row">
+    <svg class="big" viewBox="0 0 80 90"><use href="#markE"/></svg>
+    <div>
+      <div class="bar">
+        <svg class="logo" viewBox="0 0 300 90"><use href="#markE"/>
+          <text x="96" y="50" font-size="40" font-weight="600" letter-spacing="4.5" fill="#fff">MOROCCO</text>
+          <text x="97" y="73" font-size="15.5" letter-spacing="12.3" fill="#d9b464">TOURS HUB</text></svg>
+        <nav class="menu"><span>Home</span><span>All Tours</span><span>Experiences</span></nav>
+        <svg class="s" viewBox="0 0 300 90"><use href="#markE"/>
+          <text x="96" y="50" font-size="40" font-weight="600" letter-spacing="4.5" fill="#fff">MOROCCO</text>
+          <text x="97" y="73" font-size="15.5" letter-spacing="12.3" fill="#d9b464">TOURS HUB</text></svg>
+      </div>
+      <div class="photo" style="margin-top:12px"><svg class="logo" viewBox="0 0 300 90"><use href="#markE"/>
+          <text x="96" y="50" font-size="40" font-weight="600" letter-spacing="4.5" fill="#fff">MOROCCO</text>
+          <text x="97" y="73" font-size="15.5" letter-spacing="12.3" fill="#d9b464">TOURS HUB</text></svg></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo, cleaned</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#000; color:#fff; font-family:Poppins, sans-serif; }
+  .opt { padding:24px 56px 32px; border-bottom:1px solid #222; }
+  .opt h2 { font: 500 14px Poppins; color:#9aa4ad; margin:0 0 16px; }
+  .bar { display:flex; align-items:center; gap:56px; height:116px; padding:0 32px; border:1px solid #1d1d1d; border-radius:6px; }
+  .photo { height:116px; margin-top:12px; border-radius:6px; padding:0 32px; display:flex; align-items:center;
+           background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.2)), url(/assets/images/erg-chebbi-caravan-sunset.jpg) center 40%/cover; }
+  .menu { display:flex; gap:26px; font: 500 15px Oswald; text-transform:uppercase; }
+  .row { display:flex; gap:40px; align-items:center; flex-wrap:wrap; }
+  .big { height:290px; } .logo { height:68px; } .s { height:44px; }
+  .orig { height:150px; background:#fff; border-radius:6px; padding:6px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ecd08c"/><stop offset=".5" stop-color="#c99a45"/><stop offset="1" stop-color="#a5762a"/>
+    </linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#f6e2ad"/><stop offset="1" stop-color="#f6e2ad" stop-opacity="0"/></radialGradient>
+
+    <!-- camel with saddle, facing right, feet at y=50 -->
+    <symbol id="camelS" viewBox="0 -2 60 52">
+      <path d="M8 16 C12 9 17 6 22 6 C27 6 30 10 32 14 C34 17 37 21 40 22 C42 20 44 15 46.5 12.2 C48 10.8 50.5 10.6 53 11.6 L55.2 12.8 C55.9 13.4 55.8 15.2 55 15.6 L51 16.2 C48.5 18 46 22.5 43 26.5 C41.5 28 39 28.5 36.5 28.3 L38 38 L39.6 47.8 L41.6 49.4 L41.4 50 L38.3 50 L36.8 39 L34.6 30.6 L33.5 30.6 L32 39.5 L30 50 L28.3 50 L30.4 39.5 L31.2 30.2 C26 30.8 20 30.6 16 29.6 L17.6 39 L19.6 50 L17.6 50 L15.9 40 L13.8 31.2 L12.8 31 L9.4 38.2 L10.6 50 L8.8 50 L7.4 38.6 C7 33 7 28 7.4 24 C6.8 21 7 18 8 16 Z"/>
+      <path d="M15 8.5 C15.5 1.5 28.5 1 29.5 8.5 L30.5 15.5 C26 17 18 17 14 15.5 Z"/>
+      <path d="M8 18 Q6.6 23 6.5 30" stroke-width="1" stroke-linecap="round" fill="none" style="stroke:inherit"/>
+    </symbol>
+    <!-- guide: hooded djellaba, arm back holding the rope -->
+    <symbol id="guide" viewBox="0 0 16 40">
+      <path d="M8.8 0.8 C10.8 0.8 12 2.6 11.8 4.8 L11.4 8.4 C12.6 9.4 13 11 13 13 L13.6 24 L14.4 33 L15.2 38.6 L12.6 39 L11.3 33.5 L9.8 39 L5 39 L5.8 33 L5.2 24 L5.6 14 L3.4 18.6 L2.2 18.2 L4.2 12 C4.6 10 5.4 8.8 6.4 8.2 L6 4.8 C5.8 2.6 7 0.8 8.8 0.8 Z"/>
+    </symbol>
+    <!-- date palm, long trunk -->
+    <symbol id="palmT" viewBox="0 0 30 70">
+      <path d="M14 70 C14.6 52 15.6 32 17 14 L18.8 14 C17.6 32 16.8 52 16.6 70 Z"/>
+      <path d="M17.8 13 C12 8 6 9 1.5 15 C7 11.5 12 12 17.8 14.4 Z"/>
+      <path d="M17.8 13 C23 7.5 28 8.5 29.5 15 C25.5 11.5 21.5 11.8 17.8 14.4 Z"/>
+      <path d="M17.8 13 C14 6 9 3.5 3.5 4.5 C9 5.5 13 8.5 17.4 13.8 Z"/>
+      <path d="M17.8 13 C21 5.5 25 3 29 4 C25 5.5 21.5 8.5 18.2 13.8 Z"/>
+      <path d="M17.8 13 C17 7 18 3 20.5 0.3 C19.6 4 19.4 8 18.6 13 Z"/>
+    </symbol>
+
+    <clipPath id="sunCut">
+      <path d="M0 0 H300 V131 C250 128 200 131 150 136 C100 141 55 152 6 172 V0 Z"/>
+    </clipPath>
+
+    <!-- the emblem, drawn in the 640x194 space of the original logo -->
+    <g id="emblem">
+      <g clip-path="url(#sunCut)">
+        <circle cx="140" cy="108" r="104" fill="url(#sun)"/>
+        <circle cx="178" cy="80" r="34" fill="url(#glow)" opacity=".75"/>
+      </g>
+      <g fill="#0a2033" stroke="#0a2033">
+        <use href="#palmT" x="96" y="46" width="30" height="70"/>
+        <use href="#palmT" x="58" y="47" width="42" height="98"/>
+        <use href="#camelS" x="62"  y="96.7" width="50" height="43.3"/>
+        <use href="#camelS" x="108" y="92.7" width="50" height="43.3"/>
+        <use href="#camelS" x="154" y="88.7" width="50" height="43.3"/>
+        <g fill="none" stroke-width="1">
+          <path d="M108.2 110.4 Q114 113 120.5 104.5"/>
+          <path d="M154.2 106.4 Q160 109 166.5 100.5"/>
+          <path d="M200.2 102.4 Q205 106.5 209 102.6"/>
+        </g>
+        <use href="#guide" x="206" y="78.5" width="21" height="52.5"/>
+      </g>
+      <path d="M4 176 C60 152 110 141 150 138.5 C195 135.5 235 132 286 137 C238 137 195 141 152 144.5 C110 148 62 158 4 176 Z" fill="#c0913b"/>
+      <path d="M26 188 C90 168 180 155 300 154 C182 159 100 171 26 188 Z" fill="#d9b464"/>
+    </g>
+    <clipPath id="wordOnly"><path d="M256 0 H640 V194 H326 V139 L297 131 V118 H256 Z"/></clipPath>
+  </defs>
+</svg>
+
+<section class="opt">
+  <h2>Your current logo, cleaned: kasbah, dune and birds removed, colours set to our brand gold for the black header</h2>
+  <div class="row">
+    <svg class="big" viewBox="0 0 640 194"><use href="#emblem"/>
+      <image href="/assets/images/logo-white.png" width="640" height="194" clip-path="url(#wordOnly)"/></svg>
+  </div>
+</section>
+
+<section class="opt">
+  <h2>On the header, over the hero photo, and at phone size</h2>
+  <div class="bar">
+    <svg class="logo" viewBox="0 0 640 194"><use href="#emblem"/>
+      <image href="/assets/images/logo-white.png" width="640" height="194" clip-path="url(#wordOnly)"/></svg>
+    <nav class="menu"><span>Home</span><span>All Tours</span><span>Experiences</span></nav>
+    <svg class="s" viewBox="0 0 640 194"><use href="#emblem"/>
+      <image href="/assets/images/logo-white.png" width="640" height="194" clip-path="url(#wordOnly)"/></svg>
+  </div>
+  <div class="photo"><svg class="logo" viewBox="0 0 640 194"><use href="#emblem"/>
+      <image href="/assets/images/logo-white.png" width="640" height="194" clip-path="url(#wordOnly)"/></svg></div>
+</section>
+
+<section class="opt">
+  <h2>Before (original logo.png)</h2>
+  <img class="orig" src="/assets/images/logo.png" alt="">
+</section>
+</body>
+</html>
