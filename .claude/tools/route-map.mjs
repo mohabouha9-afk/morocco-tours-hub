@@ -113,6 +113,18 @@ const TRIPS = {
       { at: [-7.98869, 31.61727], icon: 'dome', name: 'Saadian Tombs', note: 'Royal tombs', side: 'left', hideM: true },
     ],
   },
+  casa: {
+    title: 'Route map of the Casablanca city tour: the Hassan II Mosque, the old medina, Place Mohammed V, the Habous quarter and the Corniche',
+    legend: [], chip: { at: 0.82, text: 'About 30 min of driving in all', textM: '30 min driving' }, legs: [{ kind: 'car', road: 'casa' }],
+    pad: [140, 60, 150, 50], padM: [50, 60, 50, 46], compassM: 'topleft',
+    stops: [
+      { at: [-7.6328, 33.6086], icon: 'minaret', name: 'Hassan II Mosque', note: 'Guided visit inside', start: true, side: 'top', sideM: 'top' },
+      { at: [-7.6192, 33.6025], icon: 'arch', name: 'Old medina', note: 'Sqala bastion', side: 'right', sideM: 'bottom' },
+      { at: [-7.6181, 33.5936], icon: 'square', name: 'Place Mohammed V', note: 'Art Deco downtown', side: 'right', hideM: true },
+      { at: [-7.606, 33.5786], icon: 'souk', name: 'Habous quarter', note: 'Pastries and olives', side: 'right', sideM: 'bottom' },
+      { at: [-7.672, 33.595], icon: 'view', name: 'Corniche', note: 'Ocean and lunch', side: 'left', sideM: 'bottom' },
+    ],
+  },
   food: {
     title: 'Walking route of the food tour: Koutoubia, the Mellah spice market, Riad Zitoun el Kedim and Jemaa el-Fnaa with the mechoui alley',
     legend: [], chip: { at: 0.3, text: 'About 2 km on foot', textM: '2 km on foot' }, legs: [{ kind: 'walk', road: 'food-foot' }],
