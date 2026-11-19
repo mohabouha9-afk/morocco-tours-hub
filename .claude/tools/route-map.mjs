@@ -113,6 +113,20 @@ const TRIPS = {
       { at: [-7.98869, 31.61727], icon: 'dome', name: 'Saadian Tombs', note: 'Royal tombs', side: 'left', hideM: true },
     ],
   },
+  toubkal: {
+    title: 'Trek map: Imlil to Aremd, up the Mizane valley past Sidi Chamharouch to the Toubkal refuge, then the summit of Jebel Toubkal',
+    legend: [], chip: { at: 0.35, text: 'About 32 km on foot in 2 days', textM: '32 km in 2 days' },
+    // Aremd -> refuge drawn by hand through real OSM points: the OSM foot network has a gap there (router detours 190 km)
+    legs: [{ kind: 'walk', road: 'tk-aremd' }, { kind: 'walk', path: [[-7.91557, 31.12643], [-7.9150, 31.1170], [-7.9135, 31.1080], [-7.91283, 31.09868], [-7.9190, 31.0900], [-7.9260, 31.0810], [-7.9320, 31.0720], [-7.93756, 31.06348]] }, { kind: 'walk', road: 'tk-summit' }],
+    pad: [150, 50, 150, 50], padM: [60, 50, 60, 46], compassM: 'topright',
+    stops: [
+      { at: [-7.92035, 31.13709], icon: 'peak', name: 'Imlil', note: 'Start, 1,740 m', start: true, side: 'left', sideM: 'left' },
+      { at: [-7.91557, 31.12643], icon: 'kasbah', name: 'Aremd', note: 'Berber village', side: 'right', hideM: true },
+      { at: [-7.91283, 31.09868], icon: 'dome', name: 'Sidi Chamharouch', note: 'Shrine, lunch', side: 'right', sideM: 'left' },
+      { at: [-7.93756, 31.06348], icon: 'hotel', name: 'Toubkal refuge', note: 'Night, 3,207 m', side: 'left', sideM: 'left' },
+      { at: [-7.91494, 31.05983], icon: 'peak', name: 'Jebel Toubkal', note: 'Summit, 4,167 m', side: 'right', sideM: 'right' },
+    ],
+  },
   casa: {
     title: 'Route map of the Casablanca city tour: the Hassan II Mosque, the old medina, Place Mohammed V, the Habous quarter and the Corniche',
     legend: [], chip: { at: 0.82, text: 'About 30 min of driving in all', textM: '30 min driving' }, legs: [{ kind: 'car', road: 'casa' }],
