@@ -2,7 +2,7 @@
 
 **Model page:** `tours/marrakech-agafay-desert-day-trip.html` (owner-approved sample, 2026-11-13).
 **Research behind it:** `.claude/research/day-trip-page-research.md` (round 1 = what tourists worry about, round 2 = top-ranking pages for Aït Ben Haddou, Essaouira, Ouzoud, Ourika, Atlas, compared to those worries).
-**Use this file** to rebuild the other 12 day-trip pages in `tours/` so they all match the model.
+**Use this file** to build every new day-trip, experience or activity page so it matches the model (all existing day trips are already rebuilt to it).
 
 ---
 
