@@ -1,6 +1,6 @@
 # Owner profile & site identity — read before any work
 
-This file sums up what has been learned about the owner of Morocco Tours Hub (how they decide, what they like and reject, how they want to work) plus the brand and design system built so far. The full dated log of each section lives in `CLAUDE.md`; this file is the short version that matters for the next job.
+This file sums up what has been learned about the owner of Morocco Tours Hub (how they decide, what they like and reject, how they want to work) plus the brand and design system built so far. The full dated log of each section lives in `.claude/PROGRESS.md` (search it, don't read it whole); this file is the short version that matters for the next job.
 
 ---
 

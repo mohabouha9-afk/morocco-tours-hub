@@ -3,7 +3,7 @@
 How to build (or rebuild) a multi-day tour page in `tours/`, the way the owner approved it on the
 3-day Marrakech → Merzouga page (2026-11-14) and the tours built after it (2-day Merzouga, 3-day and
 4-day Marrakech ⇄ Fes, 4-day and 5-day Fes → Marrakech, 5-day Marrakech → Fes, 4-day Marrakech → Erg Chigaga).
-**Owner (2026-11-17): for each new tour, read ONLY this file, then build.** Everything needed is here (process, rules, places in use, map tools); do not re-read CLAUDE.md, OWNER-PROFILE.md or old research files first. Look up a related tour in CLAUDE.md only if a specific fact is missing.
+**Owner (2026-11-17): for each new tour, read ONLY this file, then build.** Everything needed is here (process, rules, places in use, map tools); do not read OWNER-PROFILE.md or old research files first. Look up a related tour in `.claude/PROGRESS.md` (grep, never read it whole) only if a specific fact is missing.
 Day trips have their own blueprint: `.claude/PERFECT-DAY-TRIP.md`.
 
 ---
@@ -42,7 +42,7 @@ Day trips have their own blueprint: `.claude/PERFECT-DAY-TRIP.md`.
 6. **Route map** (see section 6), then **link the page** (section 7).
 7. **Check it yourself** at 1366×768, 768 and 375 (section 8) before reporting. Share a screenshot
    only when it helps; say plainly what was checked and what still needs the owner.
-8. **Log it** in `CLAUDE.md` (one "Done/Update" paragraph per change, with "Owner to confirm") and
+8. **Log it** at the end of `.claude/PROGRESS.md` (one short "Done/Update" paragraph per change, with "Owner to confirm") and
    update this file when the owner sets a new rule.
 9. **Commit/push only when the owner asks** ("save changes" = commit; "push" = push the current
    branch). Use a message file for `git commit -F` (PowerShell breaks here-strings).
@@ -197,7 +197,7 @@ Header mega-menu counts are NOT changed without asking (header rollout = confirm
 
 ## 10. Progress (update when a tour is done)
 
-**Rebuilt (20 desert tours, all logged in CLAUDE.md):** 2-day Marrakech → Merzouga · 3-day Marrakech → Merzouga ·
+**Rebuilt (20 desert tours, all logged in .claude/PROGRESS.md):** 2-day Marrakech → Merzouga · 3-day Marrakech → Merzouga ·
 3-day Marrakech → Fes · 4-day Marrakech → Fes via Merzouga · 4-day Fes → Marrakech · 5-day Fes → Marrakech ·
 5-day Marrakech → Fes · 4-day Erg Chigaga · 6-day Zagora/Ouzina/Merzouga · 7-day Erg Chigaga & Merzouga ·
 4-day Fes desert loop (Fes → Merzouga → Todra → Fes) · 3-day Errachidia · 4-day Errachidia (Todra Gorge loop) · 5-day Errachidia → Marrakech · 3-day Agadir → Merzouga → Marrakech · 4-day Agadir → Merzouga → Marrakech · 5-day Agadir → Merzouga → Errachidia airport · 3-day Rabat → Merzouga → Marrakech · 3-day Rabat → Merzouga → Rabat.
