@@ -169,7 +169,7 @@ Aït Ben Haddou (3,600 on file), Todra Gorge (1,900), Dades Valley (880), Erg Ch
 - [ ] `desert-tours-from-fes.html`
 - [ ] `tours/2-day-marrakech-to-zagora-desert-tour.html`
 - [ ] `tours/3-day-marrakech-erg-chigaga-tour.html`
-- [ ] `tours/4-day-casablanca-to-merzouga-desert-tour.html`
+- [x] `tours/4-day-casablanca-to-merzouga-desert-tour.html` (built 2026-11-19)
 
 **Priority 2: Local Merzouga experiences**
 - [ ] `tours/merzouga-private-transfers.html` (Marrakech / Fes / Errachidia ↔ Merzouga)
