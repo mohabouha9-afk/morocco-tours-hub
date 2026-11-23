@@ -174,7 +174,7 @@ ${happart('ag-comb', 'Combine Them', [
         <thead><tr><th scope="col">Desert</th><th scope="col">From Marrakech</th><th scope="col">The landscape</th><th scope="col">Shortest trip</th></tr></thead>
         <tbody>
           <tr><th scope="row">Agafay<small>An evening, no long drive</small></th><td>40 minutes</td><td>Stony hills, no sand dunes</td><td><a href="../tours/agafay-desert-camel-ride-dinner-show.html">An evening</a> or <a href="../tours/marrakech-agafay-desert-day-trip.html">a day</a></td></tr>
-          <tr><th scope="row"><a href="../tours/2-day-marrakech-to-zagora-desert-tour.html">Zagora</a><small>Short trips from Marrakech</small></th><td>About 6 hours, through the Draa Valley</td><td>Low dunes and stony desert</td><td><a href="../tours/2-day-marrakech-to-zagora-desert-tour.html">2 days</a></td></tr>
+          <tr><th scope="row"><a href="erg-chigaga-zagora.html">Zagora</a><small>Short trips from Marrakech</small></th><td>About 6 hours, through the Draa Valley</td><td>Low dunes and stony desert</td><td><a href="../tours/2-day-marrakech-to-zagora-desert-tour.html">2 days</a></td></tr>
           <tr><th scope="row"><a href="merzouga.html">Merzouga</a><small>Tall dunes, the classic</small></th><td>9 to 10 hours (560 km)</td><td>Erg Chebbi, golden sand up to about 150 m</td><td><a href="../tours/3-days-desert-tour-marrakech-to-merzouga.html">3 days</a> (2 possible)</td></tr>
         </tbody>
       </table>

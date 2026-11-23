@@ -57,6 +57,7 @@ page **wipes every edit made to that page afterwards**. Edit finished pages dire
 - `build-mk3.js` → `tours/merzouga-to-marrakech-tour.html` (NEW tour 2026-11-18, starts in Merzouga, camp + Dades + Marrakech; template = the finished 3-day Fes → Marrakech page)
 - `build-zg2.js` → `tours/2-day-marrakech-to-zagora-desert-tour.html` (NEW tour 2026-11-18, Marrakech round trip to a Zagora camp; template = the finished 2-day Marrakech → Merzouga page)
 - `build-cm4.js` → `tours/4-day-casablanca-to-merzouga-desert-tour.html` (NEW tour 2026-11-19, Casablanca → Rabat → Fes → Merzouga camp → Dades → Marrakech, 4-col table; template = the approved 4-day Marrakech → Fes page, like build-ag4.js)
+- `build-oz2.js` → `tours/2-day-ouarzazate-to-merzouga-desert-tour.html` (NEW tour 2026-11-23, 2-day Ouarzazate loop, camp only; template = the finished 2-day Marrakech → Merzouga page, like build-fr2.js; `oz2-link.js` = the one-off linking script)
 - `st-lib.js` + `build-st.js` → the 6 student/group tours (one generic builder: replaces every block by structural markers, so a new tour = one config object; `node build-st.js <key|all>`)
 - `icons.part.js` — shared SVG icons + `li()` helper, loaded by the build scripts (`eval`).
 - `cards.js` — `node cards.js <out.json> <tour1.html> <tour2.html> <tour3.html>`: grabs each tour's

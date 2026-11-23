@@ -195,6 +195,8 @@ rep(/<main>[\s\S]*?<\/main>/, MAIN, 'main');
 // JSON-LD: activities ItemList + FAQPage
 const ldList = { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Things to do in Merzouga', itemListElement: ACT.map(([href, , name], i) => ({ '@type': 'ListItem', position: i + 1, url: 'https://moroccotourshub.com/tours/' + href, name: C[href].match(/<h3 class="htour__title">([^<]*)/)[1].replace(/&amp;/g, '&') })) };
 const ldFaq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
+// drop any ItemList/FAQPage left by an earlier run, so re-running never duplicates them
+s = s.replace(/<script type="application\/ld\+json">\{"@context":"https:\/\/schema.org","@type":"(ItemList|FAQPage)"[\s\S]*?<\/script>\r?\n?/g, '');
 s = s.replace(/<\/head>/, '<script type="application/ld+json">' + JSON.stringify(ldList) + '</script>\n<script type="application/ld+json">' + JSON.stringify(ldFaq) + '</script>\n</head>');
 fs.writeFileSync(f, s);
 console.log('written', s.length);
