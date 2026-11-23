@@ -86,6 +86,23 @@ const TRIPS = {
     legend: [], compassM: 'topleft', chip: { at: 0.45, text: '40 min drive' }, legs: [{ kind: 'car', road: 'agafay' }],
     stops: [{ ...PICKUP, note: 'Pick-up in the afternoon' }, { at: [-8.1879, 31.4897], icon: 'camel', name: 'Agafay camp', note: 'Camel ride, dinner, fire show', side: 'right' }],
   },
+  palmeraie: {
+    title: 'Route map: Marrakech medina to the Palmeraie palm grove for the camel ride',
+    legend: [], compassM: 'topleft', chip: { at: 0.5, text: '15–20 min drive' }, legs: [{ kind: 'car', road: 'palmeraie' }],
+    stops: [{ ...PICKUP, note: 'Pick-up at your hotel or riad', side: 'left' }, { at: [-7.9605, 31.6725], icon: 'camel', name: 'Palmeraie', note: 'Tea, camel ride in the palms', side: 'right' }],
+  },
+  threevalleys: {
+    title: 'Route map: Marrakech loop through the Ourika and Asni valleys, over the Kik plateau to Lake Lalla Takerkoust and back',
+    legend: [], compassM: 'topright', chip: { at: 0.15, text: 'About 160 km loop', textM: '160 km loop' },
+    legs: [{ kind: 'car', road: 'threevalleys' }, { kind: 'car', road: 'threevalleys-back' }],
+    stops: [
+      { ...PICKUP, note: 'Pick-up and drop-off', side: 'right' },
+      { at: [-7.8355, 31.4188], icon: 'tea', name: 'Ourika valley', note: 'Berber house, mint tea', side: 'right', sideM: 'left' },
+      { at: [-7.9800, 31.2482], icon: 'souk', name: 'Asni', note: 'Valley views, Saturday souk', side: 'right' },
+      { at: [-8.0318, 31.3281], icon: 'view', name: 'Kik plateau', note: 'Toubkal and lake views', side: 'left', pinM: true },
+      { at: [-8.1110, 31.3638], icon: 'camel', name: 'Lalla Takerkoust', note: 'Lake, camel ride', side: 'left', sideM: 'right' },
+    ],
+  },
   balloon: {
     title: 'Route map: Marrakech to the balloon take-off site towards Agafay, the flight and the landing',
     compassM: 'topleft',

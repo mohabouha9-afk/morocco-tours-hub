@@ -2813,3 +2813,11 @@ body.page-swap { background: #fffdf9; }
 @media (prefers-reduced-motion: reduce) {
   .kd-finder__panel { animation: none; }
 }
+
+/* Palmeraie camel ride page: keep the camels in frame (they sit low in these photos) */
+.page-hero__bg img.palm-hero-img { object-position: 50% 72%; }
+.dt-gal img.palm-crop-low { object-position: 50% 74%; }
+
+/* Three Valleys day trip: portrait photos in wide crops — keep the peaks + lake shore, and the sun, in frame */
+.page-hero__bg img.tv-hero-img { object-position: 50% 66%; }
+.dt-gal img.tv-crop-sun { object-position: 50% 62%; }
