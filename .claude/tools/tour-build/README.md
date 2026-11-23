@@ -74,3 +74,4 @@ page **wipes every edit made to that page afterwards**. Edit finished pages dire
 3. `node build-<key>.js`, then the map: `node .claude/tools/tour-map-stops.js` and
    `node .claude/tools/route-map.mjs tours/<page>.html <key>` (from the project root).
 4. The script warns about `LEFTOVER:` words from the template; check them.
+- `build-fm2.js` → `tours/2-day-fes-to-marrakech-desert-tour.html` (NEW tour 2026-11-23, Fes → Merzouga camp → Marrakech; template = the finished 2-day Fes → Merzouga page; links by `fm2-link.js`)

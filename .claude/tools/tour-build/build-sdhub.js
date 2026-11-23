@@ -17,7 +17,7 @@ const home = rd('index.html');
 // ---------- cards ----------
 const sec = idx.slice(idx.indexOf('<section class="section" id="desert">'), idx.indexOf('<section class="section" id="grand">'));
 const raw = sec.split('<article class="htour">').slice(1).map(c => '<article class="htour">' + c.slice(0, c.indexOf('</article>') + 10));
-if (raw.length !== 28) throw new Error('expected 28 desert cards, got ' + raw.length);
+if (raw.length !== 29) throw new Error('expected 29 desert cards, got ' + raw.length);
 const ORDER = ['Marrakech', 'Fes', 'Merzouga', 'Errachidia', 'Agadir', 'Rabat'];
 const cards = raw.map(c => {
   c = c.replace(/href="\.\.\/tours\//g, 'href="tours/');

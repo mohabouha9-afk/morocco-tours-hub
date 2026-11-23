@@ -24,6 +24,39 @@ const TRIPS = {
     legend: [], compassM: 'topleft', chip: { at: 0.45, text: '40 min drive' }, legs: [{ kind: 'car', road: 'agafay' }],
     stops: [PICKUP, { at: [-8.1879, 31.4897], icon: 'tent', name: 'Agafay camp', note: 'Camel ride, lunch, sunset', side: 'right' }],
   },
+  'chefchaouen-day': {
+    title: 'Route map: Fes to Chefchaouen in the Rif Mountains',
+    legend: [], compassM: 'topright', chip: { at: 0.5, text: 'About 200 km each way' }, legs: [{ kind: 'car', road: 'chefchaouen-day' }],
+    stops: [
+      { at: [-5.0003, 34.0331], icon: 'hotel', name: 'Fes', note: 'Pick-up at your riad/hotel', start: true, side: 'right' },
+      { at: [-5.5951, 34.7978], icon: 'view', name: 'Ouazzane', note: 'Midway coffee stop', side: 'right', pinM: true, mini: true },
+      { at: [-5.2684, 35.1688], icon: 'city', name: 'Chefchaouen', note: 'Blue medina, Kasbah, Ras El Maa waterfall', side: 'left', sideM: 'left' },
+    ],
+  },
+  'fes-volubilis': {
+    title: 'Route map: Fes to the Roman ruins of Volubilis, the holy town of Moulay Idriss and the imperial city of Meknes, then back to Fes',
+    legend: [], compassM: 'topright', chip: { at: 0.2, text: 'About 200 km loop', textM: '200 km loop' },
+    legs: [{ kind: 'car', road: 'fes-volubilis' }, { kind: 'car', road: 'fes-volubilis-back' }],
+    stops: [
+      { at: [-5.0003, 34.0331], icon: 'hotel', name: 'Fes', note: 'Pick-up and drop-off', start: true, side: 'right' },
+      { at: [-5.5546, 34.0742], icon: 'ruins', name: 'Volubilis', note: 'Roman ruins, mosaics', side: 'left', sideM: 'left' },
+      { at: [-5.5214, 34.0549], icon: 'minaret', name: 'Moulay Idriss', note: 'Holy town', side: 'right', pinM: true },
+      { at: [-5.5637, 33.8935], icon: 'arch', name: 'Meknes', note: 'Bab Mansour, lunch', side: 'left', sideM: 'left' },
+    ],
+  },
+  'fes-middle-atlas': {
+    title: 'Route map: Fes to the Middle Atlas via Imouzzer, Dayet Aoua lake, Ifrane and the Gouraud cedar forest to Azrou, then back to Fes',
+    legend: [], compassM: 'topright', chip: { at: 0.4, text: 'About 3.5 h driving in all', textM: '3.5 h driving' },
+    legs: [{ kind: 'car', road: 'fes-middle-atlas' }, { kind: 'car', road: 'fes-middle-atlas-back' }],
+    stops: [
+      { at: [-5.0003, 34.0331], icon: 'hotel', name: 'Fes', note: 'Pick-up and drop-off', start: true, side: 'right' },
+      { at: [-5.0105, 33.7334], icon: 'view', name: 'Imouzzer', note: 'Coffee stop', side: 'right', pinM: true, mini: true },
+      { at: [-5.036, 33.649], icon: 'river', name: 'Dayet Aoua', note: 'Lake walk', side: 'right', pinM: true },
+      { at: [-5.1059, 33.5284], icon: 'garden', name: 'Ifrane', note: 'Lion statue, walk', side: 'right', sideM: 'right' },
+      { at: [-5.1554, 33.4265], icon: 'view', name: 'Gouraud cedar', note: 'Cedar forest, macaques', side: 'right', sideM: 'bottom' },
+      { at: [-5.2227, 33.4416], icon: 'tagine', name: 'Azrou', note: 'Lunch', side: 'left', sideM: 'left' },
+    ],
+  },
   ourika: {
     title: 'Route map: Marrakech up the Ourika valley to the Setti Fatma waterfalls',
     legend: [], chip: { at: 0.12, text: '1 to 1.5 h drive' }, legs: [{ kind: 'car', road: 'ourika' }],
@@ -78,6 +111,19 @@ const TRIPS = {
       { at: [-7.98271, 31.62164], icon: 'kasbah', name: 'Bahia Palace', note: 'And the Mellah next door', side: 'right', sideM: 'bottom' },
       { at: [-7.98934, 31.62593], icon: 'square', name: 'Jemaa el-Fnaa', note: 'Then into the souks', side: 'left' },
       { at: [-7.98625, 31.63154], icon: 'arch', name: 'Ben Youssef', note: 'Madrasa, rooftop tea', side: 'right', sideM: 'left' },
+    ],
+  },
+  'fes-medina': {
+    title: 'Route map of the Fes medina tour: the Royal Palace gates by car, then on foot from Bab Boujeloud past Bou Inania Madrasa, Nejjarine and Al-Attarine Madrasa to the Chouara Tannery',
+    legend: [['car', 'By car'], ['walk', 'On foot']], chip: { at: 0.5, text: '10 min drive', textM: '10 min' },
+    legs: [{ kind: 'car', road: 'fes-medina-car' }, { kind: 'walk', road: 'fes-medina-foot' }],
+    pad: [150, 60, 150, 30], padM: [40, 50, 40, 30], compassM: 'topright',
+    stops: [
+      { at: [-4.99402, 34.05243], icon: 'kasbah', name: 'Royal Palace', note: 'Golden gates, start', start: true, side: 'left', sideM: 'left' },
+      { at: [-4.98402, 34.0617], icon: 'arch', name: 'Bab Boujeloud', note: 'Blue Gate, Bou Inania', side: 'left', sideM: 'left' },
+      { at: [-4.97575, 34.06481], icon: 'souk', name: 'Nejjarine', note: 'Woodwork museum', side: 'top', sideM: 'top' },
+      { at: [-4.97356, 34.06513], icon: 'minaret', name: 'Al-Attarine', note: 'Madrasa, Qaraouiyine doors', side: 'bottom', hideM: true },
+      { at: [-4.97099, 34.06592], icon: 'view', name: 'Chouara', note: 'Tannery terrace', side: 'right', sideM: 'bottom' },
     ],
   },
   hammam: {
@@ -502,6 +548,24 @@ const TRIPS = {
       { at: [-3.995, 31.025], icon: 'lantern', name: 'Khamlia', note: '', side: 'bottom', pinM: true, mini: true },
       { at: [-4.2654, 31.2797], icon: 'souk', name: 'Rissani market', note: '', side: 'left', pinM: true },
       { at: [-4.2334, 31.4355], icon: 'fossil', name: 'Erfoud fossils', note: '', side: 'top', pinM: true },
+    ],
+  },
+  fm2: {
+    title: 'Route map: 2-day tour from Fes over the Middle Atlas and the Ziz Valley to a camp in the Merzouga dunes, then west by the Dades Valley, Ouarzazate and Aït Ben Haddou over the High Atlas to Marrakech',
+    legend: [], tall: true, chip: { at: 0.55, text: 'About 1,040 km in 2 days', textM: '1,040 km' }, compassM: 'topright', pad: [70, 40, 70, 64], padM: [40, 40, 30, 40],
+    legs: [{ kind: 'car', road: 'fm4-d1' }, { kind: 'car', road: 'fm2-d2' }], // OSRM: d1 ~470 km, d2 566 km
+    stops: [
+      { at: [-4.9998, 34.0331], icon: 'hotel', name: 'Fes', note: 'Start', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.1106, 33.5228], icon: 'garden', name: 'Ifrane', note: 'Cedar forest', side: 'left', sideM: 'left' },
+      { at: [-4.7454, 32.68], icon: 'tagine', name: 'Midelt', note: 'Lunch, day 1', side: 'right', pinM: true },
+      { at: [-4.3652, 32.1441], icon: 'palm', name: 'Ziz Valley', note: '', side: 'right', pinM: true },
+      { at: [-4.013, 31.099], icon: 'camel', name: 'Merzouga', note: 'Camel ride, night in camp', side: 'bottom', sideM: 'left' },
+      { at: [-5.53, 31.515], icon: 'palm', name: 'Tinghir', note: '', side: 'top', pinM: true },
+      { at: [-5.983, 31.37], icon: 'view', name: 'Dades Valley', note: 'Day 2', side: 'bottom', pinM: true },
+      { at: [-6.9063, 30.9189], icon: 'film', name: 'Ouarzazate', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-7.129, 31.047], icon: 'kasbah', name: 'Aït Ben Haddou', note: 'Photo stop', side: 'left', sideM: 'bottom' },
+      { at: [-7.38, 31.287], icon: 'pass', name: 'High Atlas pass', note: '', side: 'right', pinM: true, mini: true },
+      { at: [-8.0089, 31.6295], icon: 'minaret', name: 'Marrakech', note: 'End', side: 'left', sideM: 'top' },
     ],
   },  fr2: {
     title: 'Route map: 2-day round trip from Fes over the Middle Atlas and the Ziz Valley to the Merzouga dunes for a night in the camp, and back to Fes',

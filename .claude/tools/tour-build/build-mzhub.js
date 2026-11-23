@@ -24,7 +24,8 @@ rep(/(<meta property="og:title" content=")[^"]*"/, `$1${TITLE}"`, 'ogt');
 rep(/(<meta name="twitter:title" content=")[^"]*"/, `$1${TITLE}"`, 'twt');
 rep(/(<meta property="og:description" content=")[^"]*"/, `$1${DESC}"`, 'ogd');
 rep(/(<meta name="twitter:description" content=")[^"]*"/, `$1${DESC}"`, 'twd');
-rep('<body class="site2">', '<body class="site2 page-swap">', 'body');
+// Body already has page-swap
+// rep('<body class="site2">', '<body class="site2 page-swap">', 'body');
 
 // pieces from day-trips.html
 const trustIcons = DT.match(/<div class="trust__item">(<svg[\s\S]*?<\/svg>)/g).map(x => x.replace('<div class="trust__item">', ''));
@@ -43,7 +44,10 @@ chipScript = chipScript.slice(0, chipScript.indexOf("    /* search")) + '  })();
 const C = JSON.parse(fs.readFileSync(SP + 'mz-cards.json', 'utf8'));
 const ACT = [
   ['merzouga-desert-camp-camel-ride.html', 'mz-camp', 'Desert Camp', chipStar],
+  ['merzouga-luxury-desert-camp.html', 'mz-lux', 'Luxury Camp', chipStar],
   ['merzouga-sunset-camel-ride.html', 'mz-sunset', 'Sunset Camel Ride', chipStar],
+  ['merzouga-camel-trek-2-nights.html', 'mz-trek', 'Camel Trek', chipStar],
+  ['merzouga-stargazing-night.html', 'mz-star', 'Stargazing', chipStar],
   ['merzouga-quad-biking.html', 'mz-quad', 'Quad Biking', chipStar],
   ['merzouga-buggy-tour.html', 'mz-buggy', 'Buggy Tour', chipStar],
   ['merzouga-4x4-desert-day-tour.html', 'mz-4x4', '4×4 Day Tour', chipStar],
@@ -77,6 +81,13 @@ const FAQ = [
   ['Can we combine several activities?', 'Yes, and it is the best way to see Merzouga: a quad or 4×4 by day, camels at sunset and a night in the camp. Tell us your dates and we plan the timings.'],
   ['What should we wear in the desert?', 'Light layers, a scarf against sun and blowing sand, sunglasses and closed shoes; a warm jacket for evenings from November to March. Cover shoulders and knees in the villages.'],
   ['How do I book and pay?', 'Send your request with the form on each activity page or on WhatsApp. Pay a small deposit to confirm; the rest is paid on the day, in cash or by card. Cancellation is free up to 24 hours before.'],
+];
+
+const GETTING = [
+  ['By Car', 'Marrakech → 560 km, 9–10 h over the High Atlas (Tizi n\'Tichka pass). Fes → 470 km, 8 h through the Middle Atlas and Ziz Valley. Ouarzazate → 360 km, 5 h through the Draa Valley. Errachidia → 2 h. All roads are paved until the last 50 km to Erg Chigaga (off-road only).'],
+  ['By Bus', 'CTM and Supratours run daily from Marrakech (dep. ~07:30, arr. ~19:30) and Fes (dep. ~07:30, arr. ~17:00). Tickets ~150–200 MAD. Book at the station or online. The bus drops you at the Merzouga station; we pick you up free.'],
+  ['By Air', 'Errachidia (ERH) is the closest airport, 2 h from Merzouga. Royal Air Maroc flies daily from Casablanca (~1 h 15 m). We meet every flight and drive you to your camp or hotel. Ouarzazate (OZZ) is 5 h away.'],
+  ['By Private Transfer', 'Door-to-door from Marrakech, Fes, Errachidia, Ouarzazate or Casablanca. Your driver meets you at your hotel, the airport or the bus station. Stops when you ask. Can include a desert camp night on arrival. See <a href="../tours/merzouga-transfers.html">Private Transfers</a>.'],
 ];
 
 const MAIN = `<main>
@@ -148,6 +159,12 @@ ${FAQ.map(([q, a], i) => `          <details class="hfaq-item"${i ? '' : ' open'
       </div>
     </div>
   </section>
+  <section class="section mz-getting" aria-labelledby="mz-getting-title"><div class="wrap">
+    <div class="head-row"><div><h2 id="mz-getting-title">Getting to Merzouga</h2></div></div>
+    <ul class="mz-getting__grid">
+${GETTING.map(([t, d]) => `      <li><h3>${t}</h3><p>${d}</p></li>`).join('\n')}
+    </ul>
+  </div></section>
   <section class="section dtl-combine" aria-labelledby="dtl-comb">
     <div class="wrap">
       <div class="dtl-combine__box">
