@@ -453,7 +453,7 @@ p { margin: 0 0 1em; }
   .hrev { padding: 60px 0 64px; }
   .hrev__head { margin-bottom: 30px; }
   .hrev__more { margin-top: 22px; }
-  .hrev__more .hero-btn { width: 100%; }
+  .hrev__more .hero-btn, .hrev__more .hdest__btn, .hdest__in > .hdest__more .hdest__btn { width: 100%; }
 }
 
 /* ==========================================================================
@@ -621,7 +621,21 @@ p { margin: 0 0 1em; }
 .htours__nav:active { transform: scale(.92); }
 .htours__nav:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
 .htours__nav[disabled] { opacity: 0; pointer-events: none; }
-.htours--all .hdest__more, .htours--exc .hdest__more { margin-top: 40px; }
+.htours--exc .hdest__more { margin-top: 40px; }
+/* popular tours (laptop/tablet): "View All Tours" sits in the heading row, right corner above the last card */
+.htours__head--corner { position: relative; }
+.htours__corner { position: absolute; right: 0; bottom: 0; font-family: var(--sans); font-size: .86rem; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--gold-deep); text-decoration: none; }
+.htours__corner:hover { color: var(--navy); text-decoration: underline; }
+.htours__corner:active { color: var(--gold); }
+.htours__corner:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+/* homepage, laptop only: every "view all / read more" link sits in the heading row above the last card, bold + underlined;
+   the bottom buttons stay for tablet and phone */
+.htours__corner--lap { display: none; }
+@media (min-width: 1025px) {
+  .htours__corner--lap { display: inline; }
+  .hmore--notlap { display: none; }
+  .htours__corner { font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+}
 
 @media (max-width: 1100px) {
   .htours__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -638,11 +652,11 @@ p { margin: 0 0 1em; }
   .htours__nav--prev { left: -10px; }
   .htours__nav--next { right: -10px; }
   .htour__media img { height: 170px; }
-  .htours--all .hdest__more { margin-top: 28px; }
-  /* day excursions + all tours: show the end link in the row, hide the button; the end slot is narrower than a card */
-  .htours__more--desk { display: none; }
-  .htours--exc .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(6, 80%) 34%; }
-  .htours--all .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(8, 80%) 34%; }
+  .htours__corner { display: none; }
+  /* day excursions + desert activities: show the end link in the row, hide the button; the end slot is narrower than a card */
+  .htours--exc .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(14, 80%) 34%; }
+  .htours--mzact .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(9, 80%) 34%; }
+  .htours--popular .htours__list, .htours--desert .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(4, 80%) 34%; }
   .htours__end { display: block; }
 }
 
