@@ -103,6 +103,15 @@ const TRIPS = {
       { at: [-8.1110, 31.3638], icon: 'camel', name: 'Lalla Takerkoust', note: 'Lake, camel ride', side: 'left', sideM: 'right' },
     ],
   },
+  paragliding: {
+    title: 'Route map: Marrakech to Lake Lalla Takerkoust and the Aguergour paragliding take-off in the Atlas foothills',
+    legend: [], compassM: 'topright', chip: { at: 0.4, text: 'About 1 h drive' }, legs: [{ kind: 'car', road: 'paragliding' }],
+    stops: [
+      { ...PICKUP, note: 'Pick-up at your hotel or riad', side: 'right' },
+      { at: [-8.1110, 31.3638], icon: 'view', name: 'Lalla Takerkoust', note: 'The lake below your flight', side: 'left' },
+      { at: [-8.0814, 31.2932], icon: 'peak', name: 'Aguergour', note: 'Take-off, flight, mint tea', side: 'right' },
+    ],
+  },
   balloon: {
     title: 'Route map: Marrakech to the balloon take-off site towards Agafay, the flight and the landing',
     compassM: 'topleft',
