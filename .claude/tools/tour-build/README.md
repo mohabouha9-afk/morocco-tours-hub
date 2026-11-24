@@ -38,6 +38,7 @@ page **wipes every edit made to that page afterwards**. Edit finished pages dire
 - `build-cc7.js` → `tours/7-day-coastal-morocco-tour-from-marrakech.html` (7-day coast loop, one row per stop with a colspan cell for Imsouane; template = the finished 8-day Imperial Cities page)
 - `build-ag6.js` → `tours/6-day-morocco-tour-agadir-essaouira-marrakech.html` (6-day Agadir → Marrakech; derived from build-cc7.js by a patch script)
 - `build-me4.js` → `tours/4-day-marrakech-essaouira-agadir-tour.html` (4-day Marrakech → Agadir; derived from build-ag6.js)
+- `build-mkhub.js` → `destinations/marrakech.html` (destination page on the Merzouga hub shell; header copied untouched, URL swap only in head)
 - `build-me3.js` → `tours/3-day-marrakech-essaouira-tour.html` (3-day Marrakech round trip with an Essaouira night; has a `dims()` helper that reads image sizes from other pages)
 - `build-ms6.js` → `tours/6-day-marrakech-surroundings-tour.html` (6 days from one Marrakech riad, original route kept; derived from build-me3.js)
 - `build-fc3.js` → `tours/3-day-fes-chefchaouen-volubilis-tour.html` (3-day Fes round trip, original route kept; copies hotel rows from a finished page with `cells()`)
