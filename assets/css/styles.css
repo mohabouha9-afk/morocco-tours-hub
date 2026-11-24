@@ -2876,3 +2876,13 @@ body.page-swap { background: #fffdf9; }
   .cmk-table tbody td:nth-of-type(1) { font-weight: 600; color: var(--gold-deep); }
   .cmk-table tbody td:last-child { padding-bottom: 14px; }
 }
+
+/* Hero framing for owner-supplied portrait photos (2026-11-24) */
+.page-hero__bg img.hp-45 { object-position: 50% 45%; }
+.page-hero__bg img.hp-50 { object-position: 50% 50%; }
+.page-hero__bg img.hp-60 { object-position: 50% 60%; }
+.page-hero__bg img.hp-62 { object-position: 50% 62%; }
+.page-hero__bg img.hp-65 { object-position: 50% 65%; }
+.page-hero__bg img.hp-70 { object-position: 50% 70%; }
+.page-hero__bg img.hp-78 { object-position: 50% 78%; }
+.page-hero__bg img.hp-57 { object-position: 50% 57%; }

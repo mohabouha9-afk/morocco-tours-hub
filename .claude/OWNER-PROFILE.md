@@ -53,6 +53,7 @@ This file sums up what has been learned about the owner of Morocco Tours Hub (ho
 - Payment (owner confirmed): **20–30% deposit by bank transfer, balance on arrival in cash (EUR/USD/MAD) or by card.**
 - Owner facts for stats: **+7 years experience, 100% private, 100% local agency, 24/7 support in English.**
 - **Destination images show a monument or place, never a person.**
+- **Never use the same photo as hero on more than one page.** Pick from `assets/images/` (incl. the owner's own Instagram photos) and check sitewide first.
 - New photos: free licences only (Unsplash, no attribution), ask before downloading.
 - When I write new factual copy (programme times, inclusions), flag it for the owner to confirm.
 - Keep SEO plumbing intact (title, meta, canonical, hreflang, JSON-LD, sitemap, URLs). Deleted pages need 301 redirects at deploy time.
