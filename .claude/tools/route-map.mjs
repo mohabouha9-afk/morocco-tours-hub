@@ -33,6 +33,25 @@ const TRIPS = {
       { at: [-5.2684, 35.1688], icon: 'city', name: 'Chefchaouen', note: 'Blue medina, Kasbah, Ras El Maa waterfall', side: 'left', sideM: 'left' },
     ],
   },
+  'tangier-chaouen': {
+    title: 'Route map: Tangier to Chefchaouen past Tetouan, through the Rif Mountains',
+    legend: [], compassM: 'topright', chip: { at: 0.75, text: 'About 120 km each way', textM: '120 km each way' }, legs: [{ kind: 'car', road: 'tangier-chaouen' }],
+    stops: [
+      { at: [-5.813, 35.7855], icon: 'hotel', name: 'Tangier', note: 'Pick-up at your hotel or the port', start: true, side: 'left', sideM: 'left' },
+      { at: [-5.3684, 35.5785], icon: 'arch', name: 'Tetouan', note: 'On the way', side: 'right', pinM: true, mini: true },
+      { at: [-5.2684, 35.1688], icon: 'city', name: 'Chefchaouen', note: 'Blue medina, Kasbah, Ras El Maa', side: 'left', sideM: 'left' },
+    ],
+  },
+  'tarifa-tangier': {
+    title: 'Route map: Tangier Ville port and the Kasbah, out to Cap Spartel and the Caves of Hercules, back to the port',
+    legend: [], compassM: 'topright', chip: { at: 0.5, text: '25 min to Cap Spartel', textM: '25 min to the cape' }, legs: [{ kind: 'car', road: 'tarifa-tangier' }, { kind: 'car', road: 'tarifa-tangier-back' }],
+    stops: [
+      { at: [-5.8065, 35.7862], icon: 'port', name: 'Tangier Ville port', note: 'Ferry from Tarifa, meet your guide', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.8130, 35.7888], icon: 'kasbah', name: 'Medina & Kasbah', note: 'Guided walk', side: 'left', sideM: 'left', pinM: true, mini: true },
+      { at: [-5.9240, 35.7915], icon: 'view', name: 'Cap Spartel', note: 'Lighthouse, two seas', side: 'right', sideM: 'right' },
+      { at: [-5.9393, 35.7597], icon: 'camel', name: 'Caves of Hercules', note: 'Atlantic beach, camels', side: 'right', sideM: 'right' },
+    ],
+  },
   'fes-volubilis': {
     title: 'Route map: Fes to the Roman ruins of Volubilis, the holy town of Moulay Idriss and the imperial city of Meknes, then back to Fes',
     legend: [], compassM: 'topright', chip: { at: 0.2, text: 'About 200 km loop', textM: '200 km loop' },
@@ -229,6 +248,17 @@ const TRIPS = {
     stops: [
       { at: [-8.02659, 31.60112], icon: 'plane', name: 'Marrakech Airport', note: 'Name sign in arrivals', start: true, side: 'right', sideM: 'right' },
       { at: [-7.99516, 31.62624], icon: 'kasbah', name: 'The medina', note: 'Walked to your riad door', side: 'left', sideM: 'left' },
+    ],
+  },
+  'casa-mk': {
+    title: 'Route map: private transfer between Casablanca, Mohammed V airport and Marrakech on the A7 motorway, about 240 km',
+    legend: [], tall: true, chip: { at: 0.55, text: 'About 3 h on the A7 motorway', textM: 'About 3 h' }, compassM: 'topleft', pad: [70, 60, 70, 60], padM: [40, 40, 40, 40],
+    legs: [{ kind: 'car', road: 'casa-mk' }, { kind: 'car', road: 'cmn-mk' }],
+    stops: [
+      { at: [-7.6327, 33.6083], icon: 'minaret', name: 'Casablanca', note: 'Hotel, port or station', start: true, side: 'right', sideM: 'right' },
+      { at: [-7.5898, 33.3675], icon: 'plane', name: 'Casablanca airport', note: 'Name sign in arrivals', side: 'right', sideM: 'left' },
+      { at: [-7.6164, 33.001], icon: 'tea', name: 'Settat', note: 'Coffee stop on the way', side: 'left', mini: true, hideM: true },
+      { at: [-8.0089, 31.6295], icon: 'kasbah', name: 'Marrakech', note: 'Riad gate, hotel or airport', side: 'right', sideM: 'right' },
     ],
   },
   quad: {

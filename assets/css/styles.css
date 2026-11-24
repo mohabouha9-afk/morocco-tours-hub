@@ -1222,6 +1222,11 @@ p { margin: 0 0 1em; }
 
 .sidebar { position: sticky; top: 96px; }
 .sidebar__img { width: 100%; height: 150px; object-fit: cover; border-radius: 12px; margin-bottom: 18px; }
+/* Sidebar "Enquire Now": same shape as the site's standard gold button (.hero-btn--gold) */
+.sidebar .btn--gold { gap: 10px; padding: 15px 24px; border-radius: 6px; font-size: .86rem; letter-spacing: .08em; text-transform: uppercase; background: var(--gold); box-shadow: 0 10px 24px rgba(165,118,42,.32); }
+.sidebar .btn--gold:hover { background: var(--gold-deep); transform: translateY(-2px); box-shadow: 0 14px 30px rgba(165,118,42,.42); }
+.sidebar .btn--gold:active { transform: translateY(0) scale(.97); }
+.sidebar .btn--gold:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
 
 /* Quick-facts panel (tour detail) */
 .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-bottom: 40px; }
@@ -2824,3 +2829,16 @@ body.page-swap { background: #fffdf9; }
 /* Three Valleys day trip: portrait photos in wide crops — keep the peaks + lake shore, and the sun, in frame */
 .page-hero__bg img.tv-hero-img { object-position: 50% 66%; }
 .dt-gal img.tv-crop-sun { object-position: 50% 62%; }
+
+/* Casablanca ⇄ Marrakech transfer (tours/casablanca-to-marrakech-transfer.html, build-cmk.js): "Train, Taxi or
+   Private Car?" reuses .dt-acc / .sdh-table; on phones each option becomes a stacked block instead of a sideways scroll */
+@media (max-width: 640px) {
+  .sdh-table.cmk-table { min-width: 0; }
+  .cmk-table thead { display: none; }
+  .cmk-table, .cmk-table tbody, .cmk-table tr, .cmk-table th, .cmk-table td { display: block; width: auto; }
+  .cmk-table tbody tr + tr { border-top: 1px solid var(--line); }
+  .cmk-table tbody th { width: auto; padding-bottom: 2px; border: 0; }
+  .cmk-table tbody td { padding-top: 2px; padding-bottom: 2px; border: 0; }
+  .cmk-table tbody td:nth-of-type(1) { font-weight: 600; color: var(--gold-deep); }
+  .cmk-table tbody td:last-child { padding-bottom: 14px; }
+}
