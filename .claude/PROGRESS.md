@@ -504,3 +504,45 @@ Accommodation rows copied from finished pages (same linked places). Reviews vari
 **Done (2026-11-25, owner picked it) — Homepage H1 now names the offer** (research gap #3): H1 "Private Morocco Tours, Run by Locals" (2 lines on laptop/tablet via `.hero2__l2`, wraps naturally on phones); the brand moved to a small gold uppercase line `.hero2__brand` "Morocco Tours Hub" above it (still in the logo too). Gold script line now "Tailor-made, desert to coast — we take care of everything". Dead `.hero2__hub` span + CSS removed. Title/meta/JSON-LD unchanged. Checked at ~1200, 768 and 375: one h1, no sideways scroll. Rejected options: "Private Morocco & Sahara Desert Tours", "Private Morocco Tours".
 
 **Update (2026-11-25, owner confirmed "no shopping stops") — Homepage "What Sets Us Apart": card 6 "Comfortable Vehicles" replaced by "No Shopping Stops"** ("No commission stops at carpet or spice shops. More time to explore.", new crossed-out shopping-bag icon). Answers the forum worry about commission shop stops (homepage research gap #4). Vehicles are still covered by the Fleet section. Text matches the other cards: 2 lines at 1366/768, 4 on phones, no sideways scroll.
+
+**Update 2026-11-25 — Tours page research.** Studied Intrepid, TourRadar, Agencia Marrocos, Morocco Fabulous Travel and traveller worries; findings and gap list saved in `.claude/research/tours-page-research-2026-11-25.md`. No page changes yet; awaiting owner choice on which additions to build.
+
+**Done 2026-11-25 — Tours page additions (`tours/index.html`).** Added "Our Top Picks" (3-day Marrakech-Merzouga, 3-day Marrakech-Fes, 3-day Fes-Marrakech, 8-day Imperial & Sahara; editorial picks, no sales data), "How Many Days Do You Have?", "Short on Time? Day Trips" (6 picks, `#daytrip`), homepage "How Booking Works" + cancellation line, 7-question FAQ with FAQPage JSON-LD. Removed day trips from the Marrakech city list and the theme section (so the page search no longer finds them). Page-scoped CSS at end of styles.css. Owner to confirm: picks, "no shopping stops pushed", included/extra wording.
+
+**Update 2026-11-25 — Tours page.** Kept the 4 top picks. Added city section "Tours from Ouarzazate, Merzouga & Rabat" (chip "More cities"; those 5 tours were only in theme view); page count 73 -> 79 (hero + search label). Shopping FAQ now matches homepage wording; empty search links to day trips. Header "View all 73 tours" on all pages NOT changed: ask owner.
+
+**Update 2026-11-25 — Tours page.** Gold "Top Pick" ribbon on the 4 best tours (3-day Marrakech-Merzouga, 3-day Marrakech-Fes, 3-day Fes-Marrakech, 8-day Imperial & Sahara) wherever their card appears on tours/index.html (12 cards).
+
+**Update 2026-11-25 — Tours page one-row lists.** Every city and theme list on tours/index.html is one row (5 across on laptop, swipe on tablet/phone). Lists over 5 show their 5 `data-feat` tours plus a "View all N tours" button that opens the rest in place (Show fewer closes; search shows all matches). Errachidia (3), Agadir (5), Ouarzazate/Merzouga/Rabat (5) show everything, no button. Sahara Desert chip 30 -> 31. Owner to confirm: which 5 lead each list.
+
+**Update 2026-11-25 — Tours page view-all links.** Errachidia and Agadir lists got a "View all" link to their city hub; the Ouarzazate/Merzouga/Rabat list links to destinations/merzouga.html ("View all Merzouga tours & activities"). Longer lists keep their in-place "View all N tours" button.
+
+**Update 2026-11-25 — Tours page city rows show every tour.** Replaces "5 per city row": each city list is now one sideways-scrolling row with all its tours (gold arrows + scrollbar on laptop/PC, swipe below), in duration order; "View all" still opens the grid ("Back to one row" closes). Theme lists unchanged (5 + View all).
+
+**Update 2026-11-25 — Tours page rows show 4, not 5.** City and theme rows on `tours/index.html` are now 4 across on laptop (tablet/phone unchanged). Theme lists show 4 `data-feat` tours (5th dropped: Desert = 4-day Casablanca, Grand = 14-day, Coast = 18-day Dakhla, Student = Tangier). Agadir and Ouarzazate/Merzouga/Rabat rows have 5 tours: the 5th is reached with the row arrow. Not committed.
+
+**Update 2026-11-25 — Tours page city row arrows removed.** Owner asked: no prev/next arrows on any city row of `tours/index.html` (rows still swipe/scroll; "View all" unchanged). Day-trip row arrows kept. Do not re-add. Not committed.
+
+**Update 2026-11-25 — Tours page "By days" tab.** Third switch tab on `tours/index.html`: number chips 2-18 and 21, one row per trip length ("N-Day Morocco Tours", "View all" when over 4), `#days-N` links work. Built by the page script from the city cards (no duplicated HTML; a new card in a city list appears automatically). Search works in it. Checked 1366 and 375. Not committed.
+
+**Update 2026-11-25 — Tours page browse guide.** Three short lines above the browse bar ("By city: pick where your trip starts." / theme / days); hero sentence now also names number of days. Checked 1366 and 375. Not committed.
+
+**Update 2026-11-25 — Tours page theme chips in one row.** Owner asked: on laptop the "By theme" chips sit on one line like on phone (they wrapped before). `.page-tours` only, in `styles.css`: no wrap, sideways scroll with a thin scrollbar for mouse users; the active chip still slides into view. City and days rows unchanged. Checked 1366, 768, 375. Not committed.
+
+**Update 2026-11-25 — Theme chips: no numbers, no scrollbar line.** Owner asked. Tours page "By theme" chips lost their counts (city counts stay) and the thin scrollbar under them; one line stays. For mouse users the wheel over the chips scrolls them sideways. Do not re-add the line or theme counts. Checked 1366 and 375. Not committed.
+
+Update (2026-11-25): tours page rows no longer show the grey scrollbar on laptop/tablet (owner); they still swipe sideways, and the "View all" button under each row opens the rest. Not committed.
+
+Update (2026-11-25): tours page "By days": lengths with a single tour (11, 15, 16, 17, 18, 21) now share one row at the end (like the Ouarzazate/Merzouga/Rabat row); their number chips scroll there, slide to that tour and outline it in gold. Built by the page script, so it adjusts itself. Not committed.
+
+Update (2026-11-25): tours page Top Picks now chosen from search volumes and other platforms' review counts (owner; see .claude/research/top-picks-demand-2026-11-25.md): 8-day Imperial & Sahara replaced by the 2-day Zagora tour, ribbons moved with it, lead line updated. Not committed.
+
+Update (2026-11-25): tours page Top Picks: owner chose the 10-day from Casablanca (10-days-morocco-journey.html) instead of the 2-day Zagora; ribbons moved with it. Not committed.
+
+Update (2026-11-25): tours page "By theme": the four one-tour sections (Family, Yoga & Wellness, Photography, Honeymoon) are now one row, `#theme-more` ("Family, Yoga, Photography & Honeymoon Tours"). Their ids (#family, #wellness, #photography, #honeymoon) moved to the cards, so chips and header dropdown links still work and the picked card gets the gold outline (same behaviour as single-tour lengths in "By days"). Checked at 1366 and 375.
+
+Update (2026-11-25, owner: "change the hero to something better"): tours page hero photo is now home-hero.jpg (traveller leading a camel on dunes; until now only the homepage social-share image, on no page hero) instead of merzouga-dune.jpg, with a lighter page-scoped shade (left + header only) and a slightly taller hero on laptop. Text unchanged. og:image unchanged. Checked 1366, 768, 375. Owner to approve.
+
+Update (2026-11-25, owner: arrows like the Day Trips slider on rows that move sideways): tours page browse rows (city, theme, days) and the phone Top Picks row now have the gold round arrows. Next shows only when there is more to the right, previous only after moving; rows that fit or are opened with "View all" show none. Browse rows use `.trow` wrappers built by the page script (not `.htours__track`, so main.js does not double-bind). Checked 1366, 768, 375.
+
+Update (2026-11-25, owner: "remove the arrow from the left side, keep it on the right"): tours page rows (Top Picks and all browse rows) now have one gold arrow, on the right. At the end of a row it turns round and goes back to the start (same as the homepage destinations arrow), so laptop visitors are not stuck. Homepage and other sliders unchanged. Checked 1366 and 375. Not committed.

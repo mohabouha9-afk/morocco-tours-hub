@@ -2935,3 +2935,94 @@ body.page-swap { background: #fffdf9; }
   .hhow__step p { margin: 0; max-width: none; font-size: .8rem; line-height: 1.6; }
   .hhow__actions { margin-top: 24px; flex-direction: column; gap: 12px; }
 }
+
+/* tours page: top picks, days chooser, day-trip row, booking note (reuses .htours / .hhow / .hfaq) */
+.page-tours .tpick { padding-top: 48px; }
+.page-tours .tsec__lead { margin: 10px auto 0; max-width: 60ch; text-align: center; font-size: .9rem; color: var(--muted); }
+.page-tours .tdt { scroll-margin-top: 76px; }
+.page-tours .tdays__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.page-tours .tdays__card { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: 6px; padding: 18px 18px 8px; display: flex; flex-direction: column; }
+.page-tours .tdays__card h3 { margin: 0 0 6px; font-size: 1.1rem; text-transform: uppercase; color: var(--navy); }
+.page-tours .tdays__card p { margin: 0 0 12px; font-size: .84rem; line-height: 1.65; color: var(--muted); }
+.page-tours .tdays__card ul { list-style: none; margin: auto 0 0; padding: 0; }
+.page-tours .tdays__card li { border-top: 1px solid var(--line); }
+.page-tours .tdays__card a { display: block; padding: 10px 0; font-size: .85rem; font-weight: 600; color: var(--gold-deep); }
+.page-tours .tdays__card a:hover { color: var(--navy); text-decoration: underline; }
+.page-tours .tdays__card a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.page-tours .tdays__card a:active { color: var(--gold); }
+.page-tours .thow__cancel { margin: 22px 0 0; text-align: center; font-size: .86rem; color: var(--muted); }
+.page-tours .thow__cancel a { color: var(--gold-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.page-tours .thow__cancel a:hover { color: var(--navy); }
+.page-tours .thow__cancel a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.page-tours .thow__cancel a:active { color: var(--gold); }
+.page-tours .tfaq { padding-bottom: 64px; }
+@media (max-width: 1024px) { .page-tours .tdays__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .page-tours .tpick { padding-top: 32px; }
+  .page-tours .tdays__list { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 80%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .page-tours .tdays__card { scroll-snap-align: start; }
+}
+.page-tours .bsearch__empty a { color: var(--gold-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.page-tours .bsearch__empty a:hover { color: var(--navy); }
+.page-tours .bsearch__empty a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.page-tours .bsearch__empty a:active { color: var(--gold); }
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .page-tours #list-city { gap: 6px; }
+  .page-tours #list-city a { padding-left: 9px; padding-right: 7px; gap: 5px; }
+  .page-tours #list-city a > svg { display: none; }
+}
+/* tours page: one-line guide to the three browse tabs */
+.page-tours .tguide { list-style: none; margin-top: 36px; margin-bottom: 0; padding-top: 0; padding-bottom: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 28px; font-size: .86rem; color: var(--muted); }
+.page-tours .tguide b { color: var(--navy); font-weight: 600; }
+.page-tours .tguide + .tbar { margin-top: 14px; }
+@media (max-width: 640px) { .page-tours .tguide { flex-direction: column; align-items: center; margin-top: 24px; font-size: .8rem; } }
+/* tours page: "By days" chips are just the number */
+.page-tours .tbar__list[data-view="days"] { gap: 6px; }
+.page-tours .tbar__list[data-view="days"] a { justify-content: center; min-width: 34px; padding: 7px 6px; }
+/* tours page: theme chips stay on one scrolling line on laptops too, like on phones (no scrollbar; the mouse wheel scrolls it) */
+@media (min-width: 1025px) {
+  .page-tours .tbar__list[data-view="theme"] { flex: 0 1 auto; flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; }
+  .page-tours .tbar__list[data-view="theme"] a { padding-right: 10px; }
+}
+/* tours page: one row per list (4 across on laptop, swipe below), "View all" opens the rest */
+.page-tours .browse-view .tour-grid::-webkit-scrollbar { display: none; }
+.page-tours .browse-view .htour.is-pick { outline: 3px solid var(--gold); outline-offset: -3px; border-radius: 10px; }
+.page-tours .browse-view .tour-grid { grid-template-columns: repeat(auto-fit, calc((100% - 48px) / 4)); gap: 16px; }
+.page-tours .browse-view .htour[hidden], .page-tours .browse-view[data-view="theme"] .is-capped:not(.is-open) .htour:not([data-feat]) { display: none; }
+@media (min-width: 1101px) {
+  .page-tours .browse-view:not([data-view="theme"]) .section:not(.is-open) .tour-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 4); justify-content: safe center; overflow-x: auto; scroll-snap-type: x proximity; padding: 4px 0 12px; scrollbar-width: none; }
+  .page-tours .browse-view:not([data-view="theme"]) .htour { scroll-snap-align: start; }
+}
+.page-tours .tall { display: none; margin: 20px auto 0; min-width: 220px; padding: 11px 22px; border: 1.5px solid var(--gold); border-radius: 6px; background: transparent; color: var(--gold-deep); font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; }
+.page-tours .is-capped .tall { display: block; }
+.page-tours a.tall { display: block; width: fit-content; text-align: center; }
+.page-tours .tall:hover { background: var(--gold); color: #fff; }
+.page-tours .tall:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.page-tours .tall:active { transform: translateY(1px); }
+@media (max-width: 1100px) {
+  .page-tours .browse-view .tour-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - 32px) / 3); justify-content: safe center; overflow-x: auto; scroll-snap-type: x proximity; padding: 4px 0 12px; scrollbar-width: none; }
+  .page-tours .browse-view .htour { scroll-snap-align: start; }
+  .page-tours .browse-view .is-open .tour-grid { grid-auto-flow: row; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; }
+}
+@media (max-width: 860px) {
+  .page-tours .browse-view .tour-grid { grid-auto-columns: 44%; }
+  .page-tours .browse-view .is-open .tour-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .page-tours .browse-view .tour-grid { grid-auto-columns: 80%; scroll-snap-type: x mandatory; padding: 4px 24px 12px; justify-content: safe start; scrollbar-width: none; }
+  .page-tours .browse-view .is-open .tour-grid { grid-template-columns: minmax(0, 1fr); margin: 0; padding: 4px 0 0; }
+  .page-tours .tall, .page-tours a.tall { width: 100%; }
+}
+/* tours page hero: bright dune photo, shade only behind the text (left) and the header (top) */
+.page-tours .page-hero__bg img { object-position: 50% 68%; }
+.page-tours .page-hero__bg::after { background: linear-gradient(180deg, rgba(9,26,42,.62), rgba(9,26,42,0) 38%), linear-gradient(90deg, rgba(9,26,42,.86), rgba(9,26,42,.66) 34%, rgba(9,26,42,.14) 68%, rgba(9,26,42,.04)); }
+.page-tours .page-hero__inner { text-shadow: 0 1px 14px rgba(9,26,42,.45); }
+@media (min-width: 1025px) { .page-tours .page-hero--lift .page-hero__inner { padding-top: 84px; padding-bottom: 112px; } }
+@media (max-width: 640px) {
+  .page-tours .page-hero__bg img { object-position: 70% 60%; }
+  .page-tours .page-hero__bg::after { background: linear-gradient(180deg, rgba(9,26,42,.7), rgba(9,26,42,.58) 60%, rgba(9,26,42,.2)); }
+}
+/* tours page: arrows on the sideways tour rows */
+.page-tours .trow { position: relative; }
+.page-tours .trow .htours__nav svg { transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+.page-tours .trow .htours__nav.is-back svg { transform: rotate(180deg); }
