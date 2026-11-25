@@ -1617,6 +1617,16 @@ body:is(.home, .site2) { --serif: "Oswald", "Arial Narrow", sans-serif; }
   .tbar__list svg { width: 14px; height: 14px; }
   .tbar ~ .browse-view > .section:first-child { padding-top: 28px; }
 }
+/* tours page, phone (owner): line 1 = By city / By theme switch (full width) + search button,
+   line 2 = the chips of the chosen view; while searching, line 2 folds away and the field covers line 1 */
+@media (max-width: 640px) {
+  .tbar--split .tbar__bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 10px; row-gap: 8px; }
+  .tbar--split .tbar__switch { grid-column: 1; grid-row: 1; }
+  .tbar--split .tbar__switch button { flex: 1; padding: 8px 10px; font-size: .7rem; }
+  .tbar--split .bcat__toggle { grid-column: 2; grid-row: 1; }
+  .tbar--split .tbar__list { grid-column: 1 / -1; grid-row: 2; }
+  .tbar--split.is-search .tbar__list { display: none; }
+}
 
 /* ==========================================================================
    About page (2026-11-12): Our Story (= homepage "Our Agency" panel), Mission & Vision,
