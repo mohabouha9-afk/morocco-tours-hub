@@ -632,3 +632,13 @@ Update (2026-11-25, owner annotation): Sahara page "Which Desert" table header r
 **Update (2026-11-26):** "Which Desert Fits You?" row label "Days" -> "Minimum days" (owner); values unchanged. Not committed.
 
 **Update (2026-11-26):** Phone view of "Which Desert Fits You?": added the missing vertical line after the fixed label column (CSS, scoped). Not committed.
+
+**Update (2026-11-26, Marrakech desert page):** Removed "Desert Trips for Families, Couples & Wellness"; its 3 tours are now in "All Desert Tours from Marrakech" (15 cards: family after the 6-day, honeymoon and yoga last) with a navy Family / Honeymoon / Yoga label (.htour__tag); added a "9 days" filter. Not committed.
+
+**Update (2026-11-26):** Marrakech desert page tour filter: added an "All" days button, shown on phones only (laptops already have "All" in the trip-type switch). Not committed.
+
+**Update (2026-11-26):** Marrakech desert page, phones only: section titles (and gold rule) and their paragraphs aligned left, via opt-in body.m-left. Other pages unchanged. Not committed.
+
+**Update (2026-11-26):** Owner: on phones titles stay CENTRED, paragraphs under them align left (body.m-left, Marrakech desert page only; replaces the left-title version). Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page days table is now Merzouga only: title "How Many Days to Merzouga?", 2-day row links just "Back to Marrakech" (Zagora link and note removed), Agafay line under the table removed. Not committed.

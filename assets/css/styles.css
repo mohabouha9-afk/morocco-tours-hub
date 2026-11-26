@@ -2597,6 +2597,8 @@ body.page-swap { background: #fffdf9; }
 .htour__way { position: absolute; left: 12px; top: 12px; z-index: 1; padding: 5px 9px; border-radius: 6px; background: rgba(255,253,249,.95); color: var(--navy);
   font-family: var(--serif); font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; line-height: 1.2; }
 .htour__way--one { background: var(--gold); color: #fff; }
+/* theme label (Family, Honeymoon, Yoga) on the right of the photo; same shape as .htour__way */
+.htour__tag { position: absolute; right: 12px; top: 12px; z-index: 1; padding: 5px 9px; border-radius: 6px; background: var(--navy); color: #fff; font-family: var(--serif); font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; line-height: 1.2; }
 .sdh-table tbody th small { display: block; margin-top: 2px; font-size: .78rem; font-weight: 400; color: var(--muted); }
 .sdh-table td { color: var(--ink); }
 .sdh-note { margin: 14px 0 0; font-size: .88rem; color: var(--muted); text-align: center; }
@@ -2667,6 +2669,8 @@ body.page-swap { background: #fffdf9; }
 .sdm-bar .tbar__list button:active { transform: scale(.97); }
 .sdm-bar .tbar__list button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .sdm-bar .tbar__list button:disabled { opacity: .35; border-color: var(--line); color: var(--ink); cursor: default; transform: none; }
+.sdm-bar__all { display: none; } /* "All" days: phones only, laptops already have "All" in the trip-type switch */
+@media (max-width: 640px) { .sdm-bar .sdm-bar__all { display: block; } }
 @media (max-width: 640px) {
   .sdm-bar .tbar__bar { flex-direction: column; align-items: stretch; padding-right: var(--sdm-pad, 16px); }
   .sdm-bar .tbar__switch { display: none; } /* phones: days only (owner); the card badges show round trip or one way */
@@ -3091,3 +3095,8 @@ body.page-swap { background: #fffdf9; }
 
 /* Sahara page reviews: three equal cards in one row (phone keeps the swipe row) */
 @media (min-width: 621px) { .hrev--three .hrev__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; overflow: visible; margin: 0; padding: 0; } }
+
+/* Phones: titles stay centred, the paragraphs under them align left (owner). Opt-in with body.m-left. */
+@media (max-width: 640px) {
+  .m-left main .tsec__lead, .m-left main .sdm-days__lead, .m-left main .sdh-note, .m-left main .hcta__sub { text-align: left; margin-left: 0; margin-right: 0; }
+}
