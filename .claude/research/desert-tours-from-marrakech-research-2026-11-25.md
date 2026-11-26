@@ -85,3 +85,11 @@ Prices on cards, review counts we do not have, "best price guarantee", licence n
 
 ## Owner to confirm
 Which 3 are really most booked; link the shared group / student tours here or stay private-only; return time (~19:00, from the 3-day tour page) as a general line; alcohol at camps; minimum age for camel / quad; licence number; real guest photos and desert reviews.
+
+## Number of days: what people ask (added 2026-11-26; Tripadvisor forum threads, Reddit snippets, competitor FAQs)
+1. Is all that driving worth it for so little time at the dunes? ("an hour or 2") — strongest worry.
+2. Is 3 days enough, or is the 4th day worth it? Forum regulars push 4 days to cut drives.
+3. Can Merzouga be done in 2 days? Possible but very demanding.
+4. Do I get two desert nights on 3 days? No. Travellers wanting a full desert day need a 4-day plan that includes it.
+5. Only a short holiday: Zagora or Merzouga?
+6. Round trip or end in Fes (3-day Fes drop-off is often asked).

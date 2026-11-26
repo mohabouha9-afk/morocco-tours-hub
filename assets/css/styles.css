@@ -2650,6 +2650,53 @@ body.page-swap { background: #fffdf9; }
   .sdm-route__stop h3 { align-self: end; }
   .sdm-route__stop p { align-self: start; }
 }
+/* Marrakech desert page "Where to start": 3 picks stay one row from tablet up (phones keep the swipe row) */
+@media (min-width: 641px) { .sdm-pick .htours__list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Marrakech desert page: the intro is centred on laptops like the sections around it */
+@media (min-width: 1025px) {
+  .sdm-intro .cstart__intro { text-align: center; }
+  .sdm-intro .cstart__title::after, .sdm-intro .cstart__intro p { margin-left: auto; margin-right: auto; }
+}
+/* Marrakech desert page "All tours": the tours-page browse bar (.tbar) with trip type + number of days buttons */
+.sdm-all .head-row { padding-top: 32px; margin-bottom: 0; }
+.sdm-all .sdm-bar { margin-top: 16px; }
+.sdm-all .sdm-list { padding-top: 28px; }
+.sdm-bar .tbar__list button { padding: 7px 12px; background: #fff; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); font: inherit; font-size: .82rem; white-space: nowrap; cursor: pointer; transition: opacity .2s ease, transform .2s ease; }
+.sdm-bar .tbar__list button:hover { border-color: var(--gold); color: var(--gold-deep); }
+.sdm-bar .tbar__list button.is-on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.sdm-bar .tbar__list button:active { transform: scale(.97); }
+.sdm-bar .tbar__list button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.sdm-bar .tbar__list button:disabled { opacity: .35; border-color: var(--line); color: var(--ink); cursor: default; transform: none; }
+@media (max-width: 640px) {
+  .sdm-bar .tbar__bar { flex-direction: column; align-items: stretch; padding-right: var(--sdm-pad, 16px); }
+  .sdm-bar .tbar__switch { display: none; } /* phones: days only (owner); the card badges show round trip or one way */
+  .sdm-bar .tbar__list { flex: none; }
+}
+/* Marrakech desert page "How Many Days": short answer above the table */
+.sdm-days__lead { max-width: 68ch; margin: 0 auto 20px; text-align: center; font-size: .95rem; line-height: 1.8; color: var(--ink); }
+/* ...and the 2 to 5 day comparison: large day number, "+" = what the extra day adds, 3 days marked; swipes sideways on phones */
+.sdm-cmp td, .sdm-cmp tbody th { vertical-align: middle; }
+.sdm-cmp tbody th { width: 15%; font-weight: 500; color: var(--muted); }
+.sdm-cmp tbody th b { margin-right: 3px; font-family: var(--serif); font-size: 2.1rem; font-weight: 700; line-height: 1; color: var(--navy); }
+.sdm-cmp tbody th em { display: table; margin-top: 6px; padding: 3px 8px; border-radius: 5px; background: var(--gold); color: #fff; font-size: .72rem; font-style: normal; font-weight: 600; white-space: nowrap; }
+.sdm-cmp__first { background: var(--cream); }
+.sdm-cmp .sdm-cmp__get { width: 31%; font-weight: 600; }
+.sdm-cmp__get span { color: var(--gold-deep); font-size: 1.15em; font-weight: 700; }
+.sdm-cmp small { display: block; font-size: .76rem; color: var(--muted); }
+.sdm-cmp__go a { display: table; padding: 3px 0; font-weight: 500; }
+/* phones: the full table at a comfortable width, swiped sideways; the Days column stays in place */
+.sdm-swipe { display: none; }
+@media (max-width: 640px) {
+  .sdm-swipe { display: block; margin: 0 0 8px; text-align: right; font-size: .78rem; color: var(--muted); }
+  .sdh-table.sdm-cmp { min-width: 780px; font-size: .86rem; }
+  .sdm-cmp th, .sdm-cmp td { padding: 13px 12px; }
+  .sdm-cmp tbody th, .sdm-cmp thead th:first-child { position: sticky; left: 0; z-index: 1; width: 86px; min-width: 86px; box-shadow: 1px 0 0 var(--line); }
+  .sdm-cmp thead th:first-child { background: var(--navy); }
+  .sdm-cmp tbody th { background: #fff; }
+  .sdm-cmp .sdm-cmp__first th { background: var(--cream); }
+  .sdm-cmp tbody th em { padding: 4px 5px; font-size: .66rem; line-height: 1.3; white-space: normal; text-align: center; }
+  .sdm-cmp .sdm-cmp__get { width: 220px; }
+}
 /* Merzouga hub (Page 4 of the desert plan): "Getting to Merzouga" = 3 cards with a link to each departure hub;
    note under "Desert Tours to Merzouga" links the hubs */
 .mz-getting .happart-card p .sdh-link { display: table; margin-top: 8px; }

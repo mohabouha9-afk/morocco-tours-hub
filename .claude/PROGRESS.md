@@ -588,3 +588,29 @@ Update (2026-11-25, owner annotation): Sahara page "Which Desert" table header r
 **Handoff (2026-11-25) — next: rebuild desert-tours-from-marrakech.html.** Research done and saved in `.claude/research/desert-tours-from-marrakech-research-2026-11-25.md` (demand, competitors, traveller worries, proposed page order, "owner to confirm" list). The page itself is not rebuilt yet; the owner still has to approve the order, then build section by section (read `.claude/OWNER-PROFILE.md` + that research file). Sahara and Tours page work of 2026-11-25 committed with this note.
 
 **Update (2026-11-26) — Marrakech desert page rebuild started (step 1, hero):** order from the 11-25 research accepted section by section ("go with number 1"); trust bar "Always private" replaced by "No shopping stops" (same item as the Sahara page). Hero photo, h1 and intro line unchanged. Next: step 2, two-line intro. Committed.
+
+**Done (2026-11-26) — Marrakech desert page step 3, "Where to start":** new `.sdm-pick` section after the intro with 3 Top Pick cards (3-day Merzouga, 3-day to Fes, 4-day Merzouga; chosen from search demand, owner to confirm they are most booked); one row from tablet up, swipe on phones. Intro paragraphs stay as they are until the SEO/content phase. Next: step 4, move the "2, 3 or 4 days?" table up. Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page intro "From Marrakech to the Sahara" is centred on laptop (1025px+) like the other sections; phone and tablet unchanged, text unchanged. Not committed.
+
+**Done (2026-11-26, owner: table must serve intent, not longer or complex) — Marrakech desert page step 4:** "How Many Days from Marrakech?" rebuilt and moved up under "Where to start". Grouped by 2 / 3 / 4 days (nights + what that length is for), two options each, columns Choose it if / In the desert / Longest drive; key message: extra days mostly ease driving, only 4-day-to-Fes adds desert time (camp night + full day + 2nd night). Note under it: no one-day Sahara (Agafay), Erg Chigaga link. Drive times taken from the tour pages (2-day Zagora corrected from ~6 h to ~7 h). Stacked cards on phone (`.sdm-nights`). Not committed.
+
+**Update (2026-11-26, owner: grouped table too complex, go back to old version and optimize by intent):** days table is the old 4-column layout again (still under "Where to start"; do not propose the grouped duration table again). Changes: heading "How Many Days from Marrakech?", two-line answer above (3 days enough, 4 more comfortable; dunes sunset to sunrise on every tour), 3-day-to-Fes row added, small subtitles removed, Zagora drive ~7 h, note under it (full desert day = 4 days to Fes; one day = Agafay). Research on day-count questions added to the page research file. FAQ still says Zagora ~6 h (fix at FAQ step). Not committed.
+
+**Update 2026-11-26 (Marrakech desert page, "How Many Days"):** table is now 2 to 5 days (Days, What you get with "+" per extra day, Longest drive, Pick it if, See the tour); 3 days marked "Good first choice"; 4 days points only to the full-day Merzouga tour ending in Fes (owner: no 4-day Draa round-trip row, show real differences); never call Marrakech "home". CSS `.sdm-cmp` (cards on phones). Not committed.
+
+**Update 2026-11-26 (Marrakech desert page order):** "How Many Days from Marrakech?" now sits below "The Road to Merzouga" (before the round-trip list). Not committed.
+
+**Update (2026-11-26):** desert-tours-from-marrakech.html "How Many Days": new phone layout (≤640px, CSS only, `.sdm-cmp`): one card per trip length with navy day bar, gold border on 3 days, labelled facts, tour links as tap buttons. Copy, tablet and laptop unchanged. Not committed.
+
+**Update (2026-11-26):** desert-tours-from-marrakech.html "How Many Days" phone view (≤640px) is now a compact table (Days, What you get with tour links under it, Longest drive; "Pick it if" hidden on phones), replacing the cards (owner chose it; height about 1,110px to 565px). Laptop and tablet unchanged. Not committed.
+
+**Update (2026-11-26):** "How Many Days" on phones (owner: do not condense): replaced the compact table with the full 5-column table that swipes sideways, Days column stays in place, "Swipe the table to see more" line above (.sdm-swipe). Laptop unchanged. Not committed.
+
+**Update (2026-11-26, Marrakech desert page, step 5):** "Round Trips" and "One Way to Fes" merged into one "All Desert Tours from Marrakech" list (12 cards, 3 days first) with the tours-page sticky bar: All / Round trip / One way + days (Any, 2 to 7); lengths with no tour for the chosen type are greyed. No search box; cards unchanged (desert and longest drive not added yet). Family/honeymoon/yoga section kept separate. Checked 1366/768/375. Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page "All tours" on phones: All / Round trip / One way switch hidden, days chips only; card badges (Round trip / Ends in Fes) kept. Laptop/tablet unchanged. Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page "All tours": the "12 tours" count line under the heading removed (all screen sizes). Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page "All tours": "Any length" button removed (all screen sizes); no day selected shows every tour, tapping the selected day again clears it. Not committed.
