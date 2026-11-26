@@ -2697,6 +2697,20 @@ body.page-swap { background: #fffdf9; }
   .sdm-cmp tbody th em { padding: 4px 5px; font-size: .66rem; line-height: 1.3; white-space: normal; text-align: center; }
   .sdm-cmp .sdm-cmp__get { width: 220px; }
 }
+/* Marrakech desert page "Which Desert Fits You?": deserts across, 5 facts down; reuses .sdm-cmp (swipe on phones) */
+.sdm-fit__table { table-layout: fixed; }
+.sdm-fit__table th, .sdm-fit__table td { vertical-align: middle; }
+.sdm-fit__table thead th:first-child, .sdm-fit__table tbody th { width: 14%; }
+.sdm-fit__table thead a { color: #fff; }
+.sdm-fit__table thead a:hover { color: var(--gold-light); }
+/* only the Merzouga column is highlighted, no row highlight (owner) */
+.sdm-fit__table tbody td:nth-child(2) { background: var(--cream); }
+@media (max-width: 640px) {
+  .sdh-table.sdm-fit__table { min-width: 640px; }
+  .sdm-fit__table thead th:first-child, .sdm-fit__table tbody th { width: 86px; }
+  /* line after the fixed label column: drawn inside the cell, the cream Merzouga cell hid the shadow */
+  .sdm-fit__table thead th:first-child::after, .sdm-fit__table tbody th::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 1px; background: var(--line); }
+}
 /* Merzouga hub (Page 4 of the desert plan): "Getting to Merzouga" = 3 cards with a link to each departure hub;
    note under "Desert Tours to Merzouga" links the hubs */
 .mz-getting .happart-card p .sdh-link { display: table; margin-top: 8px; }

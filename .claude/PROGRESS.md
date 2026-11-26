@@ -614,3 +614,21 @@ Update (2026-11-25, owner annotation): Sahara page "Which Desert" table header r
 **Update (2026-11-26, owner):** Marrakech desert page "All tours": the "12 tours" count line under the heading removed (all screen sizes). Not committed.
 
 **Update (2026-11-26, owner):** Marrakech desert page "All tours": "Any length" button removed (all screen sizes); no day selected shows every tour, tapping the selected day again clears it. Not committed.
+
+**Update (2026-11-26, Marrakech desert page, step 6):** road strip kept; two lines added under it (`.sdm-route__back`): round trips are back late afternoon or evening (~19:00 on the 3-day Merzouga), next-day flight safest, send flight time for a same-evening flight (wording: owner to confirm). Owner: all desert tours in one row on mobile only (already so: one swipe row of 12 at 375; laptop/tablet grid unchanged). Not committed. Next: step 7, "Think twice".
+
+**Update (2026-11-26, owner):** Marrakech desert page road strip: removed the "Coming back", "Flying home?" and route-guide lines under it (and the `.sdm-route__back` CSS); do not re-add them. The route guide stays linked in the guides cards lower down. Not committed. Next: step 7, "Think twice".
+
+**Done (2026-11-26):** Added "Which Desert Fits You?" to desert-tours-from-marrakech.html (before "The Road to Merzouga"): owner picked the first 5-row version (Choose it if, Dunes, Drive, Days, How quiet), no Think twice / road / button rows; desert names link to a tour (Agafay to its hub). Chigaga drive corrected to about 9-10 h there and on sahara-desert-tours.html, destinations/erg-chigaga-zagora.html, destinations/marrakech.html. Owner to confirm: Zagora drive figure and the "How quiet" wording. Not committed.
+
+**Update (2026-11-26):** "Which Desert Fits You?" - Merzouga column highlighted (gold header, warmer cells, gold edges), CSS only, scoped to .sdm-fit__table. Not committed.
+
+**Update (2026-11-26):** Owner rejected the gold-header/gold-edge column highlight; Merzouga column now uses the same cream + semibold as the "Choose it if" row. Not committed.
+
+**Update (2026-11-26):** Removed the "Choose it if" row highlight; only the Merzouga column is highlighted. Not committed.
+
+**Update (2026-11-26):** Merzouga column: cream background only, normal font weight. Not committed.
+
+**Update (2026-11-26):** "Which Desert Fits You?" row label "Days" -> "Minimum days" (owner); values unchanged. Not committed.
+
+**Update (2026-11-26):** Phone view of "Which Desert Fits You?": added the missing vertical line after the fixed label column (CSS, scoped). Not committed.
