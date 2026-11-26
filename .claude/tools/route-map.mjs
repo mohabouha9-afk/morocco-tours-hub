@@ -19,6 +19,18 @@ const ROUTES = path.join(DIR, 'routes');
 const M = [-8.0089, 31.6295];
 const PICKUP = { at: M, icon: 'hotel', name: 'Marrakech', note: 'Pick-up at your hotel', start: true, side: 'right' };
 const TRIPS = {
+  'merzouga-hub': {
+    title: 'Route map: the three ways to Merzouga, from Marrakech over the High Atlas, from Fes through the Ziz Valley and from Errachidia airport',
+    legend: [], tall: true, compassM: 'topright', chip: { at: 0.45, text: 'Paved all the way' },
+    pad: [90, 50, 110, 40], padM: [60, 30, 30, 70],
+    legs: [{ kind: 'car', road: 'mz2-d1' }, { kind: 'car', road: 'fm4-d1' }, { kind: 'car', road: 'er3-d1' }],
+    stops: [
+      { at: M, icon: 'minaret', name: 'Marrakech', note: '9–10 h', start: true, side: 'bottom', sideM: 'top' },
+      { at: [-5.0, 34.02], icon: 'arch', name: 'Fes', note: 'About 8 h', start: true, side: 'left' },
+      { at: [-4.40, 31.94], icon: 'plane', name: 'Errachidia', note: 'Airport, about 2 h', start: true, side: 'right', sideM: 'left' },
+      { at: [-4.01269, 31.07816], icon: 'tent', name: 'Merzouga', note: 'Erg Chebbi dunes', side: 'bottom' },
+    ],
+  },
   agafay: {
     title: 'Route map: Marrakech to the Agafay desert camp',
     legend: [], compassM: 'topleft', chip: { at: 0.45, text: '40 min drive' }, legs: [{ kind: 'car', road: 'agafay' }],

@@ -696,3 +696,31 @@ Update (2026-11-25, owner annotation): Sahara page "Which Desert" table header r
 **Update (2026-11-26, Fes + Marrakech desert pages):** owner: ribbon on the three picks reads "Popular" instead of "Top Pick" (these two pages only). Not committed.
 
 **Update (2026-11-26, Marrakech desert page):** owner: the three popular tours sit alone in the first row on laptop (`.sdm-grid--top3`, others 4 per row; off while a filter is on). Fes page unchanged. Not committed.
+
+**Research (2026-11-26, Merzouga destination page):** done, page NOT changed; plan and fact problems in `.claude/research/merzouga-hub-research-2026-11-26.md`; awaiting owner choice.
+
+**Update 2026-11-26 (Merzouga hub, section 1):** destinations/merzouga.html hero: script line "Your guide to the Erg Chebbi dunes", shorter intro, and the 4 booking promises replaced by 4 quick facts (2 nights; 9-10 h Marrakech / 8 h Fes; Mar-May, Sep-Nov; free bus-station pick-up and parking, owner confirmed). Drive times and months match the page FAQ. Checked 1366/768/375. Not committed. Next: section 2 "How are you coming?"; jump links, title tag and meta unchanged; camp location still to confirm.
+
+**Update 2026-11-26 (Merzouga hub, section 2):** added "How Are You Coming?" under the quick facts (3 cards: I Need Transport / Coming by Car or Bus / Already on a Tour), scoped .mz-doors CSS, swipe row on phones. Checked 1366/768/375. Owner to confirm: adding rides for travellers already on a tour (copy says "send us your dates and camp name to check what fits"). Not committed. Next: section 3 "How long".
+
+**Update (2026-11-26) — Merzouga hub section 3:** "How Long Should You Stay?" (.mz-long) added above the activity tabs: 1 / 2 (We recommend) / 3 nights as day-by-day timelines with a note and links, one row on laptop and tablet, swipe on phones; replaces "Combine Them" (+ its CSS). Not committed. Owner to confirm: second night in a hotel can be arranged; the 3-night day plan.
+
+**Update (2026-11-26, owner: "remove the previous section"):** Merzouga hub: "How Long Should You Stay?" (.mz-long, 1 / 2 / 3 night timelines) removed with its CSS — rejected, do not propose again. "Combine Them" was not restored (ask owner).
+
+**Update (2026-11-26) — Merzouga hub section 4:** "Things to Do in Merzouga" now has 3 groups (Sleep in the Dunes / Ride the Dunes / Discover the Desert, 3 cards each, card titles h4, tab links reordered) and a "Compare the Activities" table (.mz-cmp: how long, when, pick it if, good to know). Not committed. Owner to confirm the table wording.
+
+**Update (2026-11-26, owner: "keep the old version"):** Merzouga hub section 4 undone — activities back to one 9-card list (old order, h3 titles, old tab order); the 3 groups and "Compare the Activities" table (+ .mz-group / .mz-cmp CSS) rejected, do not propose again.
+
+**Update (2026-11-26) — Merzouga hub "Getting to Merzouga" fix:** removed the Erg Chigaga off-road line and the MAD fare; bus = Supratours only, Marrakech by day (~12 h) / Fes overnight, no exact times (sources disagree, supratours.ma not checked); flight "daily" -> "on several days a week"; same bus wording in the FAQ + JSON-LD (CTM dropped). Not committed. Owner to confirm: bus times, free pick-up also for the early-morning Fes bus.
+
+**Update (2026-11-26, owner: map + three ways) — Merzouga hub "Getting to Merzouga":** now a Leaflet route map (route-map.mjs key merzouga-hub, saved roads mz2-d1 / fm4-d1 / er3-d1) with 3 cards under it (From Marrakech / From Fes / From Errachidia, .mz-ways, swipe on phones) and one note line (paved road, free bus pick-up, Ouarzazate / Casablanca transfers, bus times change). Replaces the By Car / Bus / Air / Transfer list. Not committed.
+
+**Update (2026-11-26, owner: "above FAQ") — Merzouga hub:** "Getting to Merzouga" moved from below the FAQ to just above it (markup order only). Not committed.
+
+**Update (2026-11-26, owner: "remove that filter of activities") — Merzouga hub:** removed the activity jump-link chip bar (.tbar--dt) above "Things to Do in Merzouga"; shared .tbar CSS kept for other pages. Not committed.
+
+**Update (2026-11-26, owner: "one table, skip the worry column") — Merzouga hub:** added "Merzouga Month by Month" table (#month-by-month, .mz-months, Months / What it's like / What to do, 4 seasons) between the activities and the desert tours. No new temperature figures (sources disagree), no camp heating/pool promises (owner has not answered). Not committed.
+
+**Update (2026-11-26, owner: "above why to book with us") — Merzouga hub:** "Getting to Merzouga" moved above "Why Book Merzouga With Us" (markup order only). Not committed.
+
+**Update (2026-11-26, owner: "view more desert tours" link) — Merzouga hub:** "Desert Tours to Merzouga" now links to sahara-desert-tours.html: homepage corner link above the 4th card (bold, underlined on laptop) and an end arrow slot in the phone swipe row. Not committed.

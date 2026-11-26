@@ -2585,8 +2585,25 @@ body.page-swap { background: #fffdf9; }
 
 /* Merzouga hub (destinations/merzouga.html): the 6 activity cards sit 3 per row on laptops (4 + 2 left a gap) */
 @media (min-width: 1101px) { .htours__list.mz-grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-/* Merzouga hub: "Combine Them" = 4 cards, one row on laptops (2x2 on tablets and phones via the happart rules) */
-@media (min-width: 1101px) { .mz-combos .happart__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+/* Merzouga hub: "Getting to Merzouga" = route map, then Marrakech / Fes / Errachidia cards (swipe on phones) */
+.mz-ways .rmap { margin-bottom: 14px; }
+.mz-ways .happart-card { display: flex; flex-direction: column; align-items: flex-start; }
+.mz-ways .happart-card p + p { margin-top: 6px; }
+.mz-ways .happart-card p.mz-way__fact { font-weight: 600; color: var(--ink); }
+.mz-ways__note { margin: 14px 0 0; font-size: .84rem; line-height: 1.65; color: var(--muted); }
+@media (min-width: 761px) { .mz-ways .happart__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; } }
+@media (max-width: 760px) {
+  .mz-ways .happart__grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 2px; padding-bottom: 6px; gap: 10px; }
+  .mz-ways .happart__grid > li { flex: 0 0 80%; scroll-snap-align: start; }
+}
+/* Merzouga hub: "How Are You Coming?" = 3 choices in one row, sideways swipe on phones */
+.mz-doors .happart-card { display: flex; flex-direction: column; align-items: flex-start; }
+.mz-doors__links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: auto !important; padding-top: 12px; }
+@media (min-width: 641px) { .mz-doors .happart__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; } }
+@media (max-width: 640px) {
+  .mz-doors .happart__grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 2px; padding-bottom: 6px; }
+  .mz-doors .happart__grid > li { flex: 0 0 78%; scroll-snap-align: start; }
+}
 
 /* ==========================================================================
    Sahara desert hub (sahara-desert-tours.html, 2026-11-18): filter bar over all 27 desert tours
@@ -3168,3 +3185,13 @@ body.page-swap { background: #fffdf9; }
   .sdm-grid--top3:not(:has(> li[hidden])) > li { grid-column: span 3; }
   .sdm-grid--top3:not(:has(> li[hidden])) > li:nth-child(-n+3) { grid-column: span 4; }
 }
+
+/* Merzouga hub: month-by-month table, three columns that fit a phone without sideways scrolling */
+.sdh-table.mz-months { min-width: 0; }
+@media (max-width: 600px) {
+  .sdh-table.mz-months { table-layout: fixed; font-size: .8rem; }
+  .sdh-table.mz-months th, .sdh-table.mz-months td { padding: 10px 8px; white-space: normal; vertical-align: top; overflow-wrap: break-word; }
+}
+
+/* Merzouga hub, desert tours: phone swipe row ends with the "View more desert tours" slot (4 cards + link) */
+@media (max-width: 640px) { #desert-tours .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(4, 80%) 34%; } }
