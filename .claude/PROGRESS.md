@@ -642,3 +642,45 @@ Update (2026-11-25, owner annotation): Sahara page "Which Desert" table header r
 **Update (2026-11-26):** Owner: on phones titles stay CENTRED, paragraphs under them align left (body.m-left, Marrakech desert page only; replaces the left-title version). Not committed.
 
 **Update (2026-11-26, owner):** Marrakech desert page days table is now Merzouga only: title "How Many Days to Merzouga?", 2-day row links just "Back to Marrakech" (Zagora link and note removed), Agafay line under the table removed. Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page: Merzouga minimum days now "3 (2 is rushed)"; FAQ "How far is the Sahara" (page + FAQPage JSON-LD) says Zagora about 7 hours. Other pages still say about 6 or 6 to 7 h for Zagora. Not committed.
+
+**Done (2026-11-26):** Marrakech desert page: new "Included on Every Tour" section after the tour list (.sdm-inc): lead line + one card with six icon features (owner wording). No "not included" line. Owner to confirm: sunset camel ride and daily breakfast on all 15 tours (yoga retreat included). Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page: reduced the gap between the tour list and "Included on Every Tour" (list bottom padding 0). Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page, laptop only: all main sections now share a 35px side space (max 1400px content), like moroccofabuloustravel.com; opt-in body.l-edge. Header, footer and other pages unchanged. Not committed.
+
+**Update (2026-11-26, owner: "you made it wider"):** l-edge now boxes Marrakech desert page content to 1120px centred (35px minimum side space), matching the reference. Not committed.
+
+**Update (2026-11-26, owner):** Marrakech desert page laptop: intro paragraphs now fill the 1120px content width, left-aligned (title stays centred); other lead lines widened, still centred. Not committed.
+
+**Update (2026-11-26, owner):** Laptop boxed width (1120px, body.l-edge, intro text full width) now on all 91 pages without a booking form (home, hubs, destinations, blog, about/faq/reviews etc.); tour/day-trip pages and contact.html unchanged. Checked all 91 at 1366: same edges, no sideways scroll. Home "fleet" strip keeps its own width. Not committed.
+
+**Update (2026-11-26, owner: filter in one row as before) — sahara-desert-tours.html filter bar:** All / Round trip / One way + the 8 city chips + search are one row again on laptops (they wrapped above 1500px and around 1100px since the 1120px section box). Compact chips (no pin icon) at every width 1025px+; chips scroll sideways if too narrow. Phone layout unchanged. CSS only, styles.css. Not committed.
+
+**Update (2026-11-26, owner: "move 7 to be number 4"):** Marrakech desert page: "All Desert Tours from Marrakech" now sits right after "Where to Start", before "Which Desert Fits You?", road and days. Days intro now says "On every tour on this page" (was "below"). Checked 1366, 375. Not committed.
+
+**Update (2026-11-26, owner: "move 6 to be 5"):** Marrakech desert page: "The Road to Merzouga" now sits above "Which Desert Fits You?" (after the tour list). Not committed.
+
+**Update (2026-11-26, owner: "move 7 to 6"):** Marrakech desert page order is now: tour list, Road to Merzouga, How Many Days, Which Desert Fits You, Included. Not committed.
+
+**Update (2026-11-26, Fes desert page, step 1):** order from `research/desert-tours-from-fes-research-2026-11-26.md` accepted; trust bar "Always private" replaced by "No shopping stops" (same item as the Marrakech page). Next: step 2, intro (text unchanged). Not committed.
+
+**Update (2026-11-26, Fes desert page, step 2):** intro text unchanged; added body.m-left (phones: titles centred, paragraphs left, as on Marrakech). Next: step 3, new "Where to Start" (3-day to Marrakech, 3-day back to Fes, 2-day back to Fes; owner to confirm). Not committed.
+
+**Done (2026-11-26, Fes desert page, step 3):** new "Where to Start" (`.sdm-pick`) after the intro: 3-day Fes to Marrakech, 3-day Fes to Merzouga, 2-day Fes to Merzouga (chosen from search suggestions, owner to confirm they are most booked). Checked 1366/768/375. Next: step 4, one filtered list "All Desert Tours from Fes" replacing the two lists. Not committed.
+
+**Done (2026-11-26, Fes desert page, step 4):** "Round Trips Back to Fes" and "One Way to Marrakech" merged into one "All Desert Tours from Fes" list (8 cards, 3 days first) above the road strip, with the Marrakech filter bar and script (All / Round trip / One way + 2, 3, 4, 5, 10 days; phones: days only, one swipe row). Count lines removed; card text unchanged. Filters checked at 1366, layout at 768/375. Next: step 5 (road strip, keep as is), step 6 "How Many Days to Merzouga?". Not committed.
+
+**Done (2026-11-26, Fes desert page, step 6):** "Which Fes Desert Tour Fits?" replaced by "How Many Days to Merzouga?" (Marrakech `.sdm-cmp` format, 2 to 5 days, Back to Fes / End in Marrakech links; the 2-day Fes to Marrakech tour is now in it; 10-day left to the list). Drive hours taken from the tour pages. 3 days marked "Good first choice" (owner to confirm). Checked 1366/768/375. Next: step 7, "Included on Every Tour". Not committed.
+
+**Done (2026-11-26, Fes desert page, step 7):** added "Included on Every Tour" (`.sdm-inc`, Marrakech pattern) after the days table: private vehicle, English driver-guide, Fes pick-up, desert camp night, camel ride and sandboarding, breakfasts and dinners (checked against the 8 tour pages). Steps 1 to 7 done; step 8 keeps the bottom blocks as they are. Not committed.
+
+**Update (2026-11-26, Fes desert page, road strip):** on phones/tablets (up to 900px) the line now runs down the middle and stop details alternate left/right (`.sdm-route--zig`, Fes page only; laptop row unchanged; Marrakech not changed). Not committed.
+
+**Update (2026-11-26, Fes desert page, road strip):** owner did not keep the zigzag; back to the one-sided vertical road, moved 10px left on phones/tablets (`.sdm-route--left`, Fes only). Not committed.
+
+**Update (2026-11-26, Fes desert page, days cards):** the "How Many Days to Merzouga?" table replaced by three cards, 2 / 3 / 4 days (`.sdm-daycards`: highlights, suits you if, what is different, longest drive, Back to Fes / End in Marrakech), 3 days marked "Good first choice"; 5-day tour kept as one line below. Checked 1366/768/375. Not committed.
+
+**Update (2026-11-26, Fes desert page, days cards):** owner found the cards too big; made compact (row 920px max, smaller type and padding, fact labels inline). Not committed.

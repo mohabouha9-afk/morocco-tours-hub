@@ -2651,6 +2651,8 @@ body.page-swap { background: #fffdf9; }
   .sdm-route__ic { grid-row: span 2; margin: 0; }
   .sdm-route__stop h3 { align-self: end; }
   .sdm-route__stop p { align-self: start; }
+  /* --left (Fes page, owner): the vertical road sits a little further left */
+  .sdm-route--left .sdm-route__list { position: relative; left: -10px; }
 }
 /* Marrakech desert page "Where to start": 3 picks stay one row from tablet up (phones keep the swipe row) */
 @media (min-width: 641px) { .sdm-pick .htours__list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -2701,6 +2703,28 @@ body.page-swap { background: #fffdf9; }
   .sdm-cmp tbody th em { padding: 4px 5px; font-size: .66rem; line-height: 1.3; white-space: normal; text-align: center; }
   .sdm-cmp .sdm-cmp__get { width: 220px; }
 }
+/* Fes desert page "How Many Days to Merzouga?": 2 / 3 / 4-day cards (owner, replaces the table) */
+.sdm-daycards { list-style: none; max-width: 920px; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.sdm-day { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; box-shadow: 0 8px 24px rgba(14,42,65,.07); }
+.sdm-day h3 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 6px; margin: 0; padding: 8px 14px; background: var(--navy); color: #fff; font-size: .86rem; font-weight: 500; }
+.sdm-day h3 b { font-family: var(--serif); font-size: 1.6rem; line-height: 1.1; }
+.sdm-day h3 em { margin-left: auto; align-self: center; padding: 2px 7px; border-radius: 5px; background: var(--gold); font-size: .66rem; font-style: normal; font-weight: 600; }
+.sdm-day--first { border: 2px solid var(--gold); }
+.sdm-day__list { margin: 0; padding: 11px 14px 9px 30px; font-size: .8rem; font-weight: 600; line-height: 1.45; color: var(--ink); }
+.sdm-day__list li { list-style: disc; margin-bottom: 2px; }
+.sdm-day__list li::marker { color: var(--gold-deep); }
+.sdm-day__facts { flex: 1; margin: 0 14px; padding: 9px 0 3px; border-top: 1px solid var(--line); font-size: .76rem; line-height: 1.45; }
+.sdm-day__facts div { margin-bottom: 6px; }
+.sdm-day__facts dt { display: inline; margin-right: 4px; color: var(--muted); }
+.sdm-day__facts dd { display: inline; margin: 0; color: var(--ink); }
+.sdm-day__go { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0; padding: 0 14px 14px; }
+.sdm-day__go a { display: grid; place-items: center; min-height: 40px; padding: 4px 6px; border: 1px solid var(--navy); border-radius: 7px; color: var(--navy); font-size: .74rem; font-weight: 600; line-height: 1.3; text-align: center; }
+.sdm-day__go a:hover, .sdm-day__go a:focus-visible { background: var(--navy); color: #fff; }
+.sdm-day__go a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.sdm-day__go a:active { transform: translateY(1px); }
+.sdm-daycards__more { margin: 18px 0 0; text-align: center; font-size: .92rem; color: var(--ink); }
+.sdm-daycards__more a { font-weight: 600; text-decoration: underline; }
+@media (max-width: 900px) { .sdm-daycards { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; } }
 /* Marrakech desert page "Which Desert Fits You?": deserts across, 5 facts down; reuses .sdm-cmp (swipe on phones) */
 .sdm-fit__table { table-layout: fixed; }
 .sdm-fit__table th, .sdm-fit__table td { vertical-align: middle; }
@@ -3079,9 +3103,13 @@ body.page-swap { background: #fffdf9; }
 .page-sdh .sdh-intro .cstart__title::after { margin-left: auto; margin-right: auto; }
 .page-sdh .sdh-intro .cstart__intro p { margin-left: auto; margin-right: auto; }
 /* Sahara hub, laptops: the trip-type switch and the 8 city chips share one line */
-@media (min-width: 1025px) and (max-width: 1500px) {
+@media (min-width: 1025px) {
   .page-sdh .tbar__bar { gap: 10px; }
   .page-sdh .sdh-way button { padding-left: 9px; padding-right: 9px; }
+  .page-sdh #list-city { flex-wrap: nowrap; justify-content: safe center; overflow-x: auto; } /* never a second row; narrow laptops scroll sideways */
+  /* same compact chips on wide screens too: the 1120px box does not grow past 1500 */
+  .page-sdh #list-city a { padding-left: 9px; padding-right: 7px; gap: 5px; }
+  .page-sdh #list-city a > svg { display: none; }
 }
 /* Sahara hub, phone (owner): tours stay in one swipe row, so no "View all" that stacks them */
 @media (max-width: 640px) { .page-sdh .browse-view .tall { display: none; } }
@@ -3100,3 +3128,26 @@ body.page-swap { background: #fffdf9; }
 @media (max-width: 640px) {
   .m-left main .tsec__lead, .m-left main .sdm-days__lead, .m-left main .sdh-note, .m-left main .hcta__sub { text-align: left; margin-left: 0; margin-right: 0; }
 }
+
+/* Marrakech desert page "Included on Every Tour": one white card, six features (icon + line) */
+.sdm-inc__card { list-style: none; margin: 0; padding: 28px 30px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(14,42,65,.07); }
+.sdm-inc__card li { display: flex; gap: 14px; align-items: flex-start; }
+.sdm-inc__card svg { flex: none; width: 28px; height: 28px; margin-top: 2px; color: var(--gold-deep); }
+.sdm-inc__card h3 { margin: 0 0 4px; font-size: .95rem; font-weight: 600; color: var(--ink); }
+.sdm-inc__card p { margin: 0; font-size: .86rem; line-height: 1.6; color: var(--muted); }
+@media (max-width: 1024px) { .sdm-inc__card { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .sdm-inc__card { grid-template-columns: 1fr; gap: 18px; padding: 20px 18px; } }
+
+/* tighter join between the tour list and "Included on Every Tour" (owner) */
+.sdm-all .sdm-list { padding-bottom: 0; }
+.sdm-all + .sdm-inc { padding-top: 28px; }
+
+/* Laptop: every section boxed to 1120px of content, centred, as on moroccofabuloustravel.com (owner). body.l-edge = every page without a booking form (not tour or day-trip pages, not contact). */
+@media (min-width: 1025px) {
+  html body.l-edge main .wrap { max-width: 1190px; padding-left: 35px; padding-right: 35px; }
+  /* paragraphs fill the same width: the intro reads from the left edge, short leads stay centred (owner) */
+  html body.l-edge main .cstart__intro p { max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
+  html body.l-edge main .sdm-days__lead { max-width: none; }
+}
+/* the narrower box left the Sahara hub filter chips 2px short of one row */
+@media (min-width: 1025px) { html body.l-edge.page-sdh #list-city { column-gap: 4px; } }
