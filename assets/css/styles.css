@@ -2655,7 +2655,6 @@ body.page-swap { background: #fffdf9; }
   .sdm-route--left .sdm-route__list { position: relative; left: -10px; }
 }
 /* Marrakech desert page "Where to start": 3 picks stay one row from tablet up (phones keep the swipe row) */
-@media (min-width: 641px) { .sdm-pick .htours__list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* Marrakech desert page: the intro is centred on laptops like the sections around it */
 @media (min-width: 1025px) {
   .sdm-intro .cstart__intro { text-align: center; }
@@ -3151,3 +3150,21 @@ body.page-swap { background: #fffdf9; }
 }
 /* the narrower box left the Sahara hub filter chips 2px short of one row */
 @media (min-width: 1025px) { html body.l-edge.page-sdh #list-city { column-gap: 4px; } }
+
+/* compact cards, site-wide (tour, day-trip and blog cards): shorter photo, 2-line text, Start and End side by side */
+.htour .htour__media img { height: 150px; }
+.htour .htour__body { padding: 12px 12px 14px; }
+.htour .htour__title { font-size: .96rem; }
+.htour .htour__stars { margin: 5px 0; }
+.htour .htour__desc { margin-bottom: 8px; line-height: 1.55; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; min-height: 3.1em; }
+.htour .htour__facts { display: flex; flex-wrap: wrap; gap: 3px 12px; margin-bottom: 10px; padding: 7px 10px; }
+.htour .htour__cta { padding: 7px 12px; }
+.htour.htour--blog .htour__desc { margin-bottom: 12px; }
+/* day-trip cards keep their activity ticks as a list */
+.htour.htour--dt .htour__facts { display: grid; gap: 3px; }
+/* Marrakech desert page, laptop: the three popular tours fill the first row (off while a filter is on) */
+@media (min-width: 1025px) {
+  .sdm-grid--top3:not(:has(> li[hidden])) { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .sdm-grid--top3:not(:has(> li[hidden])) > li { grid-column: span 3; }
+  .sdm-grid--top3:not(:has(> li[hidden])) > li:nth-child(-n+3) { grid-column: span 4; }
+}

@@ -684,3 +684,15 @@ Update (2026-11-25, owner annotation): Sahara page "Which Desert" table header r
 **Update (2026-11-26, Fes desert page, days cards):** the "How Many Days to Merzouga?" table replaced by three cards, 2 / 3 / 4 days (`.sdm-daycards`: highlights, suits you if, what is different, longest drive, Back to Fes / End in Marrakech), 3 days marked "Good first choice"; 5-day tour kept as one line below. Checked 1366/768/375. Not committed.
 
 **Update (2026-11-26, Fes desert page, days cards):** owner found the cards too big; made compact (row 920px max, smaller type and padding, fact labels inline). Not committed.
+
+**Update (2026-11-26, Fes desert page, compact tour cards):** owner found the cards too big. `body.sdm-compact` (Fes only): photo 150px, 2-line description, Start/End side by side, tighter padding; laptop card 531 to 397px. Marrakech page unchanged (ask before applying). Not committed.
+
+**Update (2026-11-26, compact cards site-wide):** owner asked to apply to every card: the compact `.htour` rules at the end of styles.css now cover tour, day-trip and blog cards on all pages (replaces `body.sdm-compact`); day-trip cards keep ticks as a stacked list. Some long day-trip ticks still end in "..." on phones (fewer than before). Not committed.
+
+**Done (2026-11-26, Fes + Marrakech desert pages, one tour section):** "Where to Start" merged into the full list; section now "Fes Desert Tours" / "Marrakech Desert Tours", same lead line and filters, the three top picks first (Top Pick ribbon, their short text), then the rest; no duplicate cards. `.sdm-pick` removed. Filters and 1366/768/375 checked. Not committed.
+
+**Update (2026-11-26, Fes + Marrakech desert pages):** owner: no "Round trip" / "Ends in" label on the three top picks (Top Pick ribbon only); other cards keep it. Not committed.
+
+**Update (2026-11-26, Fes + Marrakech desert pages):** owner: ribbon on the three picks reads "Popular" instead of "Top Pick" (these two pages only). Not committed.
+
+**Update (2026-11-26, Marrakech desert page):** owner: the three popular tours sit alone in the first row on laptop (`.sdm-grid--top3`, others 4 per row; off while a filter is on). Fes page unchanged. Not committed.
