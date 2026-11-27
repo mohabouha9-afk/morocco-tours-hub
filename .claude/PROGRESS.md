@@ -724,3 +724,72 @@ Update (2026-11-25, owner annotation): Sahara page "Which Desert" table header r
 **Update (2026-11-26, owner: "above why to book with us") — Merzouga hub:** "Getting to Merzouga" moved above "Why Book Merzouga With Us" (markup order only). Not committed.
 
 **Update (2026-11-26, owner: "view more desert tours" link) — Merzouga hub:** "Desert Tours to Merzouga" now links to sahara-desert-tours.html: homepage corner link above the 4th card (bold, underlined on laptop) and an end arrow slot in the phone swipe row. Not committed.
+
+**Done (2026-11-27) — Tangier research:** saved .claude/research/tangier-hub-research-2026-11-27.md (demand, worries, competitors, proposed new destinations/tangier.html). No page changed; owner to confirm Tangier services. Noted: wrong card counts on tours/morocco-tours-from-tangier.html (not fixed).
+
+**Done (2026-11-27) — Tangier hub, section 1 only:** new `destinations/tangier.html` (shell copied from chefchaouen.html): hero + 4 facts (Stay 1–2 days / Check your port / Met on arrival / Chefchaouen in a day). TEMPORARY hero `tangier-medina-rooftops.jpg` (already the hero of the 5-day Tangier to Marrakech tour): replace with a new photo after owner OK. Not yet linked or in sitemap.xml (add when the hub is finished). Owner to confirm: met at port/airport; which services exist (city tour, transfers, Asilah/Tetouan/Akchour). Next: section 2 "How are you arriving?" (research file tangier-hub-research-2026-11-27.md).
+
+**Update (2026-11-27) — Tangier services confirmed by owner:** private Tangier city tour; port, airport and Fes transfers; day trips to Asilah, Tetouan and Akchour; travellers met at port or airport. None of these has its own page yet. Still open: hero photo (Unsplash 2A8ONQWR69g proposed, not approved).
+
+**Done (2026-11-27) — Tangier hub "Why Tangier?" intro** (owner idea): added after the facts strip, `.cstart.mz-intro` pattern, two short persuasive paragraphs (Spain in view, Atlantic/Mediterranean, international city until 1956, Matisse, Paul Bowles, Cafe Hafa; who it attracts). New copy: owner to confirm.
+
+**Update (2026-11-27) — Tangier intro shortened** (owner: six lines): one paragraph, 3 lines at 1366, 6 in the preview pane (510px), 9 at 375.
+
+**Done (2026-11-27) — Tangier hub section "How Are You Arriving?":** four cards (ferry / cruise / flight or train / from Fes) after the intro, `.happart.mz-doors.tg-doors` (4 across laptop, 2x2 tablet, swipe on phone). Port mapping Tarifa=city, Algeciras=Tanger Med (as on 5-day student tour). WhatsApp links for city tour and transfer (no pages yet). Owner to confirm: cruise tour planned around ship times; airport AND train station pick-up. Next: tours and day trips from Tangier.
+
+**Done (2026-11-27) — Tangier hub: "Our Tangier Tours" + "Tangier Day Trips"** (owner asked for two sections): after "How Are You Arriving?". Tours = 5-day Chefchaouen/Fes, 5-day to Marrakech, 8-day, 14-day loop, "starting point, share your plan" line (-> contact.html), view-all -> morocco-tours-from-tangier. Day trips = Chefchaouen from Tangier + 3 from Fes (owner: include Fes), plus WhatsApp line for city tour/Asilah/Tetouan/Akchour (no pages). `.tg-list` CSS. Checked 1366/768/375. New copy: owner to confirm. Next: Things to do in Tangier.
+
+**Update (2026-11-27) — Tangier day trips** (owner): Fes trips removed; 5 cards in one row = Chefchaouen (page) + city tour, Asilah, Tetouan, Akchour (no pages, WhatsApp cards); extra WhatsApp line removed. Asilah/Tetouan/Akchour show navy name blocks until photos approved: Unsplash ghydVxL2x7w (Asilah, Milad Alizadeh), egd0IU4wVy0 (Tetouan, Maddie Leopardo), ST1FLbUFZq4 (Akchour, Yzouji, portrait). New card copy: owner to confirm.
+
+**Update (2026-11-27) — Tangier day trips photos + slider** (owner): added asilah-blue-door, tetouan-white-medina, akchour-waterfall (.jpg, the Unsplash photos listed above, free licence, owner approved). Name blocks and `.tg-list__ph` removed. Row is now the arrow slider: 4 visible on laptop, 5th by arrow; 3 on tablet, swipe on phone.
+
+**Update (2026-11-27) — No scrollbars on phones** (owner: "never put in the mobile version"): one site-wide rule at the end of styles.css (<=760px, `body *`) hides all scrollbars; swiping still works. Checked on the Tangier arrival cards.
+
+**Done (2026-11-27) — Tangier hub "Things to Do"** (owner idea, instead of six cards): one `.dtl-combine__box` card (like the desert page "Already in Merzouga?") linking to blog/best-things-to-do-in-tangier.html; `.tg-todo`; full row width like the tour cards (owner). New copy: owner to confirm. Next in research plan: "One day or two?" (the intro and article already touch it).
+Update: on laptop the Things to Do button sits at the right end of the card (owner).
+
+**Update (2026-11-27) — Tangier "Things to Do": no card** (owner sketch): the white box is gone; article photo (tangier.jpg, camels on the beach) on the left with the button under it, text on the right; on phone photo, text, button. Replaces the earlier card notes.
+
+**Update (2026-11-27) — Tangier "Things to Do" polish** (owner: "make it better"): bigger photo (about 5/11 of the width), button under it, right side = title, one line, 6 ticked highlights (2 columns, 1 on phone), closing line about the article. Checked 1366/768/375. New copy: owner to confirm.
+
+**Update (2026-11-27) — Tangier "Things to Do" back inside a white card** (owner), same contents and full row width.
+
+**Update (2026-11-27) — Tangier "Things to Do" reverted** (owner: "bring the old version"): back to the full-width `.dtl-combine__box` card, compass icon, button on the right. Photo versions (no card, photo + ticked list, with card) were rejected; do not propose again.
+Update: section title removed; "Things to Do in Tangier" is now the card heading (h2), replacing "Time to explore Tangier?".
+
+**Update (2026-11-27) — No text walls on phones** (owner rule): `.m-paras` splits a paragraph into parts at <=760px only. Applied to the Tangier "Why Tangier?" intro and Things to Do card. Other pages not reviewed.
+Update: Things to Do card text rewritten in a more natural voice (owner example).
+
+**Update (2026-11-27) — Tangier arrivals map** (owner: no separate "getting there" section): `.rmap--tall` Leaflet map above the 4 cards in "How Are You Arriving?" (route-map.mjs key `tangier-hub`; new road tangier-med; Tangier port, Tanger Med, airport, Chefchaouen, Fes; chip "About 45 min from Tanger Med", OSRM estimate). Owner to confirm: pages say Tanger Med "about 40 km" but OSRM road is about 50 km.
+
+**Update (2026-11-27) — Phone subtitle size** (owner): text under section titles (`.site2 .head-row p`) is .84rem (~13.4px, as on the homepage) at <=640px, site-wide (was 15.7px).
+
+**Done (2026-11-27) — Tangier "Good to Know"** (owner: like tours/day trips, title outside the card, tips max 2 lines): `#good-to-know` `.tg-know`, one `.dt-inc__box--info` card, 6 tips, 2 columns from 761px; checked 1366/768/375. Replaces the "problem + solution cards" plan. New copy: owner to confirm. Web search: Morocco moved to permanent GMT on 2026-09-20 (1 h behind Spain in winter, 2 h in summer); tours/tangier-day-tour-from-tarifa.html still states the old difference (not changed). Next: FAQ, closing banner.
+
+Update (2026-11-27) — Time difference (owner confirmed: Morocco is GMT+0 only, the old "1 hour behind in summer" is gone): Good to know line fixed on the Tarifa day tour and the Tangier hub to "Morocco is on GMT+0; Spain 1 h ahead in winter, 2 h in summer". build-tarifa.js and its research note still hold the old text (do not re-run).
+
+**Done (2026-11-27) — Tangier FAQ** (owner: "yes, build it"): `#faq` `.hfaq.tg-faq` (same component as Merzouga), 7 questions + FAQPage JSON-LD, first open; checked 1366/375 (max 3 lines on laptop). Owner to confirm: train + 4-5 h private transfer from Fes, cruise walk 10-15 min, euros, private guide in town. Next: closing banner, then hero photo, Tanger Med 40/50 km, tour list counts, links, sitemap.
+
+**Done (2026-11-27) — Tangier closing banner**: `.hcta.tg-cta` "Plan Your Days in Tangier", Cap Spartel lighthouse photo (object-position 50% 30%), 64px above it; checked 1366/375. Hub sections complete. Still open: hero photo, Tanger Med 40/50 km, Tangier tour list counts, links to the hub, sitemap. Uncommitted.
+
+**Done (2026-11-27) — Tangier hub linked** (owner: "yes, add them"): homepage Tangier destination card now points to destinations/tangier.html (was the tour list); new card on destinations/index.html (lone 7th card centred); "Discover Tangier" on morocco-tours-from-tangier.html (northern section); "Tangier Travel Destination" in both Tangier blog posts; sitemap.xml entry. Header/footer not touched. Still open: hero photo, Tanger Med 40/50 km, tour list counts. Uncommitted.
+
+**Done (2026-11-27) — Tangier tour list counts**: Northern 2 -> 4, hero line "13 private tours" -> "15 private tours and day trips from Tangier" (10 grand + 4 northern incl. 2 day trips + 1 student). Still open: hero photo, Tanger Med 40/50 km. Uncommitted.
+
+**Update (2026-11-27) — Tangier hub title alignment** (owner): section titles and their text start on the left (arrivals, tours, day trips, Good to know); only "Why Tangier?" title is centred, its paragraph stays left. Tangier-scoped CSS; checked 1366/375. FAQ title (own narrower column) and closing banner unchanged.
+
+**Done (2026-11-27) — Tangier enquiry form** (owner): "Send an Enquiry" (`#enquiry` `.tg-enq`, same `.dt-book`/`.dt-form` + moroccoForm, opens WhatsApp) beside the FAQ on laptop (`.hfaq__grid`, 400px column), under it on phone/tablet. FAQ title now lines up with the other titles. Checked 1366/375 and a test submit (message built, nothing sent).
+
+**Done (2026-11-27) — Tangier hero photo** (owner approved): assets/images/tangier-hero.jpg (Unsplash 2A8ONQWR69g, Raul Cacho Oses, free licence). Hub hero + og/twitter image, and the Tangier cards on the homepage (was Cap Spartel) and destinations/index.html. 5-day tour card keeps medina-rooftops. Checked 1366/375. Still open: Tanger Med 40/50 km, owner confirmations. Uncommitted.
+
+**Update (2026-11-27) — Tanger Med distance** (owner): "about 50 km" (was 40) in both places on destinations/tangier.html; matches the map road. Still open: owner confirmations on facts and new copy. Uncommitted.
+
+**Done (2026-11-27) — Tangier "Month by Month" table** (owner approved): `#month-by-month` `.tg-months` after the day trips, reuses `.mz-months` (Merzouga). Four periods: Apr-Jun, Jul-Aug, Sep-Oct, Nov-Mar. Figures: climatestotravel.com Tangier, 1991-2020. Owner to confirm: "Best time" labels, advice, east-wind beach line. Checked 1366/375 (no sideways scroll). Uncommitted.
+
+**Update (2026-11-27) — Tangier month table shortened** (owner: "not so much details, just what the reader needs"): one short line per cell, temperatures and wind advice removed. Uncommitted.
+
+**Done (2026-11-27) — Tangier fifth key fact** (owner): "Best time to visit — April to June, September and October." Strip is 5 across on laptop; on phone/tablet the fifth takes a full row (`.tg-facts`). Checked 1366/375. Uncommitted.
+
+**Update (2026-11-27) — Tangier facts back to four** (owner): "Best time to visit" replaces "Chefchaouen in a day" (already in the day trips); `.tg-facts` CSS removed. Uncommitted.
+
+**Done (2026-11-27) — Tangier section texts** (owner: ~5 lines per section where it clarifies, for later SEO): `.tg-lead.m-paras` under How Are You Arriving, Our Tangier Tours, Day Trips, Month by Month. Not added to Good to Know, FAQ, enquiry, banner; Why Tangier and Things to Do already had text. 3 lines at 1366/768, 6-7 at 375. New copy: owner to confirm. Uncommitted.

@@ -2791,13 +2791,15 @@ body.page-swap { background: #fffdf9; }
 @media (max-width: 360px) {
   .habout__offers { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 16px; }
 }
-/* destinations index: 6 city cards, 3 per row; 2 per row on phones so the names fit */
+/* destinations index: city cards, 3 per row, a lone last card centred; 2 per row on phones so the names fit */
 .dest-grid--hub { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .dest-grid--hub .dest-card { aspect-ratio: 4 / 3; }
 .dest-grid--hub b { font-size: 1.2rem; }
+@media (min-width: 641px) { .dest-grid--hub .dest-card:last-child:nth-child(3n+1) { grid-column: 2; } }
 @media (max-width: 640px) {
   .dest-grid--hub { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .dest-grid--hub b { bottom: 10px; padding: 0 8px; font-size: 1rem; line-height: 1.2; }
+  .dest-grid--hub .dest-card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 6px); }
 }
 
 /* ==== Blog: Sahara Desert with Kids (blog/sahara-desert-with-kids.html), scoped to .kd ==== */
@@ -3195,3 +3197,52 @@ body.page-swap { background: #fffdf9; }
 
 /* Merzouga hub, desert tours: phone swipe row ends with the "View more desert tours" slot (4 cards + link) */
 @media (max-width: 640px) { #desert-tours .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(4, 80%) 34%; } }
+
+/* Tangier hub: four arrival cards */
+@media (min-width: 641px) { .mz-doors.tg-doors .happart__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1025px) { .mz-doors.tg-doors .happart__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* Tangier hub: "Our Tangier Tours" + "Tangier Day Trips" */
+.tg-list .head-row p { max-width: 560px; margin: 12px auto 0; }
+@media (min-width: 641px) and (max-width: 1180px) { .tg-list .htours__corner { position: static; display: block; text-align: right; } }
+@media (max-width: 640px) { .tg-list--tours .htours__list { grid-auto-columns: auto; grid-template-columns: repeat(4, 80%) 34%; } .tg-list--tours .htours__end { display: block; } }
+
+/* Owner rule: no visible scrollbar on phones, on any swipe row or box (swiping still works). Keep this site-wide. */
+@media (max-width: 760px) { body * { scrollbar-width: none !important; } body *::-webkit-scrollbar { display: none !important; } }
+
+/* Tangier hub: one "Things to Do" card linking to the article; button at the right end on laptop */
+.tg-todo .dtl-combine__box { width: 100%; }
+@media (min-width: 821px) { .tg-todo.sdh-near .dtl-combine__box { flex-wrap: nowrap; align-items: center; gap: 28px; } .tg-todo.sdh-near .dtl-combine__btns { width: auto; padding-left: 0; } }
+.tg-todo .dtl-combine__txt h2 { margin: 0 0 4px; font-size: 1.05rem; text-transform: none; }
+
+/* Owner rule: no walls of text on phones. Wrap each idea in a span inside p.m-paras; they flow as one paragraph on larger screens. */
+@media (max-width: 760px) { .m-paras > span { display: block; } .m-paras > span + span { margin-top: 12px; } }
+.tg-doors .rmap { margin-bottom: 14px; }
+
+/* Owner rule: on phones the text under a section title stays at normal small text size (same as the homepage), never larger. */
+@media (max-width: 640px) { .site2 .head-row p { font-size: .84rem; line-height: 1.65; } }
+
+/* Tangier hub: "Good to Know", title above one card of short tips (two columns from tablet up) */
+.dt-inc.tg-know__inc { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 761px) { .tg-know__inc ul { grid-template-columns: 1fr 1fr; gap: 14px 40px; } }
+
+/* Tangier hub closing banner: keep the lighthouse top in view */
+.tg-cta .hcta__bg { object-position: 50% 30%; }
+
+/* Tangier hub: section titles and their text start on the left; only the first title, "Why Tangier?", is centred */
+#tg-intro-title { text-align: center; }
+#tg-intro-title::after { margin-left: auto; margin-right: auto; }
+.tg-doors .happart__head, .site2 .tg-list .head-row, .site2 .tg-know .head-row, .site2 .tg-months .head-row { text-align: left; align-items: flex-start; }
+.tg-doors .happart__head h2::after, .site2 .tg-list .head-row h2::after, .site2 .tg-know .head-row h2::after, .site2 .tg-months .head-row h2::after { margin-left: 0; }
+.tg-list .head-row p { margin-left: 0; }
+
+/* Tangier hub: enquiry form beside the FAQ on laptop, under it on phone and tablet */
+.tg-enq { width: 100%; max-width: 860px; margin: 0 auto; min-width: 0; scroll-margin-top: 110px; }
+.tg-enq .hfaq__head { text-align: left; }
+.tg-enq .hfaq__head h2::after { margin-left: 0; }
+@media (min-width: 1025px) { .tg-faq .tg-enq { max-width: none; margin: 0; } .tg-faq .hfaq__grid { grid-template-columns: minmax(0, 1fr) 400px; align-items: start; } }
+
+/* Tangier hub: short explaining text under section titles, same left edge and width everywhere */
+.site2 .tg-doors .tg-lead, .site2 .tg-list .head-row p.tg-lead, .site2 .tg-months .head-row p.tg-lead { max-width: 760px; margin: 12px 0 0; text-align: left; color: var(--muted); }
+.site2 .tg-doors .tg-lead { margin-bottom: 18px; }
+@media (max-width: 640px) { .site2 .tg-doors .tg-lead { font-size: .84rem; line-height: 1.65; } }

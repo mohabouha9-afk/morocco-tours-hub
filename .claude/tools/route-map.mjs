@@ -31,6 +31,18 @@ const TRIPS = {
       { at: [-4.01269, 31.07816], icon: 'tent', name: 'Merzouga', note: 'Erg Chebbi dunes', side: 'bottom' },
     ],
   },
+  'tangier-hub': {
+    title: 'Route map: arriving in Tangier from Tanger Ville port, Tanger Med port or the airport, with the road from Fes through Chefchaouen',
+    legend: [], tall: true, compassM: 'topright', chip: { at: 0.5, text: 'About 45 min from Tanger Med', textM: '45 min' }, pad: [90, 60, 110, 40], padM: [55, 45, 45, 45],
+    legs: [{ kind: 'car', road: 'tangier-med' }, { kind: 'car', road: 'tangier-chaouen' }, { kind: 'car', road: 'chefchaouen-day' }],
+    stops: [
+      { at: [-5.8065, 35.7862], icon: 'port', name: 'Tangier', note: 'City port, Tarifa ferries', start: true, side: 'top', sideM: 'top' },
+      { at: [-5.5000, 35.8820], icon: 'port', name: 'Tanger Med', note: 'Algeciras ferries', start: true, side: 'right', sideM: 'right' },
+      { at: [-5.9169, 35.7269], icon: 'plane', name: 'Airport', note: 'Flights', start: true, side: 'left', sideM: 'left' },
+      { at: [-5.2684, 35.1688], icon: 'city', name: 'Chefchaouen', note: 'Stop on the way', side: 'right', sideM: 'right' },
+      { at: [-5.0003, 34.0331], icon: 'minaret', name: 'Fes', note: 'Private transfer', start: true, side: 'right', sideM: 'left' },
+    ],
+  },
   agafay: {
     title: 'Route map: Marrakech to the Agafay desert camp',
     legend: [], compassM: 'topleft', chip: { at: 0.45, text: '40 min drive' }, legs: [{ kind: 'car', road: 'agafay' }],
